@@ -1,0 +1,1187 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>[hidden]{display:none!important}img{max-width:100%}</style>
+</head>
+<body>
+<title>Parrilla de Contenidos</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: broadcast-style programming grid (days × hours) shaded by audience heat, with a control rail beside it. */
+:root{
+  --bg:#EDF0F5; --surface:#FFFFFF; --surface-2:#F5F7FA; --line:#D8DDE6; --line-2:#C5CCD8;
+  --ink:#141822; --ink-2:#485164; --ink-3:#778093;
+  --accent:#2545D3; --accent-ink:#FFFFFF; --accent-soft:#E2E7FB; --heat:#2545D3;
+  --ok:#1D7F47; --ok-soft:#DDF1E5; --warn:#9A5B00; --warn-soft:#FBEBD0; --bad:#BE2A2A; --bad-soft:#F8E0E0;
+  --n-instagram:#C92D6A; --n-facebook:#1A6FE0; --n-tiktok:#141822; --n-youtube:#D91E18; --n-twitter:#141822;
+  --n-linkedin:#0A62BA; --n-threads:#141822; --n-bluesky:#1180F0; --n-pinterest:#D8002A; --n-gmb:#2E9248;
+  --f-display:"Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --f-body:"IBM Plex Sans", "Segoe UI", Roboto, sans-serif;
+  --f-mono:"IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  --r:8px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0D1016; --surface:#151922; --surface-2:#1B2029; --line:#29303C; --line-2:#363E4C;
+  --ink:#E7EAF0; --ink-2:#A9B1BF; --ink-3:#7C8595;
+  --accent:#7D95FF; --accent-ink:#0D1016; --accent-soft:#1E2747; --heat:#6F89FF;
+  --ok:#4DC583; --ok-soft:#163323; --warn:#E5A443; --warn-soft:#3A2A10; --bad:#FF7070; --bad-soft:#3D1A1C;
+  --n-instagram:#F0609A; --n-facebook:#5A9BFF; --n-tiktok:#E7EAF0; --n-youtube:#FF5A52; --n-twitter:#E7EAF0;
+  --n-linkedin:#4C97E8; --n-threads:#E7EAF0; --n-bluesky:#55A8FF; --n-pinterest:#FF4B66; --n-gmb:#56C273;
+  color-scheme:dark }}
+:root[data-theme="dark"]{
+  --bg:#0D1016; --surface:#151922; --surface-2:#1B2029; --line:#29303C; --line-2:#363E4C;
+  --ink:#E7EAF0; --ink-2:#A9B1BF; --ink-3:#7C8595;
+  --accent:#7D95FF; --accent-ink:#0D1016; --accent-soft:#1E2747; --heat:#6F89FF;
+  --ok:#4DC583; --ok-soft:#163323; --warn:#E5A443; --warn-soft:#3A2A10; --bad:#FF7070; --bad-soft:#3D1A1C;
+  --n-instagram:#F0609A; --n-facebook:#5A9BFF; --n-tiktok:#E7EAF0; --n-youtube:#FF5A52; --n-twitter:#E7EAF0;
+  --n-linkedin:#4C97E8; --n-threads:#E7EAF0; --n-bluesky:#55A8FF; --n-pinterest:#FF4B66; --n-gmb:#56C273;
+  color-scheme:dark }
+
+*{box-sizing:border-box}
+html,body{background:var(--bg)}
+body{color:var(--ink);font-family:var(--f-body);font-size:14px;line-height:1.45;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));padding-block:14px 32px}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0}
+.mono,.tnum{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+.hint{color:var(--ink-3);font-weight:400;font-size:12px}
+
+/* top bar */
+.top{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin:0 auto 14px;max-width:1440px}
+.brandmark{display:flex;align-items:center;gap:10px;margin-right:auto}
+.brandmark svg{flex:none}
+.brandmark h1{font-size:22px;font-weight:800;letter-spacing:-.01em}
+.brandmark small{display:block;font-family:var(--f-mono);font-size:11px;color:var(--ink-3);letter-spacing:.06em;text-transform:uppercase}
+.seg{display:inline-flex;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:3px}
+.seg button{border:0;background:transparent;padding:6px 14px;border-radius:999px;cursor:pointer;color:var(--ink-2);font-weight:500}
+.seg button[aria-selected="true"]{background:var(--ink);color:var(--bg)}
+.period{display:flex;align-items:center;gap:6px}
+.period-label{font-family:var(--f-display);font-weight:700;font-size:16px;min-width:11ch}
+.btn{border:1px solid var(--line-2);background:var(--surface);border-radius:var(--r);padding:8px 14px;cursor:pointer;font-weight:500;white-space:nowrap}
+.btn:hover{border-color:var(--ink-3)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:600}
+.btn.primary:hover{filter:brightness(1.07)}
+.btn[disabled]{opacity:.45;cursor:not-allowed;filter:none}
+.btn.ghost{background:transparent}
+.btn.danger{color:var(--bad)}
+.btn.sm{padding:5px 10px;font-size:13px}
+.icon-btn{border:1px solid var(--line);background:var(--surface);border-radius:var(--r);width:34px;height:34px;cursor:pointer;font-size:18px;line-height:1;display:inline-grid;place-items:center}
+.link-btn{border:0;background:none;color:var(--accent);cursor:pointer;padding:0;font-weight:500;font-size:13px}
+
+.pill{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:4px 10px;font-size:12px;font-weight:500;background:var(--surface-2);color:var(--ink-2);border:1px solid var(--line);white-space:nowrap}
+.pill i{width:7px;height:7px;border-radius:50%;background:currentColor}
+.pill.ok{background:var(--ok-soft);color:var(--ok);border-color:transparent}
+.pill.warn{background:var(--warn-soft);color:var(--warn);border-color:transparent}
+.pill.bad{background:var(--bad-soft);color:var(--bad);border-color:transparent}
+
+.banner{max-width:1440px;margin:0 auto 12px;padding:10px 14px;border-radius:var(--r);background:var(--warn-soft);color:var(--warn);font-size:13px}
+
+/* layout */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:16px;max-width:1440px;margin:0 auto;align-items:start}
+@media (max-width:980px){.layout{grid-template-columns:minmax(0,1fr)}}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:12px}
+#view{min-width:0}
+
+/* week grid */
+.wk-scroll{position:relative;overflow:auto;max-height:calc(100vh - 140px);min-height:420px;border-radius:12px;border:1px solid var(--line);background:var(--surface)}
+.wk{display:grid;grid-template-columns:52px repeat(7,minmax(104px,1fr));min-width:780px}
+.wk-h{position:sticky;top:0;z-index:3;background:var(--surface);border-bottom:1px solid var(--line);padding:8px 8px 6px;display:flex;flex-direction:column;gap:1px}
+.wk-h.corner{left:0;z-index:4}
+.wk-h .dn{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
+.wk-h .dd{font-family:var(--f-display);font-size:20px;font-weight:700;line-height:1}
+.wk-h.is-today .dd{color:var(--accent)}
+.wk-h .dc{font-size:11px;color:var(--ink-3)}
+.wk-t{position:sticky;left:0;z-index:2;background:var(--surface);font-family:var(--f-mono);font-size:11px;color:var(--ink-3);padding:4px 6px 0 0;text-align:right;border-right:1px solid var(--line)}
+.wk-c{position:relative;min-height:46px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:3px;display:flex;flex-direction:column;gap:3px;cursor:copy;
+  background:color-mix(in oklab, var(--heat) calc(var(--h,0) * 30%), var(--surface))}
+.wk-c.past{background:color-mix(in oklab, var(--ink) 4%, var(--surface));cursor:default}
+.wk-c.now{box-shadow:inset 0 2px 0 var(--bad)}
+.wk-c.drop{outline:2px dashed var(--accent);outline-offset:-3px}
+.slot-add{position:absolute;right:3px;bottom:3px;width:22px;height:22px;border-radius:6px;border:1px solid var(--line-2);background:var(--surface);color:var(--ink-2);opacity:0;cursor:pointer;font-size:14px;line-height:1}
+.wk-c:hover .slot-add,.slot-add:focus-visible,.mo-c:hover .slot-add{opacity:1}
+
+/* chips */
+.chip{display:flex;align-items:center;gap:5px;width:100%;min-width:0;text-align:left;border:1px solid var(--line-2);background:var(--surface);border-radius:6px;padding:3px 6px;cursor:pointer;font-size:12px;position:relative;z-index:1}
+.chip:hover{border-color:var(--ink-3)}
+.chip-time{font-family:var(--f-mono);font-size:11px;color:var(--ink-2);flex:none}
+.chip-txt{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dots{display:inline-flex;gap:2px;flex:none}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--c);display:inline-block;flex:none}
+.chip.st-draft{border-style:dashed;background:var(--surface-2);color:var(--ink-2)}
+.chip.st-planned{border-color:var(--accent)}
+.chip.st-sending,.chip.st-unknown{border-color:var(--warn);background:var(--warn-soft)}
+.chip.st-sent{background:var(--accent-soft);border-color:transparent}
+.chip.st-error{border-color:var(--bad);background:var(--bad-soft)}
+.chip.st-mc{background:var(--surface-2);border-color:var(--line);color:var(--ink-2)}
+.chip .mk{font-size:10px;font-weight:600;flex:none}
+.chip.st-sent .mk{color:var(--accent)}
+.chip.st-error .mk{color:var(--bad)}
+
+/* month */
+.mo{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--line);gap:1px}
+.mo-h{background:var(--surface);padding:8px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
+.mo-c{position:relative;background:var(--surface);min-height:118px;padding:6px;display:flex;flex-direction:column;gap:3px;cursor:copy;min-width:0}
+.mo-c.out{background:var(--surface-2)}
+.mo-c.out .mo-d{color:var(--ink-3)}
+.mo-c.drop{outline:2px dashed var(--accent);outline-offset:-3px}
+.mo-d{font-family:var(--f-display);font-weight:700;font-size:14px;display:flex;justify-content:space-between;align-items:center}
+.mo-c.today .mo-d span:first-child{background:var(--accent);color:var(--accent-ink);border-radius:999px;padding:0 7px}
+.mo-more{font-size:11px;color:var(--ink-3);border:0;background:none;text-align:left;padding:0 2px;cursor:pointer}
+.mo-dots{display:none;flex-wrap:wrap;gap:3px}
+@media (max-width:640px){
+  .mo-c{min-height:64px;padding:4px}
+  .mo-c .chip,.mo-c .mo-more{display:none}
+  .mo-dots{display:flex}
+  .mo-h{padding:6px 2px;text-align:center;letter-spacing:0}
+}
+
+/* queue */
+.q{display:flex;flex-direction:column;gap:18px}
+.q-day h3{font-size:14px;font-weight:700;margin-bottom:8px;display:flex;gap:8px;align-items:baseline}
+.q-day h3 .hint{font-family:var(--f-body)}
+.q-list{display:flex;flex-direction:column;gap:8px}
+.q-item{display:grid;grid-template-columns:64px minmax(0,1fr) auto;gap:12px;align-items:start;padding:12px 14px;background:var(--surface);border:1px solid var(--line);border-radius:10px;cursor:pointer;text-align:left;width:100%}
+.q-item:hover{border-color:var(--line-2)}
+.q-item .tm{font-family:var(--f-mono);font-size:15px;font-weight:500;padding-top:1px}
+.q-item .tx{min-width:0;display:flex;flex-direction:column;gap:6px}
+.q-item .tx p{margin:0;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow-wrap:anywhere}
+.q-item .meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:12px;color:var(--ink-3)}
+.q-item .acts{display:flex;flex-direction:column;align-items:flex-end;gap:6px}
+.netname{display:inline-flex;align-items:center;gap:4px}
+.err-line{font-size:12px;color:var(--bad);overflow-wrap:anywhere}
+@media (max-width:560px){.q-item{grid-template-columns:52px minmax(0,1fr)}.q-item .acts{grid-column:2;flex-direction:row;align-items:center;flex-wrap:wrap}}
+
+.empty{padding:40px 24px;text-align:center;color:var(--ink-2);background:var(--surface);border:1px dashed var(--line-2);border-radius:12px}
+.empty h3{font-size:18px;margin-bottom:6px;color:var(--ink)}
+.empty p{margin:0 auto 14px;max-width:46ch}
+
+/* rail */
+#rail{display:flex;flex-direction:column;gap:14px;min-width:0}
+.sec{padding:14px}
+.sec h2{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);font-weight:700;margin-bottom:10px;font-family:var(--f-body)}
+.acct{display:flex;align-items:center;gap:10px}
+.avatar{width:36px;height:36px;border-radius:9px;background:var(--ink);color:var(--bg);display:grid;place-items:center;font-family:var(--f-display);font-weight:800;flex:none}
+.acct b{display:block;font-family:var(--f-display);font-size:15px}
+.acct .hint{display:block}
+.netrow{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.sec select{width:100%;padding:7px 9px;border:1px solid var(--line-2);border-radius:var(--r);background:var(--surface)}
+.sec p{margin:0 0 10px;color:var(--ink-2);font-size:13px}
+.heat{display:grid;grid-template-columns:28px repeat(24,minmax(0,1fr));gap:2px;margin-top:10px}
+.heat span{font-family:var(--f-mono);font-size:9px;color:var(--ink-3);line-height:9px}
+.heat i{aspect-ratio:1;border-radius:2px;background:color-mix(in oklab, var(--heat) calc(var(--h,0) * 100%), var(--surface-2));max-width:100%}
+.heat-axis{display:flex;justify-content:space-between;font-family:var(--f-mono);font-size:9px;color:var(--ink-3);padding-left:30px;margin-top:3px}
+.tops{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.tops .pill{font-family:var(--f-mono)}
+.filters{display:flex;flex-wrap:wrap;gap:6px}
+.fchip{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:999px;padding:4px 10px;font-size:12px;cursor:pointer;background:var(--surface)}
+.fchip:has(input:checked),.fchip[aria-pressed="true"]{border-color:var(--ink);background:var(--ink);color:var(--bg)}
+.fchip input{position:absolute;opacity:0;pointer-events:none}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.stat b{display:block;font-family:var(--f-display);font-size:24px;font-weight:800;line-height:1.1}
+.stat span{font-size:12px;color:var(--ink-3)}
+.legend{display:flex;flex-direction:column;gap:6px;font-size:12px;color:var(--ink-2)}
+.legend .chip{pointer-events:none;width:auto;display:inline-flex}
+
+/* composer */
+dialog{border:0;padding:0;border-radius:14px;background:var(--surface);color:var(--ink);width:min(1080px, calc(100vw - 32px));max-height:calc(100vh - 32px);box-shadow:0 30px 80px -20px rgba(0,0,0,.45)}
+dialog::backdrop{background:rgba(10,14,22,.5)}
+#c-form{display:flex;flex-direction:column;max-height:calc(100vh - 32px)}
+.c-head{display:flex;align-items:center;gap:10px;padding:14px 18px;border-bottom:1px solid var(--line)}
+.c-head h2{font-size:18px;font-weight:800;margin-right:auto}
+.c-body{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);overflow:auto;flex:1;min-height:0}
+.c-main{padding:16px 18px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.c-side{background:var(--surface-2);border-left:1px solid var(--line);padding:16px 18px;min-width:0;display:flex;flex-direction:column;gap:12px}
+@media (max-width:820px){
+  dialog{width:100vw;max-width:100vw;height:100%;max-height:100%;border-radius:0;margin:0}
+  #c-form{max-height:100%;height:100%;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+  .c-body{grid-template-columns:minmax(0,1fr)}
+  .c-side{border-left:0;border-top:1px solid var(--line)}
+}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+legend,.field label,.lbl{font-weight:600;font-size:13px;margin-bottom:6px;padding:0;display:block}
+.field{display:flex;flex-direction:column;min-width:0}
+.field-row{display:flex;align-items:baseline;gap:12px}
+.field-row label{margin-right:auto}
+.field input,.field textarea,.field select{width:100%;padding:8px 10px;border:1px solid var(--line-2);border-radius:var(--r);background:var(--surface);min-width:0}
+.field textarea{resize:vertical}
+.field input:disabled,.field textarea:disabled,.field select:disabled{background:var(--surface-2);color:var(--ink-2)}
+.netlist{display:flex;flex-wrap:wrap;gap:6px}
+.netchip{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line-2);border-radius:999px;padding:5px 11px;font-size:13px;cursor:pointer;user-select:none;position:relative}
+.netchip input{position:absolute;opacity:0;pointer-events:none}
+.netchip:has(input:checked){background:color-mix(in oklab, var(--c) 14%, var(--surface));border-color:var(--c)}
+.netchip:has(input:focus-visible){outline:2px solid var(--accent);outline-offset:2px}
+.netchip.dim{opacity:.55}
+.netchip:has(input:disabled){cursor:default}
+.counters{display:flex;flex-wrap:wrap;gap:4px 12px;margin-top:6px;font-family:var(--f-mono);font-size:11px;color:var(--ink-3)}
+.counters .over{color:var(--bad);font-weight:500}
+.thumbs{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.thumb{display:flex;align-items:center;gap:6px;max-width:100%;padding:4px 8px;border-radius:6px;background:var(--surface-2);border:1px solid var(--line);font-size:12px;min-width:0}
+.thumb b{font-family:var(--f-mono);font-size:10px;color:var(--ink-3)}
+.thumb span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:24ch}
+.netopts{display:flex;flex-direction:column;gap:10px}
+.opt{border:1px solid var(--line);border-radius:10px;padding:10px 12px;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}
+.opt[hidden]{display:none}
+.opt > .lbl{grid-column:1/-1;margin:0;display:flex;align-items:center;gap:6px}
+.when{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px}
+.besthours{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:12px;color:var(--ink-2)}
+.besthours button{font-family:var(--f-mono);border:1px solid var(--line-2);background:var(--surface);border-radius:999px;padding:3px 9px;cursor:pointer;font-size:12px}
+.besthours button.on{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.check{display:flex;gap:8px;align-items:flex-start;font-size:13px}
+.check input{margin-top:3px}
+.issues{padding:0 18px}
+.issues ul{margin:10px 0 0;padding:10px 12px 10px 28px;border-radius:var(--r);background:var(--bad-soft);color:var(--bad);font-size:13px}
+.issues ul.soft{background:var(--warn-soft);color:var(--warn)}
+.c-foot{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:12px 18px;border-top:1px solid var(--line);margin-top:10px}
+.c-foot .spacer{flex:1}
+.prev-tabs{display:flex;flex-wrap:wrap;gap:6px}
+.prev-tabs button{border:1px solid var(--line-2);background:var(--surface);border-radius:999px;padding:4px 10px;font-size:12px;cursor:pointer;display:inline-flex;align-items:center;gap:5px}
+.prev-tabs button[aria-selected="true"]{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.pv{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden;font-size:13px}
+.pv-h{display:flex;align-items:center;gap:8px;padding:10px 12px}
+.pv-h .avatar{width:30px;height:30px;font-size:13px;border-radius:50%}
+.pv-h b{font-size:13px}
+.pv-h small{color:var(--ink-3);display:block;font-size:11px}
+.pv-m{aspect-ratio:1/1;max-width:100%;background:repeating-linear-gradient(135deg,var(--surface-2) 0 10px,var(--bg) 10px 20px);display:grid;place-items:center;color:var(--ink-3);font-family:var(--f-mono);font-size:11px;text-align:center;padding:12px;overflow-wrap:anywhere}
+.pv-m.wide{aspect-ratio:16/9}
+.pv-m.tall{aspect-ratio:9/14}
+.pv-t{padding:10px 12px;white-space:pre-wrap;overflow-wrap:anywhere}
+.pv-t .tag{color:var(--accent)}
+.pv-t mark.over{background:var(--bad-soft);color:var(--bad)}
+.pv-t .more{color:var(--ink-3)}
+.pv-fc{padding:0 12px 10px;color:var(--ink-2);font-size:12px;overflow-wrap:anywhere}
+.pv-note{font-size:12px;color:var(--ink-3);margin:0}
+.ro-note{font-size:13px;padding:10px 12px;border-radius:var(--r);background:var(--accent-soft)}
+.ro-note a{color:var(--accent);font-weight:600}
+
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:10px;font-size:13px;z-index:50;max-width:calc(100vw - 32px);box-shadow:0 10px 30px -10px rgba(0,0,0,.4)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+@media (prefers-reduced-motion:no-preference){.chip,.btn,.q-item{transition:border-color .15s, background-color .15s}}
+@media (max-width:640px){
+  .top{gap:10px}
+  .brandmark{width:100%}
+  #new-post{order:-1;margin-left:auto}
+  .wk-scroll{max-height:none}
+}
+</style>
+
+<header class="top">
+  <div class="brandmark">
+    <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><rect x="1" y="1" width="32" height="32" rx="8" fill="var(--ink)"/><g fill="var(--bg)"><rect x="7" y="8" width="5" height="5" rx="1"/><rect x="14.5" y="8" width="5" height="5" rx="1" opacity=".45"/><rect x="22" y="8" width="5" height="5" rx="1" opacity=".45"/><rect x="7" y="15" width="5" height="5" rx="1" opacity=".45"/><rect x="14.5" y="15" width="5" height="5" rx="1"/><rect x="22" y="15" width="5" height="5" rx="1" opacity=".45"/><rect x="7" y="22" width="5" height="5" rx="1" opacity=".45"/><rect x="14.5" y="22" width="5" height="5" rx="1" opacity=".45"/></g><rect x="22" y="22" width="5" height="5" rx="1" fill="var(--accent)"/></svg>
+    <div><h1>Parrilla</h1><small>Programador de redes</small></div>
+  </div>
+  <div class="seg" role="tablist" aria-label="Vista">
+    <button type="button" role="tab" data-view="week" id="tab-week">Semana</button>
+    <button type="button" role="tab" data-view="month" id="tab-month">Mes</button>
+    <button type="button" role="tab" data-view="queue" id="tab-queue">Cola</button>
+  </div>
+  <div class="period" id="period">
+    <button type="button" class="icon-btn" id="prev" aria-label="Anterior">‹</button>
+    <button type="button" class="btn sm" id="today">Hoy</button>
+    <button type="button" class="icon-btn" id="next" aria-label="Siguiente">›</button>
+    <span class="period-label" id="period-label"></span>
+  </div>
+  <span id="mc-pill"></span>
+  <button type="button" class="btn primary" id="new-post">Nueva publicación</button>
+</header>
+<div id="banner"></div>
+<div class="layout">
+  <main id="view" aria-live="polite"></main>
+  <aside id="rail"></aside>
+</div>
+
+<dialog id="composer" aria-labelledby="c-title">
+  <form id="c-form" method="dialog" novalidate>
+    <header class="c-head">
+      <h2 id="c-title">Nueva publicación</h2>
+      <span id="c-status"></span>
+      <button type="button" class="icon-btn" id="c-close" aria-label="Cerrar">×</button>
+    </header>
+    <div class="c-body">
+      <div class="c-main">
+        <div id="c-ro"></div>
+        <fieldset><legend>Redes</legend><div id="c-netlist" class="netlist"></div></fieldset>
+        <div class="field">
+          <div class="field-row">
+            <label for="c-text">Texto</label>
+            <button type="button" id="c-ai-undo" class="link-btn" hidden>Deshacer</button>
+            <button type="button" id="c-ai" class="link-btn" hidden>Reescribir con IA</button>
+          </div>
+          <textarea id="c-text" rows="7" placeholder="Escribe la publicación…"></textarea>
+          <div id="c-counters" class="counters"></div>
+        </div>
+        <div class="field">
+          <label for="c-media">Imágenes o vídeos <span class="hint">· URL pública, una por línea (Drive y Dropbox también valen)</span></label>
+          <textarea id="c-media" rows="2" placeholder="https://ejemplo.com/foto.jpg"></textarea>
+          <div id="c-thumbs" class="thumbs"></div>
+        </div>
+        <div id="c-netopts" class="netopts">
+          <div class="opt" data-net="instagram">
+            <span class="lbl"><i class="dot" style="--c:var(--n-instagram)"></i>Instagram</span>
+            <div class="field"><label for="c-igtype">Formato</label><select id="c-igtype"><option value="POST">Post o carrusel</option><option value="REEL">Reel</option><option value="STORY">Historia</option></select></div>
+          </div>
+          <div class="opt" data-net="facebook">
+            <span class="lbl"><i class="dot" style="--c:var(--n-facebook)"></i>Facebook</span>
+            <div class="field"><label for="c-fbtype">Formato</label><select id="c-fbtype"><option value="POST">Post</option><option value="REEL">Reel</option><option value="STORY">Historia</option></select></div>
+          </div>
+          <div class="opt" data-net="youtube">
+            <span class="lbl"><i class="dot" style="--c:var(--n-youtube)"></i>YouTube</span>
+            <div class="field"><label for="c-yttitle">Título del vídeo</label><input id="c-yttitle" maxlength="100"></div>
+            <div class="field"><label for="c-yttype">Tipo</label><select id="c-yttype"><option value="video">Vídeo</option><option value="short">Short</option></select></div>
+            <label class="check"><input type="checkbox" id="c-ytkids"> Hecho para niños</label>
+          </div>
+          <div class="opt" data-net="pinterest">
+            <span class="lbl"><i class="dot" style="--c:var(--n-pinterest)"></i>Pinterest</span>
+            <div class="field"><label for="c-pinboard">Tablero</label><input id="c-pinboard" placeholder="Nombre exacto del tablero"></div>
+            <div class="field"><label for="c-pintitle">Título del pin</label><input id="c-pintitle"></div>
+          </div>
+          <div class="opt" data-net="gmb">
+            <span class="lbl"><i class="dot" style="--c:var(--n-gmb)"></i>Google Business</span>
+            <div class="field"><label for="c-gmbtype">Tipo</label><select id="c-gmbtype"><option value="publication">Novedad (texto)</option><option value="photo">Foto o vídeo para la galería</option></select></div>
+          </div>
+        </div>
+        <div class="field">
+          <label for="c-first">Primer comentario <span class="hint">· opcional, ideal para hashtags</span></label>
+          <input id="c-first">
+        </div>
+        <div class="when">
+          <div class="field"><label for="c-date">Día</label><input type="date" id="c-date"></div>
+          <div class="field"><label for="c-time">Hora <span class="hint" id="c-tz"></span></label><input type="time" id="c-time" step="300"></div>
+          <div class="besthours" id="c-besthours"></div>
+        </div>
+        <label class="check"><input type="checkbox" id="c-autopub" checked><span>Publicar automáticamente <span class="hint">· si lo desmarcas, Metricool te envía un aviso al móvil y lo publicas tú</span></span></label>
+      </div>
+      <aside class="c-side" aria-label="Vista previa">
+        <span class="lbl">Vista previa</span>
+        <div class="prev-tabs" id="c-prevtabs" role="tablist"></div>
+        <div id="c-preview"></div>
+      </aside>
+    </div>
+    <div id="c-issues" class="issues" aria-live="polite"></div>
+    <footer class="c-foot">
+      <button type="button" id="c-del" class="btn ghost danger">Eliminar</button>
+      <button type="button" id="c-dup" class="btn ghost">Duplicar</button>
+      <span class="spacer"></span>
+      <button type="button" id="c-draft" class="btn">Guardar borrador</button>
+      <button type="button" id="c-schedule" class="btn primary">Programar</button>
+    </footer>
+  </form>
+</dialog>
+<div id="toast" class="toast" role="status" hidden></div>
+
+<script>
+(() => {
+'use strict';
+const MC = 'Metricool Social Media Management';
+const NETS = {
+  instagram:{name:'Instagram', limit:2200, fold:125},
+  facebook:{name:'Facebook', limit:63206, fold:480},
+  tiktok:{name:'TikTok', limit:2200},
+  youtube:{name:'YouTube', limit:5000},
+  twitter:{name:'X', limit:280},
+  linkedin:{name:'LinkedIn', limit:3000, fold:210},
+  threads:{name:'Threads', limit:500},
+  bluesky:{name:'Bluesky', limit:300},
+  pinterest:{name:'Pinterest', limit:500},
+  gmb:{name:'Google Business', limit:1500},
+};
+const BEST_NETS = ['instagram','facebook','tiktok','youtube','twitter','linkedin'];
+const DOW = ['lun','mar','mié','jue','vie','sáb','dom'];
+const DOW_LONG = ['lunes','martes','miércoles','jueves','viernes','sábado','domingo'];
+const STATUS = {
+  draft:{label:'Borrador', cls:''},
+  planned:{label:'Sin enviar a Metricool', cls:'warn'},
+  sending:{label:'Enviando…', cls:'warn'},
+  sent:{label:'Programada en Metricool', cls:'ok'},
+  error:{label:'Error al programar', cls:'bad'},
+  unknown:{label:'Por confirmar', cls:'warn'},
+  mc:{label:'En Metricool', cls:'ok'},
+};
+
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const pad = n => String(n).padStart(2,'0');
+const LS = {
+  get(k, d){ try{ const v = localStorage.getItem(k); return v == null ? d : JSON.parse(v); }catch(e){ return d; } },
+  set(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} },
+};
+const use = n => (window.claude && typeof window.claude.use === 'function') ? Promise.resolve(window.claude.use(n)).catch(() => null) : Promise.resolve(null);
+const newId = () => 'p_' + Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
+
+/* ---------- dates (wall time in the brand's time zone) ---------- */
+function partsAt(date, tz){
+  const f = new Intl.DateTimeFormat('en-CA', {timeZone:tz, year:'numeric', month:'2-digit', day:'2-digit', hour:'2-digit', minute:'2-digit', hourCycle:'h23'});
+  const p = Object.fromEntries(f.formatToParts(date).map(x => [x.type, x.value]));
+  return {y:+p.year, m:+p.month, d:+p.day, h:+p.hour % 24, mi:+p.minute};
+}
+function nowParts(){ const p = partsAt(new Date(), S.tz); return {date:`${p.y}-${pad(p.m)}-${pad(p.d)}`, time:`${pad(p.h)}:${pad(p.mi)}`}; }
+const today = () => nowParts().date;
+function tzOffsetMin(ms, tz){ const p = partsAt(new Date(ms), tz); return (Date.UTC(p.y, p.m-1, p.d, p.h, p.mi) - ms) / 60000; }
+function wallToIso(date, time, sec = '00'){
+  const [y,m,d] = date.split('-').map(Number), [h,mi] = time.split(':').map(Number);
+  const guess = Date.UTC(y, m-1, d, h, mi);
+  const o1 = tzOffsetMin(guess, S.tz), off = tzOffsetMin(guess - o1*60000, S.tz);
+  const a = Math.abs(off);
+  return `${date}T${time}:${sec}${off >= 0 ? '+' : '-'}${pad(Math.floor(a/60))}:${pad(a%60)}`;
+}
+function addDays(s, n){ const [y,m,d] = s.split('-').map(Number); return new Date(Date.UTC(y, m-1, d+n)).toISOString().slice(0,10); }
+function addMonths(s, n){ const [y,m] = s.split('-').map(Number); return new Date(Date.UTC(y, m-1+n, 1)).toISOString().slice(0,10); }
+function dow(s){ const [y,m,d] = s.split('-').map(Number); return (new Date(Date.UTC(y, m-1, d)).getUTCDay() + 6) % 7 + 1; }
+const weekStart = s => addDays(s, -(dow(s) - 1));
+const monthStart = s => s.slice(0,8) + '01';
+function fmt(s, o){ const [y,m,d] = s.split('-').map(Number); return new Intl.DateTimeFormat('es-ES', {timeZone:'UTC', ...o}).format(new Date(Date.UTC(y, m-1, d))); }
+const isPast = (date, time) => { const n = nowParts(); return `${date}T${time}` < `${n.date}T${n.time}`; };
+
+/* ---------- state ---------- */
+const S = {
+  posts:new Map(), loaded:false, storeMode:'pending', canWrite:true,
+  view:LS.get('pc.view', 'week'), cursor:null, status:'all', nets:new Set(),
+  tz:Intl.DateTimeFormat().resolvedOptions().timeZone || 'Europe/Madrid',
+  mc:{state:'checking', msg:'', brands:[], brandId:LS.get('pc.brand', null)},
+  best:{net:LS.get('pc.bestnet', 'instagram'), data:null, max:0, state:'idle', key:'', err:''},
+  mcPosts:[], mcKey:'', mcPostsErr:'',
+  sample:null,
+};
+S.cursor = today();
+let DB = null, MCP = null, unBrands = null, unBest = null, unPosts = null;
+
+const brand = () => S.mc.brands.find(b => String(b.id) === String(S.mc.brandId)) || null;
+const mcReady = () => S.mc.state === 'ready' && !!brand();
+function connected(net){ const b = brand(); if(!b || !b.networksData) return null; return !!b.networksData[net + 'Data']; }
+const brandName = () => brand()?.label || 'Tu marca';
+
+/* ---------- toast ---------- */
+let toastT;
+function toast(msg){ const t = $('#toast'); t.textContent = msg; t.hidden = false; clearTimeout(toastT); toastT = setTimeout(() => { t.hidden = true; }, 3800); }
+
+/* ---------- store ---------- */
+async function initStore(){
+  DB = await use('db');
+  const user = await use('user');
+  if(user && typeof user.can === 'function'){ try{ if(await user.can('data.write') === false) S.canWrite = false; }catch(e){} }
+  if(DB){
+    S.storeMode = 'db';
+    DB.collection('posts').onSnapshot(snap => {
+      S.posts = new Map(snap.docs.map(d => [d.id, {...d.data(), id:d.id}]));
+      S.loaded = true; render();
+    }, err => { S.storeErr = err && err.code; S.loaded = true; render(); });
+  } else {
+    S.storeMode = 'local';
+    S.posts = new Map(LS.get('pc.posts', []).map(p => [p.id, p]));
+    S.loaded = true; render();
+  }
+}
+function cleanPost(p){ const o = JSON.parse(JSON.stringify(p)); delete o.id; for(const k of Object.keys(o)) if(k.startsWith('_')) delete o[k]; return o; }
+async function savePost(p){
+  const body = {...cleanPost(p), updatedAt:new Date().toISOString()};
+  S.posts.set(p.id, {...body, id:p.id}); render();
+  if(S.storeMode === 'db'){
+    try{ await DB.collection('posts').doc(p.id).set(body); }
+    catch(e){ storeErr(e); throw e; }
+  } else LS.set('pc.posts', [...S.posts.values()]);
+}
+async function removePost(id){
+  S.posts.delete(id); render();
+  if(S.storeMode === 'db'){ try{ await DB.collection('posts').doc(id).delete(); }catch(e){ storeErr(e); } }
+  else LS.set('pc.posts', [...S.posts.values()]);
+}
+function storeErr(e){
+  const c = e && e.code;
+  if(c === 'invalid_argument'){ S.canWrite = false; toast('No tienes permiso para cambiar esta parrilla. Pide acceso de colaborador a quien la comparte.'); }
+  else if(c === 'quota_exceeded') toast('La parrilla está llena. Elimina publicaciones antiguas para guardar nuevas.');
+  else toast('No se pudo guardar. Comprueba tu conexión e inténtalo de nuevo.');
+  render();
+}
+
+/* ---------- Metricool ---------- */
+const MC_ERR = {
+  needs_reauth:['reauth', 'Tu conexión con Metricool ha caducado. Vuelve a conectarla en claude.ai → Ajustes → Conectores.'],
+  server_not_connected:['missing', 'Añade el conector de Metricool en claude.ai → Ajustes → Conectores para programar desde aquí.'],
+  server_not_found:['missing', 'El conector de Metricool ya no existe. Añádelo de nuevo en claude.ai → Ajustes → Conectores.'],
+  selection_required:['select', 'Tienes varias conexiones de Metricool. Elige cuál usar en el aviso de claude.ai.'],
+  approval_required:['approval', 'La parrilla necesita tu permiso para leer y programar en Metricool.'],
+  not_in_manifest:['approval', 'Metricool está desactivado para esta página. Actívalo para ver tus mejores horas y programar.'],
+  blocked_by_policy:['blocked', 'Tu organización no permite usar Metricool desde esta página.'],
+  not_granted:['unavailable', 'Abre la parrilla en claude.ai para conectarla con Metricool.'],
+  capability_disabled:['unavailable', 'Abre la parrilla en claude.ai para conectarla con Metricool.'],
+  capability_removed:['unavailable', 'Abre la parrilla en claude.ai para conectarla con Metricool.'],
+};
+const AUTHZ = new Set(['needs_reauth','server_not_connected','server_not_found','selection_required','approval_required','not_in_manifest','blocked_by_policy','not_granted','capability_disabled','capability_removed']);
+function mcError(err){
+  const code = (err && err.code) || 'upstream_error';
+  if(AUTHZ.has(code)){
+    const [state, msg] = MC_ERR[code];
+    S.mc.state = state; S.mc.msg = msg; S.mc.brands = [];
+    S.best.data = null; S.best.key = ''; S.mcPosts = []; S.mcKey = '';
+  } else if(!S.mc.brands.length){
+    S.mc.state = 'down'; S.mc.msg = 'Metricool no responde ahora mismo. Se volverá a intentar al actualizar.';
+  }
+  render();
+}
+async function initMc(){
+  MCP = await use('mcp');
+  if(!MCP){ S.mc.state = 'unavailable'; S.mc.msg = MC_ERR.not_granted[1]; render(); return; }
+  watchBrands();
+}
+function setBrands(list){
+  S.mc.brands = Array.isArray(list) ? list.filter(b => b && b.id != null) : [];
+  S.mc.state = S.mc.brands.length ? 'ready' : 'nobrands';
+  S.mc.msg = S.mc.brands.length ? '' : 'Tu cuenta de Metricool no tiene marcas todavía.';
+  if(!brand() && S.mc.brands[0]) S.mc.brandId = String(S.mc.brands[0].id);
+  const b = brand(); if(b && b.timezone) S.tz = b.timezone;
+  render();
+}
+function watchBrands(){
+  if(unBrands) unBrands();
+  let retried = false;
+  unBrands = MCP.watchTool(MC, 'getBrandSettings', null, ev => {
+    if(ev.type === 'data') setBrands(ev.result && ev.result.payload && ev.result.payload.data);
+    else {
+      mcError(ev.error);
+      if(ev.error && ev.error.retryable && !retried){ retried = true; setTimeout(() => MCP.callTool(MC, 'getBrandSettings', {}).then(r => setBrands(r.payload && r.payload.data)).catch(() => {}), (ev.error.retryAfterMs || 1500) + Math.random()*1000); }
+    }
+  }, {cache:{staleTime:600000, gcTime:86400000}});
+}
+async function mcConnect(){
+  if(!MCP) return;
+  S.mc.state = 'connecting'; render();
+  try{
+    const r = await MCP.callTool(MC, 'getBrandSettings', {});
+    setBrands(r.payload && r.payload.data);
+    S.best.key = ''; S.mcKey = '';
+    watchBrands(); render();
+  }catch(e){ mcError(e); }
+}
+function visibleRange(){
+  if(S.view === 'week'){ const s = weekStart(S.cursor); return [s, addDays(s, 6)]; }
+  if(S.view === 'month'){ const s = weekStart(monthStart(S.cursor)); return [s, addDays(s, 41)]; }
+  const t = today(); return [t, addDays(t, 60)];
+}
+function syncWatches(){
+  if(!MCP || !mcReady()) return;
+  const b = brand(), bid = String(b.id);
+  // best times for the displayed week
+  const ws = weekStart(S.view === 'queue' ? today() : S.cursor), we = addDays(ws, 6);
+  const bkey = [bid, S.best.net, ws, S.tz].join('|');
+  if(bkey !== S.best.key){
+    S.best.key = bkey; S.best.state = 'loading';
+    if(unBest) unBest();
+    const input = {brandId:bid, fromDate:wallToIso(ws, '00:00'), toDate:wallToIso(we, '23:59', '59'), timezone:S.tz, socialNetwork:S.best.net};
+    unBest = MCP.watchTool(MC, 'getBestTimeToPostByNetwork', input, ev => {
+      if(ev.type === 'data'){
+        const rows = ev.result && ev.result.payload && ev.result.payload.data;
+        const data = {}; let max = 0;
+        if(Array.isArray(rows)) for(const r of rows){
+          const d = +r.dayOfWeek; if(!(d >= 1 && d <= 7)) continue;
+          data[d] = {};
+          for(const h of (r.bestTimesByHour || [])){ const v = +h.value || 0; data[d][+h.hourOfDay] = v; if(v > max) max = v; }
+        }
+        S.best.data = max ? data : null; S.best.max = max; S.best.state = 'ready'; S.best.err = ''; render();
+      } else {
+        const c = ev.error && ev.error.code;
+        if(AUTHZ.has(c)) mcError(ev.error);
+        else { S.best.state = S.best.data ? 'ready' : 'error'; S.best.err = c === 'tool_error' ? toolMsg(ev.error) : 'No se pudieron cargar las mejores horas.'; render(); }
+      }
+    }, {cache:{staleTime:6*3600e3, gcTime:7*86400e3}});
+  }
+  // posts already scheduled in Metricool for the visible range
+  const [rs, re] = visibleRange();
+  const pkey = [bid, rs, re, S.tz].join('|');
+  if(pkey !== S.mcKey){
+    S.mcKey = pkey;
+    if(unPosts) unPosts();
+    const input = {brandId:bid, fromDate:wallToIso(rs, '00:00'), toDate:wallToIso(re, '23:59', '59'), timezone:S.tz};
+    unPosts = MCP.watchTool(MC, 'getScheduledPosts', input, ev => {
+      if(ev.type === 'data'){
+        const rows = ev.result && ev.result.payload && ev.result.payload.data;
+        S.mcPosts = Array.isArray(rows) ? rows.map(parseMcPost).filter(Boolean) : [];
+        S.mcPostsErr = ''; render();
+      } else {
+        const c = ev.error && ev.error.code;
+        if(AUTHZ.has(c)) mcError(ev.error);
+        else { S.mcPostsErr = 'No se pudieron leer las publicaciones de Metricool.'; render(); }
+      }
+    }, {cache:{staleTime:60000, gcTime:86400000}, refetchInterval:120000});
+  }
+}
+function parseMcPost(it, i){
+  if(!it || typeof it !== 'object') return null;
+  const pd = it.publicationDate || {};
+  const dt = String(pd.dateTime || it.dateTime || it.date || '');
+  const date = dt.slice(0,10), time = dt.slice(11,16) || '00:00';
+  if(!/^\d{4}-\d\d-\d\d$/.test(date)) return null;
+  const nets = (Array.isArray(it.providers) ? it.providers : []).map(p => p && (p.network || p.provider)).filter(n => NETS[n]);
+  return {kind:'mc', id:String(it.id ?? it.uuid ?? ('mc' + i)), date, time, networks:nets, text:String(it.text || ''), status:'mc',
+    media:Array.isArray(it.media) ? it.media.map(m => typeof m === 'string' ? m : (m && m.url) || '').filter(Boolean) : [],
+    firstComment:String(it.firstCommentText || ''), plannerUrl:typeof it.plannerUrl === 'string' ? it.plannerUrl : null};
+}
+function toolMsg(e){
+  const r = e && e.result; const blocks = r && Array.isArray(r.content) ? r.content : [];
+  const t = (blocks.find(b => b && b.type === 'text') || {}).text || (e && e.message) || 'Metricool rechazó la petición.';
+  return String(t).slice(0, 400);
+}
+function findKey(o, key, depth = 0){
+  if(!o || typeof o !== 'object' || depth > 6) return null;
+  if(typeof o[key] === 'string') return o[key];
+  for(const v of Object.values(o)){ const r = findKey(v, key, depth + 1); if(r) return r; }
+  return null;
+}
+function buildInfo(p){
+  const nets = p.networks;
+  const info = {
+    autoPublish:p.autoPublish !== false, descendants:[], draft:false,
+    firstCommentText:p.firstComment || '', hasNotReadNotes:false,
+    media:p.media || [], mediaAltText:[], providers:nets.map(n => ({network:n})),
+    publicationDate:{dateTime:`${p.date}T${p.time}:00`, timezone:S.tz},
+    shortener:false, smartLinkData:{ids:[]}, text:p.text || '',
+  };
+  const isStory = n => (n === 'instagram' && p.igType === 'STORY') || (n === 'facebook' && p.fbType === 'STORY');
+  if(nets.length && nets.every(isStory)) delete info.text;
+  for(const n of nets){
+    if(n === 'twitter') info.twitterData = {tags:[]};
+    if(n === 'facebook') info.facebookData = {type:p.fbType || 'POST'};
+    if(n === 'instagram') info.instagramData = {type:p.igType || 'POST'};
+    if(n === 'linkedin') info.linkedinData = {type:'post'};
+    if(n === 'pinterest') info.pinterestData = {boardId:p.pinBoard || '', pinTitle:p.pinTitle || ''};
+    if(n === 'youtube') info.youtubeData = {title:p.ytTitle || '', type:p.ytType || 'video', privacy:'public', madeForKids:!!p.ytKids};
+    if(n === 'tiktok') info.tiktokData = {privacyOption:'PUBLIC_TO_EVERYONE'};
+    if(n === 'bluesky') info.blueskyData = {postLanguages:['es']};
+    if(n === 'threads') info.threadsData = {allowedCountryCodes:[]};
+    if(n === 'gmb') info.gmbData = {type:p.gmbType || 'publication'};
+  }
+  return info;
+}
+async function sendToMc(p){
+  const b = brand(); if(!b || !MCP) return;
+  const base = {...p, brandId:String(b.id), error:null};
+  delete base._ro; delete base._new;
+  try{ await savePost({...base, status:'sending'}); }catch(e){ return; }
+  toast('Enviando a Metricool…');
+  const input = {blogId:String(b.id), date:wallToIso(p.date, p.time), info:JSON.stringify(buildInfo(p))};
+  try{
+    const r = await MCP.callTool(MC, 'createScheduledPost', input, {cache:false});
+    const pl = r.payload;
+    const failed = (typeof pl === 'string' && /^\s*error/i.test(pl)) || (pl && typeof pl === 'object' && (pl.error || pl.success === false));
+    if(failed){
+      const msg = typeof pl === 'string' ? pl : String(pl.error && (pl.error.message || pl.error) || pl.message || 'Metricool rechazó la publicación.');
+      await savePost({...base, status:'error', error:msg.slice(0, 400)});
+      toast('Metricool no aceptó la publicación. Revisa el motivo en la tarjeta.');
+      return;
+    }
+    await savePost({...base, status:'sent', plannerUrl:findKey(pl, 'plannerUrl'), sentAt:new Date().toISOString()});
+    toast('Programada en Metricool');
+    MCP.invalidate(MC, 'getScheduledPosts').catch(() => {});
+  }catch(e){
+    const c = e && e.code;
+    if(AUTHZ.has(c)){
+      await savePost({...base, status:'planned', error:MC_ERR[c][1]}).catch(() => {});
+      mcError(e); toast(MC_ERR[c][1]);
+    } else if(c === 'tool_error'){
+      await savePost({...base, status:'error', error:toolMsg(e)}).catch(() => {});
+      toast('Metricool no aceptó la publicación. Revisa el motivo en la tarjeta.');
+    } else {
+      await savePost({...base, status:'unknown', error:'Metricool no confirmó la programación. Mira tu planificador de Metricool antes de volver a enviarla.'}).catch(() => {});
+      toast('Sin confirmación de Metricool. Compruébalo antes de reintentar.');
+    }
+  }
+}
+
+/* ---------- items ---------- */
+function localItems(){
+  return [...S.posts.values()].filter(p => p && p.date && Array.isArray(p.networks)).map(p => ({...p, kind:'local', time:p.time || '10:00'}));
+}
+function allItems(){
+  const loc = localItems();
+  const keys = new Set(loc.filter(p => p.status === 'sent').map(p => `${p.date}T${p.time}|${(p.text || '').slice(0, 40)}`));
+  const mc = S.mcPosts.filter(m => !keys.has(`${m.date}T${m.time}|${m.text.slice(0, 40)}`));
+  let items = loc.concat(mc);
+  if(S.nets.size) items = items.filter(i => i.networks.some(n => S.nets.has(n)));
+  if(S.status !== 'all') items = items.filter(i => S.status === 'pending' ? ['planned','error','unknown'].includes(i.status) : S.status === 'sent' ? ['sent','mc','sending'].includes(i.status) : i.status === S.status);
+  return items.sort((a, b) => (`${a.date}T${a.time}`).localeCompare(`${b.date}T${b.time}`));
+}
+const movable = it => it.kind === 'local' && !['sent','sending'].includes(it.status) && S.canWrite;
+const snip = t => (t || '').replace(/\s+/g, ' ').trim() || 'Sin texto';
+function chip(it){
+  const mk = it.status === 'sent' ? '<span class="mk" aria-label="Programada en Metricool">✓</span>' : it.status === 'error' ? '<span class="mk">!</span>' : it.status === 'mc' ? '<span class="mk">MC</span>' : '';
+  const label = `${it.time} · ${it.networks.map(n => NETS[n].name).join(', ')} · ${STATUS[it.status] ? STATUS[it.status].label : ''}`;
+  return `<button type="button" class="chip st-${esc(it.status)}" data-open="${it.kind}:${esc(it.id)}" draggable="${movable(it)}" title="${esc(label)}">`
+    + `<span class="chip-time">${esc(it.time)}</span><span class="dots">${it.networks.map(n => `<i class="dot" style="--c:var(--n-${n})"></i>`).join('')}</span>`
+    + `<span class="chip-txt">${esc(snip(it.text))}</span>${mk}</button>`;
+}
+function heatAt(d, h){ if(!S.best.data || !S.best.max) return 0; const v = (S.best.data[d] || {})[h] || 0; return +(v / S.best.max).toFixed(3); }
+function topSlots(n = 3, onlyDow){
+  if(!S.best.data) return [];
+  const all = [];
+  for(const d of Object.keys(S.best.data)) if(!onlyDow || +d === onlyDow) for(const h of Object.keys(S.best.data[d])) all.push({d:+d, h:+h, v:S.best.data[d][h]});
+  return all.sort((a, b) => b.v - a.v).slice(0, n);
+}
+
+/* ---------- views ---------- */
+function renderWeek(items){
+  const start = weekStart(S.cursor), days = [...Array(7)].map((_, i) => addDays(start, i));
+  const n = nowParts(), nowH = +n.time.slice(0,2);
+  const cells = {};
+  for(const it of items) if(it.date >= days[0] && it.date <= days[6]) (cells[`${it.date}|${+it.time.slice(0,2)}`] ||= []).push(it);
+  const count = d => items.filter(i => i.date === d).length;
+  let h = `<div class="wk-scroll" id="wk-scroll"><div class="wk" role="grid" aria-label="Semana del ${esc(fmt(days[0], {day:'numeric', month:'long'}))}">`;
+  h += `<div class="wk-h corner"></div>`;
+  days.forEach((d, i) => {
+    const c = count(d);
+    h += `<div class="wk-h${d === n.date ? ' is-today' : ''}"><span class="dn">${DOW[i]}</span><span class="dd">${+d.slice(8)}</span><span class="dc">${c ? c + (c === 1 ? ' publicación' : ' publicaciones') : '&nbsp;'}</span></div>`;
+  });
+  for(let hr = 0; hr < 24; hr++){
+    h += `<div class="wk-t" id="hr-${hr}">${pad(hr)}:00</div>`;
+    days.forEach((d, i) => {
+      const past = d < n.date || (d === n.date && hr < nowH);
+      const heat = past ? 0 : heatAt(i + 1, hr);
+      const list = cells[`${d}|${hr}`] || [];
+      h += `<div class="wk-c${past ? ' past' : ''}${d === n.date && hr === nowH ? ' now' : ''}" data-slot="${d}|${pad(hr)}" style="--h:${heat}">`
+        + list.map(chip).join('')
+        + (past || !S.canWrite ? '' : `<button type="button" class="slot-add" data-new="${d}|${pad(hr)}:00" aria-label="Nueva publicación el ${DOW_LONG[i]} ${+d.slice(8)} a las ${pad(hr)}:00">+</button>`)
+        + `</div>`;
+    });
+  }
+  return h + `</div></div>`;
+}
+function renderMonth(items){
+  const ms = monthStart(S.cursor), gs = weekStart(ms), td = today();
+  const by = {}; for(const it of items) (by[it.date] ||= []).push(it);
+  let h = `<div class="mo" role="grid">` + DOW.map(d => `<div class="mo-h">${d}</div>`).join('');
+  for(let i = 0; i < 42; i++){
+    const d = addDays(gs, i), list = by[d] || [], out = d.slice(0,7) !== ms.slice(0,7);
+    const canAdd = d >= td && S.canWrite;
+    h += `<div class="mo-c${out ? ' out' : ''}${d === td ? ' today' : ''}" data-slot="${d}|" ${canAdd ? '' : 'style="cursor:default"'}>`
+      + `<div class="mo-d"><span>${+d.slice(8)}</span></div>`
+      + list.slice(0, 3).map(chip).join('')
+      + (list.length > 3 ? `<button type="button" class="mo-more" data-goweek="${d}">+${list.length - 3} más</button>` : '')
+      + `<div class="mo-dots">${list.slice(0, 8).map(it => `<i class="dot" style="--c:var(--n-${it.networks[0] || 'instagram'})"></i>`).join('')}</div>`
+      + (canAdd ? `<button type="button" class="slot-add" data-new="${d}|" aria-label="Nueva publicación el ${esc(fmt(d, {day:'numeric', month:'long'}))}">+</button>` : '')
+      + `</div>`;
+  }
+  return h + `</div>`;
+}
+function renderQueue(items){
+  const td = today();
+  const list = items.filter(i => i.date >= td || (i.kind === 'local' && ['draft','planned','error','unknown'].includes(i.status)));
+  if(!list.length) return emptyState();
+  const by = {}; for(const it of list) (by[it.date] ||= []).push(it);
+  return `<div class="q">` + Object.keys(by).sort().map(d => {
+    const overdue = d < td;
+    return `<section class="q-day"><h3>${esc(fmt(d, {weekday:'long', day:'numeric', month:'long'}))}${d === td ? ' <span class="pill ok">Hoy</span>' : ''}${overdue ? ' <span class="pill bad">Fecha pasada</span>' : ''}</h3><div class="q-list">`
+      + by[d].map(it => {
+        const st = STATUS[it.status] || STATUS.draft;
+        const canSend = it.kind === 'local' && ['planned','error'].includes(it.status) && mcReady() && S.canWrite && !overdue;
+        return `<div class="q-item" data-open="${it.kind}:${esc(it.id)}" role="button" tabindex="0">`
+          + `<span class="tm">${esc(it.time)}</span>`
+          + `<div class="tx"><p>${esc(snip(it.text))}</p><div class="meta">${it.networks.map(n => `<span class="netname"><i class="dot" style="--c:var(--n-${n})"></i>${NETS[n].name}</span>`).join('')}${it.media && it.media.length ? `<span>· ${it.media.length} archivo${it.media.length > 1 ? 's' : ''}</span>` : ''}${it.example ? '<span class="pill">Ejemplo</span>' : ''}</div>`
+          + (it.error && it.status !== 'sent' ? `<span class="err-line">${esc(it.error)}</span>` : '') + `</div>`
+          + `<div class="acts"><span class="pill ${st.cls}"><i></i>${st.label}</span>${canSend ? `<button type="button" class="btn sm" data-send="${esc(it.id)}">Enviar a Metricool</button>` : ''}${it.plannerUrl ? `<a class="link-btn" href="${esc(it.plannerUrl)}" target="_blank" rel="noopener">Abrir en Metricool</a>` : ''}</div>`
+          + `</div>`;
+      }).join('') + `</div></section>`;
+  }).join('') + `</div>`;
+}
+function emptyState(){
+  if(!S.loaded) return `<div class="empty"><h3>Cargando tu parrilla…</h3><p>Tus publicaciones aparecerán aquí en un momento.</p></div>`;
+  const filtered = S.nets.size || S.status !== 'all';
+  return `<div class="empty"><h3>${filtered ? 'Nada con estos filtros' : 'Tu parrilla está vacía'}</h3><p>${filtered ? 'Quita algún filtro de la columna lateral para ver más publicaciones.' : 'Crea tu primera publicación: elige redes, escribe el texto, añade la imagen y ponle día y hora. Las franjas más oscuras del calendario son tus mejores horas.'}</p>${!filtered && S.canWrite ? '<button type="button" class="btn primary" data-new="|">Nueva publicación</button>' : ''}</div>`;
+}
+
+function renderRail(items){
+  const b = brand(); let h = '';
+  // account
+  h += `<section class="panel sec"><h2>Metricool</h2>`;
+  if(b){
+    const nets = Object.keys(NETS).filter(n => connected(n));
+    h += `<div class="acct"><span class="avatar">${esc((b.label || '?').trim().charAt(0).toUpperCase())}</span><div><b>${esc(b.label || 'Marca')}</b><span class="hint">${esc(S.tz)}</span></div></div>`;
+    if(S.mc.brands.length > 1) h += `<div class="field" style="margin-top:10px"><label for="brand-sel" class="sr">Marca</label><select id="brand-sel">${S.mc.brands.map(x => `<option value="${esc(x.id)}"${String(x.id) === String(S.mc.brandId) ? ' selected' : ''}>${esc(x.label || x.id)}</option>`).join('')}</select></div>`;
+    h += `<div class="netrow">${nets.length ? nets.map(n => `<span class="pill"><i style="color:var(--n-${n})"></i>${NETS[n].name}</span>`).join('') : '<span class="hint">Sin redes conectadas en esta marca.</span>'}</div>`;
+    if(S.mcPostsErr) h += `<p class="err-line" style="margin-top:8px">${esc(S.mcPostsErr)}</p>`;
+  } else {
+    const st = S.mc.state;
+    h += `<p>${esc(st === 'checking' || st === 'connecting' ? 'Conectando con Metricool…' : S.mc.msg || 'Conecta Metricool para programar de verdad en tus redes.')}</p>`;
+    if(['approval','down'].includes(st) && MCP) h += `<button type="button" class="btn primary sm" id="mc-connect">Conectar Metricool</button>`;
+    h += `<p class="hint" style="margin-top:10px">Sin conexión puedes planificar igual; las publicaciones quedan en la parrilla hasta que las envíes.</p>`;
+  }
+  h += `</section>`;
+  // best times
+  h += `<section class="panel sec"><h2>Mejores horas</h2>`;
+  if(b){
+    h += `<div class="field"><label for="best-net" class="sr">Red</label><select id="best-net">${BEST_NETS.map(n => `<option value="${n}"${n === S.best.net ? ' selected' : ''}>${NETS[n].name}</option>`).join('')}</select></div>`;
+    if(S.best.data){
+      h += `<div class="heat" aria-label="Mapa de calor de audiencia por día y hora">`;
+      for(let d = 1; d <= 7; d++){ h += `<span>${DOW[d - 1]}</span>`; for(let hr = 0; hr < 24; hr++) h += `<i style="--h:${heatAt(d, hr)}" title="${DOW_LONG[d - 1]} ${pad(hr)}:00"></i>`; }
+      h += `</div><div class="heat-axis"><span>0h</span><span>6h</span><span>12h</span><span>18h</span><span>23h</span></div>`;
+      h += `<div class="tops">${topSlots(3).map(s => `<span class="pill ok">${DOW[s.d - 1]} ${pad(s.h)}:00</span>`).join('')}</div>`;
+      h += `<p class="hint" style="margin:10px 0 0">Datos de tu audiencia en Metricool. El calendario semanal se sombrea con estas franjas.</p>`;
+    } else h += `<p style="margin-top:10px">${S.best.state === 'loading' ? 'Calculando tus franjas…' : esc(S.best.err || 'Metricool aún no tiene datos suficientes de esta red.')}</p>`;
+  } else h += `<p>Cuando conectes Metricool verás aquí a qué horas tu audiencia está más activa, y el calendario se sombreará con esas franjas.</p>`;
+  h += `</section>`;
+  // stats + filters
+  const [rs, re] = visibleRange();
+  const inRange = items.filter(i => i.date >= rs && i.date <= re);
+  const cnt = s => inRange.filter(i => s.includes(i.status)).length;
+  h += `<section class="panel sec"><h2>${S.view === 'week' ? 'Esta semana' : S.view === 'month' ? 'Este mes' : 'Próximos 60 días'}</h2><div class="stats">`
+    + `<div class="stat"><b class="tnum">${cnt(['sent','mc','sending'])}</b><span>En Metricool</span></div>`
+    + `<div class="stat"><b class="tnum">${cnt(['planned','error','unknown'])}</b><span>Por enviar</span></div>`
+    + `<div class="stat"><b class="tnum">${cnt(['draft'])}</b><span>Borradores</span></div></div></section>`;
+  h += `<section class="panel sec"><h2>Filtrar</h2><div class="filters" style="margin-bottom:10px">`
+    + [['all','Todo'],['draft','Borradores'],['pending','Por enviar'],['sent','En Metricool']].map(([k, l]) => `<button type="button" class="fchip" data-status="${k}" aria-pressed="${S.status === k}">${l}</button>`).join('')
+    + `</div><div class="filters">` + Object.keys(NETS).map(n => `<label class="fchip"><input type="checkbox" data-netf="${n}"${S.nets.has(n) ? ' checked' : ''}><i class="dot" style="--c:var(--n-${n})"></i>${NETS[n].name}</label>`).join('') + `</div></section>`;
+  h += `<section class="panel sec"><h2>Leyenda</h2><div class="legend">`
+    + `<span><span class="chip st-draft"><span class="chip-txt">Borrador</span></span></span>`
+    + `<span><span class="chip st-planned"><span class="chip-txt">Lista, sin enviar a Metricool</span></span></span>`
+    + `<span><span class="chip st-sent"><span class="chip-txt">Programada en Metricool</span><span class="mk">✓</span></span></span>`
+    + `<span><span class="chip st-error"><span class="chip-txt">Metricool la rechazó</span><span class="mk">!</span></span></span>`
+    + `<span><span class="chip st-mc"><span class="chip-txt">Creada directamente en Metricool</span><span class="mk">MC</span></span></span>`
+    + `</div></section>`;
+  return h;
+}
+
+let firstWeek = true;
+function render(){
+  for(const v of ['week','month','queue']) $('#tab-' + v).setAttribute('aria-selected', String(S.view === v));
+  $('#period').hidden = S.view === 'queue';
+  const ws = weekStart(S.cursor);
+  $('#period-label').textContent = S.view === 'week'
+    ? (ws.slice(5,7) === addDays(ws, 6).slice(5,7) ? `${+ws.slice(8)}–${+addDays(ws, 6).slice(8)} ${fmt(ws, {month:'short'})}` : `${fmt(ws, {day:'numeric', month:'short'})} – ${fmt(addDays(ws, 6), {day:'numeric', month:'short'})}`)
+    : fmt(S.cursor, {month:'long', year:'numeric'});
+  // pill
+  const st = S.mc.state;
+  $('#mc-pill').innerHTML = mcReady() ? `<span class="pill ok"><i></i>Metricool · ${esc(brandName())}</span>`
+    : st === 'checking' || st === 'connecting' ? `<span class="pill"><i></i>Conectando…</span>`
+    : `<span class="pill warn"><i></i>Metricool sin conectar</span>`;
+  $('#new-post').disabled = !S.canWrite;
+  const banners = [];
+  if(S.storeMode === 'local') banners.push('Esta vista no tiene la base de datos compartida: las publicaciones se guardan solo en este navegador.');
+  if(!S.canWrite) banners.push('Solo lectura: puedes ver la parrilla, pero no cambiarla.');
+  if(S.storeErr) banners.push('No se pudo sincronizar la parrilla. Recarga la página.');
+  $('#banner').innerHTML = banners.map(t => `<div class="banner">${esc(t)}</div>`).join('');
+
+  const items = allItems();
+  const sc = $('#wk-scroll'); const keep = sc ? [sc.scrollTop, sc.scrollLeft] : null;
+  const view = $('#view');
+  if(!S.loaded && S.view !== 'queue') view.innerHTML = emptyState();
+  else view.innerHTML = S.view === 'week' ? renderWeek(items) : S.view === 'month' ? renderMonth(items) : renderQueue(items);
+  const sc2 = $('#wk-scroll');
+  if(sc2){
+    if(keep && !firstWeek){ sc2.scrollTop = keep[0]; sc2.scrollLeft = keep[1]; }
+    else { const r = $('#hr-7'); if(r) sc2.scrollTop = r.offsetTop - 44; firstWeek = false; }
+  }
+  $('#rail').innerHTML = renderRail(items);
+  if($('#composer').open) refreshComposer();
+  syncWatches();
+}
+
+/* ---------- composer ---------- */
+const dlg = $('#composer');
+let C = null, prevNet = null, aiPrev = null, delArm = 0;
+const isVideo = u => /\.(mp4|mov|m4v|webm|avi)(\?|#|$)/i.test(u);
+function defaultNets(){
+  const last = LS.get('pc.lastnets', null);
+  if(Array.isArray(last) && last.length) return last.filter(n => NETS[n]);
+  const b = brand(); const con = Object.keys(NETS).filter(n => connected(n));
+  return b && con.length ? con.slice(0, 2) : ['instagram'];
+}
+function nextSlot(date){
+  const d = date || today();
+  const tops = topSlots(1, dow(d));
+  if(tops.length){ const t = `${pad(tops[0].h)}:00`; if(!isPast(d, t)) return t; }
+  if(d === today()){ const n = nowParts(); const h = Math.min(23, +n.time.slice(0,2) + 1); return `${pad(h)}:00`; }
+  return '10:00';
+}
+function newPost(date, time){
+  if(!S.canWrite) return;
+  const d = date || today();
+  openComposer({id:newId(), networks:defaultNets(), text:'', media:[], firstComment:'', igType:'POST', fbType:'POST', ytTitle:'', ytType:'video', ytKids:false, pinBoard:'', pinTitle:'', gmbType:'publication',
+    date:d, time:time || nextSlot(d), autoPublish:true, status:'draft', createdAt:new Date().toISOString(), _new:true});
+}
+function openComposer(p){
+  C = JSON.parse(JSON.stringify(p));
+  C._ro = p.kind === 'mc' || ['sent','sending'].includes(p.status) || !S.canWrite;
+  C._new = !!p._new;
+  aiPrev = null; delArm = 0; prevNet = null;
+  fillComposer();
+  if(!dlg.open) dlg.showModal();
+  if(!C._ro) setTimeout(() => $('#c-text').focus(), 30);
+}
+function fillComposer(){
+  const ro = C._ro;
+  $('#c-title').textContent = C.kind === 'mc' ? 'Publicación de Metricool' : C._new ? 'Nueva publicación' : ro ? 'Publicación programada' : 'Editar publicación';
+  const st = STATUS[C.status] || STATUS.draft;
+  $('#c-status').innerHTML = C._new ? '' : `<span class="pill ${st.cls}"><i></i>${st.label}</span>${C.example ? ' <span class="pill">Ejemplo</span>' : ''}`;
+  let ron = '';
+  if(C.kind === 'mc') ron = `Esta publicación se creó directamente en Metricool. Para cambiarla, ${C.plannerUrl ? `<a href="${esc(C.plannerUrl)}" target="_blank" rel="noopener">ábrela en Metricool</a>` : 'ábrela en tu planificador de Metricool'}.`;
+  else if(C.status === 'sent') ron = `Ya está programada en Metricool, que la publicará a su hora. Para cambiarla, ${C.plannerUrl ? `<a href="${esc(C.plannerUrl)}" target="_blank" rel="noopener">ábrela en Metricool</a>` : 'hazlo en tu planificador de Metricool'}, o duplícala para crear otra.`;
+  else if(C.status === 'sending') ron = 'Enviando a Metricool…';
+  else if(!S.canWrite) ron = 'Solo lectura.';
+  $('#c-ro').innerHTML = ron ? `<div class="ro-note">${ron}</div>` : '';
+  $('#c-netlist').innerHTML = Object.keys(NETS).map(n => {
+    const con = connected(n);
+    return `<label class="netchip${con === false ? ' dim' : ''}" style="--c:var(--n-${n})" ${con === false ? 'title="No conectada en esta marca de Metricool"' : ''}><input type="checkbox" id="net-${n}" value="${n}"${C.networks.includes(n) ? ' checked' : ''}${ro ? ' disabled' : ''}><i class="dot"></i>${NETS[n].name}</label>`;
+  }).join('');
+  const set = (id, v) => { const el = $(id); if(el.type === 'checkbox') el.checked = !!v; else el.value = v ?? ''; el.disabled = ro; };
+  set('#c-text', C.text); set('#c-media', (C.media || []).join('\n')); set('#c-first', C.firstComment);
+  set('#c-igtype', C.igType || 'POST'); set('#c-fbtype', C.fbType || 'POST'); set('#c-yttitle', C.ytTitle); set('#c-yttype', C.ytType || 'video'); set('#c-ytkids', C.ytKids);
+  set('#c-pinboard', C.pinBoard); set('#c-pintitle', C.pinTitle); set('#c-gmbtype', C.gmbType || 'publication');
+  set('#c-date', C.date); set('#c-time', C.time); set('#c-autopub', C.autoPublish !== false);
+  $('#c-tz').textContent = '· ' + S.tz;
+  $('#c-date').min = C._ro ? '' : today();
+  $('#c-ai').hidden = !S.sample || ro; $('#c-ai-undo').hidden = true;
+  $('#c-del').hidden = C._new || C.kind === 'mc' || !S.canWrite;
+  $('#c-del').textContent = C.status === 'sent' ? 'Quitar de la parrilla' : 'Eliminar';
+  $('#c-dup').hidden = C._new || !S.canWrite;
+  $('#c-draft').hidden = ro; $('#c-schedule').hidden = ro;
+  refreshComposer();
+}
+function readComposer(){
+  if(!C || C._ro) return;
+  C.networks = Object.keys(NETS).filter(n => $('#net-' + n) && $('#net-' + n).checked);
+  C.text = $('#c-text').value;
+  C.media = $('#c-media').value.split(/\n+/).map(s => s.trim()).filter(Boolean);
+  C.firstComment = $('#c-first').value.trim();
+  C.igType = $('#c-igtype').value; C.fbType = $('#c-fbtype').value;
+  C.ytTitle = $('#c-yttitle').value.trim(); C.ytType = $('#c-yttype').value; C.ytKids = $('#c-ytkids').checked;
+  C.pinBoard = $('#c-pinboard').value.trim(); C.pinTitle = $('#c-pintitle').value.trim();
+  C.gmbType = $('#c-gmbtype').value;
+  C.date = $('#c-date').value; C.time = $('#c-time').value;
+  C.autoPublish = $('#c-autopub').checked;
+}
+function validate(p){
+  const err = [], warn = [];
+  const media = p.media || [], vids = media.filter(isVideo), imgs = media.filter(u => !isVideo(u));
+  const nets = p.networks || [];
+  if(!nets.length) err.push('Elige al menos una red.');
+  const storyOnly = nets.length && nets.every(n => (n === 'instagram' && p.igType === 'STORY') || (n === 'facebook' && p.fbType === 'STORY') || (n === 'gmb' && p.gmbType === 'photo'));
+  if(!(p.text || '').trim() && !storyOnly) err.push('Escribe el texto de la publicación.');
+  for(const n of nets){
+    const len = [...(p.text || '')].length, lim = NETS[n].limit;
+    if(len > lim){
+      if(n === 'twitter') warn.push(`El texto pasa de 280 caracteres. Solo se publicará si la cuenta de X es Premium; si no, Metricool lo rechazará.`);
+      else if(n === 'bluesky') err.push('Bluesky admite como máximo 300 caracteres. Acorta el texto.');
+      else err.push(`${NETS[n].name} admite como máximo ${lim.toLocaleString('es-ES')} caracteres.`);
+    }
+    if(connected(n) === false) warn.push(`${NETS[n].name} no está conectada en la marca de Metricool elegida.`);
+  }
+  if(nets.includes('instagram')){
+    if(!media.length) err.push('Instagram necesita al menos una imagen o un vídeo.');
+    else if(p.igType === 'REEL' && !vids.length) err.push('Un Reel de Instagram necesita un vídeo.');
+  }
+  if(nets.includes('facebook')){
+    if(p.fbType === 'REEL' && !vids.length) err.push('Un Reel de Facebook necesita un vídeo.');
+    if(p.fbType === 'STORY' && !media.length) err.push('Una historia de Facebook necesita una imagen o un vídeo.');
+  }
+  if(nets.includes('tiktok') && !media.length) err.push('TikTok necesita al menos una imagen o un vídeo.');
+  if(nets.includes('youtube')){
+    if(!vids.length) err.push('YouTube necesita un vídeo (enlace a .mp4, .mov…).');
+    if(!p.ytTitle) err.push('Ponle título al vídeo de YouTube.');
+  }
+  if(nets.includes('pinterest')){
+    if(!imgs.length) err.push('Pinterest necesita una imagen.');
+    if(!p.pinBoard) err.push('Indica el tablero de Pinterest.');
+  }
+  if(nets.includes('gmb') && p.gmbType === 'photo' && !media.length) err.push('La galería de Google Business necesita una imagen o un vídeo.');
+  if(media.some(u => !/^https:\/\//i.test(u))) err.push('Los enlaces de imagen o vídeo deben empezar por https://.');
+  if(!p.date || !p.time) err.push('Elige día y hora.');
+  else if(isPast(p.date, p.time)) err.push('La fecha y hora ya han pasado. Elige un momento futuro.');
+  if(p.status === 'unknown') warn.push('Esta publicación pudo quedar programada en Metricool. Compruébalo allí antes de volver a enviarla.');
+  return {err, warn};
+}
+function hl(t){ return esc(t).replace(/(^|[\s(])([#@][\p{L}\p{N}_]+)/gu, '$1<span class="tag">$2</span>'); }
+function previewHTML(n){
+  const t = C.text || '', lim = NETS[n].limit, fold = NETS[n].fold;
+  const chars = [...t];
+  let body;
+  if(chars.length > lim) body = hl(chars.slice(0, lim).join('')) + `<mark class="over">${esc(chars.slice(lim).join(''))}</mark>`;
+  else if(fold && chars.length > fold) body = hl(chars.slice(0, fold).join('')) + `<span class="more">… más</span>`;
+  else body = hl(t);
+  const media = C.media || [];
+  const first = media[0];
+  const shape = n === 'tiktok' || (n === 'instagram' && C.igType !== 'POST') || (n === 'facebook' && C.fbType !== 'POST') || (n === 'youtube' && C.ytType === 'short') ? 'tall' : n === 'youtube' ? 'wide' : '';
+  const mediaBox = first ? `<div class="pv-m ${shape}">${isVideo(first) ? 'VÍDEO' : 'IMAGEN'}${media.length > 1 ? ` · 1/${media.length}` : ''}<br>${esc(first.split('/').pop().slice(0, 60))}</div>` : '';
+  const head = `<div class="pv-h"><span class="avatar">${esc(brandName().charAt(0).toUpperCase())}</span><div><b>${esc(brandName())}</b><small>${esc(fmt(C.date || today(), {weekday:'short', day:'numeric', month:'short'}))} · ${esc(C.time || '')}</small></div></div>`;
+  const mediaFirst = ['instagram','tiktok','pinterest','youtube'].includes(n);
+  const title = n === 'youtube' && C.ytTitle ? `<div class="pv-t"><b>${esc(C.ytTitle)}</b></div>` : n === 'pinterest' && C.pinTitle ? `<div class="pv-t"><b>${esc(C.pinTitle)}</b></div>` : '';
+  const text = t ? `<div class="pv-t">${n === 'instagram' ? `<b>${esc(brandName())}</b> ` : ''}${body}</div>` : '';
+  const fc = C.firstComment ? `<div class="pv-fc">💬 ${hl(C.firstComment)}</div>` : '';
+  const card = mediaFirst ? head + (mediaBox || `<div class="pv-m ${shape}">Falta la imagen o el vídeo</div>`) + title + text + fc : head + text + mediaBox + fc;
+  const notes = [];
+  if(fold && chars.length > fold && chars.length <= lim) notes.push(`${NETS[n].name} corta el texto en el feed a unos ${fold} caracteres.`);
+  if(n === 'instagram' && C.igType === 'STORY') notes.push('Las historias no llevan texto: solo se publica la imagen o el vídeo.');
+  return `<div class="pv">${card}</div>` + notes.map(x => `<p class="pv-note">${esc(x)}</p>`).join('');
+}
+function refreshComposer(){
+  if(!C) return;
+  const nets = C.networks;
+  const len = [...(C.text || '')].length;
+  $('#c-counters').innerHTML = nets.map(n => `<span class="${len > NETS[n].limit ? 'over' : ''}">${NETS[n].name} ${len.toLocaleString('es-ES')}/${NETS[n].limit.toLocaleString('es-ES')}</span>`).join('');
+  $('#c-thumbs').innerHTML = (C.media || []).map(u => `<span class="thumb"><b>${isVideo(u) ? 'VÍDEO' : 'IMG'}</b><span>${esc(u.replace(/^https?:\/\//, ''))}</span></span>`).join('');
+  document.querySelectorAll('#c-netopts .opt').forEach(o => { o.hidden = !nets.includes(o.dataset.net); });
+  // best hours for chosen day
+  const bh = $('#c-besthours');
+  if(!C._ro && S.best.data && C.date){
+    const d = dow(C.date), tops = topSlots(3, d).sort((a, b) => a.h - b.h);
+    bh.innerHTML = tops.length ? `<span>Mejores horas en ${NETS[S.best.net].name} el ${DOW_LONG[d - 1]}:</span>` + tops.map(s => { const t = `${pad(s.h)}:00`; return `<button type="button" data-hour="${t}" class="${C.time === t ? 'on' : ''}"${isPast(C.date, t) ? ' disabled' : ''}>${t}</button>`; }).join('') : '';
+  } else bh.innerHTML = '';
+  // preview tabs
+  if(!nets.includes(prevNet)) prevNet = nets[0] || null;
+  $('#c-prevtabs').innerHTML = nets.map(n => `<button type="button" role="tab" data-prev="${n}" aria-selected="${n === prevNet}"><i class="dot" style="--c:var(--n-${n})"></i>${NETS[n].name}</button>`).join('');
+  $('#c-preview').innerHTML = prevNet ? previewHTML(prevNet) : '<p class="pv-note">Elige una red para ver cómo quedará.</p>';
+  // issues + buttons
+  if(C._ro){ $('#c-issues').innerHTML = ''; return; }
+  const {err, warn} = validate(C);
+  $('#c-issues').innerHTML = (err.length ? `<ul>${err.map(e => `<li>${esc(e)}</li>`).join('')}</ul>` : '') + (warn.length ? `<ul class="soft">${warn.map(e => `<li>${esc(e)}</li>`).join('')}</ul>` : '');
+  const sch = $('#c-schedule');
+  sch.textContent = mcReady() ? (C.status === 'error' || C.status === 'unknown' ? 'Reintentar en Metricool' : 'Programar en Metricool') : 'Dejar lista para enviar';
+  sch.disabled = err.length > 0;
+  sch.title = mcReady() ? '' : 'Metricool no está conectado: se guardará en la parrilla para enviarla después.';
+}
+dlg.addEventListener('input', () => { readComposer(); refreshComposer(); });
+dlg.addEventListener('change', () => { readComposer(); refreshComposer(); });
+dlg.addEventListener('close', () => { C = null; });
+$('#c-close').addEventListener('click', () => dlg.close());
+$('#c-besthours').addEventListener('click', e => { const b = e.target.closest('[data-hour]'); if(!b || !C) return; $('#c-time').value = b.dataset.hour; readComposer(); refreshComposer(); });
+$('#c-prevtabs').addEventListener('click', e => { const b = e.target.closest('[data-prev]'); if(!b) return; prevNet = b.dataset.prev; refreshComposer(); });
+$('#c-draft').addEventListener('click', async () => {
+  readComposer();
+  if(!(C.text || '').trim() && !(C.media || []).length){ toast('Escribe algo o añade una imagen para guardar el borrador.'); return; }
+  if(!C.date) C.date = today(); if(!C.time) C.time = '10:00';
+  const p = {...C, status:'draft'}; LS.set('pc.lastnets', p.networks);
+  dlg.close();
+  try{ await savePost(p); toast('Borrador guardado'); }catch(e){}
+});
+$('#c-schedule').addEventListener('click', async () => {
+  readComposer();
+  if(validate(C).err.length){ refreshComposer(); return; }
+  const p = {...C}; LS.set('pc.lastnets', p.networks);
+  dlg.close();
+  if(mcReady()) await sendToMc(p);
+  else { try{ await savePost({...p, status:'planned', error:null}); toast('Lista en la parrilla. Envíala a Metricool cuando lo conectes.'); }catch(e){} }
+});
+$('#c-del').addEventListener('click', async () => {
+  const b = $('#c-del');
+  if(Date.now() - delArm > 4000){ delArm = Date.now(); b.textContent = C.status === 'sent' ? 'Pulsa otra vez: sigue en Metricool' : 'Pulsa otra vez para eliminar'; return; }
+  const id = C.id, sent = C.status === 'sent'; dlg.close();
+  await removePost(id);
+  toast(sent ? 'Quitada de la parrilla. Sigue programada en Metricool.' : 'Publicación eliminada');
+});
+$('#c-dup').addEventListener('click', () => {
+  const src = {...C}; const d = src.date && src.date >= today() ? src.date : today();
+  const copy = {...src, id:newId(), status:'draft', error:null, plannerUrl:null, sentAt:null, example:false, kind:undefined, brandId:undefined, createdAt:new Date().toISOString(), date:d, _new:true};
+  if(isPast(copy.date, copy.time || '00:00')) copy.time = nextSlot(d);
+  copy.title = undefined;
+  openComposer(copy);
+});
+$('#c-ai').addEventListener('click', async () => {
+  readComposer();
+  const t = (C.text || '').trim();
+  if(!t){ toast('Escribe un borrador y la IA lo adapta a tus redes.'); return; }
+  const nets = C.networks.length ? C.networks : ['instagram'];
+  const lim = Math.min(...nets.map(n => NETS[n].limit));
+  const b = $('#c-ai'); b.disabled = true; b.textContent = 'Reescribiendo…';
+  try{
+    const prompt = `Eres community manager. Reescribe el texto de esta publicación para ${nets.map(n => NETS[n].name).join(', ')}.
+Reglas: conserva el idioma del original; máximo ${lim} caracteres en total; tono cercano y claro; empieza con una frase que enganche; si encajan, añade de 2 a 5 hashtags relevantes al final; no inventes datos, fechas, precios ni nombres que no estén en el original.
+Devuelve solo JSON con esta forma: {"text": "..."}
+Texto original:
+"""${t}"""`;
+    const r = await S.sample.json(prompt, {modelTier:'quick'});
+    const nt = r && typeof r.text === 'string' ? r.text.trim() : '';
+    if(nt && C){ aiPrev = C.text; $('#c-text').value = nt; readComposer(); refreshComposer(); $('#c-ai-undo').hidden = false; }
+    else toast('La IA no devolvió un texto válido. Prueba otra vez.');
+  }catch(e){
+    if(e && e.code === 'not_granted'){ S.sample = null; b.hidden = true; }
+    else toast(e && e.code === 'rate_limited' ? 'Demasiadas peticiones a la IA. Espera un momento.' : 'No se pudo reescribir el texto.');
+  }finally{ b.disabled = false; b.textContent = 'Reescribir con IA'; }
+});
+$('#c-ai-undo').addEventListener('click', () => { if(aiPrev == null) return; $('#c-text').value = aiPrev; aiPrev = null; $('#c-ai-undo').hidden = true; readComposer(); refreshComposer(); });
+
+/* ---------- page events ---------- */
+function openItem(key){
+  const i = key.indexOf(':'), kind = key.slice(0, i), id = key.slice(i + 1);
+  if(kind === 'local'){ const p = S.posts.get(id); if(p) openComposer({...p, id}); }
+  else { const m = S.mcPosts.find(x => x.id === id); if(m) openComposer({...m}); }
+}
+document.addEventListener('click', e => {
+  if(e.target.closest('dialog')) return;
+  const t = e.target;
+  const v = t.closest('[data-view]'); if(v){ S.view = v.dataset.view; LS.set('pc.view', S.view); if(S.view === 'week') firstWeek = true; render(); return; }
+  if(t.closest('#prev') || t.closest('#next')){
+    const dir = t.closest('#prev') ? -1 : 1;
+    S.cursor = S.view === 'month' ? addMonths(S.cursor, dir) : addDays(S.cursor, 7 * dir); render(); return;
+  }
+  if(t.closest('#today')){ S.cursor = today(); firstWeek = true; render(); return; }
+  if(t.closest('#new-post')){ newPost(); return; }
+  if(t.closest('#mc-connect')){ mcConnect(); return; }
+  const snd = t.closest('[data-send]');
+  if(snd){
+    e.stopPropagation();
+    const p = S.posts.get(snd.dataset.send); if(!p) return;
+    const v2 = validate(p);
+    if(v2.err.length){ openComposer({...p, id:snd.dataset.send}); return; }
+    snd.disabled = true; sendToMc({...p, id:snd.dataset.send}); return;
+  }
+  if(t.closest('a[href]')) return;
+  const op = t.closest('[data-open]'); if(op){ openItem(op.dataset.open); return; }
+  const gw = t.closest('[data-goweek]'); if(gw){ S.cursor = gw.dataset.goweek; S.view = 'week'; LS.set('pc.view', 'week'); firstWeek = true; render(); return; }
+  const nw = t.closest('[data-new]'); if(nw){ const [d, tm] = nw.dataset.new.split('|'); newPost(d || undefined, tm || undefined); return; }
+  const fs = t.closest('[data-status]'); if(fs){ S.status = fs.dataset.status; render(); return; }
+  const slot = t.closest('[data-slot]');
+  if(slot && (t === slot || t.classList.contains('mo-d') || t.closest('.mo-d')) && S.canWrite){
+    const [d, h] = slot.dataset.slot.split('|');
+    if(slot.classList.contains('past') || d < today()) return;
+    newPost(d, h ? `${h}:00` : undefined);
+  }
+});
+document.addEventListener('keydown', e => {
+  if((e.key === 'Enter' || e.key === ' ') && e.target.matches && e.target.matches('.q-item[data-open]')){ e.preventDefault(); openItem(e.target.dataset.open); }
+});
+document.addEventListener('change', e => {
+  const t = e.target;
+  if(t.closest('dialog')) return;
+  if(t.matches('[data-netf]')){ t.checked ? S.nets.add(t.dataset.netf) : S.nets.delete(t.dataset.netf); render(); }
+  else if(t.id === 'brand-sel'){ S.mc.brandId = t.value; LS.set('pc.brand', t.value); const b = brand(); if(b && b.timezone) S.tz = b.timezone; S.best.key = ''; S.mcKey = ''; S.best.data = null; S.mcPosts = []; render(); }
+  else if(t.id === 'best-net'){ S.best.net = t.value; LS.set('pc.bestnet', t.value); S.best.key = ''; render(); }
+});
+// drag & drop to reschedule
+let dragId = null;
+document.addEventListener('dragstart', e => {
+  const c = e.target.closest && e.target.closest('.chip[draggable="true"]'); if(!c) return;
+  dragId = c.dataset.open.split(':').slice(1).join(':');
+  try{ e.dataTransfer.setData('text/plain', dragId); e.dataTransfer.effectAllowed = 'move'; }catch(_){}
+});
+document.addEventListener('dragover', e => {
+  if(!dragId) return; const s = e.target.closest && e.target.closest('[data-slot]'); if(!s || s.classList.contains('past')) return;
+  const d = s.dataset.slot.split('|')[0]; if(d < today()) return;
+  e.preventDefault(); document.querySelectorAll('.drop').forEach(x => x !== s && x.classList.remove('drop')); s.classList.add('drop');
+});
+document.addEventListener('dragleave', e => { const s = e.target.closest && e.target.closest('[data-slot]'); if(s && !s.contains(e.relatedTarget)) s.classList.remove('drop'); });
+document.addEventListener('dragend', () => { dragId = null; document.querySelectorAll('.drop').forEach(x => x.classList.remove('drop')); });
+document.addEventListener('drop', async e => {
+  const s = e.target.closest && e.target.closest('[data-slot]'); if(!dragId || !s) return;
+  e.preventDefault();
+  const p = S.posts.get(dragId); const id = dragId; dragId = null;
+  document.querySelectorAll('.drop').forEach(x => x.classList.remove('drop'));
+  if(!p) return;
+  const [d, h] = s.dataset.slot.split('|');
+  const time = h ? `${h}:${(p.time || '10:00').slice(3, 5)}` : (p.time || '10:00');
+  if(isPast(d, time)){ toast('No puedes mover una publicación a un momento pasado.'); return; }
+  if(d === p.date && time === p.time) return;
+  try{ await savePost({...p, id, date:d, time}); toast(`Movida al ${fmt(d, {weekday:'long', day:'numeric'})} a las ${time}`); }catch(_){}
+});
+
+/* ---------- boot ---------- */
+render();
+initStore();
+initMc();
+use('sample').then(s => { S.sample = s; if(C && !C._ro) $('#c-ai').hidden = !s; });
+setInterval(() => { if(!dlg.open && document.visibilityState === 'visible') render(); }, 60000);
+})();
+</script>
+
+</body>
+</html>
