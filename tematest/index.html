@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TemaTest · Convierte tu temario en tests de examen</title>
+<meta name="description" content="Sube el PDF de tu tema de oposiciones y practica con tests tipo examen generados de tu propio temario, con penalización y repaso de falladas.">
+<meta property="og:title" content="TemaTest · Tu temario convertido en tests de examen">
+<meta property="og:description" content="Sube tu tema y practica con preguntas tipo examen en 30 segundos.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%234f46e5'/><path d='M9 17l5 5 9-11' stroke='white' stroke-width='3.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+<style>
+:root {
+  --bg: #f7f7fb; --card: #fff; --ink: #16151d; --muted: #6b6a78; --line: #e4e3ec;
+  --brand: #4f46e5; --brand-ink: #fff; --brand-soft: #eeedfd;
+  --ok: #138a4b; --ok-soft: #e5f6ec; --ko: #c62f3a; --ko-soft: #fdecee; --warn-soft: #fff6e0;
+  --radius: 14px; --shadow: 0 1px 2px rgba(20,20,40,.05), 0 6px 24px rgba(20,20,40,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f0f14; --card: #18181f; --ink: #ecebf3; --muted: #9c9bab; --line: #2a2a35;
+    --brand: #7c74ff; --brand-soft: #23214a; --ok: #3ccf7f; --ok-soft: #12301f; --ko: #ff6b76; --ko-soft: #3a1a1e; --warn-soft: #33290f;
+    --shadow: none;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+header { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; }
+.logo { display: flex; align-items: center; gap: 8px; font-weight: 800; font-size: 20px; color: var(--ink); text-decoration: none; }
+.logo i { width: 28px; height: 28px; border-radius: 8px; background: var(--brand); display: grid; place-items: center; color: #fff; font-style: normal; font-size: 16px; }
+.pill { font-size: 13px; padding: 4px 10px; border-radius: 99px; background: var(--brand-soft); color: var(--brand); font-weight: 600; border: 0; cursor: pointer; }
+h1 { font-size: clamp(28px, 6vw, 42px); line-height: 1.1; margin: 24px 0 12px; letter-spacing: -.02em; }
+h1 em { font-style: normal; color: var(--brand); }
+.lead { color: var(--muted); font-size: 18px; margin: 0 0 20px; }
+.ticks { display: flex; flex-wrap: wrap; gap: 8px 16px; padding: 0; margin: 0 0 24px; list-style: none; color: var(--muted); font-size: 14px; }
+.ticks li::before { content: "✓ "; color: var(--ok); font-weight: 700; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: 20px; margin-bottom: 16px; }
+.tabs { display: flex; gap: 4px; background: var(--bg); border-radius: 10px; padding: 4px; margin-bottom: 16px; }
+.tabs button { flex: 1; border: 0; background: transparent; padding: 8px; border-radius: 8px; font: inherit; font-weight: 600; color: var(--muted); cursor: pointer; }
+.tabs button[aria-selected="true"] { background: var(--card); color: var(--ink); box-shadow: var(--shadow); }
+.drop { display: block; border: 2px dashed var(--line); border-radius: 12px; padding: 28px 16px; text-align: center; cursor: pointer; color: var(--muted); }
+.drop:hover, .drop.over { border-color: var(--brand); background: var(--brand-soft); }
+.drop strong { color: var(--ink); display: block; font-size: 17px; }
+.drop input { display: none; }
+textarea { width: 100%; min-height: 200px; resize: vertical; border: 1px solid var(--line); border-radius: 12px; padding: 12px; font: inherit; font-size: 15px; background: var(--bg); color: var(--ink); }
+.meta { font-size: 13px; color: var(--muted); margin-top: 8px; }
+.meta.err { color: var(--ko); }
+.range { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-top: 12px; font-size: 14px; }
+.range input { width: 72px; }
+.opts { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 16px 0; }
+@media (min-width: 640px) { .opts { grid-template-columns: repeat(4, 1fr); } }
+label.f { display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: var(--muted); font-weight: 600; }
+select, input[type=number], input[type=text] { font: inherit; font-size: 15px; padding: 9px 10px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); color: var(--ink); width: 100%; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 0; border-radius: 12px; padding: 13px 20px; font: inherit; font-weight: 700; cursor: pointer; background: var(--brand); color: var(--brand-ink); text-decoration: none; }
+.btn:disabled { opacity: .5; cursor: not-allowed; }
+.btn.ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); }
+.btn.block { width: 100%; }
+.row { display: flex; gap: 8px; flex-wrap: wrap; }
+.row .btn { flex: 1; min-width: 140px; }
+.free { text-align: center; font-size: 13px; color: var(--muted); margin-top: 10px; }
+.spin { width: 18px; height: 18px; border: 3px solid rgba(255,255,255,.4); border-top-color: #fff; border-radius: 50%; animation: s 0.8s linear infinite; }
+@keyframes s { to { transform: rotate(360deg); } }
+.progress { height: 6px; background: var(--line); border-radius: 99px; overflow: hidden; margin-bottom: 16px; }
+.progress div { height: 100%; background: var(--brand); transition: width .2s; }
+.qhead { display: flex; justify-content: space-between; font-size: 13px; color: var(--muted); margin-bottom: 8px; }
+.q { font-size: 19px; font-weight: 650; margin: 0 0 16px; }
+.opt { display: flex; gap: 12px; width: 100%; text-align: left; border: 1.5px solid var(--line); border-radius: 12px; padding: 12px 14px; margin-bottom: 10px; background: var(--card); color: var(--ink); font: inherit; cursor: pointer; }
+.opt b { flex: none; width: 26px; height: 26px; border-radius: 50%; background: var(--bg); display: grid; place-items: center; font-size: 13px; }
+.opt:hover:not(:disabled) { border-color: var(--brand); }
+.opt.sel { border-color: var(--brand); background: var(--brand-soft); }
+.opt.ok { border-color: var(--ok); background: var(--ok-soft); }
+.opt.ko { border-color: var(--ko); background: var(--ko-soft); }
+.opt:disabled { cursor: default; }
+.exp { background: var(--bg); border-radius: 12px; padding: 12px 14px; font-size: 15px; margin: 6px 0 14px; }
+.exp q { display: block; margin-top: 6px; color: var(--muted); font-size: 14px; font-style: italic; }
+.dots { display: flex; flex-wrap: wrap; gap: 6px; margin: 16px 0 0; }
+.dots button { width: 32px; height: 32px; border-radius: 8px; border: 1px solid var(--line); background: var(--card); color: var(--ink); font: inherit; font-size: 13px; cursor: pointer; }
+.dots button.done { background: var(--brand-soft); border-color: var(--brand); }
+.dots button.cur { outline: 2px solid var(--brand); }
+.score { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; text-align: center; margin: 16px 0; }
+.score div { background: var(--bg); border-radius: 12px; padding: 12px 4px; }
+.score strong { display: block; font-size: 24px; }
+.score span { font-size: 12px; color: var(--muted); }
+.nota { text-align: center; font-size: 56px; font-weight: 800; margin: 8px 0 0; letter-spacing: -.03em; }
+.nota small { font-size: 20px; color: var(--muted); }
+.review { margin-top: 20px; }
+.review .item { border-top: 1px solid var(--line); padding: 14px 0; }
+.review .item p { margin: 0 0 6px; font-weight: 600; }
+.review .mark { font-size: 13px; font-weight: 700; }
+.review .mark.ok { color: var(--ok); } .review .mark.ko { color: var(--ko); } .review .mark.bl { color: var(--muted); }
+.banner { background: var(--warn-soft); border-radius: 12px; padding: 12px 14px; font-size: 14px; margin-bottom: 16px; }
+h2 { font-size: 22px; margin: 32px 0 12px; }
+.steps { display: grid; gap: 12px; }
+@media (min-width: 640px) { .steps { grid-template-columns: repeat(3, 1fr); } }
+.steps .card { margin: 0; }
+.steps b { color: var(--brand); }
+details { border-top: 1px solid var(--line); padding: 12px 0; }
+summary { font-weight: 600; cursor: pointer; }
+details p { color: var(--muted); margin: 8px 0 0; }
+footer { color: var(--muted); font-size: 13px; padding: 32px 0; text-align: center; }
+footer a { color: inherit; }
+dialog { border: 0; border-radius: 18px; padding: 24px; max-width: 420px; width: calc(100% - 32px); background: var(--card); color: var(--ink); }
+dialog::backdrop { background: rgba(10,10,20,.55); }
+dialog h3 { margin: 0 0 8px; font-size: 22px; }
+dialog ul { padding-left: 20px; color: var(--muted); }
+.price { font-size: 36px; font-weight: 800; margin: 8px 0; }
+.price small { font-size: 15px; color: var(--muted); font-weight: 500; }
+.x { float: right; border: 0; background: none; font-size: 24px; color: var(--muted); cursor: pointer; line-height: 1; }
+[hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="logo" href="./"><i>✓</i> TemaTest</a>
+    <button class="pill" id="btnLicencia" type="button">Tengo licencia</button>
+  </header>
+
+  <main>
+    <!-- INICIO -->
+    <section id="vInicio">
+      <h1>Tu temario, convertido en <em>tests de examen</em> en 30 segundos</h1>
+      <p class="lead">Sube el PDF de tu tema y practica con preguntas como las del examen oficial, sacadas de tu propio temario. Con penalización y repaso de falladas.</p>
+      <ul class="ticks"><li>De tu temario o el de tu academia</li><li>4 opciones y penalización</li><li>Explicación con la cita del tema</li><li>Sin registrarte</li></ul>
+
+      <div class="card">
+        <div class="tabs" role="tablist">
+          <button type="button" role="tab" aria-selected="true" data-tab="pdf">Subir PDF</button>
+          <button type="button" role="tab" aria-selected="false" data-tab="texto">Pegar texto</button>
+        </div>
+
+        <div id="tabPdf">
+          <label class="drop" id="drop">
+            <input type="file" id="archivo" accept="application/pdf,.pdf,.txt">
+            <strong id="dropTitulo">Arrastra aquí tu tema en PDF</strong>
+            <span id="dropSub">o toca para elegirlo</span>
+          </label>
+          <div class="range" id="rango" hidden>
+            Páginas <input type="number" id="pagDesde" min="1" value="1"> a <input type="number" id="pagHasta" min="1" value="1"> de <span id="pagTotal">1</span>
+          </div>
+        </div>
+        <div id="tabTexto" hidden>
+          <textarea id="texto" placeholder="Pega aquí el texto del tema (artículos, apuntes, resumen…)"></textarea>
+        </div>
+        <div class="meta" id="info">Máximo unas 25 páginas por test. El texto se usa solo para generar tu test y no se guarda.</div>
+
+        <div class="opts">
+          <label class="f">Preguntas
+            <select id="optN"><option>5</option><option selected>10</option><option>15</option><option>20</option></select>
+          </label>
+          <label class="f">Dificultad
+            <select id="optDif"><option value="facil">Fácil</option><option value="media" selected>Examen</option><option value="dificil">Difícil</option></select>
+          </label>
+          <label class="f">Penalización
+            <select id="optPen"><option value="0">Sin penalizar</option><option value="0.25">−1/4 por fallo</option><option value="0.3333" selected>−1/3 por fallo</option></select>
+          </label>
+          <label class="f">Modo
+            <select id="optModo"><option value="estudio" selected>Estudio</option><option value="examen">Simulacro</option></select>
+          </label>
+        </div>
+        <button class="btn block" id="btnGenerar" type="button" disabled>Generar test</button>
+        <div class="free" id="freeInfo"></div>
+      </div>
+
+      <button class="btn ghost block" id="btnRepaso" type="button" hidden></button>
+
+      <h2>Cómo funciona</h2>
+      <div class="steps">
+        <div class="card"><b>1.</b> Sube el tema en PDF o pega el texto. Elige qué páginas entran.</div>
+        <div class="card"><b>2.</b> En segundos tienes un test tipo examen con distractores de verdad: plazos, órganos, cifras.</div>
+        <div class="card"><b>3.</b> Corrige con penalización, lee por qué fallaste y repasa solo las que fallas.</div>
+      </div>
+
+      <h2>Preguntas frecuentes</h2>
+      <details><summary>¿Para qué oposiciones sirve?</summary><p>Para cualquiera: Administrativo, Auxiliar, Justicia, Policía, Guardia Civil, Sanidad, Educación… Las preguntas salen del texto que subas, así que se adapta a tu temario.</p></details>
+      <details><summary>¿Las preguntas son fiables?</summary><p>Se generan solo a partir de tu texto y cada respuesta lleva la cita del temario que la justifica, para que la compruebes. Aun así es una IA: si una pregunta te parece dudosa, fíate del temario.</p></details>
+      <details><summary>¿Qué pasa con mi temario?</summary><p>Se envía cifrado para generar el test y no se guarda en ningún sitio. Tus fallos se guardan solo en tu navegador.</p></details>
+      <details><summary>¿Cuánto cuesta?</summary><p><span data-free></span> tests gratis al día. Si quieres más, un único pago de <span data-precio></span> te da tests ilimitados. Sin suscripción.</p></details>
+      <details><summary>Mi PDF no funciona</summary><p>Si el PDF es un escaneo (una foto del papel), no tiene texto que leer. Copia el texto a mano o pásalo antes por un OCR gratuito y pégalo en «Pegar texto».</p></details>
+    </section>
+
+    <!-- TEST -->
+    <section id="vTest" hidden>
+      <div class="progress"><div id="barra"></div></div>
+      <div class="card">
+        <div class="qhead"><span id="qNum"></span><span id="qModo"></span></div>
+        <p class="q" id="qTexto"></p>
+        <div id="qOpciones"></div>
+        <div id="qExp"></div>
+        <div class="row">
+          <button class="btn ghost" id="btnAnterior" type="button">Anterior</button>
+          <button class="btn" id="btnSiguiente" type="button">Siguiente</button>
+        </div>
+        <div class="dots" id="dots"></div>
+      </div>
+      <button class="btn ghost block" id="btnSalir" type="button">Salir del test</button>
+    </section>
+
+    <!-- RESULTADO -->
+    <section id="vResultado" hidden>
+      <div class="card">
+        <p class="nota" id="rNota"></p>
+        <div class="score" id="rScore"></div>
+        <div class="row">
+          <button class="btn" id="btnRepetir" type="button">Repetir test</button>
+          <button class="btn ghost" id="btnNuevo" type="button">Nuevo test</button>
+        </div>
+        <div class="review" id="rRevision"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>TemaTest · Hecho para opositores · Las preguntas se generan con IA a partir de tu texto; contrástalas con tu temario.</footer>
+</div>
+
+<dialog id="dPago">
+  <button class="x" type="button" data-cerrar>×</button>
+  <h3>Sigue practicando sin límite</h3>
+  <p>Has usado tus tests gratis de hoy.</p>
+  <div class="price"><span data-precio></span> <small>pago único</small></div>
+  <ul>
+    <li>Tests ilimitados de cualquier tema</li>
+    <li>Hasta 20 preguntas por test</li>
+    <li>Sin suscripción: pagas una vez</li>
+  </ul>
+  <a class="btn block" id="lnkPago" target="_blank" rel="noopener">Desbloquear ahora</a>
+  <p class="free">Al pagar recibes una clave de licencia por email. <button class="pill" type="button" data-abrir-licencia>Ya tengo mi clave</button></p>
+</dialog>
+
+<dialog id="dLicencia">
+  <button class="x" type="button" data-cerrar>×</button>
+  <h3>Activa tu licencia</h3>
+  <p class="meta">Pega la clave que recibiste por email al comprar.</p>
+  <input type="text" id="inLicencia" placeholder="XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX" autocomplete="off">
+  <div class="meta" id="licInfo"></div>
+  <div class="row" style="margin-top:12px">
+    <button class="btn" id="btnGuardarLic" type="button">Activar</button>
+    <button class="btn ghost" id="btnQuitarLic" type="button" hidden>Quitar licencia</button>
+  </div>
+</dialog>
+
+<script>
+// Configuración: cambia checkoutUrl por el enlace de tu producto en Lemon Squeezy.
+const CONFIG = {
+  checkoutUrl: 'https://TU-TIENDA.lemonsqueezy.com/buy/TU-PRODUCTO',
+  precio: '9,99 €',
+  gratisAlDia: 3,
+  maxChars: 60000,
+};
+
+const $ = (id) => document.getElementById(id);
+const store = {
+  get(k, d) { try { const v = localStorage.getItem('tt_' + k); return v === null ? d : JSON.parse(v); } catch { return d; } },
+  set(k, v) { try { localStorage.setItem('tt_' + k, JSON.stringify(v)); } catch {} },
+};
+const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const LETRAS = 'ABCD';
+
+let pdf = null;
+let tab = 'pdf';
+let test = null; // { preguntas, respuestas, actual, modo, pen, corregido, repaso }
+
+document.querySelectorAll('[data-precio]').forEach((e) => (e.textContent = CONFIG.precio));
+document.querySelectorAll('[data-free]').forEach((e) => (e.textContent = CONFIG.gratisAlDia));
+$('lnkPago').href = CONFIG.checkoutUrl;
+
+function hoy() { return new Date().toISOString().slice(0, 10); }
+function usados() { const u = store.get('uso', {}); return u.dia === hoy() ? u.n : 0; }
+function sumarUso() { store.set('uso', { dia: hoy(), n: usados() + 1 }); }
+function licencia() { return store.get('licencia', ''); }
+
+function pintarGratis() {
+  if (licencia()) {
+    $('freeInfo').textContent = 'Licencia activa · tests ilimitados';
+    $('btnLicencia').textContent = 'Licencia activa';
+  } else {
+    const q = Math.max(0, CONFIG.gratisAlDia - usados());
+    $('freeInfo').textContent = `Te quedan ${q} de ${CONFIG.gratisAlDia} tests gratis hoy`;
+    $('btnLicencia').textContent = 'Tengo licencia';
+  }
+  const f = store.get('falladas', []);
+  $('btnRepaso').hidden = !f.length;
+  $('btnRepaso').textContent = `Repasar mis falladas (${f.length})`;
+}
+
+function ver(v) {
+  ['vInicio', 'vTest', 'vResultado'].forEach((id) => ($(id).hidden = id !== v));
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ---------- Entrada de temario ----------
+document.querySelectorAll('[data-tab]').forEach((b) => b.addEventListener('click', () => {
+  tab = b.dataset.tab;
+  document.querySelectorAll('[data-tab]').forEach((x) => x.setAttribute('aria-selected', x === b));
+  $('tabPdf').hidden = tab !== 'pdf';
+  $('tabTexto').hidden = tab !== 'texto';
+  comprobar();
+}));
+
+function info(msg, err) { $('info').textContent = msg; $('info').classList.toggle('err', !!err); }
+
+let pdfjsCarga = null;
+function cargarPdfjs() {
+  pdfjsCarga ??= new Promise((ok, ko) => {
+    const s = document.createElement('script');
+    s.src = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js';
+    s.onload = () => { pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js'; ok(window.pdfjsLib); };
+    s.onerror = () => { pdfjsCarga = null; ko(new Error('No se pudo cargar el lector de PDF')); };
+    document.head.appendChild(s);
+  });
+  return pdfjsCarga;
+}
+
+async function abrirArchivo(f) {
+  if (!f) return;
+  pdf = null;
+  $('rango').hidden = true;
+  if (f.type === 'text/plain' || f.name.endsWith('.txt')) {
+    $('texto').value = await f.text();
+    document.querySelector('[data-tab="texto"]').click();
+    return;
+  }
+  $('dropTitulo').textContent = f.name;
+  $('dropSub').textContent = 'Leyendo…';
+  try {
+    const lib = await cargarPdfjs();
+    const doc = await lib.getDocument({ data: await f.arrayBuffer() }).promise;
+    const paginas = [];
+    for (let i = 1; i <= doc.numPages; i++) {
+      const c = await (await doc.getPage(i)).getTextContent();
+      paginas.push(c.items.map((it) => it.str + (it.hasEOL ? '\n' : ' ')).join('').replace(/[ \t]+/g, ' ').trim());
+    }
+    const total = paginas.reduce((a, p) => a + p.length, 0);
+    if (total < 100) {
+      $('dropSub').textContent = 'Toca para elegir otro';
+      return info('Este PDF parece un escaneo y no tiene texto. Pásalo por un OCR o pega el texto a mano.', true);
+    }
+    pdf = { paginas };
+    $('pagTotal').textContent = paginas.length;
+    $('pagDesde').max = $('pagHasta').max = paginas.length;
+    $('pagDesde').value = 1;
+    // Por defecto, tantas páginas como quepan en un test.
+    let fin = 0, chars = 0;
+    while (fin < paginas.length && chars + paginas[fin].length <= CONFIG.maxChars) chars += paginas[fin++].length;
+    $('pagHasta').value = Math.max(1, fin);
+    $('rango').hidden = paginas.length < 2;
+    $('dropSub').textContent = `${paginas.length} páginas · toca para cambiar de archivo`;
+    comprobar();
+  } catch (e) {
+    $('dropSub').textContent = 'Toca para elegir otro';
+    info('No se pudo leer el PDF. Prueba con otro o pega el texto.', true);
+  }
+}
+
+$('archivo').addEventListener('change', (e) => abrirArchivo(e.target.files[0]));
+const drop = $('drop');
+['dragenter', 'dragover'].forEach((t) => drop.addEventListener(t, (e) => { e.preventDefault(); drop.classList.add('over'); }));
+['dragleave', 'drop'].forEach((t) => drop.addEventListener(t, (e) => { e.preventDefault(); drop.classList.remove('over'); }));
+drop.addEventListener('drop', (e) => abrirArchivo(e.dataTransfer.files[0]));
+['pagDesde', 'pagHasta'].forEach((id) => $(id).addEventListener('input', comprobar));
+$('texto').addEventListener('input', comprobar);
+
+function textoActual() {
+  if (tab === 'texto') return $('texto').value.trim();
+  if (!pdf) return '';
+  const a = Math.max(1, +$('pagDesde').value || 1);
+  const b = Math.min(pdf.paginas.length, +$('pagHasta').value || a);
+  return pdf.paginas.slice(a - 1, b).join('\n\n').trim();
+}
+
+function comprobar() {
+  const t = textoActual();
+  const n = t.length;
+  let ok = n >= 300 && n <= CONFIG.maxChars;
+  if (!n) info('Máximo unas 25 páginas por test. El texto se usa solo para generar tu test y no se guarda.');
+  else if (n < 300) info('Necesito un poco más de texto (al menos un par de párrafos).', true);
+  else if (n > CONFIG.maxChars) info(`Demasiado texto (${n.toLocaleString('es-ES')} caracteres). Elige menos páginas.`, true);
+  else info(`${n.toLocaleString('es-ES')} caracteres listos.`);
+  $('btnGenerar').disabled = !ok;
+}
+
+// ---------- Generar ----------
+$('btnGenerar').addEventListener('click', async () => {
+  if (!licencia() && usados() >= CONFIG.gratisAlDia) return $('dPago').showModal();
+  const b = $('btnGenerar');
+  b.disabled = true;
+  b.innerHTML = '<span class="spin"></span> Creando tu test…';
+  try {
+    const r = await fetch('api/generate', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'x-licencia': licencia() },
+      body: JSON.stringify({ texto: textoActual(), n: +$('optN').value, dificultad: $('optDif').value }),
+    });
+    const d = await r.json().catch(() => ({}));
+    if (r.status === 402) {
+      if (licencia()) { abrirLicencia(); $('licInfo').textContent = 'Tu licencia no es válida o ha caducado. Revisa la clave del email.'; return; }
+      store.set('uso', { dia: hoy(), n: CONFIG.gratisAlDia }); pintarGratis(); return $('dPago').showModal();
+    }
+    if (!r.ok) throw new Error(d.error || 'No se pudo generar el test.');
+    if (!licencia()) sumarUso();
+    empezar(d.preguntas, false);
+  } catch (e) {
+    info(e.message, true);
+  } finally {
+    b.textContent = 'Generar test';
+    b.disabled = false;
+    pintarGratis();
+  }
+});
+
+$('btnRepaso').addEventListener('click', () => {
+  const f = store.get('falladas', []);
+  const mezcla = [...f].sort(() => Math.random() - 0.5).slice(0, 20);
+  empezar(mezcla, true);
+});
+
+// ---------- Test ----------
+function empezar(preguntas, repaso) {
+  test = {
+    preguntas, repaso,
+    respuestas: preguntas.map(() => null),
+    actual: 0,
+    modo: $('optModo').value,
+    pen: +$('optPen').value,
+    corregido: false,
+  };
+  ver('vTest');
+  pintarPregunta();
+}
+
+function pintarPregunta() {
+  const { preguntas, respuestas, actual, modo } = test;
+  const p = preguntas[actual];
+  const r = respuestas[actual];
+  const visto = modo === 'estudio' && r !== null;
+  $('barra').style.width = `${(respuestas.filter((x) => x !== null).length / preguntas.length) * 100}%`;
+  $('qNum').textContent = `Pregunta ${actual + 1} de ${preguntas.length}`;
+  $('qModo').textContent = test.repaso ? 'Repaso de falladas' : modo === 'estudio' ? 'Modo estudio' : 'Simulacro';
+  $('qTexto').textContent = p.pregunta;
+  $('qOpciones').innerHTML = p.opciones.map((o, i) => {
+    let c = '';
+    if (visto) c = i === p.correcta ? 'ok' : i === r && r >= 0 ? 'ko' : '';
+    else if (r === i) c = 'sel';
+    return `<button type="button" class="opt ${c}" data-i="${i}" ${visto ? 'disabled' : ''}><b>${LETRAS[i]}</b><span>${esc(o)}</span></button>`;
+  }).join('');
+  $('qExp').innerHTML = visto
+    ? `<div class="exp">${r === p.correcta ? '✅ <strong>Correcta.</strong> ' : r === -1 ? '⏭️ <strong>En blanco.</strong> ' : '❌ <strong>Incorrecta.</strong> '}${esc(p.explicacion)}${p.cita ? `<q>${esc(p.cita)}</q>` : ''}</div>`
+    : '';
+  $('btnAnterior').disabled = actual === 0;
+  const ultima = actual === preguntas.length - 1;
+  $('btnSiguiente').textContent = ultima ? (modo === 'estudio' ? 'Ver resultado' : 'Corregir') : (modo === 'estudio' && r === null ? 'No lo sé' : 'Siguiente');
+  $('dots').innerHTML = modo === 'examen'
+    ? preguntas.map((_, i) => `<button type="button" class="${respuestas[i] !== null && respuestas[i] >= 0 ? 'done' : ''} ${i === actual ? 'cur' : ''}" data-ir="${i}">${i + 1}</button>`).join('')
+    : '';
+}
+
+$('qOpciones').addEventListener('click', (e) => {
+  const b = e.target.closest('.opt');
+  if (!b || b.disabled) return;
+  const i = +b.dataset.i;
+  if (test.modo === 'examen' && test.respuestas[test.actual] === i) test.respuestas[test.actual] = null; // desmarcar
+  else test.respuestas[test.actual] = i;
+  pintarPregunta();
+});
+$('dots').addEventListener('click', (e) => {
+  const b = e.target.closest('[data-ir]');
+  if (b) { test.actual = +b.dataset.ir; pintarPregunta(); }
+});
+$('btnAnterior').addEventListener('click', () => { test.actual--; pintarPregunta(); });
+$('btnSiguiente').addEventListener('click', () => {
+  const { modo, actual, preguntas, respuestas } = test;
+  if (modo === 'estudio' && respuestas[actual] === null) { respuestas[actual] = -1; return pintarPregunta(); }
+  if (actual < preguntas.length - 1) { test.actual++; return pintarPregunta(); }
+  if (modo === 'examen') {
+    const blancas = respuestas.filter((x) => x === null).length;
+    if (blancas && !confirm(`Tienes ${blancas} sin contestar (cuentan como en blanco). ¿Corregir ya?`)) return;
+  }
+  corregir();
+});
+$('btnSalir').addEventListener('click', () => { if (confirm('¿Salir del test? Perderás el progreso.')) { ver('vInicio'); pintarGratis(); } });
+
+function corregir() {
+  const { preguntas, respuestas, pen } = test;
+  let ok = 0, ko = 0, bl = 0;
+  let falladas = store.get('falladas', []);
+  preguntas.forEach((p, i) => {
+    const r = respuestas[i];
+    if (r === null || r === -1) bl++;
+    else if (r === p.correcta) ok++;
+    else ko++;
+    const fallada = r !== p.correcta;
+    falladas = falladas.filter((f) => f.pregunta !== p.pregunta);
+    if (fallada) falladas.push(p);
+  });
+  store.set('falladas', falladas.slice(-200));
+  const neta = ok - ko * pen;
+  const nota = Math.max(0, (neta / preguntas.length) * 10);
+  $('rNota').innerHTML = `${nota.toLocaleString('es-ES', { maximumFractionDigits: 2 })}<small> / 10</small>`;
+  $('rScore').innerHTML = [
+    [ok, 'Aciertos'], [ko, 'Fallos'], [bl, 'En blanco'], [neta.toLocaleString('es-ES', { maximumFractionDigits: 2 }), 'Netas'],
+  ].map(([v, l]) => `<div><strong>${v}</strong><span>${l}</span></div>`).join('');
+  $('rRevision').innerHTML = preguntas.map((p, i) => {
+    const r = respuestas[i];
+    const est = r === null || r === -1 ? ['bl', 'En blanco'] : r === p.correcta ? ['ok', 'Correcta'] : ['ko', `Fallada · marcaste ${LETRAS[r]}`];
+    return `<div class="item"><span class="mark ${est[0]}">${i + 1}. ${est[1]}</span><p>${esc(p.pregunta)}</p>
+      <div>✔ <strong>${LETRAS[p.correcta]}.</strong> ${esc(p.opciones[p.correcta])}</div>
+      <div class="exp">${esc(p.explicacion)}${p.cita ? `<q>${esc(p.cita)}</q>` : ''}</div></div>`;
+  }).join('');
+  ver('vResultado');
+}
+
+$('btnRepetir').addEventListener('click', () => {
+  const mezcla = test.preguntas.map((p) => {
+    const orden = [0, 1, 2, 3].sort(() => Math.random() - 0.5);
+    return { ...p, opciones: orden.map((i) => p.opciones[i]), correcta: orden.indexOf(p.correcta) };
+  }).sort(() => Math.random() - 0.5);
+  empezar(mezcla, test.repaso);
+});
+$('btnNuevo').addEventListener('click', () => { ver('vInicio'); pintarGratis(); });
+
+// ---------- Licencia ----------
+function abrirLicencia() {
+  $('dPago').close();
+  $('inLicencia').value = licencia();
+  $('btnQuitarLic').hidden = !licencia();
+  $('licInfo').textContent = '';
+  $('dLicencia').showModal();
+}
+$('btnLicencia').addEventListener('click', abrirLicencia);
+document.querySelector('[data-abrir-licencia]').addEventListener('click', abrirLicencia);
+document.querySelectorAll('[data-cerrar]').forEach((b) => b.addEventListener('click', () => b.closest('dialog').close()));
+$('btnGuardarLic').addEventListener('click', () => {
+  const k = $('inLicencia').value.trim();
+  if (k.length < 10) { $('licInfo').textContent = 'Esa clave no parece válida.'; return; }
+  store.set('licencia', k);
+  $('dLicencia').close();
+  pintarGratis();
+});
+$('btnQuitarLic').addEventListener('click', () => { store.set('licencia', ''); $('dLicencia').close(); pintarGratis(); });
+
+pintarGratis();
+comprobar();
+</script>
+</body>
+</html>

@@ -14,3 +14,9 @@ Programador de publicaciones para redes sociales, inspirado en el planificador d
 Abierta como Artifact en claude.ai usa sus capacidades de runtime: base de datos compartida, conector de Metricool (`getBrandSettings`, `getBestTimeToPostByNetwork`, `getScheduledPosts`, `createScheduledPost`) e IA para reescribir textos.
 
 Abierta como página estática (por ejemplo `npx serve .` o GitHub Pages) funciona en modo local: las publicaciones se guardan en el navegador y la conexión con Metricool queda desactivada.
+
+---
+
+# TemaTest
+
+En [`tematest/`](tematest/) está TemaTest: convierte el temario de oposiciones en tests tipo examen. Puesta en marcha en [`tematest/README.md`](tematest/README.md) y plan de lanzamiento en [`tematest/LANZAMIENTO.md`](tematest/LANZAMIENTO.md).
