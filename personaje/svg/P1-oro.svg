@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" width="300" height="400">
+  <!-- P1 ORO · Sombra (P1) con la paleta de Élite (P5) · Pertx -->
+  <defs>
+    <radialGradient id="pobg" cx="50%" cy="30%" r="80%"><stop offset="0" stop-color="#2A2219"/><stop offset=".55" stop-color="#13100C"/><stop offset="1" stop-color="#080706"/></radialGradient>
+    <radialGradient id="poglow" cx="50%" cy="100%" r="70%"><stop offset="0" stop-color="#D4AF37" stop-opacity=".40"/><stop offset="1" stop-color="#D4AF37" stop-opacity="0"/></radialGradient>
+    <linearGradient id="pohood" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0E0E10"/><stop offset=".55" stop-color="#1F1E22"/><stop offset="1" stop-color="#2E2A24"/></linearGradient>
+    <linearGradient id="pobody" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0E0E10"/><stop offset=".5" stop-color="#1F1E22"/><stop offset="1" stop-color="#2A2620"/></linearGradient>
+    <radialGradient id="pomask" cx="42%" cy="35%" r="70%"><stop offset="0" stop-color="#2C2C2E"/><stop offset="1" stop-color="#0B0B0C"/></radialGradient>
+    <linearGradient id="poskin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5A3C2A"/><stop offset=".45" stop-color="#C08E6A"/><stop offset="1" stop-color="#E2BE7A"/></linearGradient>
+    <pattern id="poknit" width="5" height="4" patternUnits="userSpaceOnUse"><path d="M0 2 Q1.25 0 2.5 2 T5 2" stroke="#000" stroke-opacity=".45" fill="none" stroke-width=".8"/></pattern>
+    <filter id="pob4"><feGaussianBlur stdDeviation="4"/></filter>
+    <filter id="pob1"><feGaussianBlur stdDeviation="1.2"/></filter>
+  </defs>
+  <rect width="300" height="400" fill="url(#pobg)"/>
+  <rect width="300" height="400" fill="url(#poglow)"/>
+
+  <!-- cuerpo sudadera -->
+  <path d="M18 400 Q26 292 96 262 L204 262 Q274 292 282 400 Z" fill="url(#pobody)"/>
+  <path d="M120 262 L132 400 M180 262 L168 400" stroke="#0A0A0C" stroke-width="2" opacity=".6"/>
+  <!-- capucha -->
+  <path d="M88 276 Q72 150 150 100 Q228 150 212 276 Q190 254 150 254 Q110 254 88 276 Z" fill="url(#pohood)"/>
+  <path d="M104 256 Q94 164 150 128 Q206 164 196 256 Q176 244 150 244 Q124 244 104 256 Z" fill="#060607"/>
+  <!-- cordones -->
+  <path d="M132 258 Q130 290 134 318" stroke="#E8DCC4" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+  <path d="M168 258 Q170 290 166 318" stroke="#E8DCC4" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+  <circle cx="134" cy="320" r="3" fill="#D4AF37"/><circle cx="166" cy="320" r="3" fill="#D4AF37"/>
+
+  <!-- cabeza con pasamontañas -->
+  <path d="M110 186 Q108 132 150 128 Q192 132 190 186 Q190 232 168 246 Q150 254 132 246 Q110 232 110 186 Z" fill="url(#pomask)"/>
+  <path d="M110 186 Q108 132 150 128 Q192 132 190 186 Q190 232 168 246 Q150 254 132 246 Q110 232 110 186 Z" fill="url(#poknit)"/>
+  <!-- ranura de ojos -->
+  <rect x="117" y="172" width="66" height="24" rx="12" fill="url(#poskin)"/>
+  <rect x="117" y="172" width="66" height="9" rx="4.5" fill="#2A1C14" opacity=".55"/>
+  <ellipse cx="134" cy="184" rx="7" ry="4.6" fill="#E4DCD2"/>
+  <ellipse cx="166" cy="184" rx="7" ry="4.6" fill="#E4DCD2"/>
+  <circle cx="135" cy="184" r="3.4" fill="#2E2219"/>
+  <circle cx="167" cy="184" r="3.4" fill="#2E2219"/>
+  <circle cx="136.2" cy="185.4" r="1.1" fill="#F5DE9A"/>
+  <circle cx="168.2" cy="185.4" r="1.1" fill="#F5DE9A"/>
+  <path d="M126 180 Q134 177 142 180 M158 180 Q166 177 174 180" stroke="#1A120D" stroke-width="1.6" fill="none"/>
+  <path d="M117 184 Q117 172 129 172 L171 172 Q183 172 183 184" stroke="#0A0A0B" stroke-width="3" fill="none"/>
+  <path d="M117 186 Q118 196 129 196 L171 196 Q182 196 183 186" stroke="#3A3D44" stroke-width="2.4" fill="none"/>
+  <!-- costura y relieve del tejido -->
+  <path d="M150 130 L150 170 M150 198 L150 250" stroke="#000" stroke-width="1.2" opacity=".5"/>
+  <path d="M124 214 Q150 228 176 214" stroke="#34363D" stroke-width="2" fill="none" opacity=".6"/>
+
+  <!-- luz de borde -->
+  <path d="M212 276 Q228 150 150 100" stroke="#D4AF37" stroke-width="2.5" fill="none" opacity=".55" filter="url(#pob1)"/>
+  <path d="M190 186 Q190 232 168 246" stroke="#D4AF37" stroke-width="2" fill="none" opacity=".45" filter="url(#pob1)"/>
+
+  <!-- portátil (de espaldas) -->
+  <ellipse cx="150" cy="356" rx="90" ry="22" fill="#D4AF37" opacity=".28" filter="url(#pob4)"/>
+  <path d="M84 400 L96 344 L204 344 L216 400 Z" fill="#0B0B0C" stroke="#2C2A30" stroke-width="2"/>
+  <text x="150" y="378" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="14" fill="#D4AF37" text-anchor="middle" opacity=".95">PX</text>
+
+  <!-- código -->
+  <g font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
+    <rect x="12" y="12" width="76" height="44" rx="11" fill="#D4AF37"/>
+    <text x="50" y="40" font-size="24" font-weight="800" fill="#13100C">P1</text>
+    <text x="50" y="51" font-size="8" font-weight="700" fill="#3A2C0A" letter-spacing=".6">SOMBRA ORO</text>
+  </g>
+</svg>

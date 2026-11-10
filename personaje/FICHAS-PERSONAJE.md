@@ -10,6 +10,37 @@ Los *prompts maestros* están listos por si algún día quieres una versión con
 
 ---
 
+## ✅ VERSIÓN ELEGIDA: P1 Sombra con los colores de P5 (`P1-oro`)
+
+Archivos: `svg/P1-oro.svg` · `png/P1-oro.png`
+
+Es el mismo diseño que P1 (pasamontañas de una ranura, capucha puesta, portátil con "PX"), pero con la paleta de P5: negro cálido y oro en lugar de cian.
+
+| Parte | Detalle | HEX |
+|---|---|---|
+| Pasamontañas | Negro mate de punto, una ranura horizontal para los ojos | `#0B0B0C` → `#2C2C2E` |
+| Ojos | Marrón oscuro con reflejo dorado | `#2E2219` / `#F5DE9A` |
+| Piel (ranura) | Morena cálida, iluminada en dorado desde abajo | `#C08E6A` |
+| Sudadera | Negra cálida con la capucha puesta | `#1F1E22` / `#0E0E10` |
+| Cordones | Crema con puntas doradas | `#E8DCC4` / `#D4AF37` |
+| Luz | Brillo dorado del portátil y línea de luz dorada en el borde de la capucha | `#D4AF37` |
+| Portátil | Negro con "PX" dorado en la tapa | `#0B0B0C` / `#D4AF37` |
+| Fondo | Negro cálido | `#080706` → `#2A2219` |
+
+**Prompt maestro (provisional)**
+```
+Dark cinematic semi-realistic illustration, waist-up portrait, front view, of a faceless young entrepreneur called Pertx wearing a matte black knitted balaclava with a single horizontal eye slit, only his dark brown eyes visible with warm gold reflections, hood of a warm-black hoodie (#1F1E22) pulled up over the balaclava, cream drawstrings with gold tips. He sits in a dark room lit only by the warm golden glow (#D4AF37) of a black laptop in front of him; the laptop lid faces the viewer with a small gold "PX" logo. Thin gold rim light on the edge of the hood, deep warm-black background (#080706 to #2A2219), quiet luxury, film noir mood, subtle knit texture, mysterious, high detail.
+```
+
+**Prompt negativo (provisional)**
+```
+visible face, visible mouth, nose, smile, cyan or blue light, bright colors, daylight, cartoon, anime, childish, cute, weapons, cash, money bags, gold chains, criminal scene, police, real brand logos, text other than PX, extra fingers, deformed hands, multiple people, watermark, blurry
+```
+
+La ficha definitiva, con poses, expresiones, voz y reglas, irá en `FICHA-FINAL.md` cuando elijas la mascota.
+
+---
+
 ## P1 · SOMBRA (noir semi-realista)
 
 **Vibe:** el que construye de noche, a solas, con la luz de la pantalla. Serio y con misterio.
