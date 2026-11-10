@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- M5 · NERO · Gato negro (animal real) · con Pertx -->
+  <defs>
+    <radialGradient id="m5glow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#F5DE9A" stop-opacity=".75"/><stop offset=".45" stop-color="#D4AF37" stop-opacity=".35"/><stop offset="1" stop-color="#D4AF37" stop-opacity="0"/></radialGradient>
+    <linearGradient id="m5hood" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0E0E10"/><stop offset=".55" stop-color="#1F1E22"/><stop offset="1" stop-color="#2E2A24"/></linearGradient>
+    <linearGradient id="m5body" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0E0E10"/><stop offset=".5" stop-color="#1F1E22"/><stop offset="1" stop-color="#2A2620"/></linearGradient>
+    <linearGradient id="m5legs" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0B0B0C"/><stop offset=".5" stop-color="#18171A"/><stop offset="1" stop-color="#232019"/></linearGradient>
+    <radialGradient id="m5mask" cx="42%" cy="35%" r="70%"><stop offset="0" stop-color="#2C2C2E"/><stop offset="1" stop-color="#0B0B0C"/></radialGradient>
+    <linearGradient id="m5skin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5A3C2A"/><stop offset=".45" stop-color="#C08E6A"/><stop offset="1" stop-color="#E2BE7A"/></linearGradient>
+    <linearGradient id="m5gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F5DE9A"/><stop offset=".5" stop-color="#D4AF37"/><stop offset="1" stop-color="#8E6E1E"/></linearGradient>
+    <pattern id="m5knit" width="4" height="3.2" patternUnits="userSpaceOnUse"><path d="M0 1.6 Q1 0 2 1.6 T4 1.6" stroke="#000" stroke-opacity=".5" fill="none" stroke-width=".7"/></pattern>
+    <filter id="m5b1"><feGaussianBlur stdDeviation="1"/></filter>
+    <filter id="m5b6" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
+    <radialGradient id="m5bg" cx="50%" cy="32%" r="80%"><stop offset="0" stop-color="#2A2219"/><stop offset=".55" stop-color="#13100C"/><stop offset="1" stop-color="#080706"/></radialGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#m5bg)"/>
+  <path d="M0 378 H400" stroke="url(#m5gold)" stroke-width=".8" opacity=".35"/>
+  <g transform="translate(14 14) scale(.96)">
+    <ellipse cx="100" cy="380" rx="62" ry="7" fill="#000" opacity=".55"/>
+    <!-- piernas: jogger negro -->
+    <path d="M66 234 Q63 300 68 352 L97 352 L100 246 Z" fill="url(#m5legs)"/>
+    <path d="M134 234 Q137 300 132 352 L103 352 L100 246 Z" fill="url(#m5legs)"/>
+    <path d="M78 292 Q84 300 92 296 M122 292 Q116 300 108 296" stroke="#000" stroke-width="1.5" fill="none" opacity=".7"/>
+    <rect x="67" y="342" width="31" height="11" rx="4" fill="#0B0B0C"/>
+    <rect x="102" y="342" width="31" height="11" rx="4" fill="#0B0B0C"/>
+    <!-- zapatillas negras con detalle dorado -->
+    <path d="M58 375 Q56 352 74 351 L95 351 Q104 353 104 365 L104 377 L58 377 Z" fill="#141416"/>
+    <path d="M142 375 Q144 352 126 351 L105 351 Q96 353 96 365 L96 377 L142 377 Z" fill="#141416"/>
+    <rect x="57" y="372" width="48" height="5" rx="2.5" fill="#8E6E1E"/>
+    <rect x="95" y="372" width="48" height="5" rx="2.5" fill="#8E6E1E"/>
+    <path d="M70 362 L90 360 M130 362 L110 360" stroke="url(#m5gold)" stroke-width="2.4" stroke-linecap="round"/>
+
+    <!-- brazo izquierdo: mano al bolsillo -->
+    <path d="M58 120 Q36 132 34 182 L42 210 L66 208 L60 178 Z" fill="url(#m5body)"/>
+    <!-- torso sudadera oversize -->
+    <path d="M56 116 Q100 104 144 116 L152 234 Q100 244 48 234 Z" fill="url(#m5body)"/>
+    <path d="M70 196 L130 196 L136 228 L64 228 Z" fill="#141416"/>
+    <path d="M70 196 L130 196" stroke="#2C2A30" stroke-width="1.5"/>
+    <path d="M48 226 Q100 236 152 226 L152 236 Q100 246 48 236 Z" fill="#0E0E10"/>
+    <path d="M42 206 Q52 214 66 208" stroke="#0B0B0C" stroke-width="3" fill="none"/>
+    <!-- cordones -->
+    <path d="M90 112 Q88 132 90 150 M110 112 Q112 132 110 150" stroke="#E8DCC4" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <rect x="88.4" y="149" width="3.2" height="6" rx="1.4" fill="url(#m5gold)"/>
+    <rect x="108.4" y="149" width="3.2" height="6" rx="1.4" fill="url(#m5gold)"/>
+
+    <!-- capucha -->
+    <path d="M58 120 Q46 30 100 6 Q154 30 142 120 Q128 104 100 104 Q72 104 58 120 Z" fill="url(#m5hood)"/>
+    <path d="M67 108 Q62 46 100 24 Q138 46 133 108 Q120 98 100 98 Q80 98 67 108 Z" fill="#060607"/>
+    <!-- cabeza con pasamontañas -->
+    <path d="M74 68 Q73 32 100 30 Q127 32 126 68 Q126 96 112 104 Q100 110 88 104 Q74 96 74 68 Z" fill="url(#m5mask)"/>
+    <path d="M74 68 Q73 32 100 30 Q127 32 126 68 Q126 96 112 104 Q100 110 88 104 Q74 96 74 68 Z" fill="url(#m5knit)"/>
+    <path d="M100 31 L100 57 M100 74 L100 108" stroke="#000" stroke-width="1" opacity=".5"/>
+    <rect x="78" y="57" width="44" height="16" rx="8" fill="url(#m5skin)"/>
+    <rect x="78" y="57" width="44" height="6" rx="3" fill="#2A1C14" opacity=".55"/>
+    <ellipse cx="89" cy="65.5" rx="4.8" ry="3.1" fill="#E4DCD2"/>
+    <ellipse cx="111" cy="65.5" rx="4.8" ry="3.1" fill="#E4DCD2"/>
+    <circle cx="89.6" cy="65.6" r="2.3" fill="#2E2219"/>
+    <circle cx="111.6" cy="65.6" r="2.3" fill="#2E2219"/>
+    <circle cx="90.4" cy="66.5" r=".8" fill="#F5DE9A"/>
+    <circle cx="112.4" cy="66.5" r=".8" fill="#F5DE9A"/>
+    <path d="M78 65 Q78 57 86 57 L114 57 Q122 57 122 65" stroke="#0A0A0B" stroke-width="2" fill="none"/>
+
+
+    <!-- brazo derecho mirando el móvil -->
+    <path d="M144 118 Q168 128 170 176 L154 180 L148 150 Z" fill="url(#m5body)"/>
+    <path d="M162 176 L146 150" stroke="#1F1E22" stroke-width="15" stroke-linecap="round"/>
+    <ellipse cx="136" cy="128" rx="26" ry="20" fill="url(#m5glow)" filter="url(#m5b6)"/>
+    <rect x="130" y="124" width="16" height="27" rx="3" fill="#0B0B0C" stroke="#3A3640" stroke-width="1"/>
+    <rect x="132" y="127" width="12" height="20" rx="1.5" fill="#F5DE9A" opacity=".85"/>
+    <ellipse cx="146" cy="148" rx="7" ry="7.5" fill="#B98A66"/>
+
+    <!-- luz dorada de borde -->
+    <path d="M142 120 Q154 30 100 6" stroke="url(#m5gold)" stroke-width="1.8" fill="none" opacity=".6" filter="url(#m5b1)"/>
+    <path d="M144 118 L152 234" stroke="url(#m5gold)" stroke-width="1.4" opacity=".35" filter="url(#m5b1)"/>
+    <path d="M134 236 Q137 300 132 352" stroke="url(#m5gold)" stroke-width="1.2" fill="none" opacity=".3"/>
+    <path d="M78 72 Q100 80 122 72" stroke="#F5DE9A" stroke-width="1.2" fill="none" opacity=".35" filter="url(#m5b1)"/>
+  </g>
+  <defs>
+    <radialGradient id="m5fur" cx="40%" cy="30%" r="75%"><stop offset="0" stop-color="#34323A"/><stop offset=".55" stop-color="#141317"/><stop offset="1" stop-color="#060607"/></radialGradient>
+    <radialGradient id="m5eye" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#F5DE9A"/><stop offset="1" stop-color="#C9971F"/></radialGradient>
+  </defs>
+  <ellipse cx="300" cy="378" rx="56" ry="7" fill="#000" opacity=".6"/>
+  <!-- cola -->
+  <path d="M340 366 Q384 360 380 318 Q378 290 356 284" stroke="#0B0B0D" stroke-width="13" fill="none" stroke-linecap="round"/>
+  <!-- cuerpo sentado -->
+  <path d="M258 376 Q246 310 274 270 L326 270 Q354 310 342 376 Z" fill="url(#m5fur)"/>
+  <path d="M276 376 L280 330 M324 376 L320 330" stroke="#060607" stroke-width="2" opacity=".8"/>
+  <ellipse cx="282" cy="374" rx="12" ry="6" fill="#141317"/>
+  <ellipse cx="318" cy="374" rx="12" ry="6" fill="#141317"/>
+  <!-- collar con chapa PX -->
+  <path d="M272 272 Q300 284 328 272" stroke="url(#m5gold)" stroke-width="5" fill="none"/>
+  <circle cx="300" cy="288" r="8" fill="url(#m5gold)"/>
+  <text x="300" y="291" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="6.5" fill="#13100C" text-anchor="middle">PX</text>
+  <!-- cabeza -->
+  <path d="M262 196 L268 158 L290 184 Z" fill="#141317"/>
+  <path d="M338 196 L332 158 L310 184 Z" fill="#141317"/>
+  <path d="M268 166 L272 184 L284 186 Z M332 166 L328 184 L316 186 Z" fill="#3A2A22" opacity=".7"/>
+  <ellipse cx="300" cy="226" rx="44" ry="40" fill="url(#m5fur)"/>
+  <!-- ojos dorados, mirada de "te estoy vigilando" -->
+  <ellipse cx="282" cy="222" rx="10" ry="8" fill="url(#m5eye)"/>
+  <ellipse cx="318" cy="222" rx="10" ry="8" fill="url(#m5eye)"/>
+  <ellipse cx="282" cy="222" rx="2.4" ry="7" fill="#0A0A0A"/>
+  <ellipse cx="318" cy="222" rx="2.4" ry="7" fill="#0A0A0A"/>
+  <path d="M271 216 Q282 212 293 217 M307 217 Q318 212 329 216" stroke="#060607" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <circle cx="285" cy="219" r="1.4" fill="#FFF5D6"/><circle cx="321" cy="219" r="1.4" fill="#FFF5D6"/>
+  <!-- nariz y boca -->
+  <path d="M296 238 L304 238 L300 243 Z" fill="#3A2A22"/>
+  <path d="M300 243 Q296 250 290 248 M300 243 Q304 250 310 248" stroke="#3A3640" stroke-width="1.6" fill="none"/>
+  <!-- bigotes -->
+  <path d="M276 242 L244 236 M276 247 L246 250 M324 242 L356 236 M324 247 L354 250" stroke="#8E8A80" stroke-width="1" opacity=".7"/>
+  <!-- brillo dorado de borde -->
+  <path d="M342 376 Q354 310 326 270" stroke="url(#m5gold)" stroke-width="1.4" fill="none" opacity=".45"/>
+  <g font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
+    <rect x="302" y="12" width="86" height="44" rx="11" fill="#D4AF37"/>
+    <text x="345" y="40" font-size="24" font-weight="800" fill="#13100C">M5</text>
+    <text x="345" y="51" font-size="8" font-weight="700" fill="#3A2C0A" letter-spacing=".6">NERO</text>
+  </g>
+</svg>

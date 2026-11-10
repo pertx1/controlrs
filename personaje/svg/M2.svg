@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- M2 · NOX · Criatura de humo (inventada) · con Pertx -->
+  <defs>
+    <radialGradient id="m2glow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#F5DE9A" stop-opacity=".75"/><stop offset=".45" stop-color="#D4AF37" stop-opacity=".35"/><stop offset="1" stop-color="#D4AF37" stop-opacity="0"/></radialGradient>
+    <linearGradient id="m2hood" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0E0E10"/><stop offset=".55" stop-color="#1F1E22"/><stop offset="1" stop-color="#2E2A24"/></linearGradient>
+    <linearGradient id="m2body" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0E0E10"/><stop offset=".5" stop-color="#1F1E22"/><stop offset="1" stop-color="#2A2620"/></linearGradient>
+    <linearGradient id="m2legs" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0B0B0C"/><stop offset=".5" stop-color="#18171A"/><stop offset="1" stop-color="#232019"/></linearGradient>
+    <radialGradient id="m2mask" cx="42%" cy="35%" r="70%"><stop offset="0" stop-color="#2C2C2E"/><stop offset="1" stop-color="#0B0B0C"/></radialGradient>
+    <linearGradient id="m2skin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5A3C2A"/><stop offset=".45" stop-color="#C08E6A"/><stop offset="1" stop-color="#E2BE7A"/></linearGradient>
+    <linearGradient id="m2gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F5DE9A"/><stop offset=".5" stop-color="#D4AF37"/><stop offset="1" stop-color="#8E6E1E"/></linearGradient>
+    <pattern id="m2knit" width="4" height="3.2" patternUnits="userSpaceOnUse"><path d="M0 1.6 Q1 0 2 1.6 T4 1.6" stroke="#000" stroke-opacity=".5" fill="none" stroke-width=".7"/></pattern>
+    <filter id="m2b1"><feGaussianBlur stdDeviation="1"/></filter>
+    <filter id="m2b6" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
+    <radialGradient id="m2bg" cx="50%" cy="32%" r="80%"><stop offset="0" stop-color="#2A2219"/><stop offset=".55" stop-color="#13100C"/><stop offset="1" stop-color="#080706"/></radialGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#m2bg)"/>
+  <path d="M0 378 H400" stroke="url(#m2gold)" stroke-width=".8" opacity=".35"/>
+  <g transform="translate(14 14) scale(.96)">
+    <ellipse cx="100" cy="380" rx="62" ry="7" fill="#000" opacity=".55"/>
+    <!-- piernas: jogger negro -->
+    <path d="M66 234 Q63 300 68 352 L97 352 L100 246 Z" fill="url(#m2legs)"/>
+    <path d="M134 234 Q137 300 132 352 L103 352 L100 246 Z" fill="url(#m2legs)"/>
+    <path d="M78 292 Q84 300 92 296 M122 292 Q116 300 108 296" stroke="#000" stroke-width="1.5" fill="none" opacity=".7"/>
+    <rect x="67" y="342" width="31" height="11" rx="4" fill="#0B0B0C"/>
+    <rect x="102" y="342" width="31" height="11" rx="4" fill="#0B0B0C"/>
+    <!-- zapatillas negras con detalle dorado -->
+    <path d="M58 375 Q56 352 74 351 L95 351 Q104 353 104 365 L104 377 L58 377 Z" fill="#141416"/>
+    <path d="M142 375 Q144 352 126 351 L105 351 Q96 353 96 365 L96 377 L142 377 Z" fill="#141416"/>
+    <rect x="57" y="372" width="48" height="5" rx="2.5" fill="#8E6E1E"/>
+    <rect x="95" y="372" width="48" height="5" rx="2.5" fill="#8E6E1E"/>
+    <path d="M70 362 L90 360 M130 362 L110 360" stroke="url(#m2gold)" stroke-width="2.4" stroke-linecap="round"/>
+
+    <!-- brazo izquierdo: mano al bolsillo -->
+    <path d="M58 120 Q36 132 34 182 L42 210 L66 208 L60 178 Z" fill="url(#m2body)"/>
+    <!-- torso sudadera oversize -->
+    <path d="M56 116 Q100 104 144 116 L152 234 Q100 244 48 234 Z" fill="url(#m2body)"/>
+    <path d="M70 196 L130 196 L136 228 L64 228 Z" fill="#141416"/>
+    <path d="M70 196 L130 196" stroke="#2C2A30" stroke-width="1.5"/>
+    <path d="M48 226 Q100 236 152 226 L152 236 Q100 246 48 236 Z" fill="#0E0E10"/>
+    <path d="M42 206 Q52 214 66 208" stroke="#0B0B0C" stroke-width="3" fill="none"/>
+    <!-- cordones -->
+    <path d="M90 112 Q88 132 90 150 M110 112 Q112 132 110 150" stroke="#E8DCC4" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <rect x="88.4" y="149" width="3.2" height="6" rx="1.4" fill="url(#m2gold)"/>
+    <rect x="108.4" y="149" width="3.2" height="6" rx="1.4" fill="url(#m2gold)"/>
+
+    <!-- capucha -->
+    <path d="M58 120 Q46 30 100 6 Q154 30 142 120 Q128 104 100 104 Q72 104 58 120 Z" fill="url(#m2hood)"/>
+    <path d="M67 108 Q62 46 100 24 Q138 46 133 108 Q120 98 100 98 Q80 98 67 108 Z" fill="#060607"/>
+    <!-- cabeza con pasamontañas -->
+    <path d="M74 68 Q73 32 100 30 Q127 32 126 68 Q126 96 112 104 Q100 110 88 104 Q74 96 74 68 Z" fill="url(#m2mask)"/>
+    <path d="M74 68 Q73 32 100 30 Q127 32 126 68 Q126 96 112 104 Q100 110 88 104 Q74 96 74 68 Z" fill="url(#m2knit)"/>
+    <path d="M100 31 L100 57 M100 74 L100 108" stroke="#000" stroke-width="1" opacity=".5"/>
+    <rect x="78" y="57" width="44" height="16" rx="8" fill="url(#m2skin)"/>
+    <rect x="78" y="57" width="44" height="6" rx="3" fill="#2A1C14" opacity=".55"/>
+    <ellipse cx="89" cy="65.5" rx="4.8" ry="3.1" fill="#E4DCD2"/>
+    <ellipse cx="111" cy="65.5" rx="4.8" ry="3.1" fill="#E4DCD2"/>
+    <circle cx="89.6" cy="65.6" r="2.3" fill="#2E2219"/>
+    <circle cx="111.6" cy="65.6" r="2.3" fill="#2E2219"/>
+    <circle cx="90.4" cy="66.5" r=".8" fill="#F5DE9A"/>
+    <circle cx="112.4" cy="66.5" r=".8" fill="#F5DE9A"/>
+    <path d="M78 65 Q78 57 86 57 L114 57 Q122 57 122 65" stroke="#0A0A0B" stroke-width="2" fill="none"/>
+
+
+    <!-- brazo derecho mirando el móvil -->
+    <path d="M144 118 Q168 128 170 176 L154 180 L148 150 Z" fill="url(#m2body)"/>
+    <path d="M162 176 L146 150" stroke="#1F1E22" stroke-width="15" stroke-linecap="round"/>
+    <ellipse cx="136" cy="128" rx="26" ry="20" fill="url(#m2glow)" filter="url(#m2b6)"/>
+    <rect x="130" y="124" width="16" height="27" rx="3" fill="#0B0B0C" stroke="#3A3640" stroke-width="1"/>
+    <rect x="132" y="127" width="12" height="20" rx="1.5" fill="#F5DE9A" opacity=".85"/>
+    <ellipse cx="146" cy="148" rx="7" ry="7.5" fill="#B98A66"/>
+
+    <!-- luz dorada de borde -->
+    <path d="M142 120 Q154 30 100 6" stroke="url(#m2gold)" stroke-width="1.8" fill="none" opacity=".6" filter="url(#m2b1)"/>
+    <path d="M144 118 L152 234" stroke="url(#m2gold)" stroke-width="1.4" opacity=".35" filter="url(#m2b1)"/>
+    <path d="M134 236 Q137 300 132 352" stroke="url(#m2gold)" stroke-width="1.2" fill="none" opacity=".3"/>
+    <path d="M78 72 Q100 80 122 72" stroke="#F5DE9A" stroke-width="1.2" fill="none" opacity=".35" filter="url(#m2b1)"/>
+  </g>
+  <defs>
+    <radialGradient id="m2smoke" cx="45%" cy="40%" r="60%"><stop offset="0" stop-color="#2A2830"/><stop offset=".7" stop-color="#0D0C10"/><stop offset="1" stop-color="#0D0C10" stop-opacity="0"/></radialGradient>
+    <filter id="m2wisp" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2.5"/></filter>
+    <filter id="m2eg" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="2.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <ellipse cx="300" cy="376" rx="40" ry="6" fill="#D4AF37" opacity=".12"/>
+  <!-- estela de humo -->
+  <path d="M286 300 Q270 330 290 346 Q304 358 292 372" stroke="#1A1920" stroke-width="16" fill="none" stroke-linecap="round" filter="url(#m2wisp)" opacity=".9"/>
+  <path d="M312 304 Q326 326 314 344" stroke="#1A1920" stroke-width="10" fill="none" stroke-linecap="round" filter="url(#m2wisp)" opacity=".7"/>
+  <!-- cuerpo -->
+  <path d="M248 250 Q244 196 300 188 Q356 196 352 250 Q352 296 322 310 Q300 318 278 310 Q248 296 248 250 Z" fill="#0D0C10" filter="url(#m2wisp)"/>
+  <path d="M252 250 Q250 200 300 194 Q350 200 348 250 Q348 292 320 304 Q300 312 280 304 Q252 292 252 250 Z" fill="url(#m2smoke)"/>
+  <!-- cuernitos -->
+  <path d="M266 204 L258 176 L280 196 Z" fill="#0D0C10"/>
+  <path d="M334 204 L342 176 L320 196 Z" fill="#0D0C10"/>
+  <path d="M258 176 L262 186 M342 176 L338 186" stroke="url(#m2gold)" stroke-width="2" stroke-linecap="round"/>
+  <!-- ojos de media luna, pícaros -->
+  <path d="M268 240 Q282 226 296 240 Q282 236 268 240 Z" fill="#F5DE9A" filter="url(#m2eg)"/>
+  <path d="M304 240 Q318 226 332 240 Q318 236 304 240 Z" fill="#F5DE9A" filter="url(#m2eg)"/>
+  <!-- sonrisa dentada -->
+  <path d="M276 264 L284 272 L292 264 L300 272 L308 264 L316 272 L324 264" stroke="#D4AF37" stroke-width="2.4" fill="none" stroke-linejoin="round" filter="url(#m2eg)"/>
+  <!-- brazitos de humo -->
+  <path d="M250 262 Q232 268 230 252" stroke="#141319" stroke-width="9" fill="none" stroke-linecap="round" filter="url(#m2wisp)"/>
+  <path d="M350 262 Q370 270 374 252" stroke="#141319" stroke-width="9" fill="none" stroke-linecap="round" filter="url(#m2wisp)"/>
+  <!-- chispas -->
+  <circle cx="240" cy="210" r="1.8" fill="#F5DE9A"/><circle cx="362" cy="224" r="1.4" fill="#F5DE9A"/><circle cx="350" cy="182" r="1.2" fill="#D4AF37"/>
+  <g font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
+    <rect x="302" y="12" width="86" height="44" rx="11" fill="#D4AF37"/>
+    <text x="345" y="40" font-size="24" font-weight="800" fill="#13100C">M2</text>
+    <text x="345" y="51" font-size="8" font-weight="700" fill="#3A2C0A" letter-spacing=".6">NOX</text>
+  </g>
+</svg>
