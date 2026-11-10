@@ -1,0 +1,453 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 400" width="2000" height="400">
+  <!-- FICHA FINAL · poses y expresiones de Pertx + Auro -->
+  <defs>
+    <radialGradient id="feglow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#F5DE9A" stop-opacity=".75"/><stop offset=".45" stop-color="#D4AF37" stop-opacity=".35"/><stop offset="1" stop-color="#D4AF37" stop-opacity="0"/></radialGradient>
+    <linearGradient id="fehood" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0E0E10"/><stop offset=".55" stop-color="#1F1E22"/><stop offset="1" stop-color="#2E2A24"/></linearGradient>
+    <linearGradient id="febody" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0E0E10"/><stop offset=".5" stop-color="#1F1E22"/><stop offset="1" stop-color="#2A2620"/></linearGradient>
+    <linearGradient id="felegs" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0B0B0C"/><stop offset=".5" stop-color="#18171A"/><stop offset="1" stop-color="#232019"/></linearGradient>
+    <radialGradient id="femask" cx="42%" cy="35%" r="70%"><stop offset="0" stop-color="#2C2C2E"/><stop offset="1" stop-color="#0B0B0C"/></radialGradient>
+    <linearGradient id="feskin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5A3C2A"/><stop offset=".45" stop-color="#C08E6A"/><stop offset="1" stop-color="#E2BE7A"/></linearGradient>
+    <linearGradient id="fegold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F5DE9A"/><stop offset=".5" stop-color="#D4AF37"/><stop offset="1" stop-color="#8E6E1E"/></linearGradient>
+    <pattern id="feknit" width="4" height="3.2" patternUnits="userSpaceOnUse"><path d="M0 1.6 Q1 0 2 1.6 T4 1.6" stroke="#000" stroke-opacity=".5" fill="none" stroke-width=".7"/></pattern>
+    <filter id="feb1"><feGaussianBlur stdDeviation="1"/></filter>
+    <filter id="feb6" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
+    <radialGradient id="febg" cx="50%" cy="32%" r="80%"><stop offset="0" stop-color="#2A2219"/><stop offset=".55" stop-color="#13100C"/><stop offset="1" stop-color="#080706"/></radialGradient>
+  </defs>
+  <rect width="2000" height="400" fill="url(#febg)"/>
+  <path d="M0 378 H2000" stroke="url(#fegold)" stroke-width=".8" opacity=".35"/>
+  <g transform="translate(0 0)">
+  <g transform="translate(14 14) scale(.96)">
+    <ellipse cx="100" cy="380" rx="62" ry="7" fill="#000" opacity=".55"/>
+    <!-- piernas: jogger negro -->
+    <path d="M66 234 Q63 300 68 352 L97 352 L100 246 Z" fill="url(#felegs)"/>
+    <path d="M134 234 Q137 300 132 352 L103 352 L100 246 Z" fill="url(#felegs)"/>
+    <path d="M78 292 Q84 300 92 296 M122 292 Q116 300 108 296" stroke="#000" stroke-width="1.5" fill="none" opacity=".7"/>
+    <rect x="67" y="342" width="31" height="11" rx="4" fill="#0B0B0C"/>
+    <rect x="102" y="342" width="31" height="11" rx="4" fill="#0B0B0C"/>
+    <!-- zapatillas negras con detalle dorado -->
+    <path d="M58 375 Q56 352 74 351 L95 351 Q104 353 104 365 L104 377 L58 377 Z" fill="#141416"/>
+    <path d="M142 375 Q144 352 126 351 L105 351 Q96 353 96 365 L96 377 L142 377 Z" fill="#141416"/>
+    <rect x="57" y="372" width="48" height="5" rx="2.5" fill="#8E6E1E"/>
+    <rect x="95" y="372" width="48" height="5" rx="2.5" fill="#8E6E1E"/>
+    <path d="M70 362 L90 360 M130 362 L110 360" stroke="url(#fegold)" stroke-width="2.4" stroke-linecap="round"/>
+
+    <!-- brazo izquierdo: mano al bolsillo -->
+    <path d="M58 120 Q36 132 34 182 L42 210 L66 208 L60 178 Z" fill="url(#febody)"/>
+    <!-- torso sudadera oversize -->
+    <path d="M56 116 Q100 104 144 116 L152 234 Q100 244 48 234 Z" fill="url(#febody)"/>
+    <path d="M70 196 L130 196 L136 228 L64 228 Z" fill="#141416"/>
+    <path d="M70 196 L130 196" stroke="#2C2A30" stroke-width="1.5"/>
+    <path d="M48 226 Q100 236 152 226 L152 236 Q100 246 48 236 Z" fill="#0E0E10"/>
+    <path d="M42 206 Q52 214 66 208" stroke="#0B0B0C" stroke-width="3" fill="none"/>
+    <!-- cordones -->
+    <path d="M90 112 Q88 132 90 150 M110 112 Q112 132 110 150" stroke="#E8DCC4" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <rect x="88.4" y="149" width="3.2" height="6" rx="1.4" fill="url(#fegold)"/>
+    <rect x="108.4" y="149" width="3.2" height="6" rx="1.4" fill="url(#fegold)"/>
+
+    <!-- capucha -->
+    <path d="M58 120 Q46 30 100 6 Q154 30 142 120 Q128 104 100 104 Q72 104 58 120 Z" fill="url(#fehood)"/>
+    <path d="M67 108 Q62 46 100 24 Q138 46 133 108 Q120 98 100 98 Q80 98 67 108 Z" fill="#060607"/>
+    <!-- cabeza con pasamontañas -->
+    <path d="M74 68 Q73 32 100 30 Q127 32 126 68 Q126 96 112 104 Q100 110 88 104 Q74 96 74 68 Z" fill="url(#femask)"/>
+    <path d="M74 68 Q73 32 100 30 Q127 32 126 68 Q126 96 112 104 Q100 110 88 104 Q74 96 74 68 Z" fill="url(#feknit)"/>
+    <path d="M100 31 L100 57 M100 74 L100 108" stroke="#000" stroke-width="1" opacity=".5"/>
+    <rect x="78" y="57" width="44" height="16" rx="8" fill="url(#feskin)"/>
+    <rect x="78" y="57" width="44" height="6" rx="3" fill="#2A1C14" opacity=".55"/>
+
+    <path d="M84 67 Q89 61.5 94 67 Q89 65 84 67 Z" fill="#E4DCD2"/>
+    <path d="M84 67 Q89 61.5 94 67" stroke="#1A120D" stroke-width="1.4" fill="none"/>
+    <path d="M85 69.5 Q89 71 93 69.5" stroke="#8A6248" stroke-width=".9" fill="none"/>
+    <path d="M106 67 Q111 61.5 116 67 Q111 65 106 67 Z" fill="#E4DCD2"/>
+    <path d="M106 67 Q111 61.5 116 67" stroke="#1A120D" stroke-width="1.4" fill="none"/>
+    <path d="M107 69.5 Q111 71 115 69.5" stroke="#8A6248" stroke-width=".9" fill="none"/>
+    <path d="M78 65 Q78 57 86 57 L114 57 Q122 57 122 65" stroke="#0A0A0B" stroke-width="2" fill="none"/>
+
+
+    <!-- brazo derecho mirando el móvil -->
+    <path d="M144 118 Q168 128 170 176 L154 180 L148 150 Z" fill="url(#febody)"/>
+    <path d="M162 176 L146 150" stroke="#1F1E22" stroke-width="15" stroke-linecap="round"/>
+    <ellipse cx="136" cy="128" rx="26" ry="20" fill="url(#feglow)" filter="url(#feb6)"/>
+    <rect x="130" y="124" width="16" height="27" rx="3" fill="#0B0B0C" stroke="#3A3640" stroke-width="1"/>
+    <rect x="132" y="127" width="12" height="20" rx="1.5" fill="#F5DE9A" opacity=".85"/>
+    <ellipse cx="146" cy="148" rx="7" ry="7.5" fill="#B98A66"/>
+
+    <!-- luz dorada de borde -->
+    <path d="M142 120 Q154 30 100 6" stroke="url(#fegold)" stroke-width="1.8" fill="none" opacity=".6" filter="url(#feb1)"/>
+    <path d="M144 118 L152 234" stroke="url(#fegold)" stroke-width="1.4" opacity=".35" filter="url(#feb1)"/>
+    <path d="M134 236 Q137 300 132 352" stroke="url(#fegold)" stroke-width="1.2" fill="none" opacity=".3"/>
+    <path d="M78 72 Q100 80 122 72" stroke="#F5DE9A" stroke-width="1.2" fill="none" opacity=".35" filter="url(#feb1)"/>
+  </g>
+  <defs>
+    <radialGradient id="feorb" cx="38%" cy="30%" r="75%"><stop offset="0" stop-color="#3A393E"/><stop offset=".55" stop-color="#151417"/><stop offset="1" stop-color="#050506"/></radialGradient>
+    <radialGradient id="fethr" cx="50%" cy="0%" r="100%"><stop offset="0" stop-color="#F5DE9A"/><stop offset="1" stop-color="#D4AF37" stop-opacity="0"/></radialGradient>
+    <filter id="feag" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <ellipse cx="300" cy="374" rx="34" ry="6" fill="#000" opacity=".6"/>
+  <!-- propulsores -->
+  <path d="M286 300 L280 334 L292 334 Z" fill="url(#fethr)" opacity=".8"/>
+  <path d="M314 300 L308 334 L320 334 Z" fill="url(#fethr)" opacity=".8"/>
+  <!-- antena -->
+  <path d="M300 186 L300 166" stroke="#2C2A30" stroke-width="3"/>
+  <circle cx="300" cy="162" r="5" fill="#D4AF37" filter="url(#feag)"/>
+  <!-- esfera -->
+  <circle cx="300" cy="244" r="58" fill="url(#feorb)"/>
+  <ellipse cx="300" cy="262" rx="58" ry="12" fill="none" stroke="url(#fegold)" stroke-width="3"/>
+  <path d="M242 262 A58 58 0 0 0 358 262" fill="#0A0A0B" opacity=".35"/>
+  <!-- pantalla-cara -->
+  <rect x="264" y="210" width="72" height="42" rx="16" fill="#050506" stroke="#2C2A30" stroke-width="1.5"/>
+  <g fill="#F5DE9A" filter="url(#feag)"><rect x="276" y="230" width="5" height="5"/><rect x="281" y="225" width="5" height="5"/><rect x="286" y="230" width="5" height="5"/><rect x="309" y="230" width="5" height="5"/><rect x="314" y="225" width="5" height="5"/><rect x="319" y="230" width="5" height="5"/></g>
+  <rect x="296" y="242" width="8" height="3" fill="#D4AF37"/>
+  <ellipse cx="282" cy="204" rx="16" ry="7" fill="#FFFFFF" opacity=".07" transform="rotate(-25 282 204)"/>
+  <g transform="translate(334 150)"><rect x="0" y="0" width="54" height="36" rx="4" fill="#D4AF37" fill-opacity=".08" stroke="#D4AF37" stroke-opacity=".6"/><path d="M6 28 L18 20 L28 24 L46 8" stroke="#F5DE9A" stroke-width="2" fill="none" filter="url(#feag)"/><path d="M40 8 L46 8 L46 14" stroke="#F5DE9A" stroke-width="2" fill="none"/></g>
+    <text x="200" y="396" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#D4AF37" text-anchor="middle" letter-spacing="1.5">1. FELIZ</text>
+  </g>
+  <g transform="translate(400 0)">
+  <g transform="translate(14 14) scale(.96)">
+    <ellipse cx="100" cy="380" rx="62" ry="7" fill="#000" opacity=".55"/>
+    <!-- piernas: jogger negro -->
+    <path d="M66 234 Q63 300 68 352 L97 352 L100 246 Z" fill="url(#felegs)"/>
+    <path d="M134 234 Q137 300 132 352 L103 352 L100 246 Z" fill="url(#felegs)"/>
+    <path d="M78 292 Q84 300 92 296 M122 292 Q116 300 108 296" stroke="#000" stroke-width="1.5" fill="none" opacity=".7"/>
+    <rect x="67" y="342" width="31" height="11" rx="4" fill="#0B0B0C"/>
+    <rect x="102" y="342" width="31" height="11" rx="4" fill="#0B0B0C"/>
+    <!-- zapatillas negras con detalle dorado -->
+    <path d="M58 375 Q56 352 74 351 L95 351 Q104 353 104 365 L104 377 L58 377 Z" fill="#141416"/>
+    <path d="M142 375 Q144 352 126 351 L105 351 Q96 353 96 365 L96 377 L142 377 Z" fill="#141416"/>
+    <rect x="57" y="372" width="48" height="5" rx="2.5" fill="#8E6E1E"/>
+    <rect x="95" y="372" width="48" height="5" rx="2.5" fill="#8E6E1E"/>
+    <path d="M70 362 L90 360 M130 362 L110 360" stroke="url(#fegold)" stroke-width="2.4" stroke-linecap="round"/>
+
+    <!-- brazo izquierdo: mano al bolsillo -->
+    <path d="M58 120 Q36 132 34 182 L42 210 L66 208 L60 178 Z" fill="url(#febody)"/>
+    <!-- torso sudadera oversize -->
+    <path d="M56 116 Q100 104 144 116 L152 234 Q100 244 48 234 Z" fill="url(#febody)"/>
+    <path d="M70 196 L130 196 L136 228 L64 228 Z" fill="#141416"/>
+    <path d="M70 196 L130 196" stroke="#2C2A30" stroke-width="1.5"/>
+    <path d="M48 226 Q100 236 152 226 L152 236 Q100 246 48 236 Z" fill="#0E0E10"/>
+    <path d="M42 206 Q52 214 66 208" stroke="#0B0B0C" stroke-width="3" fill="none"/>
+    <!-- cordones -->
+    <path d="M90 112 Q88 132 90 150 M110 112 Q112 132 110 150" stroke="#E8DCC4" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <rect x="88.4" y="149" width="3.2" height="6" rx="1.4" fill="url(#fegold)"/>
+    <rect x="108.4" y="149" width="3.2" height="6" rx="1.4" fill="url(#fegold)"/>
+
+    <!-- capucha -->
+    <path d="M58 120 Q46 30 100 6 Q154 30 142 120 Q128 104 100 104 Q72 104 58 120 Z" fill="url(#fehood)"/>
+    <path d="M67 108 Q62 46 100 24 Q138 46 133 108 Q120 98 100 98 Q80 98 67 108 Z" fill="#060607"/>
+    <!-- cabeza con pasamontañas -->
+    <path d="M74 68 Q73 32 100 30 Q127 32 126 68 Q126 96 112 104 Q100 110 88 104 Q74 96 74 68 Z" fill="url(#femask)"/>
+    <path d="M74 68 Q73 32 100 30 Q127 32 126 68 Q126 96 112 104 Q100 110 88 104 Q74 96 74 68 Z" fill="url(#feknit)"/>
+    <path d="M100 31 L100 57 M100 74 L100 108" stroke="#000" stroke-width="1" opacity=".5"/>
+    <rect x="78" y="57" width="44" height="16" rx="8" fill="url(#feskin)"/>
+    <rect x="78" y="57" width="44" height="6" rx="3" fill="#2A1C14" opacity=".55"/>
+
+    <ellipse cx="89" cy="65.5" rx="4.8" ry="3.1" fill="#E4DCD2"/>
+    <circle cx="88.0" cy="64.6" r="2.3" fill="#2E2219"/>
+    <circle cx="88.80000000000001" cy="65.5" r=".8" fill="#F5DE9A"/>
+    <ellipse cx="111" cy="65.5" rx="4.8" ry="3.1" fill="#E4DCD2"/>
+    <circle cx="110.0" cy="64.6" r="2.3" fill="#2E2219"/>
+    <circle cx="110.80000000000001" cy="65.5" r=".8" fill="#F5DE9A"/>
+    <path d="M83 63 L95 62 M105 61 Q111 58.5 117 61.5" stroke="#1A120D" stroke-width="1.6" fill="none"/>
+    <path d="M78 65 Q78 57 86 57 L114 57 Q122 57 122 65" stroke="#0A0A0B" stroke-width="2" fill="none"/>
+
+
+    <!-- brazo derecho relajado, sin nada en la mano -->
+    <path d="M144 120 Q166 132 166 182 L160 212 L144 210 L150 178 Z" fill="url(#febody)"/>
+    <path d="M144 206 Q152 214 160 208" stroke="#0B0B0C" stroke-width="3" fill="none"/>
+    <ellipse cx="152" cy="218" rx="7.5" ry="8.5" fill="#B98A66"/>
+    <path d="M147 222 Q152 226 157 222" stroke="#8A6248" stroke-width="1.2" fill="none"/>
+
+    <!-- luz dorada de borde -->
+    <path d="M142 120 Q154 30 100 6" stroke="url(#fegold)" stroke-width="1.8" fill="none" opacity=".6" filter="url(#feb1)"/>
+    <path d="M144 118 L152 234" stroke="url(#fegold)" stroke-width="1.4" opacity=".35" filter="url(#feb1)"/>
+    <path d="M134 236 Q137 300 132 352" stroke="url(#fegold)" stroke-width="1.2" fill="none" opacity=".3"/>
+    <path d="M78 72 Q100 80 122 72" stroke="#F5DE9A" stroke-width="1.2" fill="none" opacity=".35" filter="url(#feb1)"/>
+  </g>
+  <defs>
+    <radialGradient id="feorb" cx="38%" cy="30%" r="75%"><stop offset="0" stop-color="#3A393E"/><stop offset=".55" stop-color="#151417"/><stop offset="1" stop-color="#050506"/></radialGradient>
+    <radialGradient id="fethr" cx="50%" cy="0%" r="100%"><stop offset="0" stop-color="#F5DE9A"/><stop offset="1" stop-color="#D4AF37" stop-opacity="0"/></radialGradient>
+    <filter id="feag" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <ellipse cx="300" cy="374" rx="34" ry="6" fill="#000" opacity=".6"/>
+  <!-- propulsores -->
+  <path d="M286 300 L280 334 L292 334 Z" fill="url(#fethr)" opacity=".8"/>
+  <path d="M314 300 L308 334 L320 334 Z" fill="url(#fethr)" opacity=".8"/>
+  <!-- antena -->
+  <path d="M300 186 L300 166" stroke="#2C2A30" stroke-width="3"/>
+  <circle cx="300" cy="162" r="5" fill="#D4AF37" filter="url(#feag)"/>
+  <!-- esfera -->
+  <circle cx="300" cy="244" r="58" fill="url(#feorb)"/>
+  <ellipse cx="300" cy="262" rx="58" ry="12" fill="none" stroke="url(#fegold)" stroke-width="3"/>
+  <path d="M242 262 A58 58 0 0 0 358 262" fill="#0A0A0B" opacity=".35"/>
+  <!-- pantalla-cara -->
+  <rect x="264" y="210" width="72" height="42" rx="16" fill="#050506" stroke="#2C2A30" stroke-width="1.5"/>
+  <g fill="#F5DE9A" filter="url(#feag)"><rect x="276" y="230" width="5" height="5"/><rect x="281" y="230" width="5" height="5"/><rect x="286" y="230" width="5" height="5"/><rect x="314" y="224" width="5" height="5"/><rect x="309" y="229" width="5" height="5"/><rect x="314" y="229" width="5" height="5"/><rect x="319" y="229" width="5" height="5"/></g>
+  <rect x="300" y="243" width="8" height="3" fill="#D4AF37"/>
+  <ellipse cx="282" cy="204" rx="16" ry="7" fill="#FFFFFF" opacity=".07" transform="rotate(-25 282 204)"/>
+  <g transform="translate(334 150)"><rect x="0" y="0" width="54" height="36" rx="4" fill="#D4AF37" fill-opacity=".08" stroke="#D4AF37" stroke-opacity=".6"/><text x="27" y="27" font-family="Arial Black, Arial, sans-serif" font-size="22" fill="#F5DE9A" text-anchor="middle">?</text></g>
+    <text x="200" y="396" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#D4AF37" text-anchor="middle" letter-spacing="1.5">2. PENSATIVO</text>
+  </g>
+  <path d="M400 30 V370" stroke="#2E281E" stroke-width="1"/>
+  <g transform="translate(800 0)">
+  <g transform="translate(14 14) scale(.96)">
+    <ellipse cx="100" cy="380" rx="62" ry="7" fill="#000" opacity=".55"/>
+    <!-- piernas: jogger negro -->
+    <path d="M66 234 Q63 300 68 352 L97 352 L100 246 Z" fill="url(#felegs)"/>
+    <path d="M134 234 Q137 300 132 352 L103 352 L100 246 Z" fill="url(#felegs)"/>
+    <path d="M78 292 Q84 300 92 296 M122 292 Q116 300 108 296" stroke="#000" stroke-width="1.5" fill="none" opacity=".7"/>
+    <rect x="67" y="342" width="31" height="11" rx="4" fill="#0B0B0C"/>
+    <rect x="102" y="342" width="31" height="11" rx="4" fill="#0B0B0C"/>
+    <!-- zapatillas negras con detalle dorado -->
+    <path d="M58 375 Q56 352 74 351 L95 351 Q104 353 104 365 L104 377 L58 377 Z" fill="#141416"/>
+    <path d="M142 375 Q144 352 126 351 L105 351 Q96 353 96 365 L96 377 L142 377 Z" fill="#141416"/>
+    <rect x="57" y="372" width="48" height="5" rx="2.5" fill="#8E6E1E"/>
+    <rect x="95" y="372" width="48" height="5" rx="2.5" fill="#8E6E1E"/>
+    <path d="M70 362 L90 360 M130 362 L110 360" stroke="url(#fegold)" stroke-width="2.4" stroke-linecap="round"/>
+
+    <!-- brazo izquierdo: mano al bolsillo -->
+    <path d="M58 120 Q36 132 34 182 L42 210 L66 208 L60 178 Z" fill="url(#febody)"/>
+    <!-- torso sudadera oversize -->
+    <path d="M56 116 Q100 104 144 116 L152 234 Q100 244 48 234 Z" fill="url(#febody)"/>
+    <path d="M70 196 L130 196 L136 228 L64 228 Z" fill="#141416"/>
+    <path d="M70 196 L130 196" stroke="#2C2A30" stroke-width="1.5"/>
+    <path d="M48 226 Q100 236 152 226 L152 236 Q100 246 48 236 Z" fill="#0E0E10"/>
+    <path d="M42 206 Q52 214 66 208" stroke="#0B0B0C" stroke-width="3" fill="none"/>
+    <!-- cordones -->
+    <path d="M90 112 Q88 132 90 150 M110 112 Q112 132 110 150" stroke="#E8DCC4" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <rect x="88.4" y="149" width="3.2" height="6" rx="1.4" fill="url(#fegold)"/>
+    <rect x="108.4" y="149" width="3.2" height="6" rx="1.4" fill="url(#fegold)"/>
+
+    <!-- capucha -->
+    <path d="M58 120 Q46 30 100 6 Q154 30 142 120 Q128 104 100 104 Q72 104 58 120 Z" fill="url(#fehood)"/>
+    <path d="M67 108 Q62 46 100 24 Q138 46 133 108 Q120 98 100 98 Q80 98 67 108 Z" fill="#060607"/>
+    <!-- cabeza con pasamontañas -->
+    <path d="M74 68 Q73 32 100 30 Q127 32 126 68 Q126 96 112 104 Q100 110 88 104 Q74 96 74 68 Z" fill="url(#femask)"/>
+    <path d="M74 68 Q73 32 100 30 Q127 32 126 68 Q126 96 112 104 Q100 110 88 104 Q74 96 74 68 Z" fill="url(#feknit)"/>
+    <path d="M100 31 L100 57 M100 74 L100 108" stroke="#000" stroke-width="1" opacity=".5"/>
+    <rect x="78" y="57" width="44" height="16" rx="8" fill="url(#feskin)"/>
+    <rect x="78" y="57" width="44" height="6" rx="3" fill="#2A1C14" opacity=".55"/>
+
+    <ellipse cx="89" cy="65.5" rx="5.4" ry="4.2" fill="#E4DCD2"/>
+    <circle cx="89.6" cy="65.6" r="1.7" fill="#2E2219"/>
+    <circle cx="90.4" cy="66.5" r=".8" fill="#F5DE9A"/>
+    <ellipse cx="111" cy="65.5" rx="5.4" ry="4.2" fill="#E4DCD2"/>
+    <circle cx="111.6" cy="65.6" r="1.7" fill="#2E2219"/>
+    <circle cx="112.4" cy="66.5" r=".8" fill="#F5DE9A"/>
+    <path d="M78 65 Q78 57 86 57 L114 57 Q122 57 122 65" stroke="#0A0A0B" stroke-width="2" fill="none"/>
+
+
+    <!-- brazo derecho mirando el móvil -->
+    <path d="M144 118 Q168 128 170 176 L154 180 L148 150 Z" fill="url(#febody)"/>
+    <path d="M162 176 L146 150" stroke="#1F1E22" stroke-width="15" stroke-linecap="round"/>
+    <ellipse cx="136" cy="128" rx="26" ry="20" fill="url(#feglow)" filter="url(#feb6)"/>
+    <rect x="130" y="124" width="16" height="27" rx="3" fill="#0B0B0C" stroke="#3A3640" stroke-width="1"/>
+    <rect x="132" y="127" width="12" height="20" rx="1.5" fill="#F5DE9A" opacity=".85"/>
+    <ellipse cx="146" cy="148" rx="7" ry="7.5" fill="#B98A66"/>
+
+    <!-- luz dorada de borde -->
+    <path d="M142 120 Q154 30 100 6" stroke="url(#fegold)" stroke-width="1.8" fill="none" opacity=".6" filter="url(#feb1)"/>
+    <path d="M144 118 L152 234" stroke="url(#fegold)" stroke-width="1.4" opacity=".35" filter="url(#feb1)"/>
+    <path d="M134 236 Q137 300 132 352" stroke="url(#fegold)" stroke-width="1.2" fill="none" opacity=".3"/>
+    <path d="M78 72 Q100 80 122 72" stroke="#F5DE9A" stroke-width="1.2" fill="none" opacity=".35" filter="url(#feb1)"/>
+  </g>
+  <defs>
+    <radialGradient id="feorb" cx="38%" cy="30%" r="75%"><stop offset="0" stop-color="#3A393E"/><stop offset=".55" stop-color="#151417"/><stop offset="1" stop-color="#050506"/></radialGradient>
+    <radialGradient id="fethr" cx="50%" cy="0%" r="100%"><stop offset="0" stop-color="#F5DE9A"/><stop offset="1" stop-color="#D4AF37" stop-opacity="0"/></radialGradient>
+    <filter id="feag" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <ellipse cx="300" cy="374" rx="34" ry="6" fill="#000" opacity=".6"/>
+  <!-- propulsores -->
+  <path d="M286 300 L280 334 L292 334 Z" fill="url(#fethr)" opacity=".8"/>
+  <path d="M314 300 L308 334 L320 334 Z" fill="url(#fethr)" opacity=".8"/>
+  <!-- antena -->
+  <path d="M300 186 L300 166" stroke="#2C2A30" stroke-width="3"/>
+  <circle cx="300" cy="162" r="5" fill="#D4AF37" filter="url(#feag)"/>
+  <!-- esfera -->
+  <circle cx="300" cy="244" r="58" fill="url(#feorb)"/>
+  <ellipse cx="300" cy="262" rx="58" ry="12" fill="none" stroke="url(#fegold)" stroke-width="3"/>
+  <path d="M242 262 A58 58 0 0 0 358 262" fill="#0A0A0B" opacity=".35"/>
+  <!-- pantalla-cara -->
+  <rect x="264" y="210" width="72" height="42" rx="16" fill="#050506" stroke="#2C2A30" stroke-width="1.5"/>
+  <g fill="#F5DE9A" filter="url(#feag)"><rect x="276.0" y="221.0" width="4.5" height="4.5"/><rect x="280.5" y="221.0" width="4.5" height="4.5"/><rect x="285.0" y="221.0" width="4.5" height="4.5"/><rect x="276.0" y="225.5" width="4.5" height="4.5"/><rect x="285.0" y="225.5" width="4.5" height="4.5"/><rect x="276.0" y="230.0" width="4.5" height="4.5"/><rect x="280.5" y="230.0" width="4.5" height="4.5"/><rect x="285.0" y="230.0" width="4.5" height="4.5"/><rect x="310.0" y="221.0" width="4.5" height="4.5"/><rect x="314.5" y="221.0" width="4.5" height="4.5"/><rect x="319.0" y="221.0" width="4.5" height="4.5"/><rect x="310.0" y="225.5" width="4.5" height="4.5"/><rect x="319.0" y="225.5" width="4.5" height="4.5"/><rect x="310.0" y="230.0" width="4.5" height="4.5"/><rect x="314.5" y="230.0" width="4.5" height="4.5"/><rect x="319.0" y="230.0" width="4.5" height="4.5"/></g>
+  <rect x="297" y="241" width="6" height="6" fill="none" stroke="#D4AF37" stroke-width="2"/>
+  <ellipse cx="282" cy="204" rx="16" ry="7" fill="#FFFFFF" opacity=".07" transform="rotate(-25 282 204)"/>
+  <g transform="translate(334 150)"><rect x="0" y="0" width="54" height="36" rx="4" fill="#D4AF37" fill-opacity=".08" stroke="#D4AF37" stroke-opacity=".6"/><text x="27" y="28" font-family="Arial Black, Arial, sans-serif" font-size="24" fill="#F5DE9A" text-anchor="middle">!</text></g>
+    <text x="200" y="396" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#D4AF37" text-anchor="middle" letter-spacing="1.5">3. SORPRENDIDO</text>
+  </g>
+  <path d="M800 30 V370" stroke="#2E281E" stroke-width="1"/>
+  <g transform="translate(1200 0)">
+  <g transform="translate(14 14) scale(.96)">
+    <ellipse cx="100" cy="380" rx="62" ry="7" fill="#000" opacity=".55"/>
+    <!-- piernas: jogger negro -->
+    <path d="M66 234 Q63 300 68 352 L97 352 L100 246 Z" fill="url(#felegs)"/>
+    <path d="M134 234 Q137 300 132 352 L103 352 L100 246 Z" fill="url(#felegs)"/>
+    <path d="M78 292 Q84 300 92 296 M122 292 Q116 300 108 296" stroke="#000" stroke-width="1.5" fill="none" opacity=".7"/>
+    <rect x="67" y="342" width="31" height="11" rx="4" fill="#0B0B0C"/>
+    <rect x="102" y="342" width="31" height="11" rx="4" fill="#0B0B0C"/>
+    <!-- zapatillas negras con detalle dorado -->
+    <path d="M58 375 Q56 352 74 351 L95 351 Q104 353 104 365 L104 377 L58 377 Z" fill="#141416"/>
+    <path d="M142 375 Q144 352 126 351 L105 351 Q96 353 96 365 L96 377 L142 377 Z" fill="#141416"/>
+    <rect x="57" y="372" width="48" height="5" rx="2.5" fill="#8E6E1E"/>
+    <rect x="95" y="372" width="48" height="5" rx="2.5" fill="#8E6E1E"/>
+    <path d="M70 362 L90 360 M130 362 L110 360" stroke="url(#fegold)" stroke-width="2.4" stroke-linecap="round"/>
+
+    <!-- brazo izquierdo: mano al bolsillo -->
+    <path d="M58 120 Q36 132 34 182 L42 210 L66 208 L60 178 Z" fill="url(#febody)"/>
+    <!-- torso sudadera oversize -->
+    <path d="M56 116 Q100 104 144 116 L152 234 Q100 244 48 234 Z" fill="url(#febody)"/>
+    <path d="M70 196 L130 196 L136 228 L64 228 Z" fill="#141416"/>
+    <path d="M70 196 L130 196" stroke="#2C2A30" stroke-width="1.5"/>
+    <path d="M48 226 Q100 236 152 226 L152 236 Q100 246 48 236 Z" fill="#0E0E10"/>
+    <path d="M42 206 Q52 214 66 208" stroke="#0B0B0C" stroke-width="3" fill="none"/>
+    <!-- cordones -->
+    <path d="M90 112 Q88 132 90 150 M110 112 Q112 132 110 150" stroke="#E8DCC4" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <rect x="88.4" y="149" width="3.2" height="6" rx="1.4" fill="url(#fegold)"/>
+    <rect x="108.4" y="149" width="3.2" height="6" rx="1.4" fill="url(#fegold)"/>
+
+    <!-- capucha -->
+    <path d="M58 120 Q46 30 100 6 Q154 30 142 120 Q128 104 100 104 Q72 104 58 120 Z" fill="url(#fehood)"/>
+    <path d="M67 108 Q62 46 100 24 Q138 46 133 108 Q120 98 100 98 Q80 98 67 108 Z" fill="#060607"/>
+    <!-- cabeza con pasamontañas -->
+    <path d="M74 68 Q73 32 100 30 Q127 32 126 68 Q126 96 112 104 Q100 110 88 104 Q74 96 74 68 Z" fill="url(#femask)"/>
+    <path d="M74 68 Q73 32 100 30 Q127 32 126 68 Q126 96 112 104 Q100 110 88 104 Q74 96 74 68 Z" fill="url(#feknit)"/>
+    <path d="M100 31 L100 57 M100 74 L100 108" stroke="#000" stroke-width="1" opacity=".5"/>
+    <rect x="78" y="57" width="44" height="16" rx="8" fill="url(#feskin)"/>
+    <rect x="78" y="57" width="44" height="6" rx="3" fill="#2A1C14" opacity=".55"/>
+
+    <ellipse cx="89" cy="65.5" rx="4.8" ry="3.1" fill="#E4DCD2"/>
+    <circle cx="90.6" cy="65.6" r="2.3" fill="#2E2219"/>
+    <circle cx="91.4" cy="66.5" r=".8" fill="#F5DE9A"/>
+    <ellipse cx="111" cy="65.5" rx="4.8" ry="3.1" fill="#E4DCD2"/>
+    <circle cx="112.6" cy="65.6" r="2.3" fill="#2E2219"/>
+    <circle cx="113.4" cy="66.5" r=".8" fill="#F5DE9A"/>
+    <path d="M83.5 63 L95 64.5 M105 64.5 L116.5 63" stroke="#0A0A0B" stroke-width="2.4" stroke-linecap="round"/>
+    <path d="M78 65 Q78 57 86 57 L114 57 Q122 57 122 65" stroke="#0A0A0B" stroke-width="2" fill="none"/>
+
+
+    <!-- brazo derecho señalando a la derecha (pantalla) -->
+    <path d="M144 118 Q172 122 198 130 L198 146 Q172 142 150 152 Z" fill="url(#febody)"/>
+    <path d="M196 128 Q202 136 196 148" stroke="#0B0B0C" stroke-width="3" fill="none"/>
+    <ellipse cx="204" cy="138" rx="7" ry="7.5" fill="#B98A66"/>
+    <rect x="207" y="134.5" width="14" height="4.5" rx="2.2" fill="#B98A66"/>
+
+    <!-- luz dorada de borde -->
+    <path d="M142 120 Q154 30 100 6" stroke="url(#fegold)" stroke-width="1.8" fill="none" opacity=".6" filter="url(#feb1)"/>
+    <path d="M144 118 L152 234" stroke="url(#fegold)" stroke-width="1.4" opacity=".35" filter="url(#feb1)"/>
+    <path d="M134 236 Q137 300 132 352" stroke="url(#fegold)" stroke-width="1.2" fill="none" opacity=".3"/>
+    <path d="M78 72 Q100 80 122 72" stroke="#F5DE9A" stroke-width="1.2" fill="none" opacity=".35" filter="url(#feb1)"/>
+  </g>
+  <defs>
+    <radialGradient id="feorb" cx="38%" cy="30%" r="75%"><stop offset="0" stop-color="#3A393E"/><stop offset=".55" stop-color="#151417"/><stop offset="1" stop-color="#050506"/></radialGradient>
+    <radialGradient id="fethr" cx="50%" cy="0%" r="100%"><stop offset="0" stop-color="#F5DE9A"/><stop offset="1" stop-color="#D4AF37" stop-opacity="0"/></radialGradient>
+    <filter id="feag" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <ellipse cx="300" cy="374" rx="34" ry="6" fill="#000" opacity=".6"/>
+  <!-- propulsores -->
+  <path d="M286 300 L280 334 L292 334 Z" fill="url(#fethr)" opacity=".8"/>
+  <path d="M314 300 L308 334 L320 334 Z" fill="url(#fethr)" opacity=".8"/>
+  <!-- antena -->
+  <path d="M300 186 L300 166" stroke="#2C2A30" stroke-width="3"/>
+  <circle cx="300" cy="162" r="5" fill="#D4AF37" filter="url(#feag)"/>
+  <!-- esfera -->
+  <circle cx="300" cy="244" r="58" fill="url(#feorb)"/>
+  <ellipse cx="300" cy="262" rx="58" ry="12" fill="none" stroke="url(#fegold)" stroke-width="3"/>
+  <path d="M242 262 A58 58 0 0 0 358 262" fill="#0A0A0B" opacity=".35"/>
+  <!-- pantalla-cara -->
+  <rect x="264" y="210" width="72" height="42" rx="16" fill="#050506" stroke="#2C2A30" stroke-width="1.5"/>
+  <g fill="#F5DE9A" filter="url(#feag)"><rect x="280" y="220" width="4" height="4"/><rect x="284" y="224" width="4" height="4"/><rect x="288" y="228" width="4" height="4"/><rect x="284" y="232" width="4" height="4"/><rect x="280" y="236" width="4" height="4"/><rect x="312" y="220" width="4" height="4"/><rect x="316" y="224" width="4" height="4"/><rect x="320" y="228" width="4" height="4"/><rect x="316" y="232" width="4" height="4"/><rect x="312" y="236" width="4" height="4"/></g>
+  <rect x="296" y="243" width="8" height="3" fill="#D4AF37"/>
+  <ellipse cx="282" cy="204" rx="16" ry="7" fill="#FFFFFF" opacity=".07" transform="rotate(-25 282 204)"/>
+  <g transform="translate(334 150)"><rect x="0" y="0" width="54" height="36" rx="4" fill="#D4AF37" fill-opacity=".08" stroke="#D4AF37" stroke-opacity=".6"/><path d="M10 18 H42 M32 8 L44 18 L32 28" stroke="#F5DE9A" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <text x="200" y="396" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#D4AF37" text-anchor="middle" letter-spacing="1.5">4. SEÑALANDO LA PANTALLA</text>
+  </g>
+  <path d="M1200 30 V370" stroke="#2E281E" stroke-width="1"/>
+  <g transform="translate(1600 0)">
+  <g transform="translate(14 14) scale(.96)">
+    <ellipse cx="100" cy="380" rx="62" ry="7" fill="#000" opacity=".55"/>
+    <!-- piernas: jogger negro -->
+    <path d="M66 234 Q63 300 68 352 L97 352 L100 246 Z" fill="url(#felegs)"/>
+    <path d="M134 234 Q137 300 132 352 L103 352 L100 246 Z" fill="url(#felegs)"/>
+    <path d="M78 292 Q84 300 92 296 M122 292 Q116 300 108 296" stroke="#000" stroke-width="1.5" fill="none" opacity=".7"/>
+    <rect x="67" y="342" width="31" height="11" rx="4" fill="#0B0B0C"/>
+    <rect x="102" y="342" width="31" height="11" rx="4" fill="#0B0B0C"/>
+    <!-- zapatillas negras con detalle dorado -->
+    <path d="M58 375 Q56 352 74 351 L95 351 Q104 353 104 365 L104 377 L58 377 Z" fill="#141416"/>
+    <path d="M142 375 Q144 352 126 351 L105 351 Q96 353 96 365 L96 377 L142 377 Z" fill="#141416"/>
+    <rect x="57" y="372" width="48" height="5" rx="2.5" fill="#8E6E1E"/>
+    <rect x="95" y="372" width="48" height="5" rx="2.5" fill="#8E6E1E"/>
+    <path d="M70 362 L90 360 M130 362 L110 360" stroke="url(#fegold)" stroke-width="2.4" stroke-linecap="round"/>
+
+    <!-- brazo izquierdo: mano al bolsillo -->
+    <path d="M58 120 Q36 132 34 182 L42 210 L66 208 L60 178 Z" fill="url(#febody)"/>
+    <!-- torso sudadera oversize -->
+    <path d="M56 116 Q100 104 144 116 L152 234 Q100 244 48 234 Z" fill="url(#febody)"/>
+    <path d="M70 196 L130 196 L136 228 L64 228 Z" fill="#141416"/>
+    <path d="M70 196 L130 196" stroke="#2C2A30" stroke-width="1.5"/>
+    <path d="M48 226 Q100 236 152 226 L152 236 Q100 246 48 236 Z" fill="#0E0E10"/>
+    <path d="M42 206 Q52 214 66 208" stroke="#0B0B0C" stroke-width="3" fill="none"/>
+    <!-- cordones -->
+    <path d="M90 112 Q88 132 90 150 M110 112 Q112 132 110 150" stroke="#E8DCC4" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <rect x="88.4" y="149" width="3.2" height="6" rx="1.4" fill="url(#fegold)"/>
+    <rect x="108.4" y="149" width="3.2" height="6" rx="1.4" fill="url(#fegold)"/>
+
+    <!-- capucha -->
+    <path d="M58 120 Q46 30 100 6 Q154 30 142 120 Q128 104 100 104 Q72 104 58 120 Z" fill="url(#fehood)"/>
+    <path d="M67 108 Q62 46 100 24 Q138 46 133 108 Q120 98 100 98 Q80 98 67 108 Z" fill="#060607"/>
+    <!-- cabeza con pasamontañas -->
+    <path d="M74 68 Q73 32 100 30 Q127 32 126 68 Q126 96 112 104 Q100 110 88 104 Q74 96 74 68 Z" fill="url(#femask)"/>
+    <path d="M74 68 Q73 32 100 30 Q127 32 126 68 Q126 96 112 104 Q100 110 88 104 Q74 96 74 68 Z" fill="url(#feknit)"/>
+    <path d="M100 31 L100 57 M100 74 L100 108" stroke="#000" stroke-width="1" opacity=".5"/>
+    <rect x="78" y="57" width="44" height="16" rx="8" fill="url(#feskin)"/>
+    <rect x="78" y="57" width="44" height="6" rx="3" fill="#2A1C14" opacity=".55"/>
+
+    <path d="M84 67 Q89 61.5 94 67 Q89 65 84 67 Z" fill="#E4DCD2"/>
+    <path d="M84 67 Q89 61.5 94 67" stroke="#1A120D" stroke-width="1.4" fill="none"/>
+    <path d="M85 69.5 Q89 71 93 69.5" stroke="#8A6248" stroke-width=".9" fill="none"/>
+    <path d="M106 67 Q111 61.5 116 67 Q111 65 106 67 Z" fill="#E4DCD2"/>
+    <path d="M106 67 Q111 61.5 116 67" stroke="#1A120D" stroke-width="1.4" fill="none"/>
+    <path d="M107 69.5 Q111 71 115 69.5" stroke="#8A6248" stroke-width=".9" fill="none"/>
+    <path d="M78 65 Q78 57 86 57 L114 57 Q122 57 122 65" stroke="#0A0A0B" stroke-width="2" fill="none"/>
+
+
+    <!-- brazo derecho levantado celebrando -->
+    <path d="M142 120 Q160 96 164 54 L180 56 Q178 102 152 132 Z" fill="url(#febody)"/>
+    <path d="M162 56 Q171 62 180 57" stroke="#0B0B0C" stroke-width="3" fill="none"/>
+    <circle cx="171" cy="46" r="9" fill="#B98A66"/>
+    <path d="M165 42 L177 42 M165 46 L177 46" stroke="#8A6248" stroke-width="1.2"/>
+
+    <!-- luz dorada de borde -->
+    <path d="M142 120 Q154 30 100 6" stroke="url(#fegold)" stroke-width="1.8" fill="none" opacity=".6" filter="url(#feb1)"/>
+    <path d="M144 118 L152 234" stroke="url(#fegold)" stroke-width="1.4" opacity=".35" filter="url(#feb1)"/>
+    <path d="M134 236 Q137 300 132 352" stroke="url(#fegold)" stroke-width="1.2" fill="none" opacity=".3"/>
+    <path d="M78 72 Q100 80 122 72" stroke="#F5DE9A" stroke-width="1.2" fill="none" opacity=".35" filter="url(#feb1)"/>
+  </g>
+  <defs>
+    <radialGradient id="feorb" cx="38%" cy="30%" r="75%"><stop offset="0" stop-color="#3A393E"/><stop offset=".55" stop-color="#151417"/><stop offset="1" stop-color="#050506"/></radialGradient>
+    <radialGradient id="fethr" cx="50%" cy="0%" r="100%"><stop offset="0" stop-color="#F5DE9A"/><stop offset="1" stop-color="#D4AF37" stop-opacity="0"/></radialGradient>
+    <filter id="feag" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <ellipse cx="300" cy="374" rx="34" ry="6" fill="#000" opacity=".6"/>
+  <!-- propulsores -->
+  <path d="M286 300 L280 334 L292 334 Z" fill="url(#fethr)" opacity=".8"/>
+  <path d="M314 300 L308 334 L320 334 Z" fill="url(#fethr)" opacity=".8"/>
+  <!-- antena -->
+  <path d="M300 186 L300 166" stroke="#2C2A30" stroke-width="3"/>
+  <circle cx="300" cy="162" r="5" fill="#D4AF37" filter="url(#feag)"/>
+  <!-- esfera -->
+  <circle cx="300" cy="244" r="58" fill="url(#feorb)"/>
+  <ellipse cx="300" cy="262" rx="58" ry="12" fill="none" stroke="url(#fegold)" stroke-width="3"/>
+  <path d="M242 262 A58 58 0 0 0 358 262" fill="#0A0A0B" opacity=".35"/>
+  <!-- pantalla-cara -->
+  <rect x="264" y="210" width="72" height="42" rx="16" fill="#050506" stroke="#2C2A30" stroke-width="1.5"/>
+  <g fill="#F5DE9A" filter="url(#feag)"></g>
+  <text x="300" y="241" font-family="Consolas, 'Courier New', monospace" font-weight="700" font-size="24" fill="#F5DE9A" text-anchor="middle" letter-spacing="10">$$</text>
+  <ellipse cx="282" cy="204" rx="16" ry="7" fill="#FFFFFF" opacity=".07" transform="rotate(-25 282 204)"/>
+  <g transform="translate(334 150)"><rect x="0" y="0" width="54" height="36" rx="4" fill="#D4AF37" fill-opacity=".08" stroke="#D4AF37" stroke-opacity=".6"/><path d="M6 28 L18 20 L28 24 L46 8" stroke="#F5DE9A" stroke-width="2" fill="none" filter="url(#feag)"/><path d="M40 8 L46 8 L46 14" stroke="#F5DE9A" stroke-width="2" fill="none"/></g><rect x="236" y="168" width="5" height="5" fill="#F5DE9A" transform="rotate(20 236 168)"/><rect x="256" y="140" width="5" height="5" fill="#D4AF37" transform="rotate(-15 256 140)"/><rect x="350" y="120" width="5" height="5" fill="#F5DE9A" transform="rotate(35 350 120)"/><rect x="372" y="196" width="5" height="5" fill="#D4AF37" transform="rotate(10 372 196)"/><rect x="226" y="214" width="5" height="5" fill="#8E6E1E" transform="rotate(-30 226 214)"/><rect x="378" y="252" width="5" height="5" fill="#F5DE9A" transform="rotate(45 378 252)"/>
+    <text x="200" y="396" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#D4AF37" text-anchor="middle" letter-spacing="1.5">5. CELEBRANDO</text>
+  </g>
+  <path d="M1600 30 V370" stroke="#2E281E" stroke-width="1"/>
+  <g font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
+    <rect x="12" y="12" width="100" height="44" rx="11" fill="#D4AF37"/>
+    <text x="62.0" y="40" font-size="24" font-weight="800" fill="#13100C">P1+M3</text>
+    <text x="62.0" y="51" font-size="8" font-weight="700" fill="#3A2C0A" letter-spacing=".6">PERTX + AURO</text>
+  </g>
+</svg>

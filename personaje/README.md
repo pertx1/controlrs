@@ -16,7 +16,12 @@ Aquí está todo lo del personaje (y luego la mascota) de Pertx.
 | `svg/M1.svg` … `M5.svg`, `png/M1.png` … `M5.png` | Cada mascota junto a Pertx. |
 | `pertx_cuerpo.py` | El dibujo de Pertx de cuerpo completo en código (lo usan los demás scripts). |
 | `hacer-mascotas.py` | Vuelve a crear las mascotas y `galeria-mascota.html`: `python3 personaje/hacer-mascotas.py` |
+| **`FICHA-FINAL.md`** | **La referencia de todo:** código `P1-oro+M3`, descripción fija, colores, prompts, poses, voz y reglas. |
+| `png/FINAL-P1oro-M3.png` | Imagen principal: Pertx + Auro. |
+| `png/FINAL-expresiones.png` | Las 5 poses y expresiones (feliz, pensativo, sorprendido, señalando, celebrando). |
+| `auro.py` | El dibujo de Auro con sus caras, en código. |
+| `hacer-ficha-final.py` | Vuelve a crear las imágenes de la ficha final: `python3 personaje/hacer-ficha-final.py` |
 | `descartados/v1/` | La primera ronda (estilo infantil) que no te gustó. Guardada por si acaso. |
 | `hacer-galeria.py` | Vuelve a crear `galeria.html` si cambias un SVG: `python3 personaje/hacer-galeria.py` |
 
-Elegido: **P1 con los colores de P5** (`P1-oro`). Ahora toca elegir la mascota (M1-M5). Después vendrá la `FICHA-FINAL.md`.
+**Código definitivo: `P1-oro+M3`** (Pertx + Auro). Todo lo demás se basa en `FICHA-FINAL.md`.

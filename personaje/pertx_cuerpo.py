@@ -54,11 +54,68 @@ def brazo_portatil(i):
     <path d="M132 168 L186 166" stroke="#F5DE9A" stroke-width="1.6" filter="url(#{i}b1)" opacity=".9"/>"""
 
 
-BRAZO = {None: brazo_libre, "movil": brazo_movil, "portatil": brazo_portatil}
+def brazo_senalar(i):
+    return f"""
+    <!-- brazo derecho señalando a la derecha (pantalla) -->
+    <path d="M144 118 Q172 122 198 130 L198 146 Q172 142 150 152 Z" fill="url(#{i}body)"/>
+    <path d="M196 128 Q202 136 196 148" stroke="#0B0B0C" stroke-width="3" fill="none"/>
+    <ellipse cx="204" cy="138" rx="7" ry="7.5" fill="#B98A66"/>
+    <rect x="207" y="134.5" width="14" height="4.5" rx="2.2" fill="#B98A66"/>"""
 
 
-def cuerpo(i, prop=None):
-    """prop: None (manos libres), "movil" o "portatil". Cambia según la escena."""
+def brazo_celebrar(i):
+    return f"""
+    <!-- brazo derecho levantado celebrando -->
+    <path d="M142 120 Q160 96 164 54 L180 56 Q178 102 152 132 Z" fill="url(#{i}body)"/>
+    <path d="M162 56 Q171 62 180 57" stroke="#0B0B0C" stroke-width="3" fill="none"/>
+    <circle cx="171" cy="46" r="9" fill="#B98A66"/>
+    <path d="M165 42 L177 42 M165 46 L177 46" stroke="#8A6248" stroke-width="1.2"/>"""
+
+
+def _ojo_base(dx=0, dy=0, rx=4.8, ry=3.1, pr=2.3):
+    out = ""
+    for cx in (89, 111):
+        out += f"""
+    <ellipse cx="{cx}" cy="65.5" rx="{rx}" ry="{ry}" fill="#E4DCD2"/>
+    <circle cx="{cx + .6 + dx}" cy="{65.6 + dy}" r="{pr}" fill="#2E2219"/>
+    <circle cx="{cx + 1.4 + dx}" cy="{66.5 + dy}" r=".8" fill="#F5DE9A"/>"""
+    return out
+
+
+def ojos_feliz():
+    out = ""
+    for cx in (89, 111):
+        out += f"""
+    <path d="M{cx-5} 67 Q{cx} 61.5 {cx+5} 67 Q{cx} 65 {cx-5} 67 Z" fill="#E4DCD2"/>
+    <path d="M{cx-5} 67 Q{cx} 61.5 {cx+5} 67" stroke="#1A120D" stroke-width="1.4" fill="none"/>
+    <path d="M{cx-4} 69.5 Q{cx} 71 {cx+4} 69.5" stroke="#8A6248" stroke-width=".9" fill="none"/>"""
+    return out
+
+
+def ojos_pensativo():
+    return _ojo_base(dx=-1.6, dy=-1) + """
+    <path d="M83 63 L95 62 M105 61 Q111 58.5 117 61.5" stroke="#1A120D" stroke-width="1.6" fill="none"/>"""
+
+
+def ojos_sorprendido():
+    return _ojo_base(rx=5.4, ry=4.2, pr=1.7)
+
+
+def ojos_decidido():
+    return _ojo_base(dx=1) + """
+    <path d="M83.5 63 L95 64.5 M105 64.5 L116.5 63" stroke="#0A0A0B" stroke-width="2.4" stroke-linecap="round"/>"""
+
+
+OJOS = {"normal": _ojo_base, "feliz": ojos_feliz, "pensativo": ojos_pensativo,
+        "sorprendido": ojos_sorprendido, "decidido": ojos_decidido}
+
+BRAZO = {None: brazo_libre, "movil": brazo_movil, "portatil": brazo_portatil,
+         "senalar": brazo_senalar, "celebrar": brazo_celebrar}
+
+
+def cuerpo(i, prop=None, ojos="normal"):
+    """prop: None (manos libres), "movil", "portatil", "senalar" o "celebrar".
+    ojos: "normal", "feliz", "pensativo", "sorprendido" o "decidido"."""
     return f"""
     <ellipse cx="100" cy="380" rx="62" ry="7" fill="#000" opacity=".55"/>
     <!-- piernas: jogger negro -->
@@ -96,12 +153,7 @@ def cuerpo(i, prop=None):
     <path d="M100 31 L100 57 M100 74 L100 108" stroke="#000" stroke-width="1" opacity=".5"/>
     <rect x="78" y="57" width="44" height="16" rx="8" fill="url(#{i}skin)"/>
     <rect x="78" y="57" width="44" height="6" rx="3" fill="#2A1C14" opacity=".55"/>
-    <ellipse cx="89" cy="65.5" rx="4.8" ry="3.1" fill="#E4DCD2"/>
-    <ellipse cx="111" cy="65.5" rx="4.8" ry="3.1" fill="#E4DCD2"/>
-    <circle cx="89.6" cy="65.6" r="2.3" fill="#2E2219"/>
-    <circle cx="111.6" cy="65.6" r="2.3" fill="#2E2219"/>
-    <circle cx="90.4" cy="66.5" r=".8" fill="#F5DE9A"/>
-    <circle cx="112.4" cy="66.5" r=".8" fill="#F5DE9A"/>
+{OJOS[ojos]()}
     <path d="M78 65 Q78 57 86 57 L114 57 Q122 57 122 65" stroke="#0A0A0B" stroke-width="2" fill="none"/>
 
 {BRAZO[prop](i)}
@@ -121,11 +173,12 @@ def fondo(i, w, h):
 
 
 def badge(code, nombre, x=12, y=12):
+    w = max(86, len(code) * 16 + 20)
     return f"""
   <g font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
-    <rect x="{x}" y="{y}" width="86" height="44" rx="11" fill="#D4AF37"/>
-    <text x="{x+43}" y="{y+28}" font-size="24" font-weight="800" fill="#13100C">{code}</text>
-    <text x="{x+43}" y="{y+39}" font-size="8" font-weight="700" fill="#3A2C0A" letter-spacing=".6">{nombre}</text>
+    <rect x="{x}" y="{y}" width="{w}" height="44" rx="11" fill="#D4AF37"/>
+    <text x="{x+w/2}" y="{y+28}" font-size="24" font-weight="800" fill="#13100C">{code}</text>
+    <text x="{x+w/2}" y="{y+39}" font-size="8" font-weight="700" fill="#3A2C0A" letter-spacing=".6">{nombre}</text>
   </g>"""
 
 
