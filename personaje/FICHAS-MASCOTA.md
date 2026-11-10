@@ -5,11 +5,11 @@
 - Pertx de cuerpo completo: `personaje/png/P1-oro-cuerpo.png`
 - Pertx con los 3 objetos de escena: `personaje/png/P1-oro-escenas.png`
 
-**Regla del objeto:** Pertx **no** lleva siempre el ordenador. Lo que tiene en la mano depende de la escena:
+**Regla del objeto:** por defecto Pertx va **sin nada en la mano**. Solo lleva algo si la escena lo pide:
 
 | Objeto | Cuándo |
 |---|---|
-| Nada (manos libres) | Reflexiones, mentalidad, reaccionar a la mascota |
+| Nada (por defecto) | Casi siempre |
 | Móvil | Mirar métricas, ventas que entran, notificaciones, redes |
 | Portátil | Construir con IA, programar, enseñar la pantalla |
 
@@ -57,7 +57,7 @@ Un cuervo es misterioso, nocturno e inteligente, como Pertx. Le sigue el rollo a
 
 ## M2 · NOX (criatura de humo · inventada)
 
-**Archivo:** `png/M2.png` · En la imagen, Pertx lleva el **móvil**.
+**Archivo:** `png/M2.png` · En la imagen, Pertx va sin nada en la mano.
 
 ### Descripción física
 | Parte | Detalle | HEX |
@@ -79,7 +79,7 @@ Pícaro, caótico y tentador. Es la voz de las excusas: "Venga, hoy no publiques
 
 ### Prompt maestro
 ```
-Dark cinematic illustration, a small floating black smoke creature mascot called Nox, round body made of dense black smoke (#0D0C10, #2A2830) with soft blurry edges and a wispy smoke tail, two small horns with gold tips, glowing pale-gold crescent-shaped mischievous eyes (#F5DE9A), a thin glowing gold zigzag grin (#D4AF37), two little smoky arms, tiny gold sparks floating around. Floating next to a faceless young man in a black balaclava and black hoodie with hood up, looking at a glowing phone. Deep warm-black background (#080706 to #2A2219), gold rim light, mysterious, playful but not childish, high detail.
+Dark cinematic illustration, a small floating black smoke creature mascot called Nox, round body made of dense black smoke (#0D0C10, #2A2830) with soft blurry edges and a wispy smoke tail, two small horns with gold tips, glowing pale-gold crescent-shaped mischievous eyes (#F5DE9A), a thin glowing gold zigzag grin (#D4AF37), two little smoky arms, tiny gold sparks floating around. Floating next to a faceless young man in a black balaclava and black hoodie with hood up, with empty hands. Deep warm-black background (#080706 to #2A2219), gold rim light, mysterious, playful but not childish, high detail.
 ```
 
 ### Prompt negativo
@@ -94,7 +94,7 @@ Es como la "sombra" de Pertx, así que conecta directo con el personaje. Es perf
 
 ## M3 · AURO (robot orbe · IA)
 
-**Archivo:** `png/M3.png` · En la imagen, Pertx lleva el **portátil**.
+**Archivo:** `png/M3.png` · En la imagen, Pertx va sin nada en la mano.
 
 ### Descripción física
 | Parte | Detalle | HEX |
@@ -116,7 +116,7 @@ Asistente IA leal, eficiente y algo pedante: "He calculado que si publicas hoy, 
 
 ### Prompt maestro
 ```
-Dark cinematic illustration, a small floating spherical robot mascot called Auro, matte black sphere (#151417) with a thin gold ring around it like a planet (#D4AF37), a black glass face screen showing happy pixel-art eyes "^ ^" in pale gold (#F5DE9A), short antenna with a glowing gold tip, two soft golden thruster glows underneath, a small gold holographic chart with an upward arrow floating beside it. Hovering next to a faceless young man in a black balaclava and black hoodie with hood up, holding an open laptop with a gold "PX" logo. Deep warm-black background (#080706 to #2A2219), gold rim light, premium tech, high detail.
+Dark cinematic illustration, a small floating spherical robot mascot called Auro, matte black sphere (#151417) with a thin gold ring around it like a planet (#D4AF37), a black glass face screen showing happy pixel-art eyes "^ ^" in pale gold (#F5DE9A), short antenna with a glowing gold tip, two soft golden thruster glows underneath, a small gold holographic chart with an upward arrow floating beside it. Hovering next to a faceless young man in a black balaclava and black hoodie with hood up, with empty hands. Deep warm-black background (#080706 to #2A2219), gold rim light, premium tech, high detail.
 ```
 
 ### Prompt negativo
@@ -131,7 +131,7 @@ Es la mascota más "IA" y la que mejor encaja con el pilar de construir con IA y
 
 ## M4 · TEMPO (reloj de arena · objeto con vida)
 
-**Archivo:** `png/M4.png` · En la imagen, Pertx va **sin objeto**.
+**Archivo:** `png/M4.png` · En la imagen, Pertx va sin nada en la mano.
 
 ### Descripción física
 | Parte | Detalle | HEX |
@@ -167,7 +167,7 @@ Representa la disciplina, que es justo lo que tú necesitas siendo desordenado. 
 
 ## M5 · NERO (gato negro · animal real)
 
-**Archivo:** `png/M5.png` · En la imagen, Pertx lleva el **móvil**.
+**Archivo:** `png/M5.png` · En la imagen, Pertx va sin nada en la mano.
 
 ### Descripción física
 | Parte | Detalle | HEX |
@@ -188,7 +188,7 @@ Elegante, vago y juzgón. Casi no habla, juzga con la mirada. Cuando habla: "¿E
 
 ### Prompt maestro
 ```
-Dark cinematic semi-realistic illustration, an elegant black cat mascot called Nero sitting upright with its tail curled, glossy black fur (#141317, #34323A), half-lidded judging gold eyes (#F5DE9A to #C9971F) with vertical slit pupils, a slim gold collar with a round gold "PX" tag. Sitting next to a faceless young man in a black balaclava and black hoodie with hood up, looking at a glowing phone. Deep warm-black background (#080706 to #2A2219), thin gold rim light, quiet luxury, film noir mood, high detail.
+Dark cinematic semi-realistic illustration, an elegant black cat mascot called Nero sitting upright with its tail curled, glossy black fur (#141317, #34323A), half-lidded judging gold eyes (#F5DE9A to #C9971F) with vertical slit pupils, a slim gold collar with a round gold "PX" tag. Sitting next to a faceless young man in a black balaclava and black hoodie with hood up, with empty hands. Deep warm-black background (#080706 to #2A2219), thin gold rim light, quiet luxury, film noir mood, high detail.
 ```
 
 ### Prompt negativo

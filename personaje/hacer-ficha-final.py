@@ -14,9 +14,9 @@ import auro  # noqa: E402
 import pertx_cuerpo as pertx  # noqa: E402
 
 POSES = [
-    ("feliz", "FELIZ", "movil", "feliz", "feliz"),
+    ("feliz", "FELIZ", None, "feliz", "feliz"),
     ("pensativo", "PENSATIVO", None, "pensativo", "pensativo"),
-    ("sorprendido", "SORPRENDIDO", "movil", "sorprendido", "sorprendido"),
+    ("sorprendido", "SORPRENDIDO", None, "sorprendido", "sorprendido"),
     ("senalando", "SEÑALANDO LA PANTALLA", "senalar", "decidido", "senalando"),
     ("celebrando", "CELEBRANDO", "celebrar", "feliz", "celebrando"),
 ]
@@ -34,7 +34,7 @@ def principal():
     return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
   <!-- FICHA FINAL · P1-oro + M3 Auro -->
   <defs>{pertx.defs(i)}{gdefs}
-  </defs>{bg}{panel(i, "portatil", "normal", "feliz")}{pertx.badge("P1+M3", "PERTX + AURO")}
+  </defs>{bg}{panel(i, None, "normal", "feliz")}{pertx.badge("P1+M3", "PERTX + AURO")}
 </svg>
 """
 

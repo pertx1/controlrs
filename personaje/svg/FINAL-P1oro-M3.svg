@@ -62,14 +62,11 @@
     <path d="M78 65 Q78 57 86 57 L114 57 Q122 57 122 65" stroke="#0A0A0B" stroke-width="2" fill="none"/>
 
 
-    <!-- brazo derecho sujetando el portátil abierto -->
-    <path d="M144 120 Q166 132 168 178 L162 204 L146 200 L150 174 Z" fill="url(#fmbody)"/>
-    <ellipse cx="160" cy="170" rx="44" ry="34" fill="url(#fmglow)" filter="url(#fmb6)"/>
-    <path d="M132 168 L186 166 L188 202 L130 204 Z" fill="#0B0B0C" stroke="#2C2A30" stroke-width="1.5"/>
-    <text x="159" y="190" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="10" fill="url(#fmgold)" text-anchor="middle">PX</text>
-    <path d="M126 204 L192 202 L190 208 L128 210 Z" fill="#1F1E22"/>
-    <ellipse cx="156" cy="206" rx="8" ry="6" fill="#B98A66"/>
-    <path d="M132 168 L186 166" stroke="#F5DE9A" stroke-width="1.6" filter="url(#fmb1)" opacity=".9"/>
+    <!-- brazo derecho relajado, sin nada en la mano -->
+    <path d="M144 120 Q166 132 166 182 L160 212 L144 210 L150 178 Z" fill="url(#fmbody)"/>
+    <path d="M144 206 Q152 214 160 208" stroke="#0B0B0C" stroke-width="3" fill="none"/>
+    <ellipse cx="152" cy="218" rx="7.5" ry="8.5" fill="#B98A66"/>
+    <path d="M147 222 Q152 226 157 222" stroke="#8A6248" stroke-width="1.2" fill="none"/>
 
     <!-- luz dorada de borde -->
     <path d="M142 120 Q154 30 100 6" stroke="url(#fmgold)" stroke-width="1.8" fill="none" opacity=".6" filter="url(#fmb1)"/>

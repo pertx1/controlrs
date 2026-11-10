@@ -8,10 +8,10 @@ Esta ficha es **la referencia para todo lo demás**: guiones, edición, miniatur
 
 | Imagen | Archivo |
 |---|---|
-| Imagen principal (Pertx + Auro) | `png/FINAL-P1oro-M3.png` |
+| Imagen principal (Pertx + Auro, sin nada en la mano) | `png/FINAL-P1oro-M3.png` |
 | Las 5 poses y expresiones | `png/FINAL-expresiones.png` |
 | Pertx de cuerpo completo | `png/P1-oro-cuerpo.png` |
-| Pertx con los objetos de escena | `png/P1-oro-escenas.png` |
+| Pertx con los objetos (solo si la escena lo pide) | `png/P1-oro-escenas.png` |
 
 Los dibujos están hechos en código (carpeta `svg/` y scripts `.py`). Si cambias algo, ejecuta:
 ```
@@ -38,12 +38,14 @@ Joven emprendedor **sin cara**. Nunca se le ve la cara, la boca ni el pelo.
 | Manos | Piel morena, sin guantes ni anillos | `#B98A66` |
 | Luz | Siempre luz dorada en el borde (de la capucha y del lado derecho) | `#D4AF37` |
 
-### Objeto en la mano (según la escena)
-| Objeto | Cuándo | Detalle |
+### Objeto en la mano
+**Por defecto, Pertx va sin nada en la mano** (mano izquierda en el bolsillo, la derecha relajada o haciendo el gesto). Solo lleva un objeto **si la escena lo pide**:
+
+| Objeto | Solo cuando la escena lo pide | Detalle |
 |---|---|---|
-| Nada | Mentalidad, reflexiones, reaccionar a Auro | Mano izquierda en el bolsillo |
-| Móvil | Métricas, ventas, notificaciones, redes | Pantalla dorada que le ilumina |
-| Portátil | Construir con IA, programar, enseñar la pantalla | Negro, con **"PX" dorado** en la tapa, brillo dorado |
+| Móvil | Enseña métricas, una venta que entra, una notificación | Pantalla dorada que le ilumina |
+| Portátil | Está construyendo o programando en ese momento | Negro, con **"PX" dorado** en la tapa, brillo dorado |
+| Otro (libreta, café…) | Lo pide el guion | Siempre negro u oro, sin marcas |
 
 ### AURO (mascota)
 | Parte | Siempre así | HEX |
@@ -86,7 +88,7 @@ Sube siempre `png/FINAL-P1oro-M3.png` como **imagen de referencia**. Así sale m
 
 ### Pertx solo
 ```
-Dark cinematic semi-realistic illustration, full body, front view, of a faceless young entrepreneur called Pertx: matte black knitted balaclava with a single horizontal eye slit and a vertical center seam, only his dark brown eyes visible with small warm gold reflections, warm brown skin (#C08E6A) only inside the slit, oversized warm-black hoodie (#1F1E22) with the hood always up and a kangaroo pocket, cream drawstrings with gold tips, black jogger pants with cuffs, black sneakers with a thin gold stripe and dark gold soles. Left hand in the hoodie pocket. Thin warm gold rim light (#D4AF37) on the edge of the hood and the right side of the body. Deep warm-black background (#080706 to #2A2219) with a soft golden spotlight from above and a thin gold floor line. Quiet luxury, film noir mood, subtle knit texture, high detail.
+Dark cinematic semi-realistic illustration, full body, front view, of a faceless young entrepreneur called Pertx: matte black knitted balaclava with a single horizontal eye slit and a vertical center seam, only his dark brown eyes visible with small warm gold reflections, warm brown skin (#C08E6A) only inside the slit, oversized warm-black hoodie (#1F1E22) with the hood always up and a kangaroo pocket, cream drawstrings with gold tips, black jogger pants with cuffs, black sneakers with a thin gold stripe and dark gold soles. Left hand in the hoodie pocket, right hand relaxed and empty (no objects unless the scene requires one). Thin warm gold rim light (#D4AF37) on the edge of the hood and the right side of the body. Deep warm-black background (#080706 to #2A2219) with a soft golden spotlight from above and a thin gold floor line. Quiet luxury, film noir mood, subtle knit texture, high detail.
 ```
 
 ### Auro solo
@@ -112,17 +114,17 @@ Pertx solo puede expresar con **los ojos, las cejas y el cuerpo**. Auro expresa 
 
 | # | Expresión | Pertx | Auro | Cuándo usarla |
 |---|---|---|---|---|
-| 1 | **Feliz** | Ojos entrecerrados en media luna (sonríe con los ojos), móvil en la mano | Ojos `^ ^`, gráfica subiendo | Buenas noticias, resultados, final positivo |
+| 1 | **Feliz** | Ojos entrecerrados en media luna (sonríe con los ojos), manos libres | Ojos `^ ^`, gráfica subiendo | Buenas noticias, resultados, final positivo |
 | 2 | **Pensativo** | Mira hacia arriba a un lado, una ceja levantada, manos libres | Un ojo plano y otro levantado, `?` en el holograma | Preguntas, dudas, "¿merece la pena…?" |
-| 3 | **Sorprendido** | Ojos muy abiertos, pupilas pequeñas, móvil en la mano | Ojos cuadrados `□ □`, boca `o`, `!` en el holograma | Gancho del principio, datos que impactan |
+| 3 | **Sorprendido** | Ojos muy abiertos, pupilas pequeñas, manos libres | Ojos cuadrados `□ □`, boca `o`, `!` en el holograma | Gancho del principio, datos que impactan |
 | 4 | **Señalando la pantalla** | Cejas bajas (decidido), brazo derecho estirado señalando | Ojos de flecha `> >`, flecha en el holograma | Tutoriales, "mira esto", enseñar Claude Code |
 | 5 | **Celebrando** | Ojos felices, puño derecho levantado | Ojos `$ $`, gráfica subiendo, confeti dorado | Ventas, objetivos cumplidos, hitos |
 
 ### Prompts de pose (añádelos al final del prompt "Pertx + Auro juntos")
 ```
-1 FELIZ: Pertx's eyes squinting into happy crescents as if smiling behind the mask, holding a glowing phone; Auro's screen shows happy "^ ^" pixel eyes and a rising gold chart hologram.
+1 FELIZ: Pertx's eyes squinting into happy crescents as if smiling behind the mask, empty hands; Auro's screen shows happy "^ ^" pixel eyes and a rising gold chart hologram.
 2 PENSATIVO: Pertx looking up to one side with one eyebrow raised, hands relaxed; Auro's screen shows one flat eye and one raised eye, a gold "?" hologram.
-3 SORPRENDIDO: Pertx's eyes wide open with small pupils, holding a glowing phone; Auro's screen shows square hollow pixel eyes and a small "o" mouth, a gold "!" hologram.
+3 SORPRENDIDO: Pertx's eyes wide open with small pupils, empty hands; Auro's screen shows square hollow pixel eyes and a small "o" mouth, a gold "!" hologram.
 4 SEÑALANDO LA PANTALLA: Pertx with determined lowered eyebrows, right arm fully extended pointing to the right side of the frame; Auro's screen shows arrow-shaped pixel eyes "> >", a gold arrow hologram pointing right.
 5 CELEBRANDO: Pertx with happy squinting eyes, right fist raised high in celebration; Auro's screen shows "$ $" pixel eyes, rising gold chart hologram, small gold confetti squares around.
 ```
@@ -151,7 +153,7 @@ Pertx solo puede expresar con **los ojos, las cejas y el cuerpo**. Auro expresa 
 1. **Nunca** se le ve la cara, la boca, la nariz ni el pelo. La capucha siempre puesta.
 2. El pasamontañas tiene **una sola ranura** para los ojos (no dos agujeros, no boca).
 3. Ropa siempre igual: sudadera negra, cordones crema con puntas doradas, jogger negro, zapatillas negras con raya dorada. **No cambia de ropa** (como un uniforme).
-4. Lleva solo **un objeto** a la vez: nada, móvil o portátil.
+4. **Por defecto, sin nada en la mano.** Solo lleva un objeto (y uno solo) si la escena lo pide.
 5. El único logo que aparece es **"PX"** en dorado (tapa del portátil). Nunca logos de marcas reales.
 6. Nada de dinero en efectivo, cadenas, armas ni nada que parezca un robo.
 

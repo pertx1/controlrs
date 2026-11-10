@@ -199,14 +199,14 @@ MASCOTAS = [
         "nota": "Mi favorita",
     },
     {
-        "code": "M2", "prop": "movil", "nombre": "NOX", "tipo": "Criatura de humo (inventada)", "dibujo": m2,
+        "code": "M2", "prop": None, "nombre": "NOX", "tipo": "Criatura de humo (inventada)", "dibujo": m2,
         "vibe": "Pícaro y caótico, nace de la sombra de Pertx.",
         "rol": "Pone las tentaciones y las excusas, y hace las bromas.",
         "colores": ["#0D0C10", "#2A2830", "#141319", "#F5DE9A", "#D4AF37", "#1A1920"],
         "nota": "",
     },
     {
-        "code": "M3", "prop": "portatil", "nombre": "AURO", "tipo": "Robot orbe (IA)", "dibujo": m3,
+        "code": "M3", "prop": None, "nombre": "AURO", "tipo": "Robot orbe (IA)", "dibujo": m3,
         "vibe": "Asistente IA leal, eficiente y algo pedante.",
         "rol": "Enseña los números y celebra las ventas.",
         "colores": ["#151417", "#3A393E", "#050506", "#D4AF37", "#F5DE9A", "#2C2A30"],
@@ -220,7 +220,7 @@ MASCOTAS = [
         "nota": "",
     },
     {
-        "code": "M5", "prop": "movil", "nombre": "NERO", "tipo": "Gato negro (animal real)", "dibujo": m5,
+        "code": "M5", "prop": None, "nombre": "NERO", "tipo": "Gato negro (animal real)", "dibujo": m5,
         "vibe": "Elegante, vago y juzgón. Mira con desprecio.",
         "rol": "Reacciona con caras, juzga tus excusas y aprueba tus victorias.",
         "colores": ["#141317", "#34323A", "#060607", "#F5DE9A", "#C9971F", "#D4AF37"],
@@ -321,7 +321,7 @@ def main():
   <p class="kicker">Pertx · Etapa 2 · Mascota</p>
   <h1>5 mascotas para Pertx</h1>
   <p>Todas en el mismo estilo oscuro y dorado que el personaje elegido. Fichas completas con prompts en <code>FICHAS-MASCOTA.md</code>.</p>
-  <div class="hero">{hero}<p><strong>Personaje elegido:</strong> P1 Sombra con los colores de P5, de cuerpo completo. El objeto que lleva (nada, móvil o portátil) cambia según la escena.</p></div>
+  <div class="hero">{hero}<p><strong>Personaje elegido:</strong> P1 Sombra con los colores de P5, de cuerpo completo. Por defecto va sin nada en la mano; solo lleva móvil o portátil si la escena lo pide.</p></div>
 </header>
 <main>{''.join(tarjetas)}
 </main>

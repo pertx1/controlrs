@@ -63,13 +63,11 @@
     <path d="M78 65 Q78 57 86 57 L114 57 Q122 57 122 65" stroke="#0A0A0B" stroke-width="2" fill="none"/>
 
 
-    <!-- brazo derecho mirando el móvil -->
-    <path d="M144 118 Q168 128 170 176 L154 180 L148 150 Z" fill="url(#febody)"/>
-    <path d="M162 176 L146 150" stroke="#1F1E22" stroke-width="15" stroke-linecap="round"/>
-    <ellipse cx="136" cy="128" rx="26" ry="20" fill="url(#feglow)" filter="url(#feb6)"/>
-    <rect x="130" y="124" width="16" height="27" rx="3" fill="#0B0B0C" stroke="#3A3640" stroke-width="1"/>
-    <rect x="132" y="127" width="12" height="20" rx="1.5" fill="#F5DE9A" opacity=".85"/>
-    <ellipse cx="146" cy="148" rx="7" ry="7.5" fill="#B98A66"/>
+    <!-- brazo derecho relajado, sin nada en la mano -->
+    <path d="M144 120 Q166 132 166 182 L160 212 L144 210 L150 178 Z" fill="url(#febody)"/>
+    <path d="M144 206 Q152 214 160 208" stroke="#0B0B0C" stroke-width="3" fill="none"/>
+    <ellipse cx="152" cy="218" rx="7.5" ry="8.5" fill="#B98A66"/>
+    <path d="M147 222 Q152 226 157 222" stroke="#8A6248" stroke-width="1.2" fill="none"/>
 
     <!-- luz dorada de borde -->
     <path d="M142 120 Q154 30 100 6" stroke="url(#fegold)" stroke-width="1.8" fill="none" opacity=".6" filter="url(#feb1)"/>
@@ -235,13 +233,11 @@
     <path d="M78 65 Q78 57 86 57 L114 57 Q122 57 122 65" stroke="#0A0A0B" stroke-width="2" fill="none"/>
 
 
-    <!-- brazo derecho mirando el móvil -->
-    <path d="M144 118 Q168 128 170 176 L154 180 L148 150 Z" fill="url(#febody)"/>
-    <path d="M162 176 L146 150" stroke="#1F1E22" stroke-width="15" stroke-linecap="round"/>
-    <ellipse cx="136" cy="128" rx="26" ry="20" fill="url(#feglow)" filter="url(#feb6)"/>
-    <rect x="130" y="124" width="16" height="27" rx="3" fill="#0B0B0C" stroke="#3A3640" stroke-width="1"/>
-    <rect x="132" y="127" width="12" height="20" rx="1.5" fill="#F5DE9A" opacity=".85"/>
-    <ellipse cx="146" cy="148" rx="7" ry="7.5" fill="#B98A66"/>
+    <!-- brazo derecho relajado, sin nada en la mano -->
+    <path d="M144 120 Q166 132 166 182 L160 212 L144 210 L150 178 Z" fill="url(#febody)"/>
+    <path d="M144 206 Q152 214 160 208" stroke="#0B0B0C" stroke-width="3" fill="none"/>
+    <ellipse cx="152" cy="218" rx="7.5" ry="8.5" fill="#B98A66"/>
+    <path d="M147 222 Q152 226 157 222" stroke="#8A6248" stroke-width="1.2" fill="none"/>
 
     <!-- luz dorada de borde -->
     <path d="M142 120 Q154 30 100 6" stroke="url(#fegold)" stroke-width="1.8" fill="none" opacity=".6" filter="url(#feb1)"/>

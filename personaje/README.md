@@ -10,7 +10,7 @@ Aquí está todo lo del personaje (y luego la mascota) de Pertx.
 | `png/P1.png` … `png/P5.png` | Los mismos dibujos en imagen normal (PNG 1200x1600) para verlos o compartirlos. |
 | `svg/P1-oro.svg`, `png/P1-oro.png` | **El personaje elegido:** P1 con los colores de P5. |
 | `svg/P1-oro-cuerpo.svg`, `png/P1-oro-cuerpo.png` | Pertx de cuerpo completo, sin objeto. |
-| `png/P1-oro-escenas.png` | Pertx con los 3 objetos según la escena: nada, móvil y portátil. |
+| `png/P1-oro-escenas.png` | Por defecto Pertx va sin nada en la mano; aquí se ven el móvil y el portátil, que solo se usan si la escena lo pide. |
 | `galeria-mascota.html` | **Ábrelo con doble clic.** Las 5 mascotas (M1-M5), cada una junto a Pertx. |
 | `FICHAS-MASCOTA.md` | La ficha completa de cada mascota: descripción, colores, personalidad, rol, prompts. |
 | `svg/M1.svg` … `M5.svg`, `png/M1.png` … `M5.png` | Cada mascota junto a Pertx. |
