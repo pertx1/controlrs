@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 640" width="360" height="640">
+  <!-- Ejemplo de fotograma 9:16 con la fórmula Pertx (formato F1) -->
+  <defs><filter id="ejgris"><feColorMatrix type="saturate" values="0"/></filter>
+    <radialGradient id="ejglow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#F5DE9A" stop-opacity=".75"/><stop offset=".45" stop-color="#D4AF37" stop-opacity=".35"/><stop offset="1" stop-color="#D4AF37" stop-opacity="0"/></radialGradient>
+    <linearGradient id="ejhood" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0E0E10"/><stop offset=".55" stop-color="#1F1E22"/><stop offset="1" stop-color="#2E2A24"/></linearGradient>
+    <linearGradient id="ejbody" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0E0E10"/><stop offset=".5" stop-color="#1F1E22"/><stop offset="1" stop-color="#2A2620"/></linearGradient>
+    <linearGradient id="ejlegs" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0B0B0C"/><stop offset=".5" stop-color="#18171A"/><stop offset="1" stop-color="#232019"/></linearGradient>
+    <radialGradient id="ejmask" cx="42%" cy="35%" r="70%"><stop offset="0" stop-color="#2C2C2E"/><stop offset="1" stop-color="#0B0B0C"/></radialGradient>
+    <linearGradient id="ejskin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5A3C2A"/><stop offset=".45" stop-color="#C08E6A"/><stop offset="1" stop-color="#E2BE7A"/></linearGradient>
+    <linearGradient id="ejgold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F5DE9A"/><stop offset=".5" stop-color="#D4AF37"/><stop offset="1" stop-color="#8E6E1E"/></linearGradient>
+    <pattern id="ejknit" width="4" height="3.2" patternUnits="userSpaceOnUse"><path d="M0 1.6 Q1 0 2 1.6 T4 1.6" stroke="#000" stroke-opacity=".5" fill="none" stroke-width=".7"/></pattern>
+    <filter id="ejb1"><feGaussianBlur stdDeviation="1"/></filter>
+    <filter id="ejb6" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
+    <radialGradient id="ejbg" cx="50%" cy="32%" r="80%"><stop offset="0" stop-color="#2A2219"/><stop offset=".55" stop-color="#13100C"/><stop offset="1" stop-color="#080706"/></radialGradient></defs>
+  <rect width="360" height="640" fill="url(#ejbg)"/>
+  <!-- pantalla partida -->
+  <rect x="0" y="0" width="179" height="640" fill="#000" opacity=".25"/>
+  <path d="M180 100 V470" stroke="#D4AF37" stroke-width="2" opacity=".7"/>
+  <rect x="58" y="482" width="64" height="18" rx="9" fill="#2C2A30"/><text x="90" y="495" font-family="Arial" font-size="9" font-weight="700" fill="#B3A994" text-anchor="middle">NOVATO</text>
+  <rect x="238" y="482" width="64" height="18" rx="9" fill="#D4AF37"/><text x="270" y="495" font-family="Arial" font-size="9" font-weight="700" fill="#13100C" text-anchor="middle">PERTX</text>
+  <rect x="60" y="70" width="220" height="8" rx="4" fill="#2C2A30"/><rect x="60" y="70" width="60" height="8" rx="4" fill="#D4AF37"/>
+  <text x="170" y="60" font-family="Arial" font-size="9" font-weight="700" fill="#D4AF37" text-anchor="middle" letter-spacing="1.5">DÍA 1</text>
+  <!-- novato: Pertx apagado en gris -->
+  <g transform="translate(8 170) scale(.78)" filter="url(#ejgris)" opacity=".55">
+    <ellipse cx="100" cy="380" rx="62" ry="7" fill="#000" opacity=".55"/>
+    <!-- piernas: jogger negro -->
+    <path d="M66 234 Q63 300 68 352 L97 352 L100 246 Z" fill="url(#ejlegs)"/>
+    <path d="M134 234 Q137 300 132 352 L103 352 L100 246 Z" fill="url(#ejlegs)"/>
+    <path d="M78 292 Q84 300 92 296 M122 292 Q116 300 108 296" stroke="#000" stroke-width="1.5" fill="none" opacity=".7"/>
+    <rect x="67" y="342" width="31" height="11" rx="4" fill="#0B0B0C"/>
+    <rect x="102" y="342" width="31" height="11" rx="4" fill="#0B0B0C"/>
+    <!-- zapatillas negras con detalle dorado -->
+    <path d="M58 375 Q56 352 74 351 L95 351 Q104 353 104 365 L104 377 L58 377 Z" fill="#141416"/>
+    <path d="M142 375 Q144 352 126 351 L105 351 Q96 353 96 365 L96 377 L142 377 Z" fill="#141416"/>
+    <rect x="57" y="372" width="48" height="5" rx="2.5" fill="#8E6E1E"/>
+    <rect x="95" y="372" width="48" height="5" rx="2.5" fill="#8E6E1E"/>
+    <path d="M70 362 L90 360 M130 362 L110 360" stroke="url(#ejgold)" stroke-width="2.4" stroke-linecap="round"/>
+
+    <!-- brazo izquierdo: mano al bolsillo -->
+    <path d="M58 120 Q36 132 34 182 L42 210 L66 208 L60 178 Z" fill="url(#ejbody)"/>
+    <!-- torso sudadera oversize -->
+    <path d="M56 116 Q100 104 144 116 L152 234 Q100 244 48 234 Z" fill="url(#ejbody)"/>
+    <path d="M70 196 L130 196 L136 228 L64 228 Z" fill="#141416"/>
+    <path d="M70 196 L130 196" stroke="#2C2A30" stroke-width="1.5"/>
+    <path d="M48 226 Q100 236 152 226 L152 236 Q100 246 48 236 Z" fill="#0E0E10"/>
+    <path d="M42 206 Q52 214 66 208" stroke="#0B0B0C" stroke-width="3" fill="none"/>
+    <!-- cordones -->
+    <path d="M90 112 Q88 132 90 150 M110 112 Q112 132 110 150" stroke="#E8DCC4" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <rect x="88.4" y="149" width="3.2" height="6" rx="1.4" fill="url(#ejgold)"/>
+    <rect x="108.4" y="149" width="3.2" height="6" rx="1.4" fill="url(#ejgold)"/>
+
+    <!-- capucha -->
+    <path d="M58 120 Q46 30 100 6 Q154 30 142 120 Q128 104 100 104 Q72 104 58 120 Z" fill="url(#ejhood)"/>
+    <path d="M67 108 Q62 46 100 24 Q138 46 133 108 Q120 98 100 98 Q80 98 67 108 Z" fill="#060607"/>
+    <!-- cabeza con pasamontañas -->
+    <path d="M74 68 Q73 32 100 30 Q127 32 126 68 Q126 96 112 104 Q100 110 88 104 Q74 96 74 68 Z" fill="url(#ejmask)"/>
+    <path d="M74 68 Q73 32 100 30 Q127 32 126 68 Q126 96 112 104 Q100 110 88 104 Q74 96 74 68 Z" fill="url(#ejknit)"/>
+    <path d="M100 31 L100 57 M100 74 L100 108" stroke="#000" stroke-width="1" opacity=".5"/>
+    <rect x="78" y="57" width="44" height="16" rx="8" fill="url(#ejskin)"/>
+    <rect x="78" y="57" width="44" height="6" rx="3" fill="#2A1C14" opacity=".55"/>
+
+    <ellipse cx="89" cy="65.5" rx="5.4" ry="4.2" fill="#E4DCD2"/>
+    <circle cx="89.6" cy="65.6" r="1.7" fill="#2E2219"/>
+    <circle cx="90.4" cy="66.5" r=".8" fill="#F5DE9A"/>
+    <ellipse cx="111" cy="65.5" rx="5.4" ry="4.2" fill="#E4DCD2"/>
+    <circle cx="111.6" cy="65.6" r="1.7" fill="#2E2219"/>
+    <circle cx="112.4" cy="66.5" r=".8" fill="#F5DE9A"/>
+    <path d="M78 65 Q78 57 86 57 L114 57 Q122 57 122 65" stroke="#0A0A0B" stroke-width="2" fill="none"/>
+
+
+    <!-- brazo derecho relajado, sin nada en la mano -->
+    <path d="M144 120 Q166 132 166 182 L160 212 L144 210 L150 178 Z" fill="url(#ejbody)"/>
+    <path d="M144 206 Q152 214 160 208" stroke="#0B0B0C" stroke-width="3" fill="none"/>
+    <ellipse cx="152" cy="218" rx="7.5" ry="8.5" fill="#B98A66"/>
+    <path d="M147 222 Q152 226 157 222" stroke="#8A6248" stroke-width="1.2" fill="none"/>
+
+    <!-- luz dorada de borde -->
+    <path d="M142 120 Q154 30 100 6" stroke="url(#ejgold)" stroke-width="1.8" fill="none" opacity=".6" filter="url(#ejb1)"/>
+    <path d="M144 118 L152 234" stroke="url(#ejgold)" stroke-width="1.4" opacity=".35" filter="url(#ejb1)"/>
+    <path d="M134 236 Q137 300 132 352" stroke="url(#ejgold)" stroke-width="1.2" fill="none" opacity=".3"/>
+    <path d="M78 72 Q100 80 122 72" stroke="#F5DE9A" stroke-width="1.2" fill="none" opacity=".35" filter="url(#ejb1)"/></g>
+  <!-- Pertx + Auro -->
+  <g transform="translate(196 170) scale(.78)">
+    <ellipse cx="100" cy="380" rx="62" ry="7" fill="#000" opacity=".55"/>
+    <!-- piernas: jogger negro -->
+    <path d="M66 234 Q63 300 68 352 L97 352 L100 246 Z" fill="url(#ejlegs)"/>
+    <path d="M134 234 Q137 300 132 352 L103 352 L100 246 Z" fill="url(#ejlegs)"/>
+    <path d="M78 292 Q84 300 92 296 M122 292 Q116 300 108 296" stroke="#000" stroke-width="1.5" fill="none" opacity=".7"/>
+    <rect x="67" y="342" width="31" height="11" rx="4" fill="#0B0B0C"/>
+    <rect x="102" y="342" width="31" height="11" rx="4" fill="#0B0B0C"/>
+    <!-- zapatillas negras con detalle dorado -->
+    <path d="M58 375 Q56 352 74 351 L95 351 Q104 353 104 365 L104 377 L58 377 Z" fill="#141416"/>
+    <path d="M142 375 Q144 352 126 351 L105 351 Q96 353 96 365 L96 377 L142 377 Z" fill="#141416"/>
+    <rect x="57" y="372" width="48" height="5" rx="2.5" fill="#8E6E1E"/>
+    <rect x="95" y="372" width="48" height="5" rx="2.5" fill="#8E6E1E"/>
+    <path d="M70 362 L90 360 M130 362 L110 360" stroke="url(#ejgold)" stroke-width="2.4" stroke-linecap="round"/>
+
+    <!-- brazo izquierdo: mano al bolsillo -->
+    <path d="M58 120 Q36 132 34 182 L42 210 L66 208 L60 178 Z" fill="url(#ejbody)"/>
+    <!-- torso sudadera oversize -->
+    <path d="M56 116 Q100 104 144 116 L152 234 Q100 244 48 234 Z" fill="url(#ejbody)"/>
+    <path d="M70 196 L130 196 L136 228 L64 228 Z" fill="#141416"/>
+    <path d="M70 196 L130 196" stroke="#2C2A30" stroke-width="1.5"/>
+    <path d="M48 226 Q100 236 152 226 L152 236 Q100 246 48 236 Z" fill="#0E0E10"/>
+    <path d="M42 206 Q52 214 66 208" stroke="#0B0B0C" stroke-width="3" fill="none"/>
+    <!-- cordones -->
+    <path d="M90 112 Q88 132 90 150 M110 112 Q112 132 110 150" stroke="#E8DCC4" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <rect x="88.4" y="149" width="3.2" height="6" rx="1.4" fill="url(#ejgold)"/>
+    <rect x="108.4" y="149" width="3.2" height="6" rx="1.4" fill="url(#ejgold)"/>
+
+    <!-- capucha -->
+    <path d="M58 120 Q46 30 100 6 Q154 30 142 120 Q128 104 100 104 Q72 104 58 120 Z" fill="url(#ejhood)"/>
+    <path d="M67 108 Q62 46 100 24 Q138 46 133 108 Q120 98 100 98 Q80 98 67 108 Z" fill="#060607"/>
+    <!-- cabeza con pasamontañas -->
+    <path d="M74 68 Q73 32 100 30 Q127 32 126 68 Q126 96 112 104 Q100 110 88 104 Q74 96 74 68 Z" fill="url(#ejmask)"/>
+    <path d="M74 68 Q73 32 100 30 Q127 32 126 68 Q126 96 112 104 Q100 110 88 104 Q74 96 74 68 Z" fill="url(#ejknit)"/>
+    <path d="M100 31 L100 57 M100 74 L100 108" stroke="#000" stroke-width="1" opacity=".5"/>
+    <rect x="78" y="57" width="44" height="16" rx="8" fill="url(#ejskin)"/>
+    <rect x="78" y="57" width="44" height="6" rx="3" fill="#2A1C14" opacity=".55"/>
+
+    <ellipse cx="89" cy="65.5" rx="4.8" ry="3.1" fill="#E4DCD2"/>
+    <circle cx="90.6" cy="65.6" r="2.3" fill="#2E2219"/>
+    <circle cx="91.4" cy="66.5" r=".8" fill="#F5DE9A"/>
+    <ellipse cx="111" cy="65.5" rx="4.8" ry="3.1" fill="#E4DCD2"/>
+    <circle cx="112.6" cy="65.6" r="2.3" fill="#2E2219"/>
+    <circle cx="113.4" cy="66.5" r=".8" fill="#F5DE9A"/>
+    <path d="M83.5 63 L95 64.5 M105 64.5 L116.5 63" stroke="#0A0A0B" stroke-width="2.4" stroke-linecap="round"/>
+    <path d="M78 65 Q78 57 86 57 L114 57 Q122 57 122 65" stroke="#0A0A0B" stroke-width="2" fill="none"/>
+
+
+    <!-- brazo derecho relajado, sin nada en la mano -->
+    <path d="M144 120 Q166 132 166 182 L160 212 L144 210 L150 178 Z" fill="url(#ejbody)"/>
+    <path d="M144 206 Q152 214 160 208" stroke="#0B0B0C" stroke-width="3" fill="none"/>
+    <ellipse cx="152" cy="218" rx="7.5" ry="8.5" fill="#B98A66"/>
+    <path d="M147 222 Q152 226 157 222" stroke="#8A6248" stroke-width="1.2" fill="none"/>
+
+    <!-- luz dorada de borde -->
+    <path d="M142 120 Q154 30 100 6" stroke="url(#ejgold)" stroke-width="1.8" fill="none" opacity=".6" filter="url(#ejb1)"/>
+    <path d="M144 118 L152 234" stroke="url(#ejgold)" stroke-width="1.4" opacity=".35" filter="url(#ejb1)"/>
+    <path d="M134 236 Q137 300 132 352" stroke="url(#ejgold)" stroke-width="1.2" fill="none" opacity=".3"/>
+    <path d="M78 72 Q100 80 122 72" stroke="#F5DE9A" stroke-width="1.2" fill="none" opacity=".35" filter="url(#ejb1)"/></g>
+  <g transform="translate(150 -2) scale(.5)">
+  <defs>
+    <radialGradient id="ejorb" cx="38%" cy="30%" r="75%"><stop offset="0" stop-color="#3A393E"/><stop offset=".55" stop-color="#151417"/><stop offset="1" stop-color="#050506"/></radialGradient>
+    <radialGradient id="ejthr" cx="50%" cy="0%" r="100%"><stop offset="0" stop-color="#F5DE9A"/><stop offset="1" stop-color="#D4AF37" stop-opacity="0"/></radialGradient>
+    <filter id="ejag" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <ellipse cx="300" cy="374" rx="34" ry="6" fill="#000" opacity=".6"/>
+  <!-- propulsores -->
+  <path d="M286 300 L280 334 L292 334 Z" fill="url(#ejthr)" opacity=".8"/>
+  <path d="M314 300 L308 334 L320 334 Z" fill="url(#ejthr)" opacity=".8"/>
+  <!-- antena -->
+  <path d="M300 186 L300 166" stroke="#2C2A30" stroke-width="3"/>
+  <circle cx="300" cy="162" r="5" fill="#D4AF37" filter="url(#ejag)"/>
+  <!-- esfera -->
+  <circle cx="300" cy="244" r="58" fill="url(#ejorb)"/>
+  <ellipse cx="300" cy="262" rx="58" ry="12" fill="none" stroke="url(#ejgold)" stroke-width="3"/>
+  <path d="M242 262 A58 58 0 0 0 358 262" fill="#0A0A0B" opacity=".35"/>
+  <!-- pantalla-cara -->
+  <rect x="264" y="210" width="72" height="42" rx="16" fill="#050506" stroke="#2C2A30" stroke-width="1.5"/>
+  <g fill="#F5DE9A" filter="url(#ejag)"><rect x="276" y="230" width="5" height="5"/><rect x="281" y="225" width="5" height="5"/><rect x="286" y="230" width="5" height="5"/><rect x="309" y="230" width="5" height="5"/><rect x="314" y="225" width="5" height="5"/><rect x="319" y="230" width="5" height="5"/></g>
+  <rect x="296" y="242" width="8" height="3" fill="#D4AF37"/>
+  <ellipse cx="282" cy="204" rx="16" ry="7" fill="#FFFFFF" opacity=".07" transform="rotate(-25 282 204)"/>
+  <g transform="translate(334 150)"><rect x="0" y="0" width="54" height="36" rx="4" fill="#D4AF37" fill-opacity=".08" stroke="#D4AF37" stroke-opacity=".6"/><path d="M6 28 L18 20 L28 24 L46 8" stroke="#F5DE9A" stroke-width="2" fill="none" filter="url(#ejag)"/><path d="M40 8 L46 8 L46 14" stroke="#F5DE9A" stroke-width="2" fill="none"/></g></g>
+  <!-- subtítulos de dos niveles -->
+  <text x="180" y="383" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#F3EEE3" text-anchor="middle">la misma</text>
+  <text x="180" y="420" font-family="'Arial Black', Impact, sans-serif" font-size="38" font-weight="900" fill="#D4AF37" text-anchor="middle" letter-spacing="1" stroke="#080706" stroke-width="5" paint-order="stroke">WEB</text>
+  <!-- marca -->
+  <text x="22" y="40" font-family="Georgia, serif" font-weight="700" font-size="14" fill="#D4AF37" letter-spacing="1.5">PX</text>
+  <!-- zonas de botones de TikTok (no poner nada importante) -->
+  <rect x="300" y="300" width="60" height="250" fill="#FFFFFF" opacity=".05"/>
+  <rect x="0" y="540" width="360" height="100" fill="#FFFFFF" opacity=".05"/>
+  <text x="330" y="430" font-family="Arial" font-size="7" fill="#6A604C" text-anchor="middle" transform="rotate(90 330 430)">zona botones</text>
+  <text x="180" y="600" font-family="Arial" font-size="8" fill="#6A604C" text-anchor="middle">zona de texto de la app · no poner nada importante</text>
+</svg>

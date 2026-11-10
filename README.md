@@ -25,5 +25,5 @@ Marca personal faceless en castellano (TikTok, Reels, Shorts). Se construye por 
 |---|---|---|
 | 1. Personaje (P1-P5) | Elegido: P1 con colores de P5 (`personaje/png/P1-oro.png`) | `personaje/galeria.html`, `personaje/FICHAS-PERSONAJE.md` |
 | 2. Mascota (M1-M5) | Elegida: M3 Auro · código final `P1-oro+M3` (`personaje/FICHA-FINAL.md`) | `personaje/galeria-mascota.html` |
-| 3. Análisis de referencias | Pendiente | `referencias/ANALISIS.md` |
+| 3. Análisis de referencias | Hecho, esperando "aprobado" | `referencias/ANALISIS.md` |
 | 4. Desarrollo (estrategia, guiones, edición, web, sistema diario) | Pendiente | `PLAN.md` |
