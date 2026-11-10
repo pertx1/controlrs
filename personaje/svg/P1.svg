@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" width="300" height="400">
+  <!-- P1 · 3D suave · Pertx -->
+  <defs>
+    <radialGradient id="p1bg" cx="50%" cy="38%" r="75%"><stop offset="0" stop-color="#FBF8F3"/><stop offset="1" stop-color="#E6DFD3"/></radialGradient>
+    <radialGradient id="p1skin" cx="42%" cy="35%" r="70%"><stop offset="0" stop-color="#F7D2B0"/><stop offset=".7" stop-color="#E8B894"/><stop offset="1" stop-color="#CC9670"/></radialGradient>
+    <radialGradient id="p1hair" cx="40%" cy="25%" r="85%"><stop offset="0" stop-color="#85563A"/><stop offset=".6" stop-color="#5A3825"/><stop offset="1" stop-color="#3A2316"/></radialGradient>
+    <linearGradient id="p1hood" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FBC266"/><stop offset=".55" stop-color="#F2A93B"/><stop offset="1" stop-color="#C98518"/></linearGradient>
+    <linearGradient id="p1sleeve" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#D99325"/><stop offset=".5" stop-color="#F6B44C"/><stop offset="1" stop-color="#D99325"/></linearGradient>
+    <linearGradient id="p1pants" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2D3B5E"/><stop offset=".5" stop-color="#1F2A44"/><stop offset="1" stop-color="#141B2E"/></linearGradient>
+    <linearGradient id="p1shoe" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#DADDE2"/></linearGradient>
+    <linearGradient id="p1lap" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E9ECF0"/><stop offset="1" stop-color="#A9AFB8"/></linearGradient>
+    <radialGradient id="p1iris" cx="45%" cy="40%" r="60%"><stop offset="0" stop-color="#93B56F"/><stop offset="1" stop-color="#4E6B36"/></radialGradient>
+  </defs>
+  <rect width="300" height="400" fill="url(#p1bg)"/>
+  <ellipse cx="150" cy="384" rx="74" ry="9" fill="#3B2F22" opacity=".16"/>
+
+  <!-- piernas -->
+  <path d="M110 284 Q108 330 113 368 L143 368 L149 292 Z" fill="url(#p1pants)"/>
+  <path d="M190 284 Q192 330 187 368 L157 368 L151 292 Z" fill="url(#p1pants)"/>
+  <rect x="104" y="306" width="15" height="24" rx="4" fill="#18213A"/>
+  <rect x="181" y="306" width="15" height="24" rx="4" fill="#18213A"/>
+  <rect x="112" y="356" width="32" height="12" rx="5" fill="#141B2E"/>
+  <rect x="156" y="356" width="32" height="12" rx="5" fill="#141B2E"/>
+  <!-- zapatillas -->
+  <path d="M100 382 Q98 364 116 363 L140 363 Q150 365 150 376 L150 384 L100 384 Z" fill="url(#p1shoe)"/>
+  <path d="M200 382 Q202 364 184 363 L160 363 Q150 365 150 376 L150 384 L200 384 Z" fill="url(#p1shoe)"/>
+  <rect x="99" y="379" width="52" height="6" rx="3" fill="#FF6B35"/>
+  <rect x="149" y="379" width="52" height="6" rx="3" fill="#FF6B35"/>
+  <path d="M120 370 L136 370" stroke="#FF6B35" stroke-width="3" stroke-linecap="round"/>
+  <path d="M164 370 L180 370" stroke="#FF6B35" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- brazo izquierdo (colgando) -->
+  <path d="M104 194 Q80 204 78 252 L80 292 L100 292 L104 248 Z" fill="url(#p1sleeve)"/>
+  <rect x="79" y="284" width="22" height="10" rx="4" fill="#C98518"/>
+  <circle cx="90" cy="302" r="11" fill="url(#p1skin)"/>
+  <rect x="82" y="277" width="17" height="7" rx="3" fill="#1D1D1F"/>
+
+  <!-- torso sudadera -->
+  <path d="M100 192 Q150 172 200 192 L210 294 Q150 304 90 294 Z" fill="url(#p1hood)"/>
+  <path d="M118 252 L182 252 L190 284 L110 284 Z" fill="#DE9A2E"/>
+  <path d="M118 252 L182 252" stroke="#C98518" stroke-width="2"/>
+  <path d="M92 288 Q150 298 208 288 L210 296 Q150 306 90 296 Z" fill="#C98518"/>
+  <!-- capucha -->
+  <path d="M116 190 Q150 214 184 190 Q182 170 150 170 Q118 170 116 190 Z" fill="#C98518"/>
+  <path d="M138 200 L136 228" stroke="#FFF" stroke-width="3" stroke-linecap="round"/>
+  <path d="M162 200 L164 228" stroke="#FFF" stroke-width="3" stroke-linecap="round"/>
+  <text x="150" y="244" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="15" fill="#FFFFFF" text-anchor="middle">PX</text>
+  <!-- cuello camiseta -->
+  <path d="M136 180 Q150 192 164 180 L164 176 L136 176 Z" fill="#FFFFFF"/>
+
+  <!-- brazo derecho + portátil -->
+  <path d="M196 194 Q222 202 226 246 L224 276 L204 276 L204 244 Z" fill="url(#p1sleeve)"/>
+  <g transform="rotate(-8 205 250)">
+    <rect x="186" y="212" width="40" height="76" rx="6" fill="url(#p1lap)"/>
+    <circle cx="198" cy="228" r="6" fill="#FF6B35"/>
+    <rect x="207" y="236" width="12" height="9" rx="2" fill="#2B59FF"/>
+    <path d="M194 252 l6 -10 l6 10 z" fill="#1FB57A"/>
+    <circle cx="214" cy="266" r="5" fill="#FFD23F"/>
+    <rect x="192" y="272" width="12" height="6" rx="3" fill="#E5457A"/>
+  </g>
+  <circle cx="212" cy="276" r="11" fill="url(#p1skin)"/>
+
+  <!-- cuello y cabeza -->
+  <rect x="140" y="158" width="20" height="22" rx="6" fill="#D9A27A"/>
+  <ellipse cx="101" cy="124" rx="9" ry="13" fill="#E0AC86"/>
+  <ellipse cx="199" cy="124" rx="9" ry="13" fill="#E0AC86"/>
+  <circle cx="201" cy="131" r="4.5" fill="#FFFFFF" stroke="#D5D5D5"/>
+  <ellipse cx="150" cy="118" rx="50" ry="56" fill="url(#p1skin)"/>
+  <!-- pelo -->
+  <path d="M98 120 Q90 60 146 56 Q208 52 204 116 Q198 94 180 88 Q170 98 144 92 Q124 104 102 106 Z" fill="url(#p1hair)"/>
+  <circle cx="112" cy="78" r="14" fill="#5A3825"/>
+  <circle cx="132" cy="64" r="15" fill="#6A432C"/>
+  <circle cx="158" cy="60" r="16" fill="#5A3825"/>
+  <circle cx="182" cy="70" r="15" fill="#4D2F1F"/>
+  <circle cx="197" cy="90" r="11" fill="#4D2F1F"/>
+  <path d="M150 86 Q144 108 126 114 Q148 108 158 90 Z" fill="#4A2E1E"/>
+  <ellipse cx="140" cy="66" rx="10" ry="4" fill="#9A6A4A" opacity=".55" transform="rotate(-15 140 66)"/>
+  <!-- cejas -->
+  <path d="M118 104 Q130 97 142 103" stroke="#4A2E1E" stroke-width="5.5" fill="none" stroke-linecap="round"/>
+  <path d="M158 103 Q170 97 182 104" stroke="#4A2E1E" stroke-width="5.5" fill="none" stroke-linecap="round"/>
+  <!-- ojos -->
+  <ellipse cx="130" cy="124" rx="12.5" ry="14" fill="#FFFFFF"/>
+  <ellipse cx="170" cy="124" rx="12.5" ry="14" fill="#FFFFFF"/>
+  <circle cx="132" cy="126" r="8.5" fill="url(#p1iris)"/>
+  <circle cx="172" cy="126" r="8.5" fill="url(#p1iris)"/>
+  <circle cx="132" cy="126" r="4.2" fill="#1A1A1A"/>
+  <circle cx="172" cy="126" r="4.2" fill="#1A1A1A"/>
+  <circle cx="135" cy="122" r="2.6" fill="#FFFFFF"/>
+  <circle cx="175" cy="122" r="2.6" fill="#FFFFFF"/>
+  <path d="M117 118 Q130 108 143 118" stroke="#3A2316" stroke-width="2.5" fill="none"/>
+  <path d="M157 118 Q170 108 183 118" stroke="#3A2316" stroke-width="2.5" fill="none"/>
+  <!-- nariz, pecas, mofletes, boca -->
+  <path d="M150 128 Q146 142 152 144" stroke="#C48660" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <g fill="#B97A55" opacity=".7"><circle cx="138" cy="140" r="1.4"/><circle cx="143" cy="137" r="1.2"/><circle cx="157" cy="137" r="1.2"/><circle cx="162" cy="140" r="1.4"/></g>
+  <ellipse cx="120" cy="144" rx="9" ry="5" fill="#F0907A" opacity=".35"/>
+  <ellipse cx="180" cy="144" rx="9" ry="5" fill="#F0907A" opacity=".35"/>
+  <path d="M136 154 Q152 164 166 151" stroke="#8B4A3A" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+
+  <!-- código -->
+  <g font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
+    <rect x="12" y="12" width="76" height="44" rx="11" fill="#111111" opacity=".92"/>
+    <text x="50" y="40" font-size="24" font-weight="800" fill="#FFFFFF">P1</text>
+    <text x="50" y="51" font-size="8" font-weight="700" fill="#FFD23F" letter-spacing=".5">3D SUAVE</text>
+  </g>
+</svg>
