@@ -15,7 +15,7 @@ Sigue los pasos en orden y tacha cada casilla. Te lleva **unos 45 minutos el pri
   - tendrá las **contraseñas** y la **verificación en dos pasos** en su móvil;
   - tú harás el contenido, siempre con la etiqueta de IA y sin datos personales.
 - [ ] **Cread un Gmail de la marca a su nombre**, por ejemplo `pertx.contacto@gmail.com` (o el que esté libre), con la **verificación en dos pasos** en su móvil.
-- [ ] **Elegid el nombre de usuario.** Tiene que ser **el mismo en las 3 redes**. Probadlos en este orden y quedaos con el primero libre en TikTok, Instagram y YouTube a la vez:
+- [ ] **Elegid el nombre de usuario.** Tiene que ser **el mismo en todas las redes**. Probadlos en este orden y quedaos con el primero libre en TikTok e Instagram (y, si podéis, también en YouTube):
   1. `pertx`
   2. `pertx.ia`
   3. `soypertx`
@@ -38,7 +38,7 @@ Sigue los pasos en orden y tacha cada casilla. Te lleva **unos 45 minutos el pri
 
 ## Paso 1 · Crear las cuentas (30 min)
 
-**TikTok e Instagram desde el móvil** (las apps funcionan mejor) y **YouTube desde el portátil**. Wifi de casa, **sin VPN**. En todos los registros se usan **el Gmail de la marca y los datos de tu padre o tu madre**.
+**TikTok e Instagram desde el móvil** (las apps funcionan mejor). **YouTube, de momento no.** Wifi de casa, **sin VPN**. En todos los registros se usan **el Gmail de la marca y los datos de tu padre o tu madre**.
 
 ### TikTok
 - [ ] Registrarse → **Usar correo** → Gmail de la marca → **su fecha de nacimiento**.
@@ -51,15 +51,14 @@ Sigue los pasos en orden y tacha cada casilla. Te lleva **unos 45 minutos el pri
 - [ ] Nombre de usuario, nombre, foto y bio.
 - [ ] Configuración → Tipo de cuenta → **Cuenta profesional → Creador** → categoría "Creador digital".
 
-### YouTube
-- [ ] En el portátil, inicia sesión con el Gmail de la marca → foto → **Crear un canal** → nombre `Pertx`, mismo identificador que en TikTok, foto y descripción.
-- [ ] YouTube Studio → Configuración → Canal → **Funciones** → verificar con **su número de teléfono**.
-- [ ] *(Para cobrar en el futuro, la cuenta de cobro de YouTube, AdSense, va a su nombre).*
+### YouTube (más adelante · opcional ahora)
+- [ ] *Opcional, 5 minutos:* **reservar el nombre** para que no te lo quiten. En el portátil, con el Gmail de la marca → foto → **Crear un canal** → nombre `Pertx` y el mismo identificador. **No subas nada** ni hace falta calentarlo.
+- *(Cuando decidas abrirlo: verificar con su teléfono y poner la cuenta de cobro a su nombre).*
 
 ### Etiqueta de IA (en cada vídeo)
 - **TikTok:** al publicar → Más opciones → **"Contenido generado por IA"**.
 - **Instagram:** al publicar → Configuración avanzada → **"Etiqueta de IA"**.
-- **YouTube:** al subir → "¿Contenido alterado o sintético?" → **Sí**.
+- **YouTube** (cuando lo abras): al subir → "¿Contenido alterado o sintético?" → **Sí**.
 
 ---
 
@@ -67,7 +66,7 @@ Sigue los pasos en orden y tacha cada casilla. Te lleva **unos 45 minutos el pri
 
 Usa cada cuenta **20–30 minutos al día** como un usuario normal de tu nicho, en momentos distintos.
 
-| Día | Qué hacer en TikTok e Instagram (y algo en YouTube) |
+| Día | Qué hacer en TikTok e Instagram |
 |---|---|
 | **1** | Perfil completo. Busca y **mira vídeos enteros** de: `Claude Code`, `crear app con IA`, `emprender joven`, `disciplina`, `negocio online`. Like solo a lo que te guste de verdad. |
 | **2** | Sigue a **10–15 cuentas** de tu nicho (por ejemplo @yuww333.finance y @notfound404.es) y otras de IA, programación, disciplina y emprendimiento en castellano. |
@@ -88,7 +87,7 @@ Usa cada cuenta **20–30 minutos al día** como un usuario normal de tu nicho, 
 
 ## Paso 3 · Primeras publicaciones (desde el día 6)
 
-- **1 vídeo al día** en TikTok, el mismo en Reels y en Shorts. Constancia antes que cantidad.
+- **1 vídeo al día** en TikTok y el mismo en Reels de Instagram. Constancia antes que cantidad.
 - **Hora:** para empezar, entre las **18:00 y las 21:00**; luego lo ajustamos con las estadísticas.
 - **Los primeros vídeos** salen de la Fase 2 (fábrica de guiones). Los dos de muestra **no se suben**, como me has dicho.
 - **No mires las visitas cada 5 minutos.** Lo que cuenta es la media de la semana.
@@ -99,8 +98,9 @@ Usa cada cuenta **20–30 minutos al día** como un usuario normal de tu nicho, 
 
 - [ ] Padre o madre de acuerdo y presente
 - [ ] Gmail de la marca a su nombre + verificación en dos pasos en su móvil
-- [ ] Nombre de usuario libre en las 3 redes → **dímelo**
-- [ ] TikTok (personal), Instagram (creador) y YouTube (verificado) creados con sus datos
-- [ ] Foto, nombre y bio en las 3
+- [ ] Nombre de usuario libre en TikTok e Instagram (y en YouTube si lo reservas) → **dímelo**
+- [ ] TikTok (personal) e Instagram (creador) creados con sus datos
+- [ ] *(Opcional)* Canal de YouTube creado solo para reservar el nombre
+- [ ] Foto, nombre y bio en las dos
 - [ ] 5 días de calentamiento
 - [ ] Avísame y empezamos a publicar
