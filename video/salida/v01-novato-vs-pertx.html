@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<style>html,body{margin:0;background:#080706}svg{display:block}</style></head>
+<body>
+<svg id="v" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 640" width="360" height="640">
+<defs>
+    <radialGradient id="vglow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#F5DE9A" stop-opacity=".75"/><stop offset=".45" stop-color="#D4AF37" stop-opacity=".35"/><stop offset="1" stop-color="#D4AF37" stop-opacity="0"/></radialGradient>
+    <linearGradient id="vhood" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0E0E10"/><stop offset=".55" stop-color="#1F1E22"/><stop offset="1" stop-color="#2E2A24"/></linearGradient>
+    <linearGradient id="vbody" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0E0E10"/><stop offset=".5" stop-color="#1F1E22"/><stop offset="1" stop-color="#2A2620"/></linearGradient>
+    <linearGradient id="vlegs" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0B0B0C"/><stop offset=".5" stop-color="#18171A"/><stop offset="1" stop-color="#232019"/></linearGradient>
+    <radialGradient id="vmask" cx="42%" cy="35%" r="70%"><stop offset="0" stop-color="#2C2C2E"/><stop offset="1" stop-color="#0B0B0C"/></radialGradient>
+    <linearGradient id="vskin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5A3C2A"/><stop offset=".45" stop-color="#C08E6A"/><stop offset="1" stop-color="#E2BE7A"/></linearGradient>
+    <linearGradient id="vgold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F5DE9A"/><stop offset=".5" stop-color="#D4AF37"/><stop offset="1" stop-color="#8E6E1E"/></linearGradient>
+    <pattern id="vknit" width="4" height="3.2" patternUnits="userSpaceOnUse"><path d="M0 1.6 Q1 0 2 1.6 T4 1.6" stroke="#000" stroke-opacity=".5" fill="none" stroke-width=".7"/></pattern>
+    <filter id="vb1"><feGaussianBlur stdDeviation="1"/></filter>
+    <filter id="vb6" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
+    <radialGradient id="vbg" cx="50%" cy="32%" r="80%"><stop offset="0" stop-color="#2A2219"/><stop offset=".55" stop-color="#13100C"/><stop offset="1" stop-color="#080706"/></radialGradient><filter id="gris"><feColorMatrix type="saturate" values="0"/></filter></defs>
+<rect width="360" height="640" fill="url(#vbg)"/><text x="20" y="38" font-family="Georgia, serif" font-weight="700" font-size="14" fill="#D4AF37" letter-spacing="1.5">PX</text>
+<g data-s="0" data-e="27.5" data-a="fade" data-din="0.25" data-dout="0.3" style="opacity:0;transform-box:fill-box;transform-origin:center"><path d="M180 70 V520" stroke="#D4AF37" stroke-width="1.6" opacity=".65"/></g>
+<g data-s="0" data-e="3.6" data-a="fade" data-din="0.25" data-dout="0.2" style="opacity:0;transform-box:fill-box;transform-origin:center"><text x="180" y="62" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="10" font-weight="800" fill="#D4AF37" text-anchor="middle" letter-spacing="2">DÍA 1</text><rect x="60" y="70" width="240" height="8" rx="4" fill="#2C2A30"/><rect x="60" y="70" width="12.0" height="8" rx="4" fill="#D4AF37" data-w="0,3.6,12.0,60.0"/></g>
+<g data-s="0" data-e="3.6" data-a="fade" data-din="0.25" data-dout="0.2" style="opacity:0;transform-box:fill-box;transform-origin:center"><g transform="translate(8 140) scale(0.78)" filter="url(#gris)" opacity=".5">
+    <ellipse cx="100" cy="380" rx="62" ry="7" fill="#000" opacity=".55"/>
+    <!-- piernas: jogger negro -->
+    <path d="M66 234 Q63 300 68 352 L97 352 L100 246 Z" fill="url(#vlegs)"/>
+    <path d="M134 234 Q137 300 132 352 L103 352 L100 246 Z" fill="url(#vlegs)"/>
+    <path d="M78 292 Q84 300 92 296 M122 292 Q116 300 108 296" stroke="#000" stroke-width="1.5" fill="none" opacity=".7"/>
+    <rect x="67" y="342" width="31" height="11" rx="4" fill="#0B0B0C"/>
+    <rect x="102" y="342" width="31" height="11" rx="4" fill="#0B0B0C"/>
+    <!-- zapatillas negras con detalle dorado -->
+    <path d="M58 375 Q56 352 74 351 L95 351 Q104 353 104 365 L104 377 L58 377 Z" fill="#141416"/>
+    <path d="M142 375 Q144 352 126 351 L105 351 Q96 353 96 365 L96 377 L142 377 Z" fill="#141416"/>
+    <rect x="57" y="372" width="48" height="5" rx="2.5" fill="#8E6E1E"/>
+    <rect x="95" y="372" width="48" height="5" rx="2.5" fill="#8E6E1E"/>
+    <path d="M70 362 L90 360 M130 362 L110 360" stroke="url(#vgold)" stroke-width="2.4" stroke-linecap="round"/>
+
+    <!-- brazo izquierdo: mano al bolsillo -->
+    <path d="M58 120 Q36 132 34 182 L42 210 L66 208 L60 178 Z" fill="url(#vbody)"/>
+    <!-- torso sudadera oversize -->
+    <path d="M56 116 Q100 104 144 116 L152 234 Q100 244 48 234 Z" fill="url(#vbody)"/>
+    <path d="M70 196 L130 196 L136 228 L64 228 Z" fill="#141416"/>
+    <path d="M70 196 L130 196" stroke="#2C2A30" stroke-width="1.5"/>
+    <path d="M48 226 Q100 236 152 226 L152 236 Q100 246 48 236 Z" fill="#0E0E10"/>
+    <path d="M42 206 Q52 214 66 208" stroke="#0B0B0C" stroke-width="3" fill="none"/>
+    <!-- cordones -->
+    <path d="M90 112 Q88 132 90 150 M110 112 Q112 132 110 150" stroke="#E8DCC4" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <rect x="88.4" y="149" width="3.2" height="6" rx="1.4" fill="url(#vgold)"/>
+    <rect x="108.4" y="149" width="3.2" height="6" rx="1.4" fill="url(#vgold)"/>
+
+    <!-- capucha -->
+    <path d="M58 120 Q46 30 100 6 Q154 30 142 120 Q128 104 100 104 Q72 104 58 120 Z" fill="url(#vhood)"/>
+    <path d="M67 108 Q62 46 100 24 Q138 46 133 108 Q120 98 100 98 Q80 98 67 108 Z" fill="#060607"/>
+    <!-- cabeza con pasamontañas -->
+    <path d="M74 68 Q73 32 100 30 Q127 32 126 68 Q126 96 112 104 Q100 110 88 104 Q74 96 74 68 Z" fill="url(#vmask)"/>
+    <path d="M74 68 Q73 32 100 30 Q127 32 126 68 Q126 96 112 104 Q100 110 88 104 Q74 96 74 68 Z" fill="url(#vknit)"/>
+    <path d="M100 31 L100 57 M100 74 L100 108" stroke="#000" stroke-width="1" opacity=".5"/>
+    <rect x="78" y="57" width="44" height="16" rx="8" fill="url(#vskin)"/>
+    <rect x="78" y="57" width="44" height="6" rx="3" fill="#2A1C14" opacity=".55"/>
+
+    <ellipse cx="89" cy="65.5" rx="4.8" ry="3.1" fill="#E4DCD2"/>
+    <circle cx="89.6" cy="65.6" r="2.3" fill="#2E2219"/>
+    <circle cx="90.4" cy="66.5" r=".8" fill="#F5DE9A"/>
+    <ellipse cx="111" cy="65.5" rx="4.8" ry="3.1" fill="#E4DCD2"/>
+    <circle cx="111.6" cy="65.6" r="2.3" fill="#2E2219"/>
+    <circle cx="112.4" cy="66.5" r=".8" fill="#F5DE9A"/>
+    <path d="M78 65 Q78 57 86 57 L114 57 Q122 57 122 65" stroke="#0A0A0B" stroke-width="2" fill="none"/>
+
+
+    <!-- brazo derecho relajado, sin nada en la mano -->
+    <path d="M144 120 Q166 132 166 182 L160 212 L144 210 L150 178 Z" fill="url(#vbody)"/>
+    <path d="M144 206 Q152 214 160 208" stroke="#0B0B0C" stroke-width="3" fill="none"/>
+    <ellipse cx="152" cy="218" rx="7.5" ry="8.5" fill="#B98A66"/>
+    <path d="M147 222 Q152 226 157 222" stroke="#8A6248" stroke-width="1.2" fill="none"/>
+
+    <!-- luz dorada de borde -->
+    <path d="M142 120 Q154 30 100 6" stroke="url(#vgold)" stroke-width="1.8" fill="none" opacity=".6" filter="url(#vb1)"/>
+    <path d="M144 118 L152 234" stroke="url(#vgold)" stroke-width="1.4" opacity=".35" filter="url(#vb1)"/>
+    <path d="M134 236 Q137 300 132 352" stroke="url(#vgold)" stroke-width="1.2" fill="none" opacity=".3"/>
+    <path d="M78 72 Q100 80 122 72" stroke="#F5DE9A" stroke-width="1.2" fill="none" opacity=".35" filter="url(#vb1)"/><rect class="blink" data-o="0.0" x="78" y="57" width="44" height="16" rx="8" fill="#1B1A1D" style="opacity:0"/></g></g>
+<g data-s="0" data-e="3.6" data-a="fade" data-din="0.25" data-dout="0.2" style="opacity:0;transform-box:fill-box;transform-origin:center"><g transform="translate(196 140) scale(0.78)">
+    <ellipse cx="100" cy="380" rx="62" ry="7" fill="#000" opacity=".55"/>
+    <!-- piernas: jogger negro -->
+    <path d="M66 234 Q63 300 68 352 L97 352 L100 246 Z" fill="url(#vlegs)"/>
+    <path d="M134 234 Q137 300 132 352 L103 352 L100 246 Z" fill="url(#vlegs)"/>
+    <path d="M78 292 Q84 300 92 296 M122 292 Q116 300 108 296" stroke="#000" stroke-width="1.5" fill="none" opacity=".7"/>
+    <rect x="67" y="342" width="31" height="11" rx="4" fill="#0B0B0C"/>
+    <rect x="102" y="342" width="31" height="11" rx="4" fill="#0B0B0C"/>
+    <!-- zapatillas negras con detalle dorado -->
+    <path d="M58 375 Q56 352 74 351 L95 351 Q104 353 104 365 L104 377 L58 377 Z" fill="#141416"/>
+    <path d="M142 375 Q144 352 126 351 L105 351 Q96 353 96 365 L96 377 L142 377 Z" fill="#141416"/>
+    <rect x="57" y="372" width="48" height="5" rx="2.5" fill="#8E6E1E"/>
+    <rect x="95" y="372" width="48" height="5" rx="2.5" fill="#8E6E1E"/>
+    <path d="M70 362 L90 360 M130 362 L110 360" stroke="url(#vgold)" stroke-width="2.4" stroke-linecap="round"/>
+
+    <!-- brazo izquierdo: mano al bolsillo -->
+    <path d="M58 120 Q36 132 34 182 L42 210 L66 208 L60 178 Z" fill="url(#vbody)"/>
+    <!-- torso sudadera oversize -->
+    <path d="M56 116 Q100 104 144 116 L152 234 Q100 244 48 234 Z" fill="url(#vbody)"/>
+    <path d="M70 196 L130 196 L136 228 L64 228 Z" fill="#141416"/>
+    <path d="M70 196 L130 196" stroke="#2C2A30" stroke-width="1.5"/>
+    <path d="M48 226 Q100 236 152 226 L152 236 Q100 246 48 236 Z" fill="#0E0E10"/>
+    <path d="M42 206 Q52 214 66 208" stroke="#0B0B0C" stroke-width="3" fill="none"/>
+    <!-- cordones -->
+    <path d="M90 112 Q88 132 90 150 M110 112 Q112 132 110 150" stroke="#E8DCC4" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <rect x="88.4" y="149" width="3.2" height="6" rx="1.4" fill="url(#vgold)"/>
+    <rect x="108.4" y="149" width="3.2" height="6" rx="1.4" fill="url(#vgold)"/>
+
+    <!-- capucha -->
+    <path d="M58 120 Q46 30 100 6 Q154 30 142 120 Q128 104 100 104 Q72 104 58 120 Z" fill="url(#vhood)"/>
+    <path d="M67 108 Q62 46 100 24 Q138 46 133 108 Q120 98 100 98 Q80 98 67 108 Z" fill="#060607"/>
+    <!-- cabeza con pasamontañas -->
+    <path d="M74 68 Q73 32 100 30 Q127 32 126 68 Q126 96 112 104 Q100 110 88 104 Q74 96 74 68 Z" fill="url(#vmask)"/>
+    <path d="M74 68 Q73 32 100 30 Q127 32 126 68 Q126 96 112 104 Q100 110 88 104 Q74 96 74 68 Z" fill="url(#vknit)"/>
+    <path d="M100 31 L100 57 M100 74 L100 108" stroke="#000" stroke-width="1" opacity=".5"/>
+    <rect x="78" y="57" width="44" height="16" rx="8" fill="url(#vskin)"/>
+    <rect x="78" y="57" width="44" height="6" rx="3" fill="#2A1C14" opacity=".55"/>
+
+    <ellipse cx="89" cy="65.5" rx="4.8" ry="3.1" fill="#E4DCD2"/>
+    <circle cx="90.6" cy="65.6" r="2.3" fill="#2E2219"/>
+    <circle cx="91.4" cy="66.5" r=".8" fill="#F5DE9A"/>
+    <ellipse cx="111" cy="65.5" rx="4.8" ry="3.1" fill="#E4DCD2"/>
+    <circle cx="112.6" cy="65.6" r="2.3" fill="#2E2219"/>
+    <circle cx="113.4" cy="66.5" r=".8" fill="#F5DE9A"/>
+    <path d="M83.5 63 L95 64.5 M105 64.5 L116.5 63" stroke="#0A0A0B" stroke-width="2.4" stroke-linecap="round"/>
+    <path d="M78 65 Q78 57 86 57 L114 57 Q122 57 122 65" stroke="#0A0A0B" stroke-width="2" fill="none"/>
+
+
+    <!-- brazo derecho relajado, sin nada en la mano -->
+    <path d="M144 120 Q166 132 166 182 L160 212 L144 210 L150 178 Z" fill="url(#vbody)"/>
+    <path d="M144 206 Q152 214 160 208" stroke="#0B0B0C" stroke-width="3" fill="none"/>
+    <ellipse cx="152" cy="218" rx="7.5" ry="8.5" fill="#B98A66"/>
+    <path d="M147 222 Q152 226 157 222" stroke="#8A6248" stroke-width="1.2" fill="none"/>
+
+    <!-- luz dorada de borde -->
+    <path d="M142 120 Q154 30 100 6" stroke="url(#vgold)" stroke-width="1.8" fill="none" opacity=".6" filter="url(#vb1)"/>
+    <path d="M144 118 L152 234" stroke="url(#vgold)" stroke-width="1.4" opacity=".35" filter="url(#vb1)"/>
+    <path d="M134 236 Q137 300 132 352" stroke="url(#vgold)" stroke-width="1.2" fill="none" opacity=".3"/>
+    <path d="M78 72 Q100 80 122 72" stroke="#F5DE9A" stroke-width="1.2" fill="none" opacity=".35" filter="url(#vb1)"/><rect class="blink" data-o="1.3" x="78" y="57" width="44" height="16" rx="8" fill="#1B1A1D" style="opacity:0"/></g></g>
+<g data-s="0.1" data-e="3.6" data-a="up" data-din="0.25" data-dout="0.2" style="opacity:0;transform-box:fill-box;transform-origin:center"><rect x="58" y="462" width="64" height="18" rx="9" fill="#2C2A30"/><text x="90.0" y="474.5" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="9" font-weight="800" fill="#B3A994" text-anchor="middle">NOVATO</text><rect x="238" y="462" width="64" height="18" rx="9" fill="#D4AF37"/><text x="270.0" y="474.5" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="9" font-weight="800" fill="#13100C" text-anchor="middle">PERTX</text></g>
+<g data-s="0.15" data-e="1.8" data-a="pop" data-din="0.09" data-dout="0.05" style="opacity:0;transform-box:fill-box;transform-origin:center"><text x="180.0" y="384" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="15" font-weight="700" fill="#F3EEE3" text-anchor="middle" stroke="#080706" stroke-width="4" paint-order="stroke">un novato y yo</text><text x="180.0" y="424" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="34" font-weight="900" fill="#D4AF37" text-anchor="middle" letter-spacing="-.5" stroke="#080706" stroke-width="6" paint-order="stroke">EMPEZAMOS</text></g>
+<g data-s="1.8" data-e="3.6" data-a="pop" data-din="0.09" data-dout="0.05" style="opacity:0;transform-box:fill-box;transform-origin:center"><text x="180.0" y="384" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="15" font-weight="700" fill="#F3EEE3" text-anchor="middle" stroke="#080706" stroke-width="4" paint-order="stroke">a programar el</text><text x="180.0" y="424" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="34" font-weight="900" fill="#D4AF37" text-anchor="middle" letter-spacing="-.5" stroke="#080706" stroke-width="6" paint-order="stroke">MISMO DÍA</text></g>
+<g data-s="3.6" data-e="22" data-a="left" data-din="0.25" data-dout="0.2" style="opacity:0;transform-box:fill-box;transform-origin:center"><rect x="14" y="92" width="158" height="250" rx="10" fill="#0E0D0B" stroke="#2E281E" stroke-width="1.5"/><rect x="14" y="92" width="158" height="22" rx="10" fill="#1A1712"/><circle cx="26" cy="103" r="3" fill="#8E6E1E"/><circle cx="36" cy="103" r="3" fill="#3A3428"/><circle cx="46" cy="103" r="3" fill="#3A3428"/><text x="93.0" y="107" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="9" font-weight="700" fill="#B3A994" text-anchor="middle">YOUTUBE</text></g>
+<g data-s="3.6" data-e="9.4" data-a="right" data-din="0.25" data-dout="0.2" style="opacity:0;transform-box:fill-box;transform-origin:center"><rect x="188" y="92" width="158" height="250" rx="10" fill="#0E0D0B" stroke="#2E281E" stroke-width="1.5"/><rect x="188" y="92" width="158" height="22" rx="10" fill="#1A1712"/><circle cx="200" cy="103" r="3" fill="#8E6E1E"/><circle cx="210" cy="103" r="3" fill="#3A3428"/><circle cx="220" cy="103" r="3" fill="#3A3428"/><text x="267.0" y="107" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="9" font-weight="700" fill="#B3A994" text-anchor="middle">PERTX</text><text x="267.0" y="222" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="30" font-weight="800" fill="#3A3428" text-anchor="middle">…</text></g>
+<g data-s="4.0" data-e="22" data-a="up" data-din="0.25" data-dout="0.3" style="opacity:0;transform-box:fill-box;transform-origin:center"><rect x="22" y="124" width="142" height="32" rx="6" fill="#1A1712" stroke="#2E281E"/><rect x="28" y="130" width="34" height="20" rx="3" fill="#2C2A30"/><path d="M41 135 L50 140 L41 145 Z" fill="#F3EEE3"/><text x="68" y="139" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="8.5" font-weight="600" fill="#F3EEE3" text-anchor="start">Curso completo 0 a 100</text><text x="68" y="150" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="7.5" font-weight="500" fill="#8A8070" text-anchor="start">1:32:10</text></g>
+<g data-s="5.0" data-e="22" data-a="up" data-din="0.25" data-dout="0.3" style="opacity:0;transform-box:fill-box;transform-origin:center"><rect x="22" y="164" width="142" height="32" rx="6" fill="#1A1712" stroke="#2E281E"/><rect x="28" y="170" width="34" height="20" rx="3" fill="#2C2A30"/><path d="M41 175 L50 180 L41 185 Z" fill="#F3EEE3"/><text x="68" y="179" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="8.5" font-weight="600" fill="#F3EEE3" text-anchor="start">Tutorial 2: variables</text><text x="68" y="190" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="7.5" font-weight="500" fill="#8A8070" text-anchor="start">1:32:10</text></g>
+<g data-s="6.0" data-e="22" data-a="up" data-din="0.25" data-dout="0.3" style="opacity:0;transform-box:fill-box;transform-origin:center"><rect x="22" y="204" width="142" height="32" rx="6" fill="#1A1712" stroke="#2E281E"/><rect x="28" y="210" width="34" height="20" rx="3" fill="#2C2A30"/><path d="M41 215 L50 220 L41 225 Z" fill="#F3EEE3"/><text x="68" y="219" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="8.5" font-weight="600" fill="#F3EEE3" text-anchor="start">Tutorial 3: bucles</text><text x="68" y="230" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="7.5" font-weight="500" fill="#8A8070" text-anchor="start">1:32:10</text></g>
+<g data-s="7.0" data-e="22" data-a="up" data-din="0.25" data-dout="0.3" style="opacity:0;transform-box:fill-box;transform-origin:center"><rect x="22" y="244" width="142" height="32" rx="6" fill="#1A1712" stroke="#2E281E"/><rect x="28" y="250" width="34" height="20" rx="3" fill="#2C2A30"/><path d="M41 255 L50 260 L41 265 Z" fill="#F3EEE3"/><text x="68" y="259" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="8.5" font-weight="600" fill="#F3EEE3" text-anchor="start">Tutorial 4: funciones</text><text x="68" y="270" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="7.5" font-weight="500" fill="#8A8070" text-anchor="start">1:32:10</text></g>
+<g data-s="8.0" data-e="22" data-a="up" data-din="0.25" data-dout="0.3" style="opacity:0;transform-box:fill-box;transform-origin:center"><rect x="22" y="284" width="142" height="32" rx="6" fill="#1A1712" stroke="#2E281E"/><rect x="28" y="290" width="34" height="20" rx="3" fill="#2C2A30"/><path d="M41 295 L50 300 L41 305 Z" fill="#F3EEE3"/><text x="68" y="299" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="8.5" font-weight="600" fill="#F3EEE3" text-anchor="start">Tutorial 47: repaso</text><text x="68" y="310" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="7.5" font-weight="500" fill="#8A8070" text-anchor="start">1:32:10</text></g>
+<g data-s="3.6" data-e="27.5" data-a="fade" data-din="0.25" data-dout="0.2" style="opacity:0;transform-box:fill-box;transform-origin:center"><g transform="translate(28 430) scale(0.42)" filter="url(#gris)" opacity=".5">
+    <ellipse cx="100" cy="380" rx="62" ry="7" fill="#000" opacity=".55"/>
+    <!-- piernas: jogger negro -->
+    <path d="M66 234 Q63 300 68 352 L97 352 L100 246 Z" fill="url(#vlegs)"/>
+    <path d="M134 234 Q137 300 132 352 L103 352 L100 246 Z" fill="url(#vlegs)"/>
+    <path d="M78 292 Q84 300 92 296 M122 292 Q116 300 108 296" stroke="#000" stroke-width="1.5" fill="none" opacity=".7"/>
+    <rect x="67" y="342" width="31" height="11" rx="4" fill="#0B0B0C"/>
+    <rect x="102" y="342" width="31" height="11" rx="4" fill="#0B0B0C"/>
+    <!-- zapatillas negras con detalle dorado -->
+    <path d="M58 375 Q56 352 74 351 L95 351 Q104 353 104 365 L104 377 L58 377 Z" fill="#141416"/>
+    <path d="M142 375 Q144 352 126 351 L105 351 Q96 353 96 365 L96 377 L142 377 Z" fill="#141416"/>
+    <rect x="57" y="372" width="48" height="5" rx="2.5" fill="#8E6E1E"/>
+    <rect x="95" y="372" width="48" height="5" rx="2.5" fill="#8E6E1E"/>
+    <path d="M70 362 L90 360 M130 362 L110 360" stroke="url(#vgold)" stroke-width="2.4" stroke-linecap="round"/>
+
+    <!-- brazo izquierdo: mano al bolsillo -->
+    <path d="M58 120 Q36 132 34 182 L42 210 L66 208 L60 178 Z" fill="url(#vbody)"/>
+    <!-- torso sudadera oversize -->
+    <path d="M56 116 Q100 104 144 116 L152 234 Q100 244 48 234 Z" fill="url(#vbody)"/>
+    <path d="M70 196 L130 196 L136 228 L64 228 Z" fill="#141416"/>
+    <path d="M70 196 L130 196" stroke="#2C2A30" stroke-width="1.5"/>
+    <path d="M48 226 Q100 236 152 226 L152 236 Q100 246 48 236 Z" fill="#0E0E10"/>
+    <path d="M42 206 Q52 214 66 208" stroke="#0B0B0C" stroke-width="3" fill="none"/>
+    <!-- cordones -->
+    <path d="M90 112 Q88 132 90 150 M110 112 Q112 132 110 150" stroke="#E8DCC4" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <rect x="88.4" y="149" width="3.2" height="6" rx="1.4" fill="url(#vgold)"/>
+    <rect x="108.4" y="149" width="3.2" height="6" rx="1.4" fill="url(#vgold)"/>
+
+    <!-- capucha -->
+    <path d="M58 120 Q46 30 100 6 Q154 30 142 120 Q128 104 100 104 Q72 104 58 120 Z" fill="url(#vhood)"/>
+    <path d="M67 108 Q62 46 100 24 Q138 46 133 108 Q120 98 100 98 Q80 98 67 108 Z" fill="#060607"/>
+    <!-- cabeza con pasamontañas -->
+    <path d="M74 68 Q73 32 100 30 Q127 32 126 68 Q126 96 112 104 Q100 110 88 104 Q74 96 74 68 Z" fill="url(#vmask)"/>
+    <path d="M74 68 Q73 32 100 30 Q127 32 126 68 Q126 96 112 104 Q100 110 88 104 Q74 96 74 68 Z" fill="url(#vknit)"/>
+    <path d="M100 31 L100 57 M100 74 L100 108" stroke="#000" stroke-width="1" opacity=".5"/>
+    <rect x="78" y="57" width="44" height="16" rx="8" fill="url(#vskin)"/>
+    <rect x="78" y="57" width="44" height="6" rx="3" fill="#2A1C14" opacity=".55"/>
+
+    <ellipse cx="89" cy="65.5" rx="4.8" ry="3.1" fill="#E4DCD2"/>
+    <circle cx="89.6" cy="65.6" r="2.3" fill="#2E2219"/>
+    <circle cx="90.4" cy="66.5" r=".8" fill="#F5DE9A"/>
+    <ellipse cx="111" cy="65.5" rx="4.8" ry="3.1" fill="#E4DCD2"/>
+    <circle cx="111.6" cy="65.6" r="2.3" fill="#2E2219"/>
+    <circle cx="112.4" cy="66.5" r=".8" fill="#F5DE9A"/>
+    <path d="M78 65 Q78 57 86 57 L114 57 Q122 57 122 65" stroke="#0A0A0B" stroke-width="2" fill="none"/>
+
+
+    <!-- brazo derecho relajado, sin nada en la mano -->
+    <path d="M144 120 Q166 132 166 182 L160 212 L144 210 L150 178 Z" fill="url(#vbody)"/>
+    <path d="M144 206 Q152 214 160 208" stroke="#0B0B0C" stroke-width="3" fill="none"/>
+    <ellipse cx="152" cy="218" rx="7.5" ry="8.5" fill="#B98A66"/>
+    <path d="M147 222 Q152 226 157 222" stroke="#8A6248" stroke-width="1.2" fill="none"/>
+
+    <!-- luz dorada de borde -->
+    <path d="M142 120 Q154 30 100 6" stroke="url(#vgold)" stroke-width="1.8" fill="none" opacity=".6" filter="url(#vb1)"/>
+    <path d="M144 118 L152 234" stroke="url(#vgold)" stroke-width="1.4" opacity=".35" filter="url(#vb1)"/>
+    <path d="M134 236 Q137 300 132 352" stroke="url(#vgold)" stroke-width="1.2" fill="none" opacity=".3"/>
+    <path d="M78 72 Q100 80 122 72" stroke="#F5DE9A" stroke-width="1.2" fill="none" opacity=".35" filter="url(#vb1)"/><rect class="blink" data-o="0.0" x="78" y="57" width="44" height="16" rx="8" fill="#1B1A1D" style="opacity:0"/></g></g>
+<g data-s="3.6" data-e="27.5" data-a="fade" data-din="0.25" data-dout="0.2" style="opacity:0;transform-box:fill-box;transform-origin:center"><g transform="translate(222 430) scale(0.42)">
+    <ellipse cx="100" cy="380" rx="62" ry="7" fill="#000" opacity=".55"/>
+    <!-- piernas: jogger negro -->
+    <path d="M66 234 Q63 300 68 352 L97 352 L100 246 Z" fill="url(#vlegs)"/>
+    <path d="M134 234 Q137 300 132 352 L103 352 L100 246 Z" fill="url(#vlegs)"/>
+    <path d="M78 292 Q84 300 92 296 M122 292 Q116 300 108 296" stroke="#000" stroke-width="1.5" fill="none" opacity=".7"/>
+    <rect x="67" y="342" width="31" height="11" rx="4" fill="#0B0B0C"/>
+    <rect x="102" y="342" width="31" height="11" rx="4" fill="#0B0B0C"/>
+    <!-- zapatillas negras con detalle dorado -->
+    <path d="M58 375 Q56 352 74 351 L95 351 Q104 353 104 365 L104 377 L58 377 Z" fill="#141416"/>
+    <path d="M142 375 Q144 352 126 351 L105 351 Q96 353 96 365 L96 377 L142 377 Z" fill="#141416"/>
+    <rect x="57" y="372" width="48" height="5" rx="2.5" fill="#8E6E1E"/>
+    <rect x="95" y="372" width="48" height="5" rx="2.5" fill="#8E6E1E"/>
+    <path d="M70 362 L90 360 M130 362 L110 360" stroke="url(#vgold)" stroke-width="2.4" stroke-linecap="round"/>
+
+    <!-- brazo izquierdo: mano al bolsillo -->
+    <path d="M58 120 Q36 132 34 182 L42 210 L66 208 L60 178 Z" fill="url(#vbody)"/>
+    <!-- torso sudadera oversize -->
+    <path d="M56 116 Q100 104 144 116 L152 234 Q100 244 48 234 Z" fill="url(#vbody)"/>
+    <path d="M70 196 L130 196 L136 228 L64 228 Z" fill="#141416"/>
+    <path d="M70 196 L130 196" stroke="#2C2A30" stroke-width="1.5"/>
+    <path d="M48 226 Q100 236 152 226 L152 236 Q100 246 48 236 Z" fill="#0E0E10"/>
+    <path d="M42 206 Q52 214 66 208" stroke="#0B0B0C" stroke-width="3" fill="none"/>
+    <!-- cordones -->
+    <path d="M90 112 Q88 132 90 150 M110 112 Q112 132 110 150" stroke="#E8DCC4" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <rect x="88.4" y="149" width="3.2" height="6" rx="1.4" fill="url(#vgold)"/>
+    <rect x="108.4" y="149" width="3.2" height="6" rx="1.4" fill="url(#vgold)"/>
+
+    <!-- capucha -->
+    <path d="M58 120 Q46 30 100 6 Q154 30 142 120 Q128 104 100 104 Q72 104 58 120 Z" fill="url(#vhood)"/>
+    <path d="M67 108 Q62 46 100 24 Q138 46 133 108 Q120 98 100 98 Q80 98 67 108 Z" fill="#060607"/>
+    <!-- cabeza con pasamontañas -->
+    <path d="M74 68 Q73 32 100 30 Q127 32 126 68 Q126 96 112 104 Q100 110 88 104 Q74 96 74 68 Z" fill="url(#vmask)"/>
+    <path d="M74 68 Q73 32 100 30 Q127 32 126 68 Q126 96 112 104 Q100 110 88 104 Q74 96 74 68 Z" fill="url(#vknit)"/>
+    <path d="M100 31 L100 57 M100 74 L100 108" stroke="#000" stroke-width="1" opacity=".5"/>
+    <rect x="78" y="57" width="44" height="16" rx="8" fill="url(#vskin)"/>
+    <rect x="78" y="57" width="44" height="6" rx="3" fill="#2A1C14" opacity=".55"/>
+
+    <ellipse cx="89" cy="65.5" rx="4.8" ry="3.1" fill="#E4DCD2"/>
+    <circle cx="89.6" cy="65.6" r="2.3" fill="#2E2219"/>
+    <circle cx="90.4" cy="66.5" r=".8" fill="#F5DE9A"/>
+    <ellipse cx="111" cy="65.5" rx="4.8" ry="3.1" fill="#E4DCD2"/>
+    <circle cx="111.6" cy="65.6" r="2.3" fill="#2E2219"/>
+    <circle cx="112.4" cy="66.5" r=".8" fill="#F5DE9A"/>
+    <path d="M78 65 Q78 57 86 57 L114 57 Q122 57 122 65" stroke="#0A0A0B" stroke-width="2" fill="none"/>
+
+
+    <!-- brazo derecho relajado, sin nada en la mano -->
+    <path d="M144 120 Q166 132 166 182 L160 212 L144 210 L150 178 Z" fill="url(#vbody)"/>
+    <path d="M144 206 Q152 214 160 208" stroke="#0B0B0C" stroke-width="3" fill="none"/>
+    <ellipse cx="152" cy="218" rx="7.5" ry="8.5" fill="#B98A66"/>
+    <path d="M147 222 Q152 226 157 222" stroke="#8A6248" stroke-width="1.2" fill="none"/>
+
+    <!-- luz dorada de borde -->
+    <path d="M142 120 Q154 30 100 6" stroke="url(#vgold)" stroke-width="1.8" fill="none" opacity=".6" filter="url(#vb1)"/>
+    <path d="M144 118 L152 234" stroke="url(#vgold)" stroke-width="1.4" opacity=".35" filter="url(#vb1)"/>
+    <path d="M134 236 Q137 300 132 352" stroke="url(#vgold)" stroke-width="1.2" fill="none" opacity=".3"/>
+    <path d="M78 72 Q100 80 122 72" stroke="#F5DE9A" stroke-width="1.2" fill="none" opacity=".35" filter="url(#vb1)"/><rect class="blink" data-o="0.4" x="78" y="57" width="44" height="16" rx="8" fill="#1B1A1D" style="opacity:0"/></g></g>
+<g data-s="3.7" data-e="5.6" data-a="pop" data-din="0.09" data-dout="0.05" style="opacity:0;transform-box:fill-box;transform-origin:center"><text x="180.0" y="384" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="15" font-weight="700" fill="#F3EEE3" text-anchor="middle" stroke="#080706" stroke-width="4" paint-order="stroke">el novato ve</text><text x="180.0" y="424" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="34" font-weight="900" fill="#D4AF37" text-anchor="middle" letter-spacing="-.5" stroke="#080706" stroke-width="6" paint-order="stroke">TUTORIALES</text></g>
+<g data-s="5.6" data-e="7.4" data-a="pop" data-din="0.09" data-dout="0.05" style="opacity:0;transform-box:fill-box;transform-origin:center"><text x="180.0" y="384" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="15" font-weight="700" fill="#F3EEE3" text-anchor="middle" stroke="#080706" stroke-width="4" paint-order="stroke">uno detrás de</text><text x="180.0" y="424" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="40" font-weight="900" fill="#D4AF37" text-anchor="middle" letter-spacing="-.5" stroke="#080706" stroke-width="6" paint-order="stroke">OTRO</text></g>
+<g data-s="7.4" data-e="9.4" data-a="pop" data-din="0.09" data-dout="0.05" style="opacity:0;transform-box:fill-box;transform-origin:center"><text x="180.0" y="384" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="15" font-weight="700" fill="#F3EEE3" text-anchor="middle" stroke="#080706" stroke-width="4" paint-order="stroke">y todavía no ha</text><text x="180.0" y="424" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="23" font-weight="900" fill="#D4AF37" text-anchor="middle" letter-spacing="-.5" stroke="#080706" stroke-width="6" paint-order="stroke">CONSTRUIDO NADA</text></g>
+<g data-s="9.4" data-e="16" data-a="right" data-din="0.25" data-dout="0.2" style="opacity:0;transform-box:fill-box;transform-origin:center"><rect x="188" y="92" width="158" height="250" rx="10" fill="#0E0D0B" stroke="#2E281E" stroke-width="1.5"/><rect x="188" y="92" width="158" height="22" rx="10" fill="#1A1712"/><circle cx="200" cy="103" r="3" fill="#8E6E1E"/><circle cx="210" cy="103" r="3" fill="#3A3428"/><circle cx="220" cy="103" r="3" fill="#3A3428"/><text x="267.0" y="107" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="9" font-weight="700" fill="#B3A994" text-anchor="middle">TERMINAL</text></g>
+<g data-s="9.7" data-e="16" data-a="fade" data-din="0.25" data-dout="0.2" style="opacity:0;transform-box:fill-box;transform-origin:center"><text x="198" y="134" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="500" fill="#F3EEE3" text-anchor="start" data-type="9.7,10.3" data-full="&gt; claude"></text></g>
+<g data-s="10.5" data-e="16" data-a="fade" data-din="0.25" data-dout="0.2" style="opacity:0;transform-box:fill-box;transform-origin:center"><text x="198" y="150" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="500" fill="#D4AF37" text-anchor="start" data-type="10.5,11.9" data-full="&gt; hazme una web para"></text></g>
+<g data-s="11.9" data-e="16" data-a="fade" data-din="0.25" data-dout="0.2" style="opacity:0;transform-box:fill-box;transform-origin:center"><text x="198" y="166" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="500" fill="#D4AF37" text-anchor="start" data-type="11.9,12.8" data-full="  apuntar mis gastos"></text></g>
+<g data-s="13.2" data-e="16" data-a="left" data-din="0.25" data-dout="0.2" style="opacity:0;transform-box:fill-box;transform-origin:center"><text x="198" y="196" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="600" fill="#9FD17A" text-anchor="start">✓ creado index.html</text></g>
+<g data-s="13.7" data-e="16" data-a="left" data-din="0.25" data-dout="0.2" style="opacity:0;transform-box:fill-box;transform-origin:center"><text x="198" y="212" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="600" fill="#9FD17A" text-anchor="start">✓ creado estilos.css</text></g>
+<g data-s="14.2" data-e="16" data-a="left" data-din="0.25" data-dout="0.2" style="opacity:0;transform-box:fill-box;transform-origin:center"><text x="198" y="228" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', monospace" font-size="9.5" font-weight="600" fill="#9FD17A" text-anchor="start">✓ creado gastos.js</text></g>
+<g data-s="14.9" data-e="16" data-a="up" data-din="0.25" data-dout="0.2" style="opacity:0;transform-box:fill-box;transform-origin:center"><text x="198" y="260" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="8.5" font-weight="500" fill="#F3EEE3" text-anchor="start">Listo. ¿Lo revisamos juntos?</text></g>
+<g data-s="9.6" data-e="16" data-a="pop" data-din="0.25" data-dout="0.2" data-f="3,2.2" style="opacity:0;transform-box:fill-box;transform-origin:center"><g transform="translate(228.0 -9.200000000000003) scale(0.3)">
+  <defs>
+    <radialGradient id="vorb" cx="38%" cy="30%" r="75%"><stop offset="0" stop-color="#3A393E"/><stop offset=".55" stop-color="#151417"/><stop offset="1" stop-color="#050506"/></radialGradient>
+    <radialGradient id="vthr" cx="50%" cy="0%" r="100%"><stop offset="0" stop-color="#F5DE9A"/><stop offset="1" stop-color="#D4AF37" stop-opacity="0"/></radialGradient>
+    <filter id="vag" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <ellipse cx="300" cy="374" rx="34" ry="6" fill="#000" opacity=".6"/>
+  <!-- propulsores -->
+  <path d="M286 300 L280 334 L292 334 Z" fill="url(#vthr)" opacity=".8"/>
+  <path d="M314 300 L308 334 L320 334 Z" fill="url(#vthr)" opacity=".8"/>
+  <!-- antena -->
+  <path d="M300 186 L300 166" stroke="#2C2A30" stroke-width="3"/>
+  <circle cx="300" cy="162" r="5" fill="#D4AF37" filter="url(#vag)"/>
+  <!-- esfera -->
+  <circle cx="300" cy="244" r="58" fill="url(#vorb)"/>
+  <ellipse cx="300" cy="262" rx="58" ry="12" fill="none" stroke="url(#vgold)" stroke-width="3"/>
+  <path d="M242 262 A58 58 0 0 0 358 262" fill="#0A0A0B" opacity=".35"/>
+  <!-- pantalla-cara -->
+  <rect x="264" y="210" width="72" height="42" rx="16" fill="#050506" stroke="#2C2A30" stroke-width="1.5"/>
+  <g fill="#F5DE9A" filter="url(#vag)"><rect x="276" y="230" width="5" height="5"/><rect x="281" y="225" width="5" height="5"/><rect x="286" y="230" width="5" height="5"/><rect x="309" y="230" width="5" height="5"/><rect x="314" y="225" width="5" height="5"/><rect x="319" y="230" width="5" height="5"/></g>
+  <rect x="296" y="242" width="8" height="3" fill="#D4AF37"/>
+  <ellipse cx="282" cy="204" rx="16" ry="7" fill="#FFFFFF" opacity=".07" transform="rotate(-25 282 204)"/>
+  <g transform="translate(334 150)"><rect x="0" y="0" width="54" height="36" rx="4" fill="#D4AF37" fill-opacity=".08" stroke="#D4AF37" stroke-opacity=".6"/><path d="M6 28 L18 20 L28 24 L46 8" stroke="#F5DE9A" stroke-width="2" fill="none" filter="url(#vag)"/><path d="M40 8 L46 8 L46 14" stroke="#F5DE9A" stroke-width="2" fill="none"/></g></g></g>
+<g data-s="9.5" data-e="11.3" data-a="pop" data-din="0.09" data-dout="0.05" style="opacity:0;transform-box:fill-box;transform-origin:center"><text x="180.0" y="384" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="15" font-weight="700" fill="#F3EEE3" text-anchor="middle" stroke="#080706" stroke-width="4" paint-order="stroke">yo le pido a</text><text x="180.0" y="424" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="34" font-weight="900" fill="#D4AF37" text-anchor="middle" letter-spacing="-.5" stroke="#080706" stroke-width="6" paint-order="stroke">CLAUDE CODE</text></g>
+<g data-s="11.3" data-e="13.2" data-a="pop" data-din="0.09" data-dout="0.05" style="opacity:0;transform-box:fill-box;transform-origin:center"><text x="180.0" y="384" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="15" font-weight="700" fill="#F3EEE3" text-anchor="middle" stroke="#080706" stroke-width="4" paint-order="stroke">algo que</text><text x="180.0" y="424" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="40" font-weight="900" fill="#D4AF37" text-anchor="middle" letter-spacing="-.5" stroke="#080706" stroke-width="6" paint-order="stroke">NECESITO</text></g>
+<g data-s="13.2" data-e="16" data-a="pop" data-din="0.09" data-dout="0.05" style="opacity:0;transform-box:fill-box;transform-origin:center"><text x="180.0" y="384" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="15" font-weight="700" fill="#F3EEE3" text-anchor="middle" stroke="#080706" stroke-width="4" paint-order="stroke">y lo construimos</text><text x="180.0" y="424" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="40" font-weight="900" fill="#D4AF37" text-anchor="middle" letter-spacing="-.5" stroke="#080706" stroke-width="6" paint-order="stroke">JUNTOS</text></g>
+<g data-s="16" data-e="22" data-a="pop" data-din="0.25" data-dout="0.2" style="opacity:0;transform-box:fill-box;transform-origin:center"><rect x="24" y="242" width="138" height="56" rx="8" fill="#3A0E0E" stroke="#E5484D"/><text x="93.0" y="264" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="10" font-weight="800" fill="#FF8A8A" text-anchor="middle">ERROR en la línea 12</text><text x="93.0" y="282" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="8.5" font-weight="500" fill="#FFB3B3" text-anchor="middle">(copiado del vídeo)</text></g>
+<g data-s="16" data-e="22" data-a="fade" data-din="0.25" data-dout="0.2" style="opacity:0;transform-box:fill-box;transform-origin:center"><rect x="188" y="92" width="158" height="250" rx="10" fill="#0E0D0B" stroke="#2E281E" stroke-width="1.5"/><rect x="188" y="92" width="158" height="22" rx="10" fill="#1A1712"/><circle cx="200" cy="103" r="3" fill="#8E6E1E"/><circle cx="210" cy="103" r="3" fill="#3A3428"/><circle cx="220" cy="103" r="3" fill="#3A3428"/><text x="267.0" y="107" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="9" font-weight="700" fill="#B3A994" text-anchor="middle">CLAUDE CODE</text></g>
+<g data-s="16.2" data-e="22" data-a="right" data-din="0.25" data-dout="0.2" style="opacity:0;transform-box:fill-box;transform-origin:center"><rect x="218" y="128" width="118" height="38" rx="10" fill="#D4AF37"/><text x="277.0" y="144" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="9" font-weight="700" fill="#13100C" text-anchor="middle">¿Por qué esto</text><text x="277.0" y="157" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="9" font-weight="700" fill="#13100C" text-anchor="middle">funciona así?</text></g>
+<g data-s="17.6" data-e="22" data-a="fade" data-din="0.25" data-dout="0.2" style="opacity:0;transform-box:fill-box;transform-origin:center"><text x="200" y="190" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="9" font-weight="500" fill="#F3EEE3" text-anchor="start" data-type="17.6,18.8" data-full="Porque guarda cada"></text></g>
+<g data-s="18.8" data-e="22" data-a="fade" data-din="0.25" data-dout="0.2" style="opacity:0;transform-box:fill-box;transform-origin:center"><text x="200" y="205" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="9" font-weight="500" fill="#F3EEE3" text-anchor="start" data-type="18.8,19.8" data-full="gasto en una lista"></text></g>
+<g data-s="19.8" data-e="22" data-a="fade" data-din="0.25" data-dout="0.2" style="opacity:0;transform-box:fill-box;transform-origin:center"><text x="200" y="220" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="9" font-weight="500" fill="#F3EEE3" text-anchor="start" data-type="19.8,20.8" data-full="y luego los suma."></text></g>
+<g data-s="16" data-e="22" data-a="pop" data-din="0.25" data-dout="0.2" data-f="3,2.2" style="opacity:0;transform-box:fill-box;transform-origin:center"><g transform="translate(228.0 -9.200000000000003) scale(0.3)">
+  <defs>
+    <radialGradient id="vorb" cx="38%" cy="30%" r="75%"><stop offset="0" stop-color="#3A393E"/><stop offset=".55" stop-color="#151417"/><stop offset="1" stop-color="#050506"/></radialGradient>
+    <radialGradient id="vthr" cx="50%" cy="0%" r="100%"><stop offset="0" stop-color="#F5DE9A"/><stop offset="1" stop-color="#D4AF37" stop-opacity="0"/></radialGradient>
+    <filter id="vag" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <ellipse cx="300" cy="374" rx="34" ry="6" fill="#000" opacity=".6"/>
+  <!-- propulsores -->
+  <path d="M286 300 L280 334 L292 334 Z" fill="url(#vthr)" opacity=".8"/>
+  <path d="M314 300 L308 334 L320 334 Z" fill="url(#vthr)" opacity=".8"/>
+  <!-- antena -->
+  <path d="M300 186 L300 166" stroke="#2C2A30" stroke-width="3"/>
+  <circle cx="300" cy="162" r="5" fill="#D4AF37" filter="url(#vag)"/>
+  <!-- esfera -->
+  <circle cx="300" cy="244" r="58" fill="url(#vorb)"/>
+  <ellipse cx="300" cy="262" rx="58" ry="12" fill="none" stroke="url(#vgold)" stroke-width="3"/>
+  <path d="M242 262 A58 58 0 0 0 358 262" fill="#0A0A0B" opacity=".35"/>
+  <!-- pantalla-cara -->
+  <rect x="264" y="210" width="72" height="42" rx="16" fill="#050506" stroke="#2C2A30" stroke-width="1.5"/>
+  <g fill="#F5DE9A" filter="url(#vag)"><rect x="276" y="230" width="5" height="5"/><rect x="281" y="230" width="5" height="5"/><rect x="286" y="230" width="5" height="5"/><rect x="314" y="224" width="5" height="5"/><rect x="309" y="229" width="5" height="5"/><rect x="314" y="229" width="5" height="5"/><rect x="319" y="229" width="5" height="5"/></g>
+  <rect x="300" y="243" width="8" height="3" fill="#D4AF37"/>
+  <ellipse cx="282" cy="204" rx="16" ry="7" fill="#FFFFFF" opacity=".07" transform="rotate(-25 282 204)"/>
+  <g transform="translate(334 150)"><rect x="0" y="0" width="54" height="36" rx="4" fill="#D4AF37" fill-opacity=".08" stroke="#D4AF37" stroke-opacity=".6"/><text x="27" y="27" font-family="Arial Black, Arial, sans-serif" font-size="22" fill="#F5DE9A" text-anchor="middle">?</text></g></g></g>
+<g data-s="16.0" data-e="17.8" data-a="pop" data-din="0.09" data-dout="0.05" style="opacity:0;transform-box:fill-box;transform-origin:center"><text x="180.0" y="384" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="15" font-weight="700" fill="#F3EEE3" text-anchor="middle" stroke="#080706" stroke-width="4" paint-order="stroke">el novato copia y</text><text x="180.0" y="424" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="40" font-weight="900" fill="#D4AF37" text-anchor="middle" letter-spacing="-.5" stroke="#080706" stroke-width="6" paint-order="stroke">FALLA</text></g>
+<g data-s="17.8" data-e="19.8" data-a="pop" data-din="0.09" data-dout="0.05" style="opacity:0;transform-box:fill-box;transform-origin:center"><text x="180.0" y="384" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="15" font-weight="700" fill="#F3EEE3" text-anchor="middle" stroke="#080706" stroke-width="4" paint-order="stroke">yo pregunto por qué</text><text x="180.0" y="424" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="40" font-weight="900" fill="#D4AF37" text-anchor="middle" letter-spacing="-.5" stroke="#080706" stroke-width="6" paint-order="stroke">FUNCIONA</text></g>
+<g data-s="19.8" data-e="22" data-a="pop" data-din="0.09" data-dout="0.05" style="opacity:0;transform-box:fill-box;transform-origin:center"><text x="180.0" y="384" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="15" font-weight="700" fill="#F3EEE3" text-anchor="middle" stroke="#080706" stroke-width="4" paint-order="stroke">y así</text><text x="180.0" y="424" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="40" font-weight="900" fill="#D4AF37" text-anchor="middle" letter-spacing="-.5" stroke="#080706" stroke-width="6" paint-order="stroke">APRENDO</text></g>
+<g data-s="22" data-e="27.5" data-a="left" data-din="0.25" data-dout="0.2" style="opacity:0;transform-box:fill-box;transform-origin:center"><rect x="14" y="92" width="158" height="250" rx="10" fill="#0E0D0B" stroke="#2E281E" stroke-width="1.5"/><rect x="14" y="92" width="158" height="22" rx="10" fill="#1A1712"/><circle cx="26" cy="103" r="3" fill="#8E6E1E"/><circle cx="36" cy="103" r="3" fill="#3A3428"/><circle cx="46" cy="103" r="3" fill="#3A3428"/><text x="93.0" y="107" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="9" font-weight="700" fill="#B3A994" text-anchor="middle">UN MES DESPUÉS</text><rect x="34" y="152" width="108" height="22" rx="4" fill="#2C2A30" stroke="#3A3640"/><rect x="40" y="180" width="108" height="22" rx="4" fill="#2C2A30" stroke="#3A3640"/><rect x="46" y="208" width="108" height="22" rx="4" fill="#2C2A30" stroke="#3A3640"/><rect x="52" y="236" width="108" height="22" rx="4" fill="#2C2A30" stroke="#3A3640"/><rect x="58" y="264" width="108" height="22" rx="4" fill="#2C2A30" stroke="#3A3640"/><text x="93.0" y="320" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="12" font-weight="900" fill="#8A8070" text-anchor="middle">MUCHA TEORÍA</text></g>
+<g data-s="22.2" data-e="27.5" data-a="right" data-din="0.25" data-dout="0.2" style="opacity:0;transform-box:fill-box;transform-origin:center"><rect x="188" y="92" width="158" height="250" rx="10" fill="#0E0D0B" stroke="#2E281E" stroke-width="1.5"/><rect x="188" y="92" width="158" height="22" rx="10" fill="#1A1712"/><circle cx="200" cy="103" r="3" fill="#8E6E1E"/><circle cx="210" cy="103" r="3" fill="#3A3428"/><circle cx="220" cy="103" r="3" fill="#3A3428"/><text x="267.0" y="107" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="9" font-weight="700" fill="#B3A994" text-anchor="middle">MIS GASTOS</text><text x="200" y="136" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="10" font-weight="800" fill="#D4AF37" text-anchor="start">Noviembre</text><rect x="198" y="146" width="138" height="20" rx="5" fill="#1A1712"/><text x="206" y="160" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="9" font-weight="600" fill="#F3EEE3" text-anchor="start">Café</text><text x="330" y="160" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="9" font-weight="600" fill="#F3EEE3" text-anchor="end">2,50 €</text><rect x="198" y="170" width="138" height="20" rx="5" fill="#1A1712"/><text x="206" y="184" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="9" font-weight="600" fill="#F3EEE3" text-anchor="start">Bus</text><text x="330" y="184" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="9" font-weight="600" fill="#F3EEE3" text-anchor="end">1,40 €</text><rect x="198" y="194" width="138" height="20" rx="5" fill="#1A1712"/><text x="206" y="208" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="9" font-weight="600" fill="#F3EEE3" text-anchor="start">Comida</text><text x="330" y="208" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="9" font-weight="600" fill="#F3EEE3" text-anchor="end">8,90 €</text><path d="M198 224 H336" stroke="#2E281E"/><text x="206" y="242" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="10" font-weight="800" fill="#F3EEE3" text-anchor="start">Total</text><text x="330" y="242" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="10" font-weight="900" fill="#D4AF37" text-anchor="end">12,80 €</text><rect x="212" y="272" width="110" height="30" rx="15" fill="#D4AF37"/><text x="267.0" y="291" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="11" font-weight="900" fill="#13100C" text-anchor="middle">✓ FUNCIONA</text></g>
+<g data-s="22" data-e="27.5" data-a="pop" data-din="0.25" data-dout="0.2" data-f="3,2.2" style="opacity:0;transform-box:fill-box;transform-origin:center"><g transform="translate(228.0 -9.200000000000003) scale(0.3)">
+  <defs>
+    <radialGradient id="vorb" cx="38%" cy="30%" r="75%"><stop offset="0" stop-color="#3A393E"/><stop offset=".55" stop-color="#151417"/><stop offset="1" stop-color="#050506"/></radialGradient>
+    <radialGradient id="vthr" cx="50%" cy="0%" r="100%"><stop offset="0" stop-color="#F5DE9A"/><stop offset="1" stop-color="#D4AF37" stop-opacity="0"/></radialGradient>
+    <filter id="vag" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <ellipse cx="300" cy="374" rx="34" ry="6" fill="#000" opacity=".6"/>
+  <!-- propulsores -->
+  <path d="M286 300 L280 334 L292 334 Z" fill="url(#vthr)" opacity=".8"/>
+  <path d="M314 300 L308 334 L320 334 Z" fill="url(#vthr)" opacity=".8"/>
+  <!-- antena -->
+  <path d="M300 186 L300 166" stroke="#2C2A30" stroke-width="3"/>
+  <circle cx="300" cy="162" r="5" fill="#D4AF37" filter="url(#vag)"/>
+  <!-- esfera -->
+  <circle cx="300" cy="244" r="58" fill="url(#vorb)"/>
+  <ellipse cx="300" cy="262" rx="58" ry="12" fill="none" stroke="url(#vgold)" stroke-width="3"/>
+  <path d="M242 262 A58 58 0 0 0 358 262" fill="#0A0A0B" opacity=".35"/>
+  <!-- pantalla-cara -->
+  <rect x="264" y="210" width="72" height="42" rx="16" fill="#050506" stroke="#2C2A30" stroke-width="1.5"/>
+  <g fill="#F5DE9A" filter="url(#vag)"><rect x="276" y="230" width="5" height="5"/><rect x="281" y="225" width="5" height="5"/><rect x="286" y="230" width="5" height="5"/><rect x="309" y="230" width="5" height="5"/><rect x="314" y="225" width="5" height="5"/><rect x="319" y="230" width="5" height="5"/></g>
+  <rect x="296" y="242" width="8" height="3" fill="#D4AF37"/>
+  <ellipse cx="282" cy="204" rx="16" ry="7" fill="#FFFFFF" opacity=".07" transform="rotate(-25 282 204)"/>
+  <g transform="translate(334 150)"><rect x="0" y="0" width="54" height="36" rx="4" fill="#D4AF37" fill-opacity=".08" stroke="#D4AF37" stroke-opacity=".6"/><path d="M6 28 L18 20 L28 24 L46 8" stroke="#F5DE9A" stroke-width="2" fill="none" filter="url(#vag)"/><path d="M40 8 L46 8 L46 14" stroke="#F5DE9A" stroke-width="2" fill="none"/></g></g></g>
+<g data-s="22.1" data-e="24.0" data-a="pop" data-din="0.09" data-dout="0.05" style="opacity:0;transform-box:fill-box;transform-origin:center"><text x="180.0" y="384" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="15" font-weight="700" fill="#F3EEE3" text-anchor="middle" stroke="#080706" stroke-width="4" paint-order="stroke">un mes después él tiene</text><text x="180.0" y="424" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="40" font-weight="900" fill="#D4AF37" text-anchor="middle" letter-spacing="-.5" stroke="#080706" stroke-width="6" paint-order="stroke">TEORÍA</text></g>
+<g data-s="24.0" data-e="26.0" data-a="pop" data-din="0.09" data-dout="0.05" style="opacity:0;transform-box:fill-box;transform-origin:center"><text x="180.0" y="384" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="15" font-weight="700" fill="#F3EEE3" text-anchor="middle" stroke="#080706" stroke-width="4" paint-order="stroke">y yo tengo algo</text><text x="180.0" y="424" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="28" font-weight="900" fill="#D4AF37" text-anchor="middle" letter-spacing="-.5" stroke="#080706" stroke-width="6" paint-order="stroke">QUE FUNCIONA</text></g>
+<g data-s="26.0" data-e="27.5" data-a="pop" data-din="0.09" data-dout="0.05" style="opacity:0;transform-box:fill-box;transform-origin:center"><text x="180.0" y="384" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="15" font-weight="700" fill="#F3EEE3" text-anchor="middle" stroke="#080706" stroke-width="4" paint-order="stroke">y que</text><text x="180.0" y="424" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="40" font-weight="900" fill="#D4AF37" text-anchor="middle" letter-spacing="-.5" stroke="#080706" stroke-width="6" paint-order="stroke">ENTIENDO</text></g>
+<g data-s="27.5" data-e="31.5" data-a="pop" data-din="0.25" data-dout="0.2" style="opacity:0;transform-box:fill-box;transform-origin:center"><g transform="translate(70 150) scale(0.8)">
+    <ellipse cx="100" cy="380" rx="62" ry="7" fill="#000" opacity=".55"/>
+    <!-- piernas: jogger negro -->
+    <path d="M66 234 Q63 300 68 352 L97 352 L100 246 Z" fill="url(#vlegs)"/>
+    <path d="M134 234 Q137 300 132 352 L103 352 L100 246 Z" fill="url(#vlegs)"/>
+    <path d="M78 292 Q84 300 92 296 M122 292 Q116 300 108 296" stroke="#000" stroke-width="1.5" fill="none" opacity=".7"/>
+    <rect x="67" y="342" width="31" height="11" rx="4" fill="#0B0B0C"/>
+    <rect x="102" y="342" width="31" height="11" rx="4" fill="#0B0B0C"/>
+    <!-- zapatillas negras con detalle dorado -->
+    <path d="M58 375 Q56 352 74 351 L95 351 Q104 353 104 365 L104 377 L58 377 Z" fill="#141416"/>
+    <path d="M142 375 Q144 352 126 351 L105 351 Q96 353 96 365 L96 377 L142 377 Z" fill="#141416"/>
+    <rect x="57" y="372" width="48" height="5" rx="2.5" fill="#8E6E1E"/>
+    <rect x="95" y="372" width="48" height="5" rx="2.5" fill="#8E6E1E"/>
+    <path d="M70 362 L90 360 M130 362 L110 360" stroke="url(#vgold)" stroke-width="2.4" stroke-linecap="round"/>
+
+    <!-- brazo izquierdo: mano al bolsillo -->
+    <path d="M58 120 Q36 132 34 182 L42 210 L66 208 L60 178 Z" fill="url(#vbody)"/>
+    <!-- torso sudadera oversize -->
+    <path d="M56 116 Q100 104 144 116 L152 234 Q100 244 48 234 Z" fill="url(#vbody)"/>
+    <path d="M70 196 L130 196 L136 228 L64 228 Z" fill="#141416"/>
+    <path d="M70 196 L130 196" stroke="#2C2A30" stroke-width="1.5"/>
+    <path d="M48 226 Q100 236 152 226 L152 236 Q100 246 48 236 Z" fill="#0E0E10"/>
+    <path d="M42 206 Q52 214 66 208" stroke="#0B0B0C" stroke-width="3" fill="none"/>
+    <!-- cordones -->
+    <path d="M90 112 Q88 132 90 150 M110 112 Q112 132 110 150" stroke="#E8DCC4" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <rect x="88.4" y="149" width="3.2" height="6" rx="1.4" fill="url(#vgold)"/>
+    <rect x="108.4" y="149" width="3.2" height="6" rx="1.4" fill="url(#vgold)"/>
+
+    <!-- capucha -->
+    <path d="M58 120 Q46 30 100 6 Q154 30 142 120 Q128 104 100 104 Q72 104 58 120 Z" fill="url(#vhood)"/>
+    <path d="M67 108 Q62 46 100 24 Q138 46 133 108 Q120 98 100 98 Q80 98 67 108 Z" fill="#060607"/>
+    <!-- cabeza con pasamontañas -->
+    <path d="M74 68 Q73 32 100 30 Q127 32 126 68 Q126 96 112 104 Q100 110 88 104 Q74 96 74 68 Z" fill="url(#vmask)"/>
+    <path d="M74 68 Q73 32 100 30 Q127 32 126 68 Q126 96 112 104 Q100 110 88 104 Q74 96 74 68 Z" fill="url(#vknit)"/>
+    <path d="M100 31 L100 57 M100 74 L100 108" stroke="#000" stroke-width="1" opacity=".5"/>
+    <rect x="78" y="57" width="44" height="16" rx="8" fill="url(#vskin)"/>
+    <rect x="78" y="57" width="44" height="6" rx="3" fill="#2A1C14" opacity=".55"/>
+
+    <ellipse cx="89" cy="65.5" rx="4.8" ry="3.1" fill="#E4DCD2"/>
+    <circle cx="90.6" cy="65.6" r="2.3" fill="#2E2219"/>
+    <circle cx="91.4" cy="66.5" r=".8" fill="#F5DE9A"/>
+    <ellipse cx="111" cy="65.5" rx="4.8" ry="3.1" fill="#E4DCD2"/>
+    <circle cx="112.6" cy="65.6" r="2.3" fill="#2E2219"/>
+    <circle cx="113.4" cy="66.5" r=".8" fill="#F5DE9A"/>
+    <path d="M83.5 63 L95 64.5 M105 64.5 L116.5 63" stroke="#0A0A0B" stroke-width="2.4" stroke-linecap="round"/>
+    <path d="M78 65 Q78 57 86 57 L114 57 Q122 57 122 65" stroke="#0A0A0B" stroke-width="2" fill="none"/>
+
+
+    <!-- brazo derecho relajado, sin nada en la mano -->
+    <path d="M144 120 Q166 132 166 182 L160 212 L144 210 L150 178 Z" fill="url(#vbody)"/>
+    <path d="M144 206 Q152 214 160 208" stroke="#0B0B0C" stroke-width="3" fill="none"/>
+    <ellipse cx="152" cy="218" rx="7.5" ry="8.5" fill="#B98A66"/>
+    <path d="M147 222 Q152 226 157 222" stroke="#8A6248" stroke-width="1.2" fill="none"/>
+
+    <!-- luz dorada de borde -->
+    <path d="M142 120 Q154 30 100 6" stroke="url(#vgold)" stroke-width="1.8" fill="none" opacity=".6" filter="url(#vb1)"/>
+    <path d="M144 118 L152 234" stroke="url(#vgold)" stroke-width="1.4" opacity=".35" filter="url(#vb1)"/>
+    <path d="M134 236 Q137 300 132 352" stroke="url(#vgold)" stroke-width="1.2" fill="none" opacity=".3"/>
+    <path d="M78 72 Q100 80 122 72" stroke="#F5DE9A" stroke-width="1.2" fill="none" opacity=".35" filter="url(#vb1)"/><rect class="blink" data-o="2.0" x="78" y="57" width="44" height="16" rx="8" fill="#1B1A1D" style="opacity:0"/></g></g>
+<g data-s="27.7" data-e="31.5" data-a="pop" data-din="0.25" data-dout="0.2" data-f="3,2.2" style="opacity:0;transform-box:fill-box;transform-origin:center"><g transform="translate(142.0 48.0) scale(0.5)">
+  <defs>
+    <radialGradient id="vorb" cx="38%" cy="30%" r="75%"><stop offset="0" stop-color="#3A393E"/><stop offset=".55" stop-color="#151417"/><stop offset="1" stop-color="#050506"/></radialGradient>
+    <radialGradient id="vthr" cx="50%" cy="0%" r="100%"><stop offset="0" stop-color="#F5DE9A"/><stop offset="1" stop-color="#D4AF37" stop-opacity="0"/></radialGradient>
+    <filter id="vag" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <ellipse cx="300" cy="374" rx="34" ry="6" fill="#000" opacity=".6"/>
+  <!-- propulsores -->
+  <path d="M286 300 L280 334 L292 334 Z" fill="url(#vthr)" opacity=".8"/>
+  <path d="M314 300 L308 334 L320 334 Z" fill="url(#vthr)" opacity=".8"/>
+  <!-- antena -->
+  <path d="M300 186 L300 166" stroke="#2C2A30" stroke-width="3"/>
+  <circle cx="300" cy="162" r="5" fill="#D4AF37" filter="url(#vag)"/>
+  <!-- esfera -->
+  <circle cx="300" cy="244" r="58" fill="url(#vorb)"/>
+  <ellipse cx="300" cy="262" rx="58" ry="12" fill="none" stroke="url(#vgold)" stroke-width="3"/>
+  <path d="M242 262 A58 58 0 0 0 358 262" fill="#0A0A0B" opacity=".35"/>
+  <!-- pantalla-cara -->
+  <rect x="264" y="210" width="72" height="42" rx="16" fill="#050506" stroke="#2C2A30" stroke-width="1.5"/>
+  <g fill="#F5DE9A" filter="url(#vag)"><rect x="280" y="220" width="4" height="4"/><rect x="284" y="224" width="4" height="4"/><rect x="288" y="228" width="4" height="4"/><rect x="284" y="232" width="4" height="4"/><rect x="280" y="236" width="4" height="4"/><rect x="312" y="220" width="4" height="4"/><rect x="316" y="224" width="4" height="4"/><rect x="320" y="228" width="4" height="4"/><rect x="316" y="232" width="4" height="4"/><rect x="312" y="236" width="4" height="4"/></g>
+  <rect x="296" y="243" width="8" height="3" fill="#D4AF37"/>
+  <ellipse cx="282" cy="204" rx="16" ry="7" fill="#FFFFFF" opacity=".07" transform="rotate(-25 282 204)"/>
+  <g transform="translate(334 150)"><rect x="0" y="0" width="54" height="36" rx="4" fill="#D4AF37" fill-opacity=".08" stroke="#D4AF37" stroke-opacity=".6"/><path d="M10 18 H42 M32 8 L44 18 L32 28" stroke="#F5DE9A" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g></g></g>
+<g data-s="27.6" data-e="29.5" data-a="pop" data-din="0.09" data-dout="0.05" style="opacity:0;transform-box:fill-box;transform-origin:center"><text x="180.0" y="384" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="15" font-weight="700" fill="#F3EEE3" text-anchor="middle" stroke="#080706" stroke-width="4" paint-order="stroke">no se aprende</text><text x="180.0" y="424" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="40" font-weight="900" fill="#D4AF37" text-anchor="middle" letter-spacing="-.5" stroke="#080706" stroke-width="6" paint-order="stroke">MIRANDO</text></g>
+<g data-s="29.5" data-e="31.5" data-a="pop" data-din="0.09" data-dout="0.05" style="opacity:0;transform-box:fill-box;transform-origin:center"><text x="180.0" y="384" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="15" font-weight="700" fill="#F3EEE3" text-anchor="middle" stroke="#080706" stroke-width="4" paint-order="stroke">se aprende</text><text x="180.0" y="424" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="28" font-weight="900" fill="#D4AF37" text-anchor="middle" letter-spacing="-.5" stroke="#080706" stroke-width="6" paint-order="stroke">CONSTRUYENDO</text></g>
+<g data-s="31.5" data-e="36" data-a="up" data-din="0.25" data-dout="0.4" style="opacity:0;transform-box:fill-box;transform-origin:center"><g transform="translate(176 86) scale(1.0)"><rect x="0" y="0" width="120" height="220" rx="18" fill="#0B0B0C" stroke="#3A3640" stroke-width="2"/><rect x="8" y="10" width="104" height="200" rx="12" fill="#13100C"/><rect x="45" y="14" width="30" height="5" rx="2.5" fill="#2C2A30"/><circle cx="60" cy="56" r="22" fill="#1F1E22" stroke="#D4AF37" stroke-width="2"/><text x="60" y="61" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="12" font-weight="800" fill="#D4AF37" text-anchor="middle">PX</text><text x="60" y="96" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="11" font-weight="800" fill="#F3EEE3" text-anchor="middle">@pertx</text><text x="60" y="112" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="7.5" font-weight="500" fill="#B3A994" text-anchor="middle">Construyo negocios</text><text x="60" y="122" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="7.5" font-weight="500" fill="#B3A994" text-anchor="middle">con IA desde 0</text><rect x="20" y="136" width="80" height="24" rx="12" fill="#D4AF37"/><text x="60" y="152" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="10" font-weight="800" fill="#13100C" text-anchor="middle">Seguir</text><rect x="14" y="172" width="28" height="30" rx="4" fill="#1F1E22"/><rect x="46" y="172" width="28" height="30" rx="4" fill="#1F1E22"/><rect x="78" y="172" width="28" height="30" rx="4" fill="#1F1E22"/></g></g>
+<g data-s="31.5" data-e="36" data-a="fade" data-din="0.25" data-dout="0.2" style="opacity:0;transform-box:fill-box;transform-origin:center"><g transform="translate(0 150) scale(0.78)">
+    <ellipse cx="100" cy="380" rx="62" ry="7" fill="#000" opacity=".55"/>
+    <!-- piernas: jogger negro -->
+    <path d="M66 234 Q63 300 68 352 L97 352 L100 246 Z" fill="url(#vlegs)"/>
+    <path d="M134 234 Q137 300 132 352 L103 352 L100 246 Z" fill="url(#vlegs)"/>
+    <path d="M78 292 Q84 300 92 296 M122 292 Q116 300 108 296" stroke="#000" stroke-width="1.5" fill="none" opacity=".7"/>
+    <rect x="67" y="342" width="31" height="11" rx="4" fill="#0B0B0C"/>
+    <rect x="102" y="342" width="31" height="11" rx="4" fill="#0B0B0C"/>
+    <!-- zapatillas negras con detalle dorado -->
+    <path d="M58 375 Q56 352 74 351 L95 351 Q104 353 104 365 L104 377 L58 377 Z" fill="#141416"/>
+    <path d="M142 375 Q144 352 126 351 L105 351 Q96 353 96 365 L96 377 L142 377 Z" fill="#141416"/>
+    <rect x="57" y="372" width="48" height="5" rx="2.5" fill="#8E6E1E"/>
+    <rect x="95" y="372" width="48" height="5" rx="2.5" fill="#8E6E1E"/>
+    <path d="M70 362 L90 360 M130 362 L110 360" stroke="url(#vgold)" stroke-width="2.4" stroke-linecap="round"/>
+
+    <!-- brazo izquierdo: mano al bolsillo -->
+    <path d="M58 120 Q36 132 34 182 L42 210 L66 208 L60 178 Z" fill="url(#vbody)"/>
+    <!-- torso sudadera oversize -->
+    <path d="M56 116 Q100 104 144 116 L152 234 Q100 244 48 234 Z" fill="url(#vbody)"/>
+    <path d="M70 196 L130 196 L136 228 L64 228 Z" fill="#141416"/>
+    <path d="M70 196 L130 196" stroke="#2C2A30" stroke-width="1.5"/>
+    <path d="M48 226 Q100 236 152 226 L152 236 Q100 246 48 236 Z" fill="#0E0E10"/>
+    <path d="M42 206 Q52 214 66 208" stroke="#0B0B0C" stroke-width="3" fill="none"/>
+    <!-- cordones -->
+    <path d="M90 112 Q88 132 90 150 M110 112 Q112 132 110 150" stroke="#E8DCC4" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <rect x="88.4" y="149" width="3.2" height="6" rx="1.4" fill="url(#vgold)"/>
+    <rect x="108.4" y="149" width="3.2" height="6" rx="1.4" fill="url(#vgold)"/>
+
+    <!-- capucha -->
+    <path d="M58 120 Q46 30 100 6 Q154 30 142 120 Q128 104 100 104 Q72 104 58 120 Z" fill="url(#vhood)"/>
+    <path d="M67 108 Q62 46 100 24 Q138 46 133 108 Q120 98 100 98 Q80 98 67 108 Z" fill="#060607"/>
+    <!-- cabeza con pasamontañas -->
+    <path d="M74 68 Q73 32 100 30 Q127 32 126 68 Q126 96 112 104 Q100 110 88 104 Q74 96 74 68 Z" fill="url(#vmask)"/>
+    <path d="M74 68 Q73 32 100 30 Q127 32 126 68 Q126 96 112 104 Q100 110 88 104 Q74 96 74 68 Z" fill="url(#vknit)"/>
+    <path d="M100 31 L100 57 M100 74 L100 108" stroke="#000" stroke-width="1" opacity=".5"/>
+    <rect x="78" y="57" width="44" height="16" rx="8" fill="url(#vskin)"/>
+    <rect x="78" y="57" width="44" height="6" rx="3" fill="#2A1C14" opacity=".55"/>
+
+    <path d="M84 67 Q89 61.5 94 67 Q89 65 84 67 Z" fill="#E4DCD2"/>
+    <path d="M84 67 Q89 61.5 94 67" stroke="#1A120D" stroke-width="1.4" fill="none"/>
+    <path d="M85 69.5 Q89 71 93 69.5" stroke="#8A6248" stroke-width=".9" fill="none"/>
+    <path d="M106 67 Q111 61.5 116 67 Q111 65 106 67 Z" fill="#E4DCD2"/>
+    <path d="M106 67 Q111 61.5 116 67" stroke="#1A120D" stroke-width="1.4" fill="none"/>
+    <path d="M107 69.5 Q111 71 115 69.5" stroke="#8A6248" stroke-width=".9" fill="none"/>
+    <path d="M78 65 Q78 57 86 57 L114 57 Q122 57 122 65" stroke="#0A0A0B" stroke-width="2" fill="none"/>
+
+
+    <!-- brazo derecho señalando a la derecha (pantalla) -->
+    <path d="M144 118 Q172 122 198 130 L198 146 Q172 142 150 152 Z" fill="url(#vbody)"/>
+    <path d="M196 128 Q202 136 196 148" stroke="#0B0B0C" stroke-width="3" fill="none"/>
+    <ellipse cx="204" cy="138" rx="7" ry="7.5" fill="#B98A66"/>
+    <rect x="207" y="134.5" width="14" height="4.5" rx="2.2" fill="#B98A66"/>
+
+    <!-- luz dorada de borde -->
+    <path d="M142 120 Q154 30 100 6" stroke="url(#vgold)" stroke-width="1.8" fill="none" opacity=".6" filter="url(#vb1)"/>
+    <path d="M144 118 L152 234" stroke="url(#vgold)" stroke-width="1.4" opacity=".35" filter="url(#vb1)"/>
+    <path d="M134 236 Q137 300 132 352" stroke="url(#vgold)" stroke-width="1.2" fill="none" opacity=".3"/>
+    <path d="M78 72 Q100 80 122 72" stroke="#F5DE9A" stroke-width="1.2" fill="none" opacity=".35" filter="url(#vb1)"/><rect class="blink" data-o="0.8" x="78" y="57" width="44" height="16" rx="8" fill="#1B1A1D" style="opacity:0"/></g></g>
+<g data-s="31.6" data-e="33.6" data-a="pop" data-din="0.09" data-dout="0.05" style="opacity:0;transform-box:fill-box;transform-origin:center"><text x="180.0" y="384" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="15" font-weight="700" fill="#F3EEE3" text-anchor="middle" stroke="#080706" stroke-width="4" paint-order="stroke">sígueme y mira cómo</text><text x="180.0" y="424" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="34" font-weight="900" fill="#D4AF37" text-anchor="middle" letter-spacing="-.5" stroke="#080706" stroke-width="6" paint-order="stroke">CONSTRUYO</text></g>
+<g data-s="33.6" data-e="36" data-a="pop" data-din="0.09" data-dout="0.05" style="opacity:0;transform-box:fill-box;transform-origin:center"><text x="180.0" y="384" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="15" font-weight="700" fill="#F3EEE3" text-anchor="middle" stroke="#080706" stroke-width="4" paint-order="stroke">¿y tú cómo estás</text><text x="180.0" y="424" font-family="Inter, 'Arial Black', Arial, sans-serif" font-size="28" font-weight="900" fill="#D4AF37" text-anchor="middle" letter-spacing="-.5" stroke="#080706" stroke-width="6" paint-order="stroke">APRENDIENDO?</text></g>
+</svg>
+<script>
+const capas=[...document.querySelectorAll('[data-s]')];
+const ease=x=>x<=0?0:x>=1?1:1-Math.pow(1-x,3);
+window.setT=function(t){
+  for(const el of capas){
+    const s=+el.dataset.s,e=+el.dataset.e,a=el.dataset.a,din=+el.dataset.din,dout=+el.dataset.dout;
+    if(t<s||t>e){el.style.opacity=0;continue}
+    const pi=ease((t-s)/din),po=ease((e-t)/dout);
+    let tf='';
+    if(a==='pop')tf=`scale(${0.82+0.18*pi})`;
+    else if(a==='up')tf=`translateY(${(1-pi)*28}px)`;
+    else if(a==='left')tf=`translateX(${(1-pi)*-50}px)`;
+    else if(a==='right')tf=`translateX(${(1-pi)*50}px)`;
+    else if(a==='down')tf=`translateY(${(1-pi)*-40}px)`;
+    if(el.dataset.f){const [amp,per]=el.dataset.f.split(',').map(Number);tf+=` translateY(${Math.sin(t*2*Math.PI/per)*amp}px)`}
+    el.style.opacity=Math.min(pi,po);el.style.transform=tf;
+  }
+  for(const el of document.querySelectorAll('[data-type]')){
+    const [s,e]=el.dataset.type.split(',').map(Number),full=el.dataset.full;
+    el.textContent=full.slice(0,Math.round(Math.max(0,Math.min(1,(t-s)/(e-s)))*full.length));
+  }
+  for(const el of document.querySelectorAll('[data-w]')){
+    const [s,e,a,b]=el.dataset.w.split(',').map(Number);
+    el.setAttribute('width',a+(b-a)*ease((t-s)/(e-s)));
+  }
+  for(const el of document.querySelectorAll('[data-count]')){
+    const [s,e,a,b]=el.dataset.count.split(',').map(Number);
+    el.textContent=Math.round(a+(b-a)*ease((t-s)/(e-s)))+(el.dataset.suf||'');
+  }
+  for(const el of document.querySelectorAll('.blink')){
+    const ph=(t+(+el.dataset.o))%3.6;el.style.opacity=ph<0.13?1:0;
+  }
+};
+window.setT(0);
+</script>
+</body></html>
