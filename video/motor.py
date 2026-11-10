@@ -81,7 +81,8 @@ class Video:
         return PLANTILLA.replace("%W%", str(W)).replace("%H%", str(H)).replace("%DEFS%", defs) \
             .replace("%FONDO%", fondo).replace("%CAPAS%", "\n".join(self.capas))
 
-    def render(self, carpeta: pathlib.Path, solo_html=False):
+    def render(self, carpeta: pathlib.Path, solo_html=False, con_voz=False):
+        """con_voz=True mete las voces de video/voz/. Por defecto el vídeo sale SIN voz."""
         carpeta.mkdir(parents=True, exist_ok=True)
         pag = carpeta / f"{self.nombre}.html"
         pag.write_text(self.html(), encoding="utf-8")
@@ -91,7 +92,7 @@ class Video:
         mudo = carpeta / f".{self.nombre}-mudo.mp4"
         subprocess.run(["node", str(pathlib.Path(__file__).parent / "render.js"), str(pag), str(self.dur), str(FPS), str(mudo)], check=True)
         audio = carpeta / f".{self.nombre}-audio.wav"
-        escribir_wav(audio, mezcla(self.dur, self.sfx))
+        escribir_wav(audio, mezcla(self.dur, self.sfx, self.voces() if con_voz else ()))
         final = carpeta / f"{self.nombre}.mp4"
         subprocess.run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-i", str(mudo), "-i", str(audio),
                         "-c:v", "copy", "-c:a", "aac", "-b:a", "160k", "-shortest", "-movflags", "+faststart", str(final)], check=True)
@@ -99,10 +100,20 @@ class Video:
         audio.unlink()
         return final
 
+    def voces(self):
+        """Busca video/voz/<vNN>-<n>.mp3 para cada frase del guion (n empieza en 1)."""
+        pref = self.nombre.split("-")[0]
+        out = []
+        for n, (s, e, _q, _f) in enumerate(self.guion, 1):
+            ruta = RAIZ / "video" / "voz" / f"{pref}-{n}.mp3"
+            if ruta.exists():
+                out.append((s, e, ruta))
+        return out
+
     def guion_md(self) -> str:
         filas = "\n".join(f"| {s:05.1f}–{e:05.1f} s | {q} | {f} |" for s, e, q, f in self.guion)
-        return (f"# Guion de voz · {self.nombre}\n\nGraba cada frase en su tramo (no hace falta exacto: luego se ajusta).\n"
-                f"Pertx = tu voz, grave y tranquila. Auro = voz IA (se decide en la Etapa 4).\n\n"
+        return (f"# Guion de voz · {self.nombre}\n\nCada frase se genera aparte y el motor la coloca en su tramo.\n"
+                f"Voz de Pertx: ElevenLabs, 'Tom - Calma y claridad' (voice_id B0r3rOF9WOwQ4BBKhRWO), modelo eleven_v4.\nLos audios van en video/voz/<vNN>-<n>.mp3 (n = número de frase).\n\n"
                 f"| Tiempo | Quién | Frase |\n|---|---|---|\n{filas}\n")
 
 
@@ -226,16 +237,44 @@ def efecto(tipo):
     return 0.35 * (ruido - suave) * env * 0.5 + 0.2 * suave * env
 
 
-def mezcla(dur, sfx):
-    out = musica(dur)
+def leer_audio(ruta, tempo=1.0):
+    """Decodifica un audio (mp3, wav...) a mono 44,1 kHz con ffmpeg. tempo>1 lo acelera sin cambiar el tono."""
+    filtros = ["-af", f"atempo={tempo:.3f}"] if abs(tempo - 1) > 0.001 else []
+    raw = subprocess.run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-i", str(ruta), *filtros,
+                          "-f", "s16le", "-ac", "1", "-ar", str(SR), "-"], check=True, capture_output=True).stdout
+    return np.frombuffer(raw, dtype="<i2").astype(np.float64) / 32768
+
+
+def mezcla(dur, sfx, voces=()):
+    n = int(dur * SR)
+    mus = musica(dur)
+    mus = mus / (np.max(np.abs(mus)) or 1)
+    voz = np.zeros(n)
+    hay_voz = np.zeros(n)
+    for s, e, ruta in voces:
+        hueco = max(0.5, e - s - 0.05)
+        a = leer_audio(ruta)
+        tempo = min(1.15, len(a) / SR / hueco) if len(a) / SR > hueco else 1.0
+        if tempo > 1:
+            a = leer_audio(ruta, tempo)
+        a = a / (np.max(np.abs(a)) or 1) * 0.92
+        i0 = int(s * SR)
+        m = min(len(a), n - i0)
+        voz[i0:i0 + m] += a[:m]
+        hay_voz[i0:i0 + m] = 1
+    # la música baja cuando habla Pertx (con transiciones suaves)
+    k = int(0.25 * SR)
+    suave = np.convolve(hay_voz, np.ones(k) / k, mode="same") if voces else hay_voz
+    nivel_musica = 0.30 - 0.18 * suave if voces else np.full(n, 0.45)
+    fx = np.zeros(n)
     for t, tipo in sfx:
         e = efecto(tipo)
         i0 = int(t * SR)
-        m = min(len(e), len(out) - i0)
+        m = min(len(e), n - i0)
         if m > 0:
-            out[i0:i0 + m] += e[:m]
-    pico = np.max(np.abs(out)) or 1
-    return out / pico * 0.6
+            fx[i0:i0 + m] += e[:m]
+    out = voz + mus * nivel_musica + fx * (0.45 if voces else 0.9)
+    return np.tanh(out * 1.1) * 0.9
 
 
 def escribir_wav(ruta, mono):

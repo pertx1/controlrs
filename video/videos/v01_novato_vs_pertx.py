@@ -115,5 +115,5 @@ for t in (3.6, 9.4, 16.0, 22.0, 27.5, 31.5):
     v.sfx.append((t - 0.15, "whoosh"))
 
 if __name__ == "__main__":
-    out = v.render(pathlib.Path(__file__).resolve().parent.parent / "salida", solo_html="--html" in sys.argv)
+    out = v.render(pathlib.Path(__file__).resolve().parent.parent / "salida", solo_html="--html" in sys.argv, con_voz="--voz" in sys.argv)
     print("Hecho:", out)

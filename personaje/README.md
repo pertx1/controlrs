@@ -21,6 +21,7 @@ Aquí está todo lo del personaje (y luego la mascota) de Pertx.
 | `png/FINAL-expresiones.png` | Las 5 poses y expresiones (feliz, pensativo, sorprendido, señalando, celebrando). |
 | `auro.py` | El dibujo de Auro con sus caras, en código. |
 | `hacer-ficha-final.py` | Vuelve a crear las imágenes de la ficha final: `python3 personaje/hacer-ficha-final.py` |
+| `png/perfil.png` | Foto de perfil para TikTok, Instagram y YouTube (1080x1080). |
 | `descartados/v1/` | La primera ronda (estilo infantil) que no te gustó. Guardada por si acaso. |
 | `hacer-galeria.py` | Vuelve a crear `galeria.html` si cambias un SVG: `python3 personaje/hacer-galeria.py` |
 

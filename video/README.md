@@ -16,9 +16,10 @@ Monta vídeos 9:16 (1080x1920, 30 fps) **gratis y en local**, con Pertx y Auro a
 ```
 python3 video/videos/v01_novato_vs_pertx.py          # MP4 completo (~1-2 min)
 python3 video/videos/v01_novato_vs_pertx.py --html   # solo la previsualización
+python3 video/videos/v01_novato_vs_pertx.py --voz    # con la voz de video/voz/ (solo si lo pides)
 ```
 
 ## Qué falta (honesto)
-- **Voz:** aquí no hay ninguna voz en castellano gratis. Los vídeos llevan música, efectos y subtítulos, y **la voz de Pertx la grabas tú** con el guion de `*-guion-voz.md`. Cuando la tengas, el motor la mete en el vídeo. La voz de Auro se decide en la Etapa 4.
+- **Voz:** los vídeos salen **sin voz** por defecto. La voz de Pertx es de ElevenLabs ("Tom - Calma y claridad"). Las frases de los vídeos 1 y 2 ya están generadas en `video/voz/` (`v01-1.mp3`…), pero **no se usan** hasta que lo pidas con `--voz`.
 - **Música:** es una base sintetizada por el propio motor (libre de derechos). Para publicar puedes usar también un sonido de la biblioteca de TikTok.
 - **Pantalla real:** ahora todo son mockups. Cuando grabes tu pantalla, se mete como un plano más.
