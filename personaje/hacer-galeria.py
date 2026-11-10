@@ -11,43 +11,43 @@ AQUI = pathlib.Path(__file__).parent
 
 VERSIONES = [
     {
-        "code": "P1", "estilo": "3D suave", "edad": "19 años",
-        "vibe": "El chaval majo que está empezando y se lo curra.",
-        "habla": "Cercano y optimista, se ríe de sus fallos.",
-        "mejor": "Ganchos, reacciones, emprender joven, miniaturas.",
-        "colores": ["#F2A93B", "#1F2A44", "#5A3825", "#E8B894", "#6B8E4E", "#FF6B35"],
+        "code": "P1", "estilo": "Sombra", "edad": "Noir semi-realista",
+        "vibe": "Construye de noche, a solas, con la luz de la pantalla.",
+        "habla": "Poco y despacio, frases que pegan.",
+        "mejor": "Construir con IA, números reales, mentalidad.",
+        "colores": ["#141518", "#1C1D22", "#29D3FF", "#C99A78", "#BFC6CF", "#07080A"],
         "nota": "Mi favorito",
     },
     {
-        "code": "P2", "estilo": "Anime", "edad": "18 años",
-        "vibe": "El hacker prodigio que programa de noche.",
-        "habla": "Seguro, rápido y un poco chulito.",
-        "mejor": "Construir con IA en pantalla, retos de 24 h.",
-        "colores": ["#121318", "#00E5FF", "#7A6FF0", "#16181D", "#2E3138", "#0E1530"],
-        "nota": "",
+        "code": "P2", "estilo": "Glitch", "edad": "Cyberpunk neón",
+        "vibe": "Medio humano, medio IA, con ojos LED.",
+        "habla": "Frío y rápido: \u201cproceso completado\u201d.",
+        "mejor": "Herramientas de IA, automatizaciones.",
+        "colores": ["#15131C", "#00F0FF", "#FF2BD6", "#231D36", "#0D0221", "#FFFFFF"],
+        "nota": "El más fácil de animar",
     },
     {
-        "code": "P3", "estilo": "Semi-realista", "edad": "24 años",
-        "vibe": "Creador serio de escritorio nocturno.",
-        "habla": "Calmado, directo y con números.",
-        "mejor": "Miniaturas de YouTube largo, dinero.",
-        "colores": ["#2B1F17", "#D9A57E", "#5C3B22", "#3A3A3C", "#FFB347", "#3D7BFF"],
-        "nota": "No recomendado como cara principal",
+        "code": "P3", "estilo": "Calle", "edad": "Póster serigrafía",
+        "vibe": "Streetwear rebelde, como un cartel pegado en la pared.",
+        "habla": "Sin filtro: \u201cdeja de mirar tutoriales, construye\u201d.",
+        "mejor": "Mentalidad, opiniones fuertes, portadas.",
+        "colores": ["#0E0E0E", "#E10600", "#E9E2D3", "#1A1A1A", "#1C1C1C", "#050505"],
+        "nota": "El que más destaca",
     },
     {
-        "code": "P4", "estilo": "Flat minimal", "edad": "Sin edad",
-        "vibe": "Icono de marca simple y reconocible.",
-        "habla": "Ordenado, humor seco, “tres pasos, sin rollo”.",
-        "mejor": "Pantalla con personaje en esquina, carruseles, logo.",
-        "colores": ["#2B59FF", "#1B1B1B", "#F1C6A0", "#E1E4EC", "#FF6B6B", "#EEF1FF"],
-        "nota": "El más fácil de animar gratis",
+        "code": "P4", "estilo": "Icono", "edad": "Flat monocromo",
+        "vibe": "Un logo con vida: negro total y un color de marca.",
+        "habla": "Seco y ordenado: \u201cpaso 1, paso 2, hecho\u201d.",
+        "mejor": "Esquina de vídeos, tutoriales, logo y perfil.",
+        "colores": ["#000000", "#C6FF00", "#121212", "#D9A27E", "#FFFFFF", "#1E1E1E"],
+        "nota": "Ideal como logo",
     },
     {
-        "code": "P5", "estilo": "Cartoon 2D", "edad": "22 años",
-        "vibe": "Caos creativo, energía a tope.",
-        "habla": "Hiperactivo y exagerado: “¡TÍO, MIRA ESTO!”",
-        "mejor": "Humor, fails, disciplina siendo desordenado.",
-        "colores": ["#FF7A00", "#7B2FF7", "#FFD23F", "#8EC5FF", "#FF3B3B", "#F0C08A"],
+        "code": "P5", "estilo": "Élite", "edad": "Lujo oscuro",
+        "vibe": "El empresario silencioso: elegante y sin presumir.",
+        "habla": "Calmado y con autoridad, en tono bajo.",
+        "mejor": "Dinero y finanzas, miniaturas de YouTube.",
+        "colores": ["#0B0B0C", "#D4AF37", "#F5DE9A", "#1F1E22", "#C08E6A", "#2A2219"],
         "nota": "",
     },
 ]
@@ -68,7 +68,7 @@ def tarjeta(v):
         {nota}
         <p class="vibe">{html.escape(v['vibe'])}</p>
         <dl>
-          <dt>Edad</dt><dd>{html.escape(v['edad'])}</dd>
+          <dt>Estilo</dt><dd>{html.escape(v['edad'])}</dd>
           <dt>Habla</dt><dd>{html.escape(v['habla'])}</dd>
           <dt>Mejor para</dt><dd>{html.escape(v['mejor'])}</dd>
         </dl>
@@ -87,7 +87,7 @@ def main():
 <title>Pertx Personajes</title>
 <style>
 :root{{
-  --bg:#F6F4EF; --surface:#FFFFFF; --line:#E4E0D6; --ink:#16181D; --ink-2:#5A5F6B; --accent:#F2A93B;
+  --bg:#F3F3F1; --surface:#FFFFFF; --line:#E2E2DE; --ink:#16181D; --ink-2:#5A5F6B; --accent:#C6FF00;
   --font:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
 }}
 @media (prefers-color-scheme: dark){{
@@ -126,15 +126,15 @@ footer{{max-width:1500px;margin:0 auto;padding:18px 16px 40px}}
 <body>
 <header>
   <p class="kicker">Pertx · Etapa 1 · Personaje</p>
-  <h1>5 versiones de Pertx</h1>
-  <p>Dibujadas en código (SVG). Fichas completas con prompts en <code>FICHAS-PERSONAJE.md</code>.</p>
+  <h1>5 versiones de Pertx · ronda 2</h1>
+  <p>Oscuro y con la cara tapada. Dibujadas en código (SVG). Fichas completas con prompts en <code>FICHAS-PERSONAJE.md</code>.</p>
 </header>
 <main>{tarjetas}
 </main>
 <footer>
   <div class="pregunta">
     <strong>¿Qué versión eliges (P1-P5)? ¿Quieres mezclar algo de otra?</strong>
-    <p>Ejemplo de respuesta: "P1, pero con las gafas de P5".</p>
+    <p>Ejemplo de respuesta: "P1, pero con el PX dorado de P5".</p>
   </div>
 </footer>
 </body>

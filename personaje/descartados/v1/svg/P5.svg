@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" width="300" height="400">
+  <!-- P5 · Cartoon 2D · Pertx -->
+  <rect width="300" height="400" fill="#FFF4D6"/>
+  <g fill="#FFD23F"><path d="M246 40 l6 14 l14 6 l-14 6 l-6 14 l-6 -14 l-14 -6 l14 -6 z"/><path d="M264 112 l3 7 l7 3 l-7 3 l-3 7 l-3 -7 l-7 -3 l7 -3 z"/></g>
+  <ellipse cx="150" cy="386" rx="66" ry="8" fill="#E8D7A8"/>
+
+  <g stroke="#111111" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+    <!-- piernas vaqueros anchos -->
+    <path d="M112 300 L104 362 L146 362 L150 320 L154 362 L196 362 L188 300 Z" fill="#8EC5FF"/>
+    <path d="M150 320 L150 304" fill="none"/>
+    <!-- zapatillas -->
+    <path d="M98 384 Q92 360 116 358 L142 358 Q154 362 152 384 Z" fill="#FF3B3B"/>
+    <path d="M202 384 Q208 360 184 358 L158 358 Q146 362 148 384 Z" fill="#FF3B3B"/>
+    <path d="M98 384 L152 384 M148 384 L202 384" stroke-width="5"/>
+    <path d="M112 368 L134 368 M166 368 L188 368" stroke="#FFFFFF" stroke-width="3"/>
+
+    <!-- brazo izquierdo (en la cadera) -->
+    <path d="M204 228 Q232 250 216 286 Q206 296 196 286" fill="#7B2FF7"/>
+    <!-- chaqueta bomber -->
+    <path d="M100 222 Q150 204 200 222 L206 302 L94 302 Z" fill="#7B2FF7"/>
+    <path d="M134 214 L166 214 L162 302 L138 302 Z" fill="#FFD23F"/>
+    <path d="M152 236 L144 256 L152 256 L146 276 L160 250 L152 250 L158 236 Z" fill="#111111" stroke-width="2"/>
+    <path d="M94 292 L206 292 L206 304 L94 304 Z" fill="#5B1FC2"/>
+    <!-- parche nombre -->
+    <rect x="170" y="238" width="28" height="14" rx="3" fill="#FFFFFF" stroke-width="2.5"/>
+    <!-- móvil en bolsillo -->
+    <rect x="108" y="250" width="16" height="26" rx="3" fill="#2B2B2B" stroke-width="3"/>
+    <path d="M104 264 L128 264" stroke-width="3"/>
+    <!-- brazo derecho: pulgar arriba -->
+    <path d="M100 226 Q72 236 64 204" fill="none" stroke-width="22" stroke="#111111"/>
+    <path d="M100 226 Q72 236 64 204" fill="none" stroke-width="15" stroke="#7B2FF7"/>
+    <path d="M48 196 Q46 176 60 176 L66 178 L66 160 Q66 150 74 152 Q80 154 78 170 L80 180 Q90 180 88 192 Q90 204 78 206 L56 206 Q48 204 48 196 Z" fill="#F0C08A"/>
+    <path d="M66 186 L80 186 M66 196 L80 196" stroke-width="2.5"/>
+  </g>
+  <text x="184" y="249" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="7.5" fill="#111" text-anchor="middle">Pertx</text>
+
+  <g stroke="#111111" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+    <!-- cabeza grande -->
+    <path d="M140 198 L140 214 L160 214 L160 198 Z" fill="#E3A96E"/>
+    <circle cx="82" cy="146" r="14" fill="#F0C08A"/>
+    <circle cx="218" cy="146" r="14" fill="#F0C08A"/>
+    <circle cx="150" cy="138" r="68" fill="#F0C08A"/>
+    <!-- pelo rizado -->
+    <g fill="#1A1A1A">
+      <circle cx="88" cy="112" r="16"/><circle cx="212" cy="112" r="16"/>
+      <circle cx="84" cy="130" r="12"/><circle cx="216" cy="130" r="12"/>
+      <circle cx="102" cy="94" r="14"/><circle cx="198" cy="94" r="14"/>
+    </g>
+    <!-- gorro beanie -->
+    <path d="M86 98 Q88 34 150 32 Q212 34 214 98 Z" fill="#FF7A00"/>
+    <rect x="80" y="86" width="140" height="24" rx="10" fill="#E86A00"/>
+    <path d="M100 90 L100 106 M118 90 L118 106 M136 90 L136 106 M154 90 L154 106 M172 90 L172 106 M190 90 L190 106 M206 90 L206 106" stroke-width="2.5"/>
+    <!-- gafas redondas -->
+    <circle cx="124" cy="140" r="22" fill="#FFFFFF" stroke-width="6"/>
+    <circle cx="176" cy="140" r="22" fill="#FFFFFF" stroke-width="6"/>
+    <path d="M146 138 Q150 133 154 138" fill="none" stroke-width="5"/>
+    <path d="M102 136 L86 132 M198 136 L214 132" stroke-width="5"/>
+  </g>
+  <!-- ojos -->
+  <circle cx="128" cy="142" r="9" fill="#111111"/>
+  <circle cx="172" cy="142" r="9" fill="#111111"/>
+  <circle cx="131" cy="138" r="3.2" fill="#FFFFFF"/>
+  <circle cx="175" cy="138" r="3.2" fill="#FFFFFF"/>
+  <!-- cejas levantadas -->
+  <path d="M106 112 Q122 104 138 112" stroke="#1A1A1A" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M162 112 Q178 104 194 112" stroke="#1A1A1A" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <!-- sonrisa enorme con hueco -->
+  <path d="M112 172 Q150 214 188 172 Z" fill="#7A1F2B" stroke="#111111" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M120 176 L180 176 L176 186 L124 186 Z" fill="#FFFFFF"/>
+  <path d="M148 176 L148 186 M152 176 L152 186" stroke="#7A1F2B" stroke-width="3"/>
+  <path d="M132 198 Q150 206 168 198 Q150 192 132 198 Z" fill="#FF7A8A"/>
+  <ellipse cx="102" cy="172" rx="10" ry="6" fill="#FF8A80" opacity=".55"/>
+  <ellipse cx="198" cy="172" rx="10" ry="6" fill="#FF8A80" opacity=".55"/>
+  <path d="M150 150 Q156 160 148 164" stroke="#B07A45" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+  <!-- código -->
+  <g font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
+    <rect x="12" y="12" width="76" height="44" rx="11" fill="#111111" stroke="#111" stroke-width="2"/>
+    <text x="50" y="40" font-size="24" font-weight="800" fill="#FFFFFF">P5</text>
+    <text x="50" y="51" font-size="8" font-weight="700" fill="#FFD23F" letter-spacing=".5">CARTOON 2D</text>
+  </g>
+</svg>
