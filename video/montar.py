@@ -76,10 +76,25 @@ def pastilla(t: str, y=50):
 
 
 # ------------------------------------------------------------ plantillas
+MANO = {None: (152, 218), "movil": (138, 138), "portatil": (158, 186), "senalar": (214, 137), "celebrar": (171, 46)}
+POS_X = {"izquierda": 0, "centro": 70, "derecha": 140}
+
+
 def p_pertx(v, s, e, es, p):
+    """Pertx grande. params: posicion (izquierda/centro/derecha), mov (idle/habla/camina/salta),
+    poses: [{"en": 0.5, "objeto": "celebrar", "ojos": "feliz", "mov": "salta"}] para cambiar de pose a mitad de escena."""
     pe = es.get("pertx") or {"ojos": "normal", "objeto": None}
-    x = 0 if pe.get("objeto") == "senalar" else 70
-    v.pertx(s, e, x, 150, .8, prop=pe.get("objeto"), ojos=pe.get("ojos", "normal"), a="pop", blink_off=s % 3)
+    x = POS_X.get(p.get("posicion"), 0 if pe.get("objeto") == "senalar" else 70)
+    mov0 = p.get("mov") or ("habla" if es.get("quien", "Pertx") == "Pertx" else "idle")
+    tramos = [{"en": 0, "objeto": pe.get("objeto"), "ojos": pe.get("ojos", "normal"), "mov": mov0}] + p.get("poses", [])
+    for k, tr in enumerate(tramos):
+        a = s + (e - s) * tr["en"]
+        b = s + (e - s) * tramos[k + 1]["en"] if k + 1 < len(tramos) else e
+        v.pertx(a, b, x, 150, .8, prop=tr.get("objeto"), ojos=tr.get("ojos", "normal"), mov=tr.get("mov", "habla" if k else mov0),
+                a="pop" if k == 0 and mov0 != "camina" else "fade", din=0.25 if k == 0 else 0.06, blink_off=s % 3)
+        if k == 0:
+            hx, hy = MANO.get(tr.get("objeto"), MANO[None])
+            v._mano = (x + hx * .8, 150 + hy * .8)
     if es.get("auro"):
         v.auro(s, e, 292, 170, .5, es["auro"])
 
@@ -216,6 +231,31 @@ def p_texto(v, s, e, es, p):
         v.sfx.append((s + k * paso, "pop"))
 
 
+def poner_objetos(v, s, e, p):
+    """params.objetos: [{"tipo","x","y","etiqueta","k","anim": pop|mano|izquierda|derecha|arriba|abajo,"en": 0.3,"gira","flota"}]
+    params.lluvia: {"tipo": "moneda", "n": 8} → caen desde arriba."""
+    for o in p.get("objetos", []):
+        x, y = o.get("x", 180), o.get("y", 200)
+        t0 = s + (e - s) * o.get("en", 0.15)
+        anim = o.get("anim", "pop")
+        dx, dy = {"izquierda": (-260, 0), "derecha": (260, 0), "arriba": (0, -320), "abajo": (0, 300)}.get(anim, (0, 0))
+        if anim == "mano":
+            dx, dy = v._mano[0] - x, v._mano[1] - y
+        a = "pop" if anim == "pop" else "desde"
+        v.objeto(t0, e, x, y, o["tipo"], o.get("etiqueta", ""), o.get("k", 1.0), a=a, dx=dx, dy=dy,
+                 gira=o.get("gira", 0), flota=(3, 2.4) if o.get("flota", True) else None, din=0.45 if a == "desde" else 0.3)
+    ll = p.get("lluvia")
+    if ll:
+        import random
+        rnd = random.Random(int(s * 100))
+        for k in range(ll.get("n", 8)):
+            x = rnd.uniform(30, 330)
+            y = rnd.uniform(140, 330)
+            t0 = s + (e - s) * (0.1 + 0.5 * k / max(1, ll.get("n", 8)))
+            v.objeto(t0, e, x, y, ll.get("tipo", "moneda"), "", rnd.uniform(.5, .8), a="desde", dx=0, dy=-y - 60,
+                     gira=rnd.choice([-120, 120, 200, -200]), din=0.6)
+
+
 PLANTILLAS = {"pertx": p_pertx, "contadores": p_contadores, "tarjetas": p_tarjetas, "terminal": p_terminal,
               "chat": p_chat, "partida": p_partida, "movil": p_movil, "auro": p_auro, "lista": p_lista, "texto": p_texto}
 GRANDES = {"pertx", "movil", "auro", "partida"}   # plantillas que ya dibujan sus personajes
@@ -267,12 +307,17 @@ def montar(sem: int, dia: int, con_voz=False, solo_html=False):
     voces = []
     for (s, e, ruta), es in zip(ts, g["escenas"]):
         plant = es.get("plantilla", "pertx")
-        PLANTILLAS[plant](v, s, e, es, es.get("params", {}))
+        prm = es.get("params", {})
+        v.fondo(s, e, prm.get("fondo"))
+        v._mano = (191, 324)
+        PLANTILLAS[plant](v, s, e, es, prm)
+        poner_objetos(v, s, e, prm)
         if plant not in GRANDES:
             if es.get("pertx") and plant != "lista":
                 pe = es["pertx"]
                 prop = pe.get("objeto") if pe.get("objeto") in ("movil", "portatil") else None
-                v.pertx(s, e, 24, 430, .42, ojos=pe.get("ojos", "normal"), prop=prop, blink_off=s % 2)
+                v.pertx(s, e, 24, 430, .42, ojos=pe.get("ojos", "normal"), prop=prop, blink_off=s % 2,
+                        mov="habla" if es.get("quien", "Pertx") == "Pertx" else "idle")
             if es.get("auro"):
                 v.auro(s, e, 318, 64, .3, es["auro"])
         elif plant in ("partida", "movil") and es.get("auro"):

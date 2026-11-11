@@ -22,7 +22,7 @@ Para cada día:
 - **3 ganchos** distintos (número o contraste en los 3 primeros segundos). Elige el mejor en `gancho_elegido`.
 - **Escenas** de 3 a 7 segundos, cada una con: voz (quién habla), qué se ve, texto en pantalla (1–2 palabras clave), qué graba el usuario (o null), expresión de Pertx (y objeto **solo si la escena lo pide**) y cara de Auro si sale.
 - Ritmo de voz: **máximo 2,5–3 palabras por segundo**. Duración total de **30 a 45 s**.
-- Para cada escena, **`plantilla` y `params`** (ver la tabla de `guiones/ESQUEMA.md`): es lo que usa el motor para dibujarla. Varía las plantillas para que la imagen cambie.
+- Para cada escena, **`plantilla` y `params`** (ver la tabla de `guiones/ESQUEMA.md`): es lo que usa el motor para dibujarla. Varía las plantillas para que la imagen cambie, y **dale vida**: escenarios (`fondo`), objetos con los que Pertx interactúa (`objetos`, `lluvia`), Pertx que camina, salta o cambia de pose (`mov`, `poses`). Nada de escenas estáticas.
 - **Descripción**, **3–6 hashtags** y **CTA**.
 - **`necesita_de_ti`**: lo que el usuario tiene que grabar o contarte.
 - **No pidas grabaciones al usuario.** Por defecto las pantallas son mockups animados del motor (terminal, webs, móviles, chats). `grabar` va en `null`; como mucho pide una **captura** de un proyecto real suyo cuando haga falta.

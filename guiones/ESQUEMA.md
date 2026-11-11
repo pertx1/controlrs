@@ -66,6 +66,20 @@ Cada vídeo es un archivo `.json`. La ficha para leer (`.md`) se genera sola con
 | `lista` | Pasos numerados, con el paso activo resaltado | `pasos`: `[...]`, `activo`: número (0 = primero, -1 = ninguno) |
 | `texto` | Frases grandes que entran de golpe | `palabras`: `["SIN HUMO.", "..."]` |
 
+### Vida en las escenas (en `params` de cualquier escena)
+
+| Opción | Qué hace | Ejemplo |
+|---|---|---|
+| `fondo` | Escenario: `habitacion` (su cuarto de noche), `calle` (tiendas), `escenario` (foco) o `noche` (negro, por defecto) | `"fondo": "habitacion"` |
+| `objetos` | Objetos que aparecen. `anim`: `pop`, `mano` (salen de la mano de Pertx), `izquierda`, `derecha`, `arriba`, `abajo`. `en`: cuándo salen (0–1 de la escena). `gira`: grados por segundo | `[{"tipo": "camiseta", "x": 64, "y": 118, "etiqueta": "5.000 €", "anim": "mano", "en": 0.3}]` |
+| `lluvia` | Muchos objetos cayendo | `{"tipo": "moneda", "n": 8}` |
+| `mov` (plantilla `pertx`) | `camina` (entra andando), `habla` (mueve la cabeza, por defecto), `salta`, `idle` | `"mov": "camina"` |
+| `posicion` (plantilla `pertx`) | `izquierda`, `centro` o `derecha` | `"posicion": "izquierda"` |
+| `poses` (plantilla `pertx`) | Cambia de pose a mitad de escena | `[{"en": 0.5, "objeto": "celebrar", "ojos": "feliz", "mov": "salta"}]` |
+
+**Objetos disponibles:** `bolsa`, `bombilla`, `caja`, `calendario`, `camiseta`, `check`, `cohete`, `error`, `etiqueta`, `euro`, `grafica`, `libro`, `lupa`, `moneda`, `monedas`, `movil`, `papel`, `portatil`, `reloj`, `tienda`, `trofeo`, `web`.
+El dinero se pinta como **monedas y €**, nunca como fajos de billetes (con pasamontañas parecería un atraco).
+
 En todas las plantillas salen solos los **subtítulos** (sacados de `voz`), la **palabra clave** de `texto` arriba, y Pertx o Auro en pequeño si la escena los tiene.
 
 **Reglas que comprueba `revisar`:** 3 ganchos; el gancho acaba antes de 4,5 s; escenas de 7 s como máximo; máximo 3 palabras por segundo; duración de 20 a 60 s; 3–6 hashtags; descripción; etiqueta de IA; y **las líneas rojas** de `DIRECCION.md` (marca de ropa por su nombre, ciudad o región, edad exacta, política, religión, cripto, "dinero rápido"…).

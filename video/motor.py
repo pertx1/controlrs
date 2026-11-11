@@ -22,6 +22,8 @@ RAIZ = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(RAIZ / "personaje"))
 import auro as _auro  # noqa: E402
 import pertx_cuerpo as _pertx  # noqa: E402
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+import objetos as _objetos  # noqa: E402
 
 W, H = 360, 640          # espacio de dibujo (se exporta x3 = 1080x1920)
 FPS = 30
@@ -50,11 +52,22 @@ class Video:
             f'<g data-s="{s}" data-e="{e}" data-a="{a}" data-din="{din}" data-dout="{dout}"{f}{extra} '
             f'style="opacity:0;transform-box:fill-box;transform-origin:center">{svg}</g>')
 
-    def pertx(self, s, e, x, y, k, prop=None, ojos="normal", gris=False, a="fade", blink_off=0.0):
-        cuerpo = _pertx.cuerpo("v", prop, ojos)
-        parpadeo = f'<rect class="blink" data-o="{blink_off}" x="78" y="57" width="44" height="16" rx="8" fill="#1B1A1D" style="opacity:0"/>'
+    def pertx(self, s, e, x, y, k, prop=None, ojos="normal", gris=False, a="fade", blink_off=0.0, mov="idle", din=0.25):
+        """mov: idle (respira), habla (mueve la cabeza), camina (entra andando), salta."""
+        cuerpo = _pertx.cuerpo("v", prop, ojos, parpadeo=True).replace('data-o="0"', f'data-o="{blink_off:.2f}"')
         filtro = ' filter="url(#gris)" opacity=".5"' if gris else ""
-        self.add(s, e, f'<g transform="translate({x} {y}) scale({k})"{filtro}>{cuerpo}{parpadeo}</g>', a=a)
+        self.add(s, e, f'<g transform="translate({x} {y}) scale({k})"{filtro}>{cuerpo}</g>', a=a, din=din, extra=f' data-mov="{mov}"')
+
+    def objeto(self, s, e, x, y, tipo, etiqueta="", k=1.0, a="pop", dx=0, dy=0, gira=0, flota=None, din=0.35):
+        """Un objeto de video/objetos.py. a='desde' lo trae desde (x+dx, y+dy); gira = grados por segundo."""
+        svg = f'<g transform="translate({x} {y})">{_objetos.objeto(tipo, etiqueta, k)}</g>'
+        extra = f' data-dx="{dx}" data-dy="{dy}"' + (f' data-rot="{gira}"' if gira else "")
+        self.add(s, e, svg, a=a, din=din, flota=flota, extra=extra)
+        self.sfx.append((s, "pop"))
+
+    def fondo(self, s, e, tipo):
+        if tipo and tipo != "noche":
+            self.add(s, e, fondo_escena(tipo), a="fade", din=0.3, dout=0.3)
 
     def auro(self, s, e, x, y, k, cara="feliz", a="pop"):
         # Auro se dibuja centrado en (300,244) dentro de su marco: lo movemos para que su centro quede en (x,y)
@@ -323,6 +336,19 @@ window.setT=function(t){
     else if(a==='left')tf=`translateX(${(1-pi)*-50}px)`;
     else if(a==='right')tf=`translateX(${(1-pi)*50}px)`;
     else if(a==='down')tf=`translateY(${(1-pi)*-40}px)`;
+    else if(a==='desde')tf=`translate(${(1-pi)*(+el.dataset.dx)}px,${(1-pi)*(+el.dataset.dy)}px) scale(${0.55+0.45*pi})`;
+    if(el.dataset.rot)tf+=` rotate(${(t-s)*(+el.dataset.rot)}deg)`;
+    const m=el.dataset.mov;
+    if(m){
+      if(m==='camina'){const w=Math.min(1,(t-s)/1.3);tf=`translateX(${(1-ease(w))*-190}px) translateY(${w<1?-Math.abs(Math.sin(t*Math.PI*3.4))*6:0}px) `+tf;}
+      if(m==='salta'){const j=(t-s)%1.1;tf+=` translateY(${j<0.45?-Math.sin(j/0.45*Math.PI)*24:0}px)`;}
+      tf+=` translateY(${Math.sin(t*2*Math.PI*0.45)*1.3}px)`;
+      const vivo=(m!=='idle');
+      const cab=el.querySelector('.pxcab');
+      if(cab)cab.style.transform=`rotate(${vivo?Math.sin(t*2*Math.PI*1.6)*2.6+Math.sin(t*2*Math.PI*0.55)*1.2:Math.sin(t*2*Math.PI*0.35)*1.3}deg)`;
+      const br=el.querySelector('.pxbrazo');
+      if(br)br.style.transform=`rotate(${Math.sin(t*2*Math.PI*(vivo?0.9:0.45)+1)*(vivo?3.2:1.4)}deg)`;
+    }
     if(el.dataset.f){const [amp,per]=el.dataset.f.split(',').map(Number);tf+=` translateY(${Math.sin(t*2*Math.PI/per)*amp}px)`}
     el.style.opacity=Math.min(pi,po);el.style.transform=tf;
   }
@@ -346,6 +372,39 @@ window.setT(0);
 </script>
 </body></html>
 """
+
+
+def fondo_escena(tipo):
+    """Escenarios de fondo (360x640): habitacion, calle, escenario."""
+    if tipo == "habitacion":
+        luces = "".join(f'<circle cx="{x}" cy="{y}" r="1.6" fill="{c}" opacity=".7"/>' for x, y, c in
+                        [(40, 120, "#FFC870"), (58, 104, "#F5DE9A"), (76, 132, "#FFB347"), (96, 112, "#F5DE9A"), (112, 138, "#FFC870"),
+                         (48, 148, "#F5DE9A"), (86, 150, "#FFB347"), (104, 92, "#F5DE9A")])
+        return (f'<rect x="22" y="70" width="110" height="110" rx="4" fill="#0B0F18" stroke="#2E281E" stroke-width="3"/>{luces}'
+                f'<path d="M77 70 V180 M22 125 H132" stroke="#1B1814" stroke-width="3"/>'
+                f'<rect x="210" y="96" width="120" height="6" rx="2" fill="#2A2219"/>'
+                f'<rect x="218" y="74" width="12" height="22" fill="#3A3428"/><rect x="234" y="80" width="10" height="16" fill="#2E281E"/><rect x="250" y="70" width="14" height="26" fill="{GOLD3}" opacity=".7"/>'
+                f'<rect x="0" y="470" width="360" height="170" fill="#140F0A"/><rect x="0" y="466" width="360" height="6" fill="#2A2219"/>'
+                f'<radialGradient id="flamp" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#FFB347" stop-opacity=".22"/><stop offset="1" stop-color="#FFB347" stop-opacity="0"/></radialGradient>'
+                f'<circle cx="310" cy="250" r="120" fill="url(#flamp)"/>'
+                f'<path d="M318 466 V300 L296 278" stroke="#2A2A2A" stroke-width="4" fill="none"/><path d="M282 268 L306 260 L310 284 L290 290 Z" fill="#2A2A2A"/>')
+    if tipo == "calle":
+        tiendas = ""
+        for k, (x, w, h) in enumerate([(-10, 90, 190), (84, 100, 230), (188, 86, 200), (278, 100, 220)]):
+            y = 470 - h
+            tiendas += (f'<rect x="{x}" y="{y}" width="{w}" height="{h}" fill="#15110D" stroke="#2A2219"/>'
+                        f'<rect x="{x + 10}" y="{470 - 70}" width="{w - 20}" height="52" fill="#F5DE9A" opacity=".10"/>'
+                        f'<path d="M{x} {470 - 84} H{x + w} L{x + w - 6} {470 - 70} H{x + 6} Z" fill="{GOLD if k % 2 else GOLD3}" opacity=".55"/>'
+                        + "".join(f'<rect x="{x + 12 + c * 22}" y="{y + 18 + f * 30}" width="12" height="16" fill="#F5DE9A" opacity="{.18 if (c + f + k) % 3 else .45}"/>'
+                                  for f in range((h - 110) // 30) for c in range(max(1, (w - 20) // 22))))
+        return (f'{tiendas}<rect x="0" y="470" width="360" height="170" fill="#100C08"/><path d="M0 520 H360" stroke="#2A2219" stroke-width="3" stroke-dasharray="26 18"/>'
+                f'<path d="M30 470 V300" stroke="#2A2A2A" stroke-width="4"/><circle cx="30" cy="296" r="7" fill="#F5DE9A" opacity=".8"/>')
+    if tipo == "escenario":
+        return (f'<linearGradient id="fspot" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F5DE9A" stop-opacity=".28"/><stop offset="1" stop-color="#F5DE9A" stop-opacity=".02"/></linearGradient>'
+                f'<path d="M150 0 H210 L300 470 H60 Z" fill="url(#fspot)"/>'
+                f'<ellipse cx="180" cy="474" rx="140" ry="18" fill="#D4AF37" opacity=".12" stroke="#D4AF37" stroke-opacity=".5"/>'
+                f'<path d="M0 0 Q30 240 10 640 H0 Z M360 0 Q330 240 350 640 H360 Z" fill="#3A0E0E" opacity=".55"/>')
+    return ""
 
 
 def perfil_movil(x=176, y=86):

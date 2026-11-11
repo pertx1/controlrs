@@ -36,6 +36,8 @@ PROHIBIDAS = [
     "garantizado", "100% seguro",
 ]
 PENDIENTE = re.compile(r"\[[^\]]+\]")
+sys.path.insert(0, str(RAIZ / "video"))
+from objetos import TIPOS as OBJETOS  # noqa: E402
 PLANTILLAS = {"pertx", "contadores", "tarjetas", "terminal", "chat", "partida", "movil", "auro", "lista", "texto"}
 
 
@@ -94,6 +96,9 @@ def revisar_guion(g: dict) -> tuple[list[str], list[str], list[str]]:
             errores.append(f"escena {k}: {pps:.1f} palabras/s (máximo {MAX_PAL_SEG}); quita palabras o dale más tiempo")
         if not e.get("texto"):
             avisos.append(f"escena {k}: no tiene texto en pantalla")
+        for o in (e.get("params") or {}).get("objetos", []) + ([(e.get("params") or {})["lluvia"]] if (e.get("params") or {}).get("lluvia") else []):
+            if o.get("tipo") not in OBJETOS:
+                errores.append(f"escena {k}: el objeto «{o.get('tipo')}» no existe")
         if e.get("plantilla", "pertx") not in PLANTILLAS:
             errores.append(f"escena {k}: plantilla «{e.get('plantilla')}» no existe ({', '.join(sorted(PLANTILLAS))})")
         if not e.get("visual"):

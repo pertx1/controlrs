@@ -113,7 +113,7 @@ BRAZO = {None: brazo_libre, "movil": brazo_movil, "portatil": brazo_portatil,
          "senalar": brazo_senalar, "celebrar": brazo_celebrar}
 
 
-def cuerpo(i, prop=None, ojos="normal"):
+def cuerpo(i, prop=None, ojos="normal", parpadeo=False):
     """prop: None (manos libres), "movil", "portatil", "senalar" o "celebrar".
     ojos: "normal", "feliz", "pensativo", "sorprendido" o "decidido"."""
     return f"""
@@ -144,6 +144,7 @@ def cuerpo(i, prop=None, ojos="normal"):
     <rect x="88.4" y="149" width="3.2" height="6" rx="1.4" fill="url(#{i}gold)"/>
     <rect x="108.4" y="149" width="3.2" height="6" rx="1.4" fill="url(#{i}gold)"/>
 
+    <g class="pxcab" style="transform-box:fill-box;transform-origin:50% 90%">
     <!-- capucha -->
     <path d="M58 120 Q46 30 100 6 Q154 30 142 120 Q128 104 100 104 Q72 104 58 120 Z" fill="url(#{i}hood)"/>
     <path d="M67 108 Q62 46 100 24 Q138 46 133 108 Q120 98 100 98 Q80 98 67 108 Z" fill="#060607"/>
@@ -155,8 +156,10 @@ def cuerpo(i, prop=None, ojos="normal"):
     <rect x="78" y="57" width="44" height="6" rx="3" fill="#2A1C14" opacity=".55"/>
 {OJOS[ojos]()}
     <path d="M78 65 Q78 57 86 57 L114 57 Q122 57 122 65" stroke="#0A0A0B" stroke-width="2" fill="none"/>
+    {'<rect class="blink" data-o="0" x="78" y="57" width="44" height="16" rx="8" fill="#1B1A1D" style="opacity:0"/>' if parpadeo else ''}
+    </g>
 
-{BRAZO[prop](i)}
+<g class="pxbrazo" style="transform-box:fill-box;transform-origin:20% 5%">{BRAZO[prop](i)}</g>
 
     <!-- luz dorada de borde -->
     <path d="M142 120 Q154 30 100 6" stroke="url(#{i}gold)" stroke-width="1.8" fill="none" opacity=".6" filter="url(#{i}b1)"/>
