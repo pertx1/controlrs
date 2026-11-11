@@ -1,0 +1,7 @@
+{
+  "modelo": "eleven_v4",
+  "voces": {
+    "Pertx": {"id": "B0r3rOF9WOwQ4BBKhRWO", "nombre": "Tom - Calma y claridad (castellano de España)"},
+    "Auro": {"id": "HvGHhLAx7UNxYofHDPRW", "nombre": "Lucas - Clear, Conversational (castellano de España) + filtro robótico local"}
+  }
+}

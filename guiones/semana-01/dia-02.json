@@ -30,7 +30,16 @@
         "objeto": null
       },
       "auro": null,
-      "sonido": "whoosh"
+      "sonido": "whoosh",
+      "plantilla": "lista",
+      "params": {
+        "pasos": [
+          "Explica el negocio",
+          "Pide un plan",
+          "Crea y corrige"
+        ],
+        "activo": -1
+      }
     },
     {
       "t": [
@@ -49,7 +58,16 @@
         "objeto": null
       },
       "auro": "feliz",
-      "sonido": null
+      "sonido": null,
+      "plantilla": "terminal",
+      "params": {
+        "lineas": [
+          "~/mi-web $ claude",
+          "✻ Claude Code",
+          "¿En qué te ayudo hoy?",
+          "> _"
+        ]
+      }
     },
     {
       "t": [
@@ -65,7 +83,16 @@
       "grabar": null,
       "pertx": null,
       "auro": null,
-      "sonido": "pop"
+      "sonido": "pop",
+      "plantilla": "chat",
+      "params": {
+        "mensajes": [
+          {
+            "de": "yo",
+            "texto": "Peluquería de barrio. Clientes de 20 a 60 años. Corte, color y barba. Que pidan cita por WhatsApp. Tono cercano."
+          }
+        ]
+      }
     },
     {
       "t": [
@@ -81,7 +108,24 @@
       "grabar": null,
       "pertx": null,
       "auro": "senalando",
-      "sonido": null
+      "sonido": null,
+      "plantilla": "chat",
+      "params": {
+        "mensajes": [
+          {
+            "de": "ia",
+            "texto": "Plan: 1) Portada 2) Servicios 3) Fotos 4) Horario y mapa 5) Botón de WhatsApp"
+          },
+          {
+            "de": "yo",
+            "texto": "Quita las fotos y añade los precios."
+          },
+          {
+            "de": "ia",
+            "texto": "Hecho. ¿Empiezo?"
+          }
+        ]
+      }
     },
     {
       "t": [
@@ -97,7 +141,18 @@
       "grabar": null,
       "pertx": null,
       "auro": null,
-      "sonido": "pop"
+      "sonido": "pop",
+      "plantilla": "terminal",
+      "params": {
+        "titulo": "CLAUDE CODE",
+        "lineas": [
+          "✓ index.html",
+          "✓ estilos.css",
+          "✓ main.js",
+          "> botón de WhatsApp más grande",
+          "✓ cambiado"
+        ]
+      }
     },
     {
       "t": [
@@ -116,7 +171,9 @@
         "objeto": null
       },
       "auro": null,
-      "sonido": null
+      "sonido": null,
+      "plantilla": "pertx",
+      "params": {}
     },
     {
       "t": [
@@ -135,7 +192,11 @@
         "objeto": "senalar"
       },
       "auro": null,
-      "sonido": null
+      "sonido": null,
+      "plantilla": "movil",
+      "params": {
+        "tipo": "perfil"
+      }
     }
   ],
   "descripcion": "Los 3 pasos que sigo para que una IA me haga una web que se pueda enseñar a un cliente. Comenta WEB y te paso mi prompt.",

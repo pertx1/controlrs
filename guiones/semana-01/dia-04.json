@@ -31,7 +31,22 @@
         "objeto": null
       },
       "auro": null,
-      "sonido": "whoosh"
+      "sonido": "whoosh",
+      "plantilla": "contadores",
+      "params": {
+        "items": [
+          {
+            "etiqueta": "APPS CON IA",
+            "valor": "0 €",
+            "nota": "hoy"
+          },
+          {
+            "etiqueta": "PLAZO",
+            "valor": "30 días",
+            "nota": "para el primer euro"
+          }
+        ]
+      }
     },
     {
       "t": [
@@ -50,7 +65,17 @@
         "objeto": null
       },
       "auro": null,
-      "sonido": null
+      "sonido": null,
+      "plantilla": "lista",
+      "params": {
+        "pasos": [
+          "Vender webs a negocios",
+          "20 negocios sin web",
+          "Enseñar y cobrar",
+          "Contarlo todo"
+        ],
+        "activo": 0
+      }
     },
     {
       "t": [
@@ -69,7 +94,17 @@
         "objeto": null
       },
       "auro": null,
-      "sonido": "pop"
+      "sonido": "pop",
+      "plantilla": "lista",
+      "params": {
+        "pasos": [
+          "Vender webs a negocios",
+          "20 negocios sin web",
+          "Enseñar y cobrar",
+          "Contarlo todo"
+        ],
+        "activo": 1
+      }
     },
     {
       "t": [
@@ -88,7 +123,17 @@
         "objeto": "movil"
       },
       "auro": null,
-      "sonido": null
+      "sonido": null,
+      "plantilla": "lista",
+      "params": {
+        "pasos": [
+          "Vender webs a negocios",
+          "20 negocios sin web",
+          "Enseñar y cobrar",
+          "Contarlo todo"
+        ],
+        "activo": 2
+      }
     },
     {
       "t": [
@@ -107,7 +152,17 @@
         "objeto": null
       },
       "auro": null,
-      "sonido": null
+      "sonido": null,
+      "plantilla": "lista",
+      "params": {
+        "pasos": [
+          "Vender webs a negocios",
+          "20 negocios sin web",
+          "Enseñar y cobrar",
+          "Contarlo todo"
+        ],
+        "activo": 3
+      }
     },
     {
       "t": [
@@ -126,7 +181,9 @@
         "objeto": null
       },
       "auro": "pensativo",
-      "sonido": null
+      "sonido": null,
+      "plantilla": "pertx",
+      "params": {}
     },
     {
       "t": [
@@ -142,7 +199,14 @@
       "grabar": null,
       "pertx": null,
       "auro": "senalando",
-      "sonido": "ding"
+      "sonido": "ding",
+      "plantilla": "auro",
+      "params": {
+        "lineas": [
+          "DÍA 1",
+          "0 €"
+        ]
+      }
     },
     {
       "t": [
@@ -161,7 +225,11 @@
         "objeto": "senalar"
       },
       "auro": null,
-      "sonido": null
+      "sonido": null,
+      "plantilla": "movil",
+      "params": {
+        "tipo": "perfil"
+      }
     }
   ],
   "descripcion": "Episodio 1 del reto: de 0 € a mi primer euro con apps en 30 días. El plan en 4 pasos. Vuelve el jueves para ver si avanza.",

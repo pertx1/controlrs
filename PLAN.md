@@ -49,12 +49,13 @@ Vamos **fase por fase**. Al empezar cada fase te hago las preguntas que falten. 
 
 ## Fase 3 · Edición automática
 - [x] Prototipo del motor (SVG + Chromium + ffmpeg, 1080x1920)
-- [ ] Voz automática con ElevenLabs por cada frase del guion (con tu permiso en cada vídeo)
-- [ ] Voz de Auro (otra voz + filtro robótico en local)
-- [ ] Meter tus grabaciones de pantalla como planos
-- [ ] Plantillas de escena reutilizables para los 5 formatos
-- [ ] Instalación y prueba en **tu portátil Windows**
-- [ ] Del guion al MP4 con un solo comando
+- [x] Del guion al vídeo con un comando: `npm run video -- SEMANA DIA` (10 plantillas de escena, subtítulos automáticos, música y efectos)
+- [x] Voz automática con ElevenLabs por escena: `npm run voz -- SEMANA DIA` (te dice el gasto y pregunta antes)
+- [x] Voz de Auro (otra voz + filtro robótico en local)
+- [x] ~~Meter tus grabaciones de pantalla~~ → no hace falta: las pantallas se dibujan
+- [x] Plantillas de escena reutilizables para los 5 formatos
+- [ ] Instalación y prueba en **tu portátil Windows** (`video/INSTALAR-WINDOWS.md`)
+- [x] Del guion al MP4 con un solo comando
 
 ## Fase 4 · Embudo de ventas
 - [ ] Web link-in-bio en **Next.js en Vercel**

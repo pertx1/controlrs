@@ -30,7 +30,9 @@
         "objeto": null
       },
       "auro": null,
-      "sonido": "whoosh"
+      "sonido": "whoosh",
+      "plantilla": "pertx",
+      "params": {}
     },
     {
       "t": [
@@ -46,7 +48,13 @@
       "grabar": null,
       "pertx": null,
       "auro": "pensativo",
-      "sonido": null
+      "sonido": null,
+      "plantilla": "auro",
+      "params": {
+        "lineas": [
+          "CALCULANDO…"
+        ]
+      }
     },
     {
       "t": [
@@ -63,7 +71,22 @@
       "grabar": null,
       "pertx": null,
       "auro": "celebrando",
-      "sonido": "ding"
+      "sonido": "ding",
+      "plantilla": "contadores",
+      "params": {
+        "items": [
+          {
+            "etiqueta": "APPS CON IA",
+            "valor": "0 €",
+            "nota": "esta semana"
+          },
+          {
+            "etiqueta": "WEBS",
+            "valor": "[EUROS SEMANA] €",
+            "nota": "esta semana"
+          }
+        ]
+      }
     },
     {
       "t": [
@@ -79,7 +102,22 @@
       "grabar": null,
       "pertx": null,
       "auro": "feliz",
-      "sonido": "ding"
+      "sonido": "ding",
+      "plantilla": "contadores",
+      "params": {
+        "items": [
+          {
+            "etiqueta": "SEGUIDORES NUEVOS",
+            "valor": "[SEGUIDORES]",
+            "nota": "TikTok + Instagram"
+          },
+          {
+            "etiqueta": "MEJOR VÍDEO",
+            "valor": "[MEJOR VÍDEO]",
+            "nota": "el que más visitas tuvo"
+          }
+        ]
+      }
     },
     {
       "t": [
@@ -98,7 +136,22 @@
         "objeto": "movil"
       },
       "auro": null,
-      "sonido": null
+      "sonido": null,
+      "plantilla": "contadores",
+      "params": {
+        "items": [
+          {
+            "etiqueta": "NEGOCIOS CONTACTADOS",
+            "valor": "[NEGOCIOS]",
+            "nota": ""
+          },
+          {
+            "etiqueta": "RESPUESTAS",
+            "valor": "[RESPUESTAS]",
+            "nota": ""
+          }
+        ]
+      }
     },
     {
       "t": [
@@ -117,7 +170,14 @@
         "objeto": null
       },
       "auro": null,
-      "sonido": null
+      "sonido": null,
+      "plantilla": "texto",
+      "params": {
+        "palabras": [
+          "LO QUE HE APRENDIDO:",
+          "[APRENDIZAJE]"
+        ]
+      }
     },
     {
       "t": [
@@ -133,7 +193,14 @@
       "grabar": null,
       "pertx": null,
       "auro": "senalando",
-      "sonido": null
+      "sonido": null,
+      "plantilla": "auro",
+      "params": {
+        "lineas": [
+          "PRÓXIMO INFORME",
+          "7 DÍAS"
+        ]
+      }
     },
     {
       "t": [
@@ -152,7 +219,9 @@
         "objeto": null
       },
       "auro": "feliz",
-      "sonido": null
+      "sonido": null,
+      "plantilla": "pertx",
+      "params": {}
     }
   ],
   "descripcion": "Semana 1 de Pertx: todos los números, aunque sean pequeños. No es consejo financiero.",

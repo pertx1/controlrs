@@ -30,7 +30,22 @@
         "objeto": null
       },
       "auro": null,
-      "sonido": "whoosh"
+      "sonido": "whoosh",
+      "plantilla": "contadores",
+      "params": {
+        "items": [
+          {
+            "etiqueta": "MARCA DE ROPA",
+            "valor": "5.000 €",
+            "nota": "facturados en 3 meses"
+          },
+          {
+            "etiqueta": "ERRORES",
+            "valor": "3",
+            "nota": "que me costaron caros"
+          }
+        ]
+      }
     },
     {
       "t": [
@@ -49,7 +64,16 @@
         "objeto": null
       },
       "auro": null,
-      "sonido": null
+      "sonido": null,
+      "plantilla": "tarjetas",
+      "params": {
+        "items": [
+          {
+            "titulo": "Error 1",
+            "sub": "[ERROR 1] · [COSTE 1]"
+          }
+        ]
+      }
     },
     {
       "t": [
@@ -68,7 +92,21 @@
         "objeto": null
       },
       "auro": null,
-      "sonido": "pop"
+      "sonido": "pop",
+      "plantilla": "tarjetas",
+      "params": {
+        "items": [
+          {
+            "titulo": "Error 1",
+            "sub": "[ERROR 1] · [COSTE 1]",
+            "ya": true
+          },
+          {
+            "titulo": "Error 2",
+            "sub": "[ERROR 2] · [COSTE 2]"
+          }
+        ]
+      }
     },
     {
       "t": [
@@ -87,7 +125,26 @@
         "objeto": null
       },
       "auro": null,
-      "sonido": "pop"
+      "sonido": "pop",
+      "plantilla": "tarjetas",
+      "params": {
+        "items": [
+          {
+            "titulo": "Error 1",
+            "sub": "[ERROR 1] · [COSTE 1]",
+            "ya": true
+          },
+          {
+            "titulo": "Error 2",
+            "sub": "[ERROR 2] · [COSTE 2]",
+            "ya": true
+          },
+          {
+            "titulo": "Error 3",
+            "sub": "[ERROR 3] · [COSTE 3]"
+          }
+        ]
+      }
     },
     {
       "t": [
@@ -106,7 +163,14 @@
         "objeto": "senalar"
       },
       "auro": null,
-      "sonido": null
+      "sonido": null,
+      "plantilla": "texto",
+      "params": {
+        "palabras": [
+          "LO QUE HARÍA HOY:",
+          "[LECCIÓN]"
+        ]
+      }
     },
     {
       "t": [
@@ -125,7 +189,14 @@
         "objeto": null
       },
       "auro": "pensativo",
-      "sonido": null
+      "sonido": null,
+      "plantilla": "texto",
+      "params": {
+        "palabras": [
+          "FACTURAR ≠ GANAR",
+          "APUNTA EL PORQUÉ"
+        ]
+      }
     },
     {
       "t": [
@@ -144,7 +215,9 @@
         "objeto": null
       },
       "auro": null,
-      "sonido": null
+      "sonido": null,
+      "plantilla": "pertx",
+      "params": {}
     }
   ],
   "descripcion": "5.000 € facturados con una marca de ropa en 3 meses… y 3 errores que me costaron dinero. ¿Cuál te ha pasado a ti?",

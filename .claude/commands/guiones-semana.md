@@ -22,6 +22,7 @@ Para cada día:
 - **3 ganchos** distintos (número o contraste en los 3 primeros segundos). Elige el mejor en `gancho_elegido`.
 - **Escenas** de 3 a 7 segundos, cada una con: voz (quién habla), qué se ve, texto en pantalla (1–2 palabras clave), qué graba el usuario (o null), expresión de Pertx (y objeto **solo si la escena lo pide**) y cara de Auro si sale.
 - Ritmo de voz: **máximo 2,5–3 palabras por segundo**. Duración total de **30 a 45 s**.
+- Para cada escena, **`plantilla` y `params`** (ver la tabla de `guiones/ESQUEMA.md`): es lo que usa el motor para dibujarla. Varía las plantillas para que la imagen cambie.
 - **Descripción**, **3–6 hashtags** y **CTA**.
 - **`necesita_de_ti`**: lo que el usuario tiene que grabar o contarte.
 - **No pidas grabaciones al usuario.** Por defecto las pantallas son mockups animados del motor (terminal, webs, móviles, chats). `grabar` va en `null`; como mucho pide una **captura** de un proyecto real suyo cuando haga falta.
@@ -32,7 +33,10 @@ Para cada día:
 1. `python3 guiones/fabrica.py revisar $ARGUMENTS` → arregla todos los **ERROR** y vuelve a revisar hasta que no quede ninguno (los ⏳ pendientes de datos sí pueden quedar).
 2. `python3 guiones/fabrica.py fichas $ARGUMENTS`.
 
-## 5. Cuéntaselo al usuario
+## 5. Previsualiza
+`python3 video/montar.py $ARGUMENTS todos --html` y mira que no haya textos que se salgan ni se pisen.
+
+## 6. Cuéntaselo al usuario
 Lenguaje sencillo, en castellano:
 - Una línea por día: título + gancho.
 - La lista de **todo lo que tiene que grabar o contarte** esta semana (sale de `necesita_de_ti` y de los huecos `[...]`).

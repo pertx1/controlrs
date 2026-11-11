@@ -1,0 +1,14 @@
+{
+  "name": "pertx",
+  "private": true,
+  "description": "Fábrica de contenido de Pertx: guiones, vídeos y sistema diario",
+  "scripts": {
+    "guiones": "node scripts/py.js guiones/fabrica.py",
+    "video": "node scripts/py.js video/montar.py",
+    "voz": "node scripts/py.js video/voz.py",
+    "calendario": "node scripts/py.js estrategia/hacer-calendario.py"
+  },
+  "devDependencies": {
+    "playwright": "^1.48.0"
+  }
+}

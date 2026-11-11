@@ -31,7 +31,12 @@
         "objeto": null
       },
       "auro": null,
-      "sonido": "whoosh"
+      "sonido": "whoosh",
+      "plantilla": "partida",
+      "params": {
+        "izquierda": [],
+        "derecha": []
+      }
     },
     {
       "t": [
@@ -50,7 +55,14 @@
         "objeto": null
       },
       "auro": null,
-      "sonido": null
+      "sonido": null,
+      "plantilla": "partida",
+      "params": {
+        "izquierda": [
+          "«Hazme una web bonita»"
+        ],
+        "derecha": []
+      }
     },
     {
       "t": [
@@ -69,7 +81,18 @@
         "objeto": null
       },
       "auro": null,
-      "sonido": "pop"
+      "sonido": "pop",
+      "plantilla": "partida",
+      "params": {
+        "izquierda": [
+          "«Hazme una web bonita»"
+        ],
+        "derecha": [
+          "Para quién es",
+          "Qué vende",
+          "Qué hace cada botón"
+        ]
+      }
     },
     {
       "t": [
@@ -88,7 +111,17 @@
         "objeto": null
       },
       "auro": "feliz",
-      "sonido": "ding"
+      "sonido": "ding",
+      "plantilla": "partida",
+      "params": {
+        "izquierda": [
+          "Web genérica",
+          "Textos de relleno"
+        ],
+        "derecha": [
+          "Lista para el cliente"
+        ]
+      }
     },
     {
       "t": [
@@ -107,7 +140,9 @@
         "objeto": null
       },
       "auro": "pensativo",
-      "sonido": null
+      "sonido": null,
+      "plantilla": "pertx",
+      "params": {}
     },
     {
       "t": [
@@ -126,7 +161,9 @@
         "objeto": null
       },
       "auro": null,
-      "sonido": null
+      "sonido": null,
+      "plantilla": "pertx",
+      "params": {}
     },
     {
       "t": [
@@ -145,7 +182,11 @@
         "objeto": "senalar"
       },
       "auro": null,
-      "sonido": null
+      "sonido": null,
+      "plantilla": "movil",
+      "params": {
+        "tipo": "perfil"
+      }
     }
   ],
   "descripcion": "Mismo pedido, dos resultados. La IA hace lo que le pides, ni más ni menos. Comenta PROMPT y te paso el mío.",

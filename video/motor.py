@@ -100,8 +100,12 @@ class Video:
         audio.unlink()
         return final
 
+    voces_fijas = None   # lista (inicio, fin, ruta, es_auro) que pone montar.py; si es None se buscan en video/voz/
+
     def voces(self):
         """Busca video/voz/<vNN>-<n>.mp3 para cada frase del guion (n empieza en 1)."""
+        if self.voces_fijas is not None:
+            return self.voces_fijas
         pref = self.nombre.split("-")[0]
         out = []
         for n, (s, e, _q, _f) in enumerate(self.guion, 1):
@@ -237,9 +241,17 @@ def efecto(tipo):
     return 0.35 * (ruido - suave) * env * 0.5 + 0.2 * suave * env
 
 
-def leer_audio(ruta, tempo=1.0):
+# Filtro de voz de Auro: un poco más aguda, metálica y con eco corto (todo local y gratis).
+FILTRO_ROBOT = ("asetrate=44100*1.10,aresample=44100,atempo=0.91,"
+                "aecho=0.8:0.6:12:0.35,aphaser=type=t:speed=2:decay=0.4,highpass=f=180")
+
+
+def leer_audio(ruta, tempo=1.0, robot=False):
     """Decodifica un audio (mp3, wav...) a mono 44,1 kHz con ffmpeg. tempo>1 lo acelera sin cambiar el tono."""
-    filtros = ["-af", f"atempo={tempo:.3f}"] if abs(tempo - 1) > 0.001 else []
+    cadena = [FILTRO_ROBOT] if robot else []
+    if abs(tempo - 1) > 0.001:
+        cadena.append(f"atempo={tempo:.3f}")
+    filtros = ["-af", ",".join(cadena)] if cadena else []
     raw = subprocess.run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-i", str(ruta), *filtros,
                           "-f", "s16le", "-ac", "1", "-ar", str(SR), "-"], check=True, capture_output=True).stdout
     return np.frombuffer(raw, dtype="<i2").astype(np.float64) / 32768
@@ -251,12 +263,14 @@ def mezcla(dur, sfx, voces=()):
     mus = mus / (np.max(np.abs(mus)) or 1)
     voz = np.zeros(n)
     hay_voz = np.zeros(n)
-    for s, e, ruta in voces:
+    for v in voces:
+        s, e, ruta = v[:3]
+        robot = len(v) > 3 and v[3]
         hueco = max(0.5, e - s - 0.05)
-        a = leer_audio(ruta)
+        a = leer_audio(ruta, robot=robot)
         tempo = min(1.15, len(a) / SR / hueco) if len(a) / SR > hueco else 1.0
         if tempo > 1:
-            a = leer_audio(ruta, tempo)
+            a = leer_audio(ruta, tempo, robot)
         a = a / (np.max(np.abs(a)) or 1) * 0.92
         i0 = int(s * SR)
         m = min(len(a), n - i0)

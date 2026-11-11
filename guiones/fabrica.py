@@ -36,6 +36,7 @@ PROHIBIDAS = [
     "garantizado", "100% seguro",
 ]
 PENDIENTE = re.compile(r"\[[^\]]+\]")
+PLANTILLAS = {"pertx", "contadores", "tarjetas", "terminal", "chat", "partida", "movil", "auro", "lista", "texto"}
 
 
 def carpeta(n: int) -> pathlib.Path:
@@ -93,6 +94,8 @@ def revisar_guion(g: dict) -> tuple[list[str], list[str], list[str]]:
             errores.append(f"escena {k}: {pps:.1f} palabras/s (máximo {MAX_PAL_SEG}); quita palabras o dale más tiempo")
         if not e.get("texto"):
             avisos.append(f"escena {k}: no tiene texto en pantalla")
+        if e.get("plantilla", "pertx") not in PLANTILLAS:
+            errores.append(f"escena {k}: plantilla «{e.get('plantilla')}» no existe ({', '.join(sorted(PLANTILLAS))})")
         if not e.get("visual"):
             errores.append(f"escena {k}: falta 'visual' (qué se ve)")
         fin_anterior = b

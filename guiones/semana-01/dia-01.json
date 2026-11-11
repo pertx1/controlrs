@@ -31,7 +31,22 @@
         "objeto": null
       },
       "auro": null,
-      "sonido": "whoosh"
+      "sonido": "whoosh",
+      "plantilla": "contadores",
+      "params": {
+        "items": [
+          {
+            "etiqueta": "MARCA DE ROPA",
+            "valor": "5.000 €",
+            "nota": "facturados en 3 meses"
+          },
+          {
+            "etiqueta": "APPS CON IA",
+            "valor": "0 €",
+            "nota": "de momento"
+          }
+        ]
+      }
     },
     {
       "t": [
@@ -50,7 +65,9 @@
         "objeto": null
       },
       "auro": null,
-      "sonido": null
+      "sonido": null,
+      "plantilla": "pertx",
+      "params": {}
     },
     {
       "t": [
@@ -69,7 +86,24 @@
         "objeto": null
       },
       "auro": null,
-      "sonido": "pop"
+      "sonido": "pop",
+      "plantilla": "tarjetas",
+      "params": {
+        "items": [
+          {
+            "titulo": "Marca de ropa",
+            "sub": "5.000 € facturados"
+          },
+          {
+            "titulo": "Reventa en Vinted",
+            "sub": "+200 € de beneficio"
+          },
+          {
+            "titulo": "Apps con IA",
+            "sub": "0 € (de momento)"
+          }
+        ]
+      }
     },
     {
       "t": [
@@ -88,7 +122,15 @@
         "objeto": null
       },
       "auro": "feliz",
-      "sonido": "ding"
+      "sonido": "ding",
+      "plantilla": "auro",
+      "params": {
+        "lineas": [
+          "AURO",
+          "Me ayuda a programar",
+          "y no deja que mienta"
+        ]
+      }
     },
     {
       "t": [
@@ -107,7 +149,22 @@
         "objeto": null
       },
       "auro": null,
-      "sonido": null
+      "sonido": null,
+      "plantilla": "contadores",
+      "params": {
+        "items": [
+          {
+            "etiqueta": "APPS CON IA",
+            "valor": "0 €",
+            "nota": "hoy"
+          },
+          {
+            "etiqueta": "OBJETIVO",
+            "valor": "1 €",
+            "nota": "mi primer euro"
+          }
+        ]
+      }
     },
     {
       "t": [
@@ -126,7 +183,15 @@
         "objeto": null
       },
       "auro": null,
-      "sonido": null
+      "sonido": null,
+      "plantilla": "texto",
+      "params": {
+        "palabras": [
+          "SIN HUMO.",
+          "SIN CURSOS MILAGRO.",
+          "TODOS LOS NÚMEROS."
+        ]
+      }
     },
     {
       "t": [
@@ -145,7 +210,11 @@
         "objeto": "senalar"
       },
       "auro": "celebrando",
-      "sonido": null
+      "sonido": null,
+      "plantilla": "movil",
+      "params": {
+        "tipo": "perfil"
+      }
     }
   ],
   "descripcion": "Episodio 0. Facturé 5.000 € con una marca de ropa, saqué 200 € revendiendo y llevo 0 € con apps. El reto: mi primer euro con apps, contándolo todo.",
