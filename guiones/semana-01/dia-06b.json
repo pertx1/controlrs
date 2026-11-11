@@ -1,0 +1,138 @@
+{
+  "dia": "6b",
+  "tipo": "pildora",
+  "hora": "13:00",
+  "dia_semana": "sábado",
+  "serie": "PÍLDORA · Mi marca de ropa",
+  "formato": "Píldora",
+  "pilar": "Emprender",
+  "titulo": "Empecé con 30 €",
+  "duracion": 15,
+  "ganchos": [
+    "Mi marca de ropa empezó con 30 euros."
+  ],
+  "gancho_elegido": 0,
+  "escenas": [
+    {
+      "t": [
+        0,
+        3.5
+      ],
+      "quien": "Pertx",
+      "voz": "Mi marca de ropa empezó con 30 euros.",
+      "visual": "Moneda grande: 30 €",
+      "texto": [
+        "30 €"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "decidido",
+        "objeto": null
+      },
+      "auro": null,
+      "sonido": "whoosh",
+      "plantilla": "pertx",
+      "params": {
+        "fondo": "habitacion",
+        "posicion": "izquierda",
+        "objetos": [
+          {
+            "tipo": "moneda",
+            "x": 262,
+            "y": 160,
+            "etiqueta": "30 €",
+            "anim": "mano",
+            "en": 0.1
+          }
+        ]
+      }
+    },
+    {
+      "t": [
+        3.5,
+        10
+      ],
+      "quien": "Pertx",
+      "voz": "Se los pagué a una imprenta. La primera semana saqué 200 euros de beneficio.",
+      "visual": "Contadores: 30 € → 200 €",
+      "texto": [
+        "200 €"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "decidido",
+        "objeto": null
+      },
+      "auro": null,
+      "sonido": "pop",
+      "plantilla": "contadores",
+      "params": {
+        "fondo": "habitacion",
+        "items": [
+          {
+            "etiqueta": "INVERSIÓN",
+            "valor": "30 €",
+            "nota": "imprenta"
+          },
+          {
+            "etiqueta": "SEMANA 1",
+            "valor": "200 €",
+            "nota": "de beneficio"
+          }
+        ]
+      }
+    },
+    {
+      "t": [
+        10,
+        15
+      ],
+      "quien": "Pertx",
+      "voz": "Y con eso me compré mi propia plancha. Paso a paso.",
+      "visual": "Camiseta y check",
+      "texto": [
+        "PASO A PASO"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "feliz",
+        "objeto": null
+      },
+      "auro": null,
+      "sonido": null,
+      "plantilla": "pertx",
+      "params": {
+        "fondo": "habitacion",
+        "posicion": "izquierda",
+        "objetos": [
+          {
+            "tipo": "camiseta",
+            "x": 262,
+            "y": 150,
+            "anim": "pop",
+            "en": 0.1
+          },
+          {
+            "tipo": "check",
+            "x": 300,
+            "y": 260,
+            "etiqueta": "PLANCHA",
+            "anim": "pop",
+            "en": 0.5
+          }
+        ]
+      }
+    }
+  ],
+  "descripcion": "30 € a una imprenta para las primeras camisetas. 200 € de beneficio la primera semana. Con eso, una plancha de 180 €. No hace falta mucho para empezar.",
+  "hashtags": [
+    "#marcaderopa",
+    "#emprenderjoven",
+    "#empezar",
+    "#pertx"
+  ],
+  "cta": "¿Con cuánto empezarías tú?",
+  "necesita_de_ti": [],
+  "etiqueta_ia": true,
+  "estado": "borrador"
+}

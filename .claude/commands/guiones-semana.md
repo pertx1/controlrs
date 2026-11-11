@@ -1,5 +1,5 @@
 ---
-description: Escribe los 7 guiones de una semana de Pertx (uso: /guiones-semana 2)
+description: Escribe los 14 guiones de una semana de Pertx, 7 principales y 7 píldoras (uso: /guiones-semana 2)
 argument-hint: número de semana (1, 2, 3...)
 ---
 
@@ -12,7 +12,8 @@ Eres el guionista de **Pertx**. Escribe los guiones de la **semana $ARGUMENTS**.
 - `referencias/ANALISIS.md`: la fórmula Pertx y los formatos F1–F5.
 - `guiones/ESQUEMA.md`: el formato exacto de cada guion.
 - Los guiones de semanas anteriores en `guiones/semana-*/`, para no repetir ideas ni ganchos.
-- Si existe `metricas/`, mira qué funcionó mejor y haz más de eso.
+- Si existe `metricas/`, mira qué funcionó mejor y haz más de eso (también si funcionan mejor las píldoras o los principales).
+- `referencias/COMPETENCIA.md`: lo que les funciona a otras cuentas. Si hay capturas nuevas, usa sus ganchos ganadores (adaptados, nunca copiados).
 
 ## 2. Prepara la semana
 Ejecuta `python3 guiones/fabrica.py semana $ARGUMENTS` (en Windows, `py` en vez de `python3`). Crea un esqueleto `.json` por día a partir de `estrategia/calendario-30.csv`. Si el calendario no tiene esa semana, propón 7 días siguiendo las series de `ESTRATEGIA.md`, añádelos al CSV y vuelve a ejecutarlo.
@@ -29,6 +30,13 @@ Para cada día:
 - **Nunca inventes datos.** Si falta un número o un hecho real del usuario, pon un hueco entre corchetes: `[EUROS SEMANA]`, `[ERROR 1]`…
 - Pon `"estado": "borrador"`.
 
+## 3b. Escribe también la píldora de cada día: `guiones/semana-XX/dia-NNb.json`
+Se publica a las **13:00** (el principal, a las 19:00). Mismo formato que el principal, con estos cambios:
+- `"dia": "Nb"` (por ejemplo `"3b"`), `"tipo": "pildora"`, `"hora": "13:00"`, `"formato": "Píldora"` y `"serie": "PÍLDORA · ..."`.
+- **Una sola idea** con un número o una frase que se pueda guardar. **3 escenas** y de **10 a 20 s** en total. **1 gancho** (con 1 basta).
+- Que **no repita** el vídeo principal de ese día: un dato de la historia real (ropa, reventa, errores), una regla de mentalidad o un truco con IA.
+- Sin historia ni encuesta: eso va con el vídeo de las 19:00.
+
 ## 4. Revisa y genera las fichas
 1. `python3 guiones/fabrica.py revisar $ARGUMENTS` → arregla todos los **ERROR** y vuelve a revisar hasta que no quede ninguno (los ⏳ pendientes de datos sí pueden quedar).
 2. `python3 guiones/fabrica.py fichas $ARGUMENTS`.
@@ -38,6 +46,6 @@ Para cada día:
 
 ## 6. Cuéntaselo al usuario
 Lenguaje sencillo, en castellano:
-- Una línea por día: título + gancho.
+- Una línea por día: título + gancho del principal y de la píldora.
 - La lista de **todo lo que tiene que grabar o contarte** esta semana (sale de `necesita_de_ti` y de los huecos `[...]`).
 - Dónde están las fichas: `guiones/semana-XX/README.md`.

@@ -26,6 +26,7 @@ MAX_PAL_SEG = 3.0        # palabras por segundo como máximo en una escena (la v
 MAX_ESCENA = 7.0         # segundos máximos de una escena (la imagen tiene que cambiar a menudo)
 MAX_GANCHO = 4.5         # la primera escena (gancho) termina antes de esto
 DUR_MIN, DUR_MAX = 20, 60
+DUR_PILDORA = 10, 20     # vídeo B ("tipo": "pildora"): una sola idea, se publica a las 13:00
 
 # Líneas rojas (DIRECCION.md). Se buscan como palabras sueltas, sin distinguir mayúsculas.
 PROHIBIDAS = [
@@ -82,8 +83,10 @@ def revisar_guion(g: dict) -> tuple[list[str], list[str], list[str]]:
     esc = g.get("escenas", [])
     if not esc:
         return [f"día {g.get('dia')}: no tiene escenas"], [], []
-    if len([x for x in g.get("ganchos", []) if x.strip()]) < 3:
-        errores.append("faltan ganchos (tienen que ser 3)")
+    pildora = g.get("tipo") == "pildora"
+    n_ganchos = 1 if pildora else 3
+    if len([x for x in g.get("ganchos", []) if x.strip()]) < n_ganchos:
+        errores.append(f"faltan ganchos (tienen que ser {n_ganchos})")
     fin_anterior = 0.0
     for k, e in enumerate(esc, 1):
         a, b = e["t"]
@@ -109,8 +112,9 @@ def revisar_guion(g: dict) -> tuple[list[str], list[str], list[str]]:
     dur = esc[-1]["t"][1]
     if abs(dur - g.get("duracion", dur)) > 0.05:
         avisos.append(f"'duracion' dice {g.get('duracion')} s pero las escenas acaban en {dur} s")
-    if not DUR_MIN <= dur <= DUR_MAX:
-        errores.append(f"dura {dur} s (entre {DUR_MIN} y {DUR_MAX})")
+    dmin, dmax = DUR_PILDORA if pildora else (DUR_MIN, DUR_MAX)
+    if not dmin <= dur <= dmax:
+        errores.append(f"dura {dur} s (entre {dmin} y {dmax})")
     if not 3 <= len(g.get("hashtags", [])) <= 6:
         errores.append("tiene que llevar entre 3 y 6 hashtags")
     if not g.get("descripcion"):

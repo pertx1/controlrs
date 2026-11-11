@@ -1,0 +1,126 @@
+{
+  "dia": "3b",
+  "tipo": "pildora",
+  "hora": "13:00",
+  "dia_semana": "miércoles",
+  "serie": "PÍLDORA · Mi marca de ropa",
+  "formato": "Píldora",
+  "pilar": "Emprender",
+  "titulo": "Agotado en 2 días",
+  "duracion": 15,
+  "ganchos": [
+    "Pedí stock de camisetas de fútbol. Se agotó en dos días."
+  ],
+  "gancho_elegido": 0,
+  "escenas": [
+    {
+      "t": [
+        0,
+        4.5
+      ],
+      "quien": "Pertx",
+      "voz": "Pedí stock de camisetas de fútbol. Se agotó en dos días.",
+      "visual": "Caja que llega y etiqueta AGOTADO",
+      "texto": [
+        "AGOTADO"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "decidido",
+        "objeto": null
+      },
+      "auro": null,
+      "sonido": "whoosh",
+      "plantilla": "pertx",
+      "params": {
+        "fondo": "habitacion",
+        "posicion": "izquierda",
+        "objetos": [
+          {
+            "tipo": "caja",
+            "x": 262,
+            "y": 150,
+            "etiqueta": "STOCK",
+            "anim": "derecha",
+            "en": 0.1
+          },
+          {
+            "tipo": "etiqueta",
+            "x": 300,
+            "y": 260,
+            "etiqueta": "AGOTADO",
+            "anim": "pop",
+            "en": 0.6
+          }
+        ]
+      }
+    },
+    {
+      "t": [
+        4.5,
+        10.5
+      ],
+      "quien": "Pertx",
+      "voz": "Pero antes las vendí bajo demanda. Así sabía que se iban a vender.",
+      "visual": "Lista: 1 bajo demanda, 2 ver qué se vende, 3 pedir stock",
+      "texto": [
+        "BAJO DEMANDA"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "decidido",
+        "objeto": null
+      },
+      "auro": null,
+      "sonido": "pop",
+      "plantilla": "lista",
+      "params": {
+        "fondo": "habitacion",
+        "pasos": [
+          "Vende bajo demanda",
+          "Mira qué se vende",
+          "Pide stock de eso"
+        ],
+        "activo": 0
+      }
+    },
+    {
+      "t": [
+        10.5,
+        15
+      ],
+      "quien": "Pertx",
+      "voz": "No compres stock hasta que los números te lo digan.",
+      "visual": "Frases grandes",
+      "texto": [
+        "NÚMEROS"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "decidido",
+        "objeto": null
+      },
+      "auro": null,
+      "sonido": null,
+      "plantilla": "texto",
+      "params": {
+        "fondo": "escenario",
+        "palabras": [
+          "PRIMERO VENDE.",
+          "LUEGO COMPRA."
+        ]
+      }
+    }
+  ],
+  "descripcion": "El stock de camisetas de fútbol (diseño propio) se agotó al 2.º día. La clave: primero vender bajo demanda y luego pedir stock.",
+  "hashtags": [
+    "#marcaderopa",
+    "#emprenderjoven",
+    "#stock",
+    "#pertx"
+  ],
+  "cta": "¿Bajo demanda o stock?",
+  "necesita_de_ti": [],
+  "etiqueta_ia": true,
+  "estado": "borrador"
+}

@@ -9,7 +9,7 @@ Vamos **fase por fase**. Al empezar cada fase te hago las preguntas que falten. 
 | Suscripciones | **Higgsfield, Vercel, ElevenLabs** | Voz con ElevenLabs, web en Vercel, Higgsfield solo si hiciera falta una imagen o vídeo IA (el personaje lo dibujamos en código) |
 | Ordenador | **Windows, portátil** | Todos los comandos tienen que funcionar en Windows (Node + Python + ffmpeg) |
 | Micrófono | Tienes, pero **no quieres usarlo** | Voz de Pertx 100 % IA: **ElevenLabs "Tom · Calma y claridad"** → todos los vídeos se marcan como IA |
-| Tiempo | **El que haga falta** | Plan de 1 vídeo al día desde la semana 2 |
+| Tiempo | **El que haga falta** | **2 vídeos al día** desde el día 1: píldora a las 13:00 + principal a las 19:00 |
 | Primer producto | **De todo** | Orden: 1) servicios de webs y tiendas online, 2) producto digital barato, 3) afiliados, 4) la web para creadores, 5) curso (ver `DIRECCION.md`) |
 | Cuentas | **No creadas** · de momento **solo TikTok e Instagram** | Fase 0 (guía en `CUENTAS.md`) |
 | Edad | **Menor de edad** | Tus padres son los titulares de las cuentas y los cobros. En los vídeos: "menor de edad" o "estudiante", nunca la edad exacta |

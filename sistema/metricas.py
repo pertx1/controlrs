@@ -46,10 +46,13 @@ def crear(n: int):
         sys.exit(f"Ya existen las métricas de la semana {n}. Ábrelas y rellénalas: {rv.relative_to(RAIZ)}")
     filas = []
     for d in range(7 * (n - 1) + 1, 7 * n + 1):
-        g = RAIZ / "guiones" / f"semana-{n:02d}" / f"dia-{d:02d}.json"
-        datos = json.loads(g.read_text(encoding="utf-8")) if g.exists() else {}
-        for red in REDES:
-            filas.append({"dia": d, "titulo": datos.get("titulo", ""), "serie": datos.get("serie", ""), "red": red})
+        for b in ("b", ""):                     # píldora (13:00) y vídeo principal (19:00)
+            g = RAIZ / "guiones" / f"semana-{n:02d}" / f"dia-{d:02d}{b}.json"
+            if b and not g.exists():
+                continue
+            datos = json.loads(g.read_text(encoding="utf-8")) if g.exists() else {}
+            for red in REDES:
+                filas.append({"dia": f"{d}{b}", "titulo": datos.get("titulo", ""), "serie": datos.get("serie", ""), "red": red})
     with rv.open("w", encoding="utf-8-sig", newline="") as f:
         w = csv.DictWriter(f, fieldnames=COL_VIDEO)
         w.writeheader()
@@ -128,6 +131,13 @@ def analizar(n: int):
         visto = f"{p['visto_m']:.0f} %" if p["visto_m"] is not None else "—"
         out.append(f"| {d} | {p['titulo']} | {p['vis']:,.0f} | {visto} | {p['eng']:.1f} % | {p['seg']:,.0f} | {p['seg_1000']:.1f} |".replace(",", "."))
 
+    pild = [p for d, p in por_video.items() if str(d).endswith("b")]
+    princ = [p for d, p in por_video.items() if not str(d).endswith("b")]
+    if pild and princ:
+        media = lambda xs, k: sum(x[k] for x in xs) / len(xs)
+        out += ["", "## Píldora (13:00) vs vídeo principal (19:00)", "", "| Tipo | Vídeos | Media de visualizaciones | Seg. cada 1.000 vis. |", "|---|---|---|---|",
+                f"| Píldora | {len(pild)} | {media(pild, 'vis'):,.0f} | {media(pild, 'seg_1000'):.1f} |".replace(",", "."),
+                f"| Principal | {len(princ)} | {media(princ, 'vis'):,.0f} | {media(princ, 'seg_1000'):.1f} |".replace(",", ".")]
     out += ["", "## Por red", "", "| Red | Visualizaciones | Seguidores ganados |", "|---|---|---|"]
     for red, r in por_red.items():
         out.append(f"| {red} | {r['vis']:,.0f} | {r['seg']:,.0f} |".replace(",", "."))

@@ -1,0 +1,130 @@
+{
+  "dia": "1b",
+  "tipo": "pildora",
+  "hora": "13:00",
+  "dia_semana": "lunes",
+  "serie": "PÍLDORA · Números",
+  "formato": "Píldora",
+  "pilar": "Dinero",
+  "titulo": "La camiseta de 40 €",
+  "duracion": 14,
+  "ganchos": [
+    "Vendía esta camiseta a 40 euros. ¿Cuánto me costaba?"
+  ],
+  "gancho_elegido": 0,
+  "escenas": [
+    {
+      "t": [
+        0,
+        4
+      ],
+      "quien": "Pertx",
+      "voz": "Vendía esta camiseta a 40 euros. ¿Cuánto me costaba?",
+      "visual": "Camiseta grande con etiqueta 40 €",
+      "texto": [
+        "40 €"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "decidido",
+        "objeto": null
+      },
+      "auro": null,
+      "sonido": "whoosh",
+      "plantilla": "pertx",
+      "params": {
+        "fondo": "habitacion",
+        "posicion": "izquierda",
+        "objetos": [
+          {
+            "tipo": "camiseta",
+            "x": 262,
+            "y": 160,
+            "etiqueta": "40 €",
+            "anim": "mano",
+            "en": 0.1
+          }
+        ]
+      }
+    },
+    {
+      "t": [
+        4,
+        9
+      ],
+      "quien": "Pertx",
+      "voz": "Quince euros. Me quedaban veinticinco por camiseta.",
+      "visual": "Contadores: PRECIO 40 € · COSTE 15 € · TE QUEDA 25 €",
+      "texto": [
+        "25 €"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "decidido",
+        "objeto": null
+      },
+      "auro": null,
+      "sonido": "pop",
+      "plantilla": "contadores",
+      "params": {
+        "fondo": "habitacion",
+        "items": [
+          {
+            "etiqueta": "PRECIO",
+            "valor": "40 €",
+            "nota": "diseño propio"
+          },
+          {
+            "etiqueta": "COSTE",
+            "valor": "15 €",
+            "nota": "hacerla"
+          },
+          {
+            "etiqueta": "ME QUEDA",
+            "valor": "25 €",
+            "nota": "62 % de margen"
+          }
+        ]
+      }
+    },
+    {
+      "t": [
+        9,
+        14
+      ],
+      "quien": "Pertx",
+      "voz": "Antes de vender nada, haz esta cuenta. Precio menos coste.",
+      "visual": "Frases grandes",
+      "texto": [
+        "HAZ LA CUENTA"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "decidido",
+        "objeto": null
+      },
+      "auro": null,
+      "sonido": null,
+      "plantilla": "texto",
+      "params": {
+        "fondo": "escenario",
+        "palabras": [
+          "PRECIO",
+          "− COSTE",
+          "= LO QUE TE QUEDA"
+        ]
+      }
+    }
+  ],
+  "descripcion": "Camiseta de fútbol (diseño propio) a 40 €. Me costaba 15 €. 25 € de margen, un 62 %. Haz siempre esta cuenta.",
+  "hashtags": [
+    "#marcaderopa",
+    "#emprenderjoven",
+    "#margen",
+    "#pertx"
+  ],
+  "cta": "Haz la cuenta con tu producto",
+  "necesita_de_ti": [],
+  "etiqueta_ia": true,
+  "estado": "borrador"
+}

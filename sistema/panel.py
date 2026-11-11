@@ -47,24 +47,32 @@ def datos_semana(sem: int):
     cfg = json.loads((RAIZ / "sistema" / "config.json").read_text(encoding="utf-8")) if (RAIZ / "sistema" / "config.json").exists() else {}
     inicio = dt.date.fromisoformat(cfg["fecha_inicio"]) if cfg.get("fecha_inicio") else None
     dias, ficheros = [], {}
-    for ruta in sorted((RAIZ / "guiones" / f"semana-{sem:02d}").glob("dia-*.json")):
+    hora_a = cfg.get("hora_publicar", "19:00")
+    rutas = sorted((RAIZ / "guiones" / f"semana-{sem:02d}").glob("dia-*.json"),
+                   key=lambda r: (int(re.sub(r"\D", "", r.stem)), 0 if r.stem.endswith("b") else 1))
+    for ruta in rutas:
         g = json.loads(ruta.read_text(encoding="utf-8"))
-        n = g["dia"]
+        ide = ruta.stem.split("-")[1]           # "01" (vídeo A) o "01b" (píldora)
+        n = int(re.sub(r"\D", "", ide))
+        pildora = g.get("tipo") == "pildora"
         pend = sorted({m for t in textos(g["escenas"]) for m in PEND.findall(t)})
-        mp4 = salida / f"dia-{n:02d}.mp4"
+        mp4 = salida / f"dia-{ide}.mp4"
         png = salida / f"historia-dia-{n:02d}.png"
         listo = mp4.exists() and not pend
         if listo:
-            ficheros[f"videos/dia-{n:02d}.mp4"] = str(mp4)
-        if png.exists():
+            ficheros[f"videos/dia-{ide}.mp4"] = str(mp4)
+        historia = png.exists() and not pildora
+        if historia:
             ficheros[f"historias/historia-dia-{n:02d}.png"] = str(png)
-        pregunta, opciones = g.get("encuesta") or ENCUESTAS.get(n, ("", []))
+        pregunta, opciones = ("", []) if pildora else (g.get("encuesta") or ENCUESTAS.get(n, ("", [])))
         fecha = (inicio + dt.timedelta(days=n - 1)).strftime("%d/%m") if inicio else ""
         dias.append({
-            "n": n, "dia": g.get("dia_semana", DIAS[(n - 1) % 7]), "fecha": fecha, "serie": g["serie"], "titulo": g["titulo"],
+            "n": n, "id": ide, "hora": g.get("hora", cfg.get("hora_pildora", "13:00")) if pildora else hora_a,
+            "tipo": "Píldora" if pildora else "Vídeo principal",
+            "dia": g.get("dia_semana", DIAS[(n - 1) % 7]), "fecha": fecha, "serie": g["serie"], "titulo": g["titulo"],
             "texto": g["descripcion"] + "\n\n" + " ".join(g["hashtags"]),
-            "video": f"videos/dia-{n:02d}.mp4" if listo else None,
-            "historia": f"historias/historia-dia-{n:02d}.png" if png.exists() else None,
+            "video": f"videos/dia-{ide}.mp4" if listo else None,
+            "historia": f"historias/historia-dia-{n:02d}.png" if historia else None,
             "pregunta": pregunta, "opciones": opciones,
             "falta": (g.get("necesita_de_ti") or ([f"Datos: {', '.join(pend)}"] if pend else [])) if not listo else [],
         })
@@ -124,7 +132,7 @@ h2{font:700 21px/1.2 var(--display);margin:0;text-wrap:balance}
   <header>
     <span class="kicker">Pertx · semana __SEM__</span>
     <h1>Lo que publicas esta semana</h1>
-    <p class="sub">Cada día: descarga el vídeo y la historia, copia la descripción y publica entre las 18:00 y las 21:00 en TikTok y en Reels de Instagram.</p>
+    <p class="sub">Cada día hay <b>2 vídeos</b>: la <b>píldora a las 13:00</b> y el <b>vídeo principal a las 19:00</b> (con su historia). Descarga, copia la descripción y publica en TikTok y en Reels de Instagram.</p>
     <ul class="pasos">
       <li><b>1</b> Descarga el vídeo</li><li><b>2</b> Súbelo a TikTok y a Reels</li><li><b>3</b> Pega la descripción</li>
       <li><b>4</b> Activa la etiqueta de IA</li><li><b>5</b> Sube la historia con la encuesta o el enlace</li>
@@ -143,7 +151,7 @@ const esc = (t) => String(t).replace(/[&<>"]/g, (c) => ({"&":"&amp;","<":"&lt;",
 
 function tarjeta(d) {
   const listo = !!d.video;
-  const hecho = leer(clave(d.n));
+  const hecho = leer(clave(d.id));
   const el = document.createElement("article");
   el.className = "dia" + (hecho ? " hecho" : "");
   el.innerHTML = `
@@ -152,18 +160,18 @@ function tarjeta(d) {
       ${d.historia ? `<img class="historia" alt="Historia del día ${d.n}: ${esc(d.titulo)}" src="${esc(d.historia)}">` : ""}
     </div>
     <div class="info">
-      <div class="cab"><span class="num">Día ${d.n} · ${esc(d.dia)}${d.fecha ? " · " + d.fecha : ""}</span><span class="serie">${esc(d.serie)}</span></div>
+      <div class="cab"><span class="num">Día ${d.n} · ${esc(d.dia)}${d.fecha ? " · " + d.fecha : ""} · <b>${esc(d.hora)}</b> · ${esc(d.tipo)}</span><span class="serie">${esc(d.serie)}</span></div>
       <h2>${esc(d.titulo)}</h2>
       <span class="estado ${listo ? "ok" : "falta"}">${listo ? "Listo para publicar" : "Falta algo"}</span>
       ${d.falta.length ? `<ul class="falta">${d.falta.map((f) => `<li>${esc(f)}</li>`).join("")}</ul>` : ""}
-      <pre class="texto" id="texto-${d.n}">${esc(d.texto)}</pre>
-      <div class="encuesta"><b>Encuesta para la historia:</b> ${esc(d.pregunta)}<br>${d.opciones.map((o) => `<span>${esc(o)}</span>`).join("")}</div>
+      <pre class="texto" id="texto-${d.id}">${esc(d.texto)}</pre>
+      ${d.pregunta ? `<div class="encuesta"><b>Encuesta para la historia:</b> ${esc(d.pregunta)}<br>${d.opciones.map((o) => `<span>${esc(o)}</span>`).join("")}</div>` : ""}
       <div class="botones">
         ${listo ? `<a class="btn" href="${abs(d.video)}" target="_blank" rel="noopener">Descargar vídeo</a>` : ""}
         ${d.historia ? `<a class="btn sec" href="${abs(d.historia)}" target="_blank" rel="noopener">Descargar historia</a>` : ""}
-        <button class="btn sec" type="button" data-copiar="${d.n}">Copiar descripción</button>
+        <button class="btn sec" type="button" data-copiar="${d.id}">Copiar descripción</button>
       </div>
-      <label class="publicado"><input type="checkbox" id="pub-${d.n}" ${hecho ? "checked" : ""}> Publicado</label>
+      <label class="publicado"><input type="checkbox" id="pub-${d.id}" ${hecho ? "checked" : ""}> Publicado</label>
     </div>`;
   el.querySelector("[data-copiar]").addEventListener("click", async (ev) => {
     const b = ev.currentTarget, pre = el.querySelector(".texto");
@@ -171,7 +179,7 @@ function tarjeta(d) {
     catch { const r = document.createRange(); r.selectNodeContents(pre); const s = getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = "Seleccionado: cópialo"; }
     setTimeout(() => (b.textContent = "Copiar descripción"), 2200);
   });
-  el.querySelector("input").addEventListener("change", (ev) => { guardar(clave(d.n), ev.target.checked); el.classList.toggle("hecho", ev.target.checked); });
+  el.querySelector("input").addEventListener("change", (ev) => { guardar(clave(d.id), ev.target.checked); el.classList.toggle("hecho", ev.target.checked); });
   return el;
 }
 const cont = document.getElementById("dias");

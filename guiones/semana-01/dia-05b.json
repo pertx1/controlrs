@@ -1,0 +1,138 @@
+{
+  "dia": "5b",
+  "tipo": "pildora",
+  "hora": "13:00",
+  "dia_semana": "viernes",
+  "serie": "PÍLDORA · Errores",
+  "formato": "Píldora",
+  "pilar": "Emprender",
+  "titulo": "El error de los 500 €",
+  "duracion": 15,
+  "ganchos": [
+    "Firmar sin comparar me costó 500 euros."
+  ],
+  "gancho_elegido": 0,
+  "escenas": [
+    {
+      "t": [
+        0,
+        4
+      ],
+      "quien": "Pertx",
+      "voz": "Firmar sin comparar me costó 500 euros.",
+      "visual": "Papel de contrato y −500 €",
+      "texto": [
+        "−500 €"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "sorprendido",
+        "objeto": null
+      },
+      "auro": null,
+      "sonido": "error",
+      "plantilla": "pertx",
+      "params": {
+        "fondo": "habitacion",
+        "posicion": "izquierda",
+        "objetos": [
+          {
+            "tipo": "papel",
+            "x": 262,
+            "y": 150,
+            "etiqueta": "CONTRATO",
+            "anim": "mano",
+            "en": 0.1
+          },
+          {
+            "tipo": "error",
+            "x": 300,
+            "y": 260,
+            "etiqueta": "−500 €",
+            "anim": "arriba",
+            "en": 0.55,
+            "k": 0.8
+          }
+        ]
+      }
+    },
+    {
+      "t": [
+        4,
+        9.5
+      ],
+      "quien": "Pertx",
+      "voz": "Un contrato de envíos que me comía el margen en cada pedido.",
+      "visual": "Cajas de envío saliendo",
+      "texto": [
+        "ENVÍOS"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "pensativo",
+        "objeto": null
+      },
+      "auro": null,
+      "sonido": "pop",
+      "plantilla": "pertx",
+      "params": {
+        "fondo": "habitacion",
+        "posicion": "izquierda",
+        "objetos": [
+          {
+            "tipo": "caja",
+            "x": 262,
+            "y": 150,
+            "anim": "derecha",
+            "en": 0.1
+          },
+          {
+            "tipo": "monedas",
+            "x": 300,
+            "y": 260,
+            "anim": "abajo",
+            "en": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "t": [
+        9.5,
+        15
+      ],
+      "quien": "Pertx",
+      "voz": "Ahora hago las etiquetas desde Shopify. Compara siempre antes de firmar.",
+      "visual": "Check con SHOPIFY + frase",
+      "texto": [
+        "COMPARA"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "decidido",
+        "objeto": null
+      },
+      "auro": null,
+      "sonido": null,
+      "plantilla": "texto",
+      "params": {
+        "fondo": "escenario",
+        "palabras": [
+          "COMPARA",
+          "ANTES DE FIRMAR."
+        ]
+      }
+    }
+  ],
+  "descripcion": "Firmé un contrato de envíos sin comparar y perdí 500 € de margen. Ahora hago las etiquetas desde Shopify. Compara antes de firmar.",
+  "hashtags": [
+    "#marcaderopa",
+    "#emprenderjoven",
+    "#envios",
+    "#pertx"
+  ],
+  "cta": "Compara antes de firmar",
+  "necesita_de_ti": [],
+  "etiqueta_ia": true,
+  "estado": "borrador"
+}

@@ -83,3 +83,9 @@ El dinero se pinta como **monedas y €**, nunca como fajos de billetes (con pas
 En todas las plantillas salen solos los **subtítulos** (sacados de `voz`), la **palabra clave** de `texto` arriba, y Pertx o Auro en pequeño si la escena los tiene.
 
 **Reglas que comprueba `revisar`:** 3 ganchos; el gancho acaba antes de 4,5 s; escenas de 7 s como máximo; máximo 3 palabras por segundo; duración de 20 a 60 s; 3–6 hashtags; descripción; etiqueta de IA; y **las líneas rojas** de `DIRECCION.md` (marca de ropa por su nombre, ciudad o región, edad exacta, política, religión, cripto, "dinero rápido"…).
+
+## Vídeo B: la píldora (`dia-NNb.json`)
+
+Cada día hay **2 vídeos**: la **píldora a las 13:00** y el **principal a las 19:00**.
+La píldora usa el mismo formato con `"dia": "1b"`, `"tipo": "pildora"` y `"hora": "13:00"`. Lleva **1 gancho**, unas **3 escenas** y dura **de 10 a 20 s**.
+Se monta con `npm run video -- 1 1b --voz`. Las voces se guardan como `video/voz/semana-01/dia-01b-KK.mp3`.

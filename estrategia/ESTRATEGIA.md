@@ -33,7 +33,7 @@ Basada en `DIRECCION.md` (aprobada). **De momento solo TikTok e Instagram**: You
 
 ## 3. Series recurrentes (ritmo semanal)
 
-**1 vídeo al día.** Cada día de la semana tiene su serie, así no hay que pensar qué toca.
+**2 vídeos al día.** A las **13:00, una píldora** (10–20 s, una idea y un número) y a las **19:00, el vídeo principal** de la serie del día, con su historia. Cada día de la semana tiene su serie, así no hay que pensar qué toca. Por qué: cuanto más volumen, más fácil que algo funcione (lección de tu marca de ropa) y lo que funciona en 2026 (ver `referencias/COMPETENCIA.md`).
 
 | Día | Serie | Formato base | Pilar | Idea |
 |---|---|---|---|---|
@@ -134,6 +134,6 @@ Basada en `DIRECCION.md` (aprobada). **De momento solo TikTok e Instagram**: You
 
 - **Mismo vídeo** en TikTok y en Reels de Instagram, **sin marcas de agua** de otras apps (se exporta limpio desde nuestro motor). YouTube Shorts, cuando decidas abrirlo.
 - **Etiqueta de IA** activada siempre.
-- **Hora:** 18:00–21:00 al principio.
+- **Hora:** píldora a las 13:00 y principal a las 19:00 (ajustar con las métricas).
 - **Primera hora:** contesta a todos los comentarios.
 - **Nunca** borres un vídeo que va mal: lo archivamos y aprendemos.

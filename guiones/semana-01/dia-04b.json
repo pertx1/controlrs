@@ -1,0 +1,119 @@
+{
+  "dia": "4b",
+  "tipo": "pildora",
+  "hora": "13:00",
+  "dia_semana": "jueves",
+  "serie": "PÍLDORA · Sin excusas",
+  "formato": "Píldora",
+  "pilar": "Mentalidad",
+  "titulo": "Nadie te da permiso",
+  "duracion": 13.5,
+  "ganchos": [
+    "Nadie te va a dar permiso para empezar."
+  ],
+  "gancho_elegido": 0,
+  "escenas": [
+    {
+      "t": [
+        0,
+        3.5
+      ],
+      "quien": "Pertx",
+      "voz": "Nadie te va a dar permiso para empezar.",
+      "visual": "Pertx camina decidido por la calle",
+      "texto": [
+        "SIN PERMISO"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "decidido",
+        "objeto": null
+      },
+      "auro": null,
+      "sonido": "whoosh",
+      "plantilla": "pertx",
+      "params": {
+        "fondo": "calle",
+        "mov": "camina"
+      }
+    },
+    {
+      "t": [
+        3.5,
+        9
+      ],
+      "quien": "Pertx",
+      "voz": "Yo empecé sin saber nada. Aprendí haciendo y equivocándome.",
+      "visual": "Bombilla y check",
+      "texto": [
+        "HACIENDO"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "normal",
+        "objeto": null
+      },
+      "auro": null,
+      "sonido": "pop",
+      "plantilla": "pertx",
+      "params": {
+        "fondo": "calle",
+        "posicion": "izquierda",
+        "objetos": [
+          {
+            "tipo": "bombilla",
+            "x": 262,
+            "y": 150,
+            "anim": "pop",
+            "en": 0.1
+          },
+          {
+            "tipo": "check",
+            "x": 300,
+            "y": 260,
+            "anim": "pop",
+            "en": 0.55
+          }
+        ]
+      }
+    },
+    {
+      "t": [
+        9,
+        13.5
+      ],
+      "quien": "Pertx",
+      "voz": "Empieza pequeño. Pero empieza hoy.",
+      "visual": "Frases grandes",
+      "texto": [
+        "HOY"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "decidido",
+        "objeto": null
+      },
+      "auro": null,
+      "sonido": null,
+      "plantilla": "texto",
+      "params": {
+        "fondo": "escenario",
+        "palabras": [
+          "EMPIEZA PEQUEÑO.",
+          "PERO HOY."
+        ]
+      }
+    }
+  ],
+  "descripcion": "Empecé mi marca de ropa con 30 € y sin saber nada. Nadie te da permiso: empieza pequeño, pero hoy.",
+  "hashtags": [
+    "#emprenderjoven",
+    "#mentalidad",
+    "#sinexcusas",
+    "#pertx"
+  ],
+  "cta": "¿Qué empiezas hoy?",
+  "necesita_de_ti": [],
+  "etiqueta_ia": true,
+  "estado": "borrador"
+}

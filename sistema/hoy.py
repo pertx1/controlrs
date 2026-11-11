@@ -48,9 +48,10 @@ def calendario() -> dict[int, dict]:
     return {int(f["dia"]): f for f in csv.DictReader(ruta.open(encoding="utf-8"))}
 
 
-def guion(n: int) -> dict | None:
+def guion(n: int, b: str = "") -> dict | None:
+    """b = "" para el vídeo principal (19:00) o "b" para la píldora (13:00)."""
     sem = (n - 1) // 7 + 1
-    ruta = RAIZ / "guiones" / f"semana-{sem:02d}" / f"dia-{n:02d}.json"
+    ruta = RAIZ / "guiones" / f"semana-{sem:02d}" / f"dia-{n:02d}{b}.json"
     return json.loads(ruta.read_text(encoding="utf-8")) if ruta.exists() else None
 
 
@@ -65,22 +66,22 @@ def textos(o):
             yield from textos(v)
 
 
-def estado_video(n: int) -> tuple[str, list[str], list[str]]:
+def estado_video(n: int, b: str = "") -> tuple[str, list[str], list[str]]:
     """(resumen, pasos que faltan, datos pendientes del usuario)"""
     sem = (n - 1) // 7 + 1
-    g = guion(n)
+    g = guion(n, b)
     if not g or not g.get("escenas"):
-        return "sin guion", [f"Escribir el guion: en Claude Code → /guiones-semana {sem}"], []
+        return "sin guion", [f"Escribir el guion{' de la píldora' if b else ''}: en Claude Code → /guiones-semana {sem}"], []
     pend = sorted({m for t in textos(g["escenas"]) for m in PEND.findall(t)})
-    voz = [RAIZ / "video" / "voz" / f"semana-{sem:02d}" / f"dia-{n:02d}-{k:02d}.mp3" for k in range(1, len(g["escenas"]) + 1)]
-    mp4 = RAIZ / "video" / "salida" / f"semana-{sem:02d}" / f"dia-{n:02d}.mp4"
+    voz = [RAIZ / "video" / "voz" / f"semana-{sem:02d}" / f"dia-{n:02d}{b}-{k:02d}.mp3" for k in range(1, len(g["escenas"]) + 1)]
+    mp4 = RAIZ / "video" / "salida" / f"semana-{sem:02d}" / f"dia-{n:02d}{b}.mp4"
     pasos = []
     if pend:
         pasos.append("Pasarme los datos que faltan (abajo)")
     if not all(v.exists() for v in voz):
-        pasos.append(f"Voz: npm run voz -- {sem} {n}")
+        pasos.append(f"Voz: npm run voz -- {sem} {n}{b}")
     if not mp4.exists():
-        pasos.append(f"Montar: npm run video -- {sem} {n} --voz")
+        pasos.append(f"Montar: npm run video -- {sem} {n}{b} --voz")
     resumen = "✅ listo para publicar" if not pasos else ("⏳ faltan datos" if pend else "🎬 falta producirlo")
     datos = g.get("necesita_de_ti") or ([f"Datos que faltan en el guion: {', '.join(pend)}"] if pend else [])
     return resumen, pasos, datos
@@ -141,16 +142,22 @@ def main():
     linea(f" Día {n} · semana {sem}" + (f" · {f.get('serie', '')}" if f else ""))
 
     # 1. Publicar hoy
-    linea("\n📤 PUBLICAR HOY " + f"(entre las 18:00 y las 21:00 · {' + '.join(c.get('redes', []))})")
-    if g:
-        res, pasos, _ = estado_video(n)
-        linea(f"  «{g['titulo']}» · {res}")
+    linea("\n📤 PUBLICAR HOY " + f"({' + '.join(c.get('redes', []))})")
+    hechos = 0
+    for b, hora, nombre in (("b", c.get("hora_pildora", "13:00"), "Píldora"), ("", c.get("hora_publicar", "19:00"), "Vídeo principal")):
+        gb = guion(n, b)
+        if not gb:
+            continue
+        hechos += 1
+        res, pasos, _ = estado_video(n, b)
+        linea(f"  {hora} · {nombre}: «{gb['titulo']}» · {res}")
         for p in pasos:
             linea(f"   → {p}")
         linea("  Descripción para copiar:")
-        linea("  " + g["descripcion"])
-        linea("  " + " ".join(g["hashtags"]))
-        linea("  ⚠️ Activa la etiqueta de IA al publicar.")
+        linea("  " + gb["descripcion"])
+        linea("  " + " ".join(gb["hashtags"]))
+    if hechos:
+        linea("  ⚠️ Activa la etiqueta de IA al publicar. La historia va con el vídeo de las 19:00.")
     elif f:
         linea(f"  «{f['titulo']}» · sin guion → en Claude Code: /guiones-semana {sem}")
     else:
@@ -165,6 +172,8 @@ def main():
         linea(f"  Día {d} · {titulo} · {res}")
         for p in pasos[:2]:
             linea(f"     → {p}")
+        res_b, pasos_b, _ = estado_video(d, "b")
+        linea(f"     + píldora · {res_b}" + (f" → {pasos_b[0]}" if pasos_b else ""))
         necesito += [f"Día {d}: {x}" for x in datos]
 
     # 3. Lo que necesito de ti esta semana

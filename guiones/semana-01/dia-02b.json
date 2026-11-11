@@ -1,0 +1,130 @@
+{
+  "dia": "2b",
+  "tipo": "pildora",
+  "hora": "13:00",
+  "dia_semana": "martes",
+  "serie": "PÍLDORA · Sin excusas",
+  "formato": "Píldora",
+  "pilar": "Mentalidad",
+  "titulo": "Si no lo apuntas, no existe",
+  "duracion": 14,
+  "ganchos": [
+    "Si no lo apuntas, no existe."
+  ],
+  "gancho_elegido": 0,
+  "escenas": [
+    {
+      "t": [
+        0,
+        3.5
+      ],
+      "quien": "Pertx",
+      "voz": "Si no lo apuntas, no existe.",
+      "visual": "Pertx con un papel en la mano",
+      "texto": [
+        "APÚNTALO"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "decidido",
+        "objeto": null
+      },
+      "auro": null,
+      "sonido": "whoosh",
+      "plantilla": "pertx",
+      "params": {
+        "fondo": "habitacion",
+        "posicion": "izquierda",
+        "objetos": [
+          {
+            "tipo": "papel",
+            "x": 262,
+            "y": 160,
+            "etiqueta": "VENTAS",
+            "anim": "mano",
+            "en": 0.1
+          }
+        ]
+      }
+    },
+    {
+      "t": [
+        3.5,
+        9.5
+      ],
+      "quien": "Pertx",
+      "voz": "Apunto cada venta y cada gasto. Así supe cuánto me quedaba de verdad.",
+      "visual": "Libro con monedas que caen",
+      "texto": [
+        "CADA EURO"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "pensativo",
+        "objeto": null
+      },
+      "auro": null,
+      "sonido": "pop",
+      "plantilla": "pertx",
+      "params": {
+        "fondo": "habitacion",
+        "posicion": "izquierda",
+        "objetos": [
+          {
+            "tipo": "libro",
+            "x": 262,
+            "y": 150,
+            "anim": "pop",
+            "en": 0.1
+          },
+          {
+            "tipo": "monedas",
+            "x": 300,
+            "y": 260,
+            "anim": "arriba",
+            "en": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "t": [
+        9.5,
+        14
+      ],
+      "quien": "Pertx",
+      "voz": "Una libreta o una hoja de cálculo. Pero hoy.",
+      "visual": "Frases grandes",
+      "texto": [
+        "HOY"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "decidido",
+        "objeto": null
+      },
+      "auro": null,
+      "sonido": null,
+      "plantilla": "texto",
+      "params": {
+        "fondo": "escenario",
+        "palabras": [
+          "UNA LIBRETA.",
+          "O UNA HOJA.",
+          "PERO HOY."
+        ]
+      }
+    }
+  ],
+  "descripcion": "Cada venta y cada gasto, apuntado. Así supe que de 5.000 € facturados me quedaron 2.700 €.",
+  "hashtags": [
+    "#emprenderjoven",
+    "#disciplina",
+    "#mentalidad",
+    "#pertx"
+  ],
+  "cta": "Empieza a apuntar hoy",
+  "necesita_de_ti": [],
+  "etiqueta_ia": true,
+  "estado": "borrador"
+}

@@ -6,7 +6,8 @@ Uso (desde la carpeta del proyecto; en Windows `npm run video -- 1 1` o `py vide
   python3 video/montar.py 1 1            # semana 1, día 1 → video/salida/semana-01/dia-01.mp4 (sin voz)
   python3 video/montar.py 1 1 --voz      # con las voces de video/voz/semana-01/ (créalas con video/voz.py)
   python3 video/montar.py 1 1 --html     # solo la previsualización .html (rápido)
-  python3 video/montar.py 1 todos        # todos los días de la semana
+  python3 video/montar.py 1 1b           # el vídeo B (píldora) del día 1 → dia-01b.mp4
+  python3 video/montar.py 1 todos        # todos los días de la semana (A y B)
 
 Cada escena del guion tiene una `plantilla` (ver guiones/ESQUEMA.md) que dice cómo se dibuja.
 Los subtítulos salen solos de la voz: palabras de unión pequeñas + palabra clave grande en oro.
@@ -275,12 +276,20 @@ def textos(obj):
             yield from textos(x)
 
 
+def ident(dia) -> str:
+    """1 → "01" (vídeo A) · "1b" → "01b" (vídeo B, la píldora de las 13:00)."""
+    m = re.fullmatch(r"(\d+)([a-z]?)", str(dia).strip().lower())
+    if not m:
+        sys.exit(f"Día no válido: {dia} (usa 1, 01, 1b…)")
+    return f"{int(m.group(1)):02d}{m.group(2)}"
+
+
 def ruta_guion(sem, dia):
-    return RAIZ / "guiones" / f"semana-{sem:02d}" / f"dia-{dia:02d}.json"
+    return RAIZ / "guiones" / f"semana-{sem:02d}" / f"dia-{ident(dia)}.json"
 
 
 def ruta_voz(sem, dia, k):
-    return RAIZ / "video" / "voz" / f"semana-{sem:02d}" / f"dia-{dia:02d}-{k:02d}.mp3"
+    return RAIZ / "video" / "voz" / f"semana-{sem:02d}" / f"dia-{ident(dia)}-{k:02d}.mp3"
 
 
 def tiempos(g, sem, dia, con_voz):
@@ -298,13 +307,13 @@ def tiempos(g, sem, dia, con_voz):
     return out
 
 
-def montar(sem: int, dia: int, con_voz=False, solo_html=False):
+def montar(sem: int, dia, con_voz=False, solo_html=False):
     g = json.loads(ruta_guion(sem, dia).read_text(encoding="utf-8"))
     pend = sorted({m for t in textos(g["escenas"]) for m in PENDIENTE.findall(t)})
     if pend:
         print(f"  ⏳ Día {dia}: aún tiene datos pendientes {', '.join(pend)}. Se monta como BORRADOR.")
     ts = tiempos(g, sem, dia, con_voz)
-    v = Video(f"dia-{dia:02d}", ts[-1][1])
+    v = Video(f"dia-{ident(dia)}", ts[-1][1])
     voces = []
     for (s, e, ruta), es in zip(ts, g["escenas"]):
         plant = es.get("plantilla", "pertx")
@@ -351,8 +360,8 @@ if __name__ == "__main__":
     if len(args) != 2:
         sys.exit(__doc__)
     sem = int(args[0])
-    dias = ([int(p.stem.split("-")[1]) for p in sorted((RAIZ / "guiones" / f"semana-{sem:02d}").glob("dia-*.json"))]
-            if args[1] == "todos" else [int(args[1])])
+    dias = ([p.stem.split("-")[1] for p in sorted((RAIZ / "guiones" / f"semana-{sem:02d}").glob("dia-*.json"))]
+            if args[1] == "todos" else [ident(args[1])])
     for d in dias:
         print(f"Semana {sem} · día {d}…")
         print("  Hecho:", montar(sem, d, con_voz="--voz" in sys.argv, solo_html="--html" in sys.argv))

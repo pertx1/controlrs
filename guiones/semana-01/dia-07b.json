@@ -1,0 +1,120 @@
+{
+  "dia": "7b",
+  "tipo": "pildora",
+  "hora": "13:00",
+  "dia_semana": "domingo",
+  "serie": "PÍLDORA · Diario",
+  "formato": "Píldora",
+  "pilar": "Mentalidad",
+  "titulo": "Semana uno hecha",
+  "duracion": 13,
+  "ganchos": [
+    "Siete días publicando. Semana uno hecha."
+  ],
+  "gancho_elegido": 0,
+  "escenas": [
+    {
+      "t": [
+        0,
+        3.5
+      ],
+      "quien": "Pertx",
+      "voz": "Siete días publicando. Semana uno hecha.",
+      "visual": "Calendario con check",
+      "texto": [
+        "SEMANA 1"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "feliz",
+        "objeto": null
+      },
+      "auro": null,
+      "sonido": "whoosh",
+      "plantilla": "pertx",
+      "params": {
+        "fondo": "habitacion",
+        "posicion": "izquierda",
+        "objetos": [
+          {
+            "tipo": "calendario",
+            "x": 262,
+            "y": 150,
+            "etiqueta": "7/7",
+            "anim": "mano",
+            "en": 0.1
+          },
+          {
+            "tipo": "check",
+            "x": 300,
+            "y": 260,
+            "anim": "pop",
+            "en": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "t": [
+        3.5,
+        8.5
+      ],
+      "quien": "Pertx",
+      "voz": "Lo difícil no es empezar. Es no parar.",
+      "visual": "Frases grandes",
+      "texto": [
+        "NO PARAR"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "decidido",
+        "objeto": null
+      },
+      "auro": null,
+      "sonido": null,
+      "plantilla": "texto",
+      "params": {
+        "fondo": "escenario",
+        "palabras": [
+          "EMPEZAR ES FÁCIL.",
+          "NO PARAR, NO."
+        ]
+      }
+    },
+    {
+      "t": [
+        8.5,
+        13
+      ],
+      "quien": "Pertx",
+      "voz": "Esta tarde, los números reales. Sin filtros.",
+      "visual": "Auro con holograma de números",
+      "texto": [
+        "NÚMEROS"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "decidido",
+        "objeto": null
+      },
+      "auro": "senalando",
+      "sonido": null,
+      "plantilla": "pertx",
+      "params": {
+        "fondo": "habitacion",
+        "mov": "salta"
+      }
+    }
+  ],
+  "descripcion": "Primera semana de Pertx: dos vídeos al día, sin saltarme ninguno. Esta tarde, los números reales de la semana.",
+  "hashtags": [
+    "#emprenderjoven",
+    "#constancia",
+    "#pertx",
+    "#reto"
+  ],
+  "cta": "Esta tarde, los números",
+  "necesita_de_ti": [],
+  "etiqueta_ia": true,
+  "estado": "borrador"
+}
