@@ -54,7 +54,7 @@ Vamos **fase por fase**. Al empezar cada fase te hago las preguntas que falten. 
 - [x] Voz de Auro (otra voz + filtro robótico en local)
 - [x] ~~Meter tus grabaciones de pantalla~~ → no hace falta: las pantallas se dibujan
 - [x] Plantillas de escena reutilizables para los 5 formatos
-- [x] Vida en las escenas: Pertx camina, habla, salta y cambia de pose; 21 objetos; 3 escenarios
+- [x] Vida en las escenas: Pertx camina, habla, salta y cambia de pose; 22 objetos; 3 escenarios
 - [x] Día 1 de la semana 1 montado **con voz** (`video/salida/semana-01/dia-01.mp4`)
 - [ ] Instalación y prueba en **tu portátil Windows** (`video/INSTALAR-WINDOWS.md`)
 - [x] Del guion al MP4 con un solo comando
