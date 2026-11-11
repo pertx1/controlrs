@@ -42,7 +42,7 @@ Cada vídeo es un archivo `.json`. La ficha para leer (`.md`) se genera sola con
 | `voz` | Lo que se dice. Máximo ~3 palabras por segundo de escena. |
 | `visual` | Qué se ve: animación, mockup, grabación de pantalla… |
 | `texto` | 1–2 palabras clave que salen grandes en oro (el resto de subtítulos salen solos de `voz`). |
-| `grabar` | Lo que tiene que grabar el usuario para esa escena, o `null`. |
+| `grabar` | Normalmente `null`: las pantallas son animadas. Solo si hace falta, una captura de un proyecto real. |
 | `pertx` | `ojos`: `normal`, `feliz`, `pensativo`, `sorprendido` o `decidido`. `objeto`: `null` (por defecto), `movil`, `portatil`, `senalar` o `celebrar`. `null` si Pertx no sale. |
 | `auro` | `feliz`, `pensativo`, `sorprendido`, `senalando`, `celebrando` o `null`. |
 | `sonido` | `whoosh`, `ding`, `pop`, `error` o `null`. |

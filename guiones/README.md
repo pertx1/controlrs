@@ -14,6 +14,7 @@ Claude lee la dirección, la estrategia, la ficha del personaje y las referencia
 | `semana-01/dia-NN.md` | Ficha de cada vídeo: gancho, guion con tiempos, qué se ve, texto en pantalla, qué grabas, descripción y hashtags |
 | `semana-01/dia-NN.json` | El mismo guion en formato para el motor de vídeo (Fase 3) |
 | `ESQUEMA.md` | Explicación del formato `.json` |
+| `recursos/prompt-web.md` | El prompt que se regala a quien comenta WEB o PROMPT |
 | `fabrica.py` | `semana N` (prepara), `revisar N` (comprueba) y `fichas N` (crea las fichas) |
 
 **Estados:** ✅ listo para producir · ⏳ faltan datos tuyos (los huecos entre `[corchetes]`) · ❌ tiene errores.

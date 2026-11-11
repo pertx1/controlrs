@@ -45,7 +45,7 @@ Vamos **fase por fase**. Al empezar cada fase te hago las preguntas que falten. 
 ## Fase 2 · Fábrica de guiones
 - [x] Comando que genera los guiones de la semana (`/guiones-semana N` en Claude Code + `guiones/fabrica.py`)
 - [x] Usa la dirección, la estrategia, la ficha del personaje y la fórmula de las referencias, y revisa líneas rojas y ritmo
-- [x] Primeros 7 guiones (`guiones/semana-01/`): 3 listos, 4 esperando tus datos o grabaciones
+- [x] Primeros 7 guiones (`guiones/semana-01/`): 5 listos, 2 esperando tus datos (sin grabaciones)
 
 ## Fase 3 · Edición automática
 - [x] Prototipo del motor (SVG + Chromium + ffmpeg, 1080x1920)

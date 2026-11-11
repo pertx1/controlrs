@@ -2,14 +2,14 @@
   "dia": 2,
   "dia_semana": "martes",
   "serie": "CONSTRUYO CONTIGO",
-  "formato": "F2 tutorial",
+  "formato": "F2 tutorial (pantallas animadas)",
   "pilar": "Construir con IA",
-  "titulo": "Le pido una web a Claude Code en [X] minutos",
+  "titulo": "Así le pido una web a una IA (3 pasos)",
   "duracion": 36,
   "ganchos": [
-    "Esta web la ha hecho una IA. Yo solo hablé.",
-    "No he escrito ni una línea de código de esta web.",
-    "Así se hace una web en [X] minutos sin saber diseño."
+    "Pedirle una web a una IA tiene truco. Tres pasos.",
+    "Si la IA te hace webs feas, es por esto.",
+    "Tres pasos para que una IA te haga una web decente."
   ],
   "gancho_elegido": 0,
   "escenas": [
@@ -19,13 +19,16 @@
         3.5
       ],
       "quien": "Pertx",
-      "voz": "Esta web la ha hecho una IA. Yo solo hablé.",
-      "visual": "Grabación de la web terminada en el móvil, haciendo scroll",
+      "voz": "Pedirle una web a una IA tiene truco. Tres pasos.",
+      "visual": "Pertx grande; tres números dorados 1 · 2 · 3 aparecen",
       "texto": [
-        "IA"
+        "3 PASOS"
       ],
-      "grabar": "La web terminada en el móvil, haciendo scroll (5 s)",
-      "pertx": null,
+      "grabar": null,
+      "pertx": {
+        "ojos": "decidido",
+        "objeto": null
+      },
       "auro": null,
       "sonido": "whoosh"
     },
@@ -35,17 +38,17 @@
         8
       ],
       "quien": "Pertx",
-      "voz": "Se llama Claude Code y vive en la terminal. Así lo hice.",
-      "visual": "Grabación de la terminal abriendo Claude Code; Pertx pequeño abajo",
+      "voz": "Yo uso Claude Code, que trabaja dentro de la terminal.",
+      "visual": "Mockup animado de terminal con ✻ Claude Code; Pertx pequeño abajo",
       "texto": [
         "CLAUDE CODE"
       ],
-      "grabar": "Abrir la terminal y escribir claude",
+      "grabar": null,
       "pertx": {
         "ojos": "normal",
         "objeto": null
       },
-      "auro": null,
+      "auro": "feliz",
       "sonido": null
     },
     {
@@ -54,15 +57,15 @@
         14
       ],
       "quien": "Pertx",
-      "voz": "Paso uno: le explico el negocio en cinco frases. Qué vende y para quién.",
-      "visual": "Grabación escribiendo el prompt; las 5 frases se resaltan en oro",
+      "voz": "Paso uno: explícale el negocio en cinco frases. Qué vende y para quién.",
+      "visual": "Mockup: bocadillo dorado con 5 líneas que se escriben solas",
       "texto": [
         "5 FRASES"
       ],
-      "grabar": "Escribir el prompt con las 5 frases",
+      "grabar": null,
       "pertx": null,
       "auro": null,
-      "sonido": null
+      "sonido": "pop"
     },
     {
       "t": [
@@ -70,12 +73,12 @@
         20
       ],
       "quien": "Pertx",
-      "voz": "Paso dos: le pido un plan antes de tocar nada. Lo leo y lo corrijo.",
-      "visual": "Grabación del plan que propone Claude Code; Auro señala una línea",
+      "voz": "Paso dos: pídele un plan antes de tocar nada. Léelo y corrígelo.",
+      "visual": "Mockup: lista de plan con una línea tachada y corregida; Auro señala",
       "texto": [
         "PLAN"
       ],
-      "grabar": "El plan que te propone y cómo corriges algo",
+      "grabar": null,
       "pertx": null,
       "auro": "senalando",
       "sonido": null
@@ -86,12 +89,12 @@
         26
       ],
       "quien": "Pertx",
-      "voz": "Paso tres: crea los archivos. Lo abro en el móvil y le pido cambios, uno a uno.",
-      "visual": "Pantalla partida: archivos creándose y la web en el móvil cambiando",
+      "voz": "Paso tres: que cree los archivos. Ábrelo en el móvil y pide cambios, uno a uno.",
+      "visual": "Mockup: archivos con ✓ apareciendo y un móvil con la web cambiando de color",
       "texto": [
         "CAMBIOS"
       ],
-      "grabar": "Los archivos creándose y 2 cambios pedidos",
+      "grabar": null,
       "pertx": null,
       "auro": null,
       "sonido": "pop"
@@ -102,8 +105,8 @@
         31
       ],
       "quien": "Pertx",
-      "voz": "[X] minutos. Pero los cinco primeros son pensar, no programar.",
-      "visual": "Reloj dorado con [X] min; Pertx a cámara",
+      "voz": "El truco: los primeros minutos son pensar, no programar.",
+      "visual": "Pertx a cámara, cejas bajas",
       "texto": [
         "PENSAR"
       ],
@@ -121,7 +124,7 @@
         36
       ],
       "quien": "Pertx",
-      "voz": "Comenta WEB y te paso el prompt exacto que uso.",
+      "voz": "Comenta WEB y te paso mi prompt.",
       "visual": "Bocadillo de comentario con WEB en oro; Pertx señala",
       "texto": [
         "COMENTA WEB"
@@ -135,7 +138,7 @@
       "sonido": null
     }
   ],
-  "descripcion": "Le pido una web entera a Claude Code y te enseño los 3 pasos que sigo. Comenta WEB y te paso el prompt.",
+  "descripcion": "Los 3 pasos que sigo para que una IA me haga una web que se pueda enseñar a un cliente. Comenta WEB y te paso mi prompt.",
   "hashtags": [
     "#claudecode",
     "#crearweb",
@@ -144,10 +147,7 @@
     "#pertx"
   ],
   "cta": "Comenta WEB y te digo el prompt",
-  "necesita_de_ti": [
-    "Grabar la pantalla mientras haces una web sencilla con Claude Code (5–10 min) y cronometrar cuánto tardas de verdad",
-    "Tener preparado el prompt para enviarlo a quien comente WEB"
-  ],
+  "necesita_de_ti": [],
   "etiqueta_ia": true,
   "estado": "borrador"
 }

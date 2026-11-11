@@ -24,6 +24,7 @@ Para cada día:
 - Ritmo de voz: **máximo 2,5–3 palabras por segundo**. Duración total de **30 a 45 s**.
 - **Descripción**, **3–6 hashtags** y **CTA**.
 - **`necesita_de_ti`**: lo que el usuario tiene que grabar o contarte.
+- **No pidas grabaciones al usuario.** Por defecto las pantallas son mockups animados del motor (terminal, webs, móviles, chats). `grabar` va en `null`; como mucho pide una **captura** de un proyecto real suyo cuando haga falta.
 - **Nunca inventes datos.** Si falta un número o un hecho real del usuario, pon un hueco entre corchetes: `[EUROS SEMANA]`, `[ERROR 1]`…
 - Pon `"estado": "borrador"`.
 

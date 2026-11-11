@@ -1,31 +1,31 @@
 dia,dia_semana,serie,formato,pilar,titulo,gancho,cta,necesita_de_ti
-1,lunes,DE 0 € A MI PRIMER EURO · Ep. 0,Presentación,Emprender,Quién es Pertx,"Menor de edad. 5.000 € facturados con una marca de ropa. 0 € con apps. Esto va a cambiar.",Sígueme para ver el contador subir,Nada
-2,martes,CONSTRUYO CONTIGO,F2 tutorial,Construir con IA,Le pido una web a Claude Code en 10 minutos,"Esta web la ha hecho una IA mientras yo miraba.",Comenta WEB y te digo el prompt,Grabar la pantalla mientras haces una web sencilla (5–10 min)
-3,miércoles,NOVATO VS PERTX,F1,Construir con IA,Montar una tienda online,"Un novato y yo montamos la misma tienda online.",¿Tú cuál eres? Comenta,Nada
-4,jueves,DE 0 € A MI PRIMER EURO · Ep. 1,Diario + contador,Emprender,El plan para mi primer euro con apps,"Llevo 0 € con apps. Este es el plan para cambiarlo en 30 días.",Sígueme y comprueba si lo consigo,Nada
-5,viernes,CONTRARRELOJ,F4,Construir con IA,Una web para un negocio en 2 horas,"Tengo 2 horas para hacer la web de un negocio de verdad.",¿Qué hago en 2 horas la próxima vez?,Grabar la pantalla del reto entero (la web de muestra nº 1)
-6,sábado,LO QUE APRENDÍ,Historia con números,Emprender,3 errores con mi marca de ropa,"Facturé 5.000 € con una marca de ropa. Y cometí estos 3 errores.",¿Cuál te ha pasado a ti?,Decirme 3 errores reales de tu marca de ropa
+1,lunes,DE 0 € A MI PRIMER EURO · Ep. 0,Presentación,Emprender,Quién es Pertx,Menor de edad. 5.000 € facturados con una marca de ropa. 0 € con apps. Esto va a cambiar.,Sígueme para ver el contador subir,Nada
+2,martes,CONSTRUYO CONTIGO,F2 tutorial,Construir con IA,Así le pido una web a una IA (3 pasos),Pedirle una web a una IA tiene truco. Tres pasos.,Comenta WEB y te paso mi prompt,Nada
+3,miércoles,NOVATO VS PERTX,F1,Construir con IA,Montar una tienda online,Un novato y yo montamos la misma tienda online.,¿Tú cuál eres? Comenta,Nada
+4,jueves,DE 0 € A MI PRIMER EURO · Ep. 1,Diario + contador,Emprender,El plan para mi primer euro con apps,Llevo 0 € con apps. Este es el plan para cambiarlo en 30 días.,Sígueme y comprueba si lo consigo,Nada
+5,viernes,NOVATO VS PERTX · especial,F1,Construir con IA,El prompt del novato vs el mío,El novato y yo pedimos lo mismo a la IA.,Comenta PROMPT y te paso el mío,Nada
+6,sábado,LO QUE APRENDÍ,Historia con números,Emprender,3 errores con mi marca de ropa,Facturé 5.000 € con una marca de ropa. Y cometí estos 3 errores.,¿Cuál te ha pasado a ti?,Decirme 3 errores reales de tu marca de ropa
 7,domingo,AURO ¿CUÁNTO?,F3,Dinero,Semana 1: números reales,"Auro, ¿cuánto he ganado esta semana?",¿Qué número quieres ver la semana que viene?,Pasarme tus números de la semana (seguidores e ingresos)
-8,lunes,SIN EXCUSAS,Avatar + texto,Mentalidad,Soy desordenado: así me organizo,"Soy un desastre organizándome. Y aun así estudio y emprendo. Así.",Guarda el vídeo para mañana,Decirme cómo te organizas de verdad (3 trucos)
-9,martes,CONSTRUYO CONTIGO,F2 tutorial,Construir con IA,El paso que todos se saltan al crear una app,"Todos empiezan a programar. Error. Primero esto.",Comenta APP y te paso la plantilla,Nada
-10,miércoles,NOVATO VS PERTX,F1,Emprender,Conseguir el primer cliente,"Un novato y yo buscamos nuestro primer cliente.",¿Tienes un negocio sin web? Escríbeme,Nada
-11,jueves,DE 0 € A MI PRIMER EURO · Ep. 2,Diario + contador,Emprender,Le hago una web a un negocio sin que me lo pida,"Le he hecho una web a un negocio sin que me lo pida. Esto ha pasado.",Sígueme para ver si dice que sí,Las 3 webs de muestra hechas y la respuesta de los negocios
-12,viernes,ME PREGUNTASTEIS,F5,Comunidad,La pregunta más repetida de la semana,"Me habéis preguntado lo mismo [N] veces.",Pregúntame lo siguiente,Captura de los comentarios reales
-13,sábado,LO QUE APRENDÍ,Historia con números,Emprender,200 € revendiendo en Vinted,"Saqué 200 € de beneficio revendiendo en Vinted. Así lo hice.",¿Revendes algo? Cuéntame,Contarme cómo lo hiciste (qué vendías y cómo)
+8,lunes,SIN EXCUSAS,Avatar + texto,Mentalidad,Soy desordenado: así me organizo,Soy un desastre organizándome. Y aun así estudio y emprendo. Así.,Guarda el vídeo para mañana,Decirme cómo te organizas de verdad (3 trucos)
+9,martes,CONSTRUYO CONTIGO,F2 tutorial,Construir con IA,El paso que todos se saltan al crear una app,Todos empiezan a programar. Error. Primero esto.,Comenta APP y te paso la plantilla,Nada
+10,miércoles,NOVATO VS PERTX,F1,Emprender,Conseguir el primer cliente,Un novato y yo buscamos nuestro primer cliente.,¿Tienes un negocio sin web? Escríbeme,Nada
+11,jueves,DE 0 € A MI PRIMER EURO · Ep. 2,Diario + contador,Emprender,Le hago una web a un negocio sin que me lo pida,Le he hecho una web a un negocio sin que me lo pida. Esto ha pasado.,Sígueme para ver si dice que sí,Las 3 webs de muestra hechas y la respuesta de los negocios
+12,viernes,ME PREGUNTASTEIS,F5,Comunidad,La pregunta más repetida de la semana,Me habéis preguntado lo mismo [N] veces.,Pregúntame lo siguiente,Captura de los comentarios reales
+13,sábado,LO QUE APRENDÍ,Historia con números,Emprender,200 € revendiendo en Vinted,Saqué 200 € de beneficio revendiendo en Vinted. Así lo hice.,¿Revendes algo? Cuéntame,Contarme cómo lo hiciste (qué vendías y cómo)
 14,domingo,AURO ¿CUÁNTO?,F3,Dinero,Semana 2: números reales,"Semana 2. Auro, dime la verdad.",¿Lo voy a conseguir?,Tus números de la semana
 15,lunes,SIN EXCUSAS,Avatar + texto,Mentalidad,Nadie va a venir a salvarte,"Nadie va a venir a salvarte. Ni tus padres, ni tu profe, ni un curso.",Comparte con quien lo necesite,Nada
-16,martes,CONSTRUYO CONTIGO,F2 tutorial,Construir con IA,Le pido una tienda online a la IA: lo bueno y lo malo,"Le he pedido una tienda online entera a una IA. Esto ha salido.",Comenta TIENDA,Grabar la pantalla probando una tienda
+16,martes,CONSTRUYO CONTIGO,F2 tutorial,Construir con IA,Le pido una tienda online a la IA: lo bueno y lo malo,Le he pedido una tienda online entera a una IA. Esto ha salido.,Comenta TIENDA,Nada (pantallas animadas)
 17,miércoles,NOVATO VS PERTX,F1,Mentalidad,Usar la IA para copiar vs para aprender,"Un novato usa la IA para copiar. Yo, para aprender.",¿Cómo la usas tú?,Nada
-18,jueves,DE 0 € A MI PRIMER EURO · Ep. 3,Diario + contador,Construir con IA,Estoy construyendo una web para creadores,"Llevo meses llevando mis redes a mano. Así que estoy construyendo esto.",Apúntate a la lista de espera,Capturas de la nueva web para creadores (aunque esté a medias)
-19,viernes,CONTRARRELOJ,F4,Construir con IA,Una landing para mi producto en 1 hora,"1 hora para hacer la web de mi primer producto.",¿La compro o no la compro?,Grabar la pantalla del reto
-20,sábado,LO QUE APRENDÍ,Historia con números,Dinero,Facturar no es ganar,"Facturé 5.000 €. No gané 5.000 €. Te explico la diferencia.",Guarda esto antes de emprender,Decirme gastos aproximados de la marca de ropa (o lo dejamos en ejemplo)
-21,domingo,AURO ¿CUÁNTO?,F3,Dinero,Semana 3: números reales,"Semana 3. Esto ya se mueve… o no.",¿Qué cambio la semana que viene?,Tus números de la semana
-22,lunes,SIN EXCUSAS,Avatar + texto,Mentalidad,Mi regla de las 3 tareas al día,"Solo hago 3 cosas al día. Y avanzo más que nunca.",Prueba mañana y cuéntame,Nada
-23,martes,CONSTRUYO CONTIGO,F2 tutorial,Construir con IA,Cómo reviso lo que hace la IA,"La IA programa rápido. Y se equivoca rápido. Así la reviso.",Comenta REVISAR,Grabar la pantalla revisando un cambio
-24,miércoles,NOVATO VS PERTX,F1,Emprender,Lanzar un producto,"Un novato y yo lanzamos el mismo producto.",¿Qué producto lanzarías tú?,Nada
-25,jueves,DE 0 € A MI PRIMER EURO · Ep. 4,Diario + contador,Emprender,Mi primer cliente (o por qué aún no lo tengo),"Día 25. ¿Primer euro? Te enseño la verdad.",Sígueme para el final del mes,Cómo ha ido con los negocios (sí o no y qué te han dicho)
-26,viernes,ME PREGUNTASTEIS,F5,Comunidad,Responde la pregunta más repetida,"Esta pregunta me la habéis hecho [N] veces.",Pregúntame lo siguiente,Captura de los comentarios reales
-27,sábado,LO QUE APRENDÍ,Historia con números,Construir con IA,Construyo un marketplace: lo que llevo aprendido,"Estoy construyendo un marketplace para artesanos. Esto es lo que nadie te dice.",¿Lo usarías?,Capturas del marketplace
+18,jueves,DE 0 € A MI PRIMER EURO · Ep. 3,Diario + contador,Construir con IA,Estoy construyendo una web para creadores,Llevo meses llevando mis redes a mano. Así que estoy construyendo esto.,Apúntate a la lista de espera,Capturas de la nueva web para creadores (aunque esté a medias)
+19,viernes,CONTRARRELOJ,F4,Construir con IA,Una web para un negocio en 2 horas,Dos horas para hacerle la web a un negocio real.,¿Qué hago en 2 horas la próxima vez?,"Opcional: si ya tienes tu primera web de muestra, una captura del resultado (si no, lo hago animado con un negocio de ejemplo y se dice)"
+20,sábado,LO QUE APRENDÍ,Historia con números,Dinero,Facturar no es ganar,Facturé 5.000 €. No gané 5.000 €. Te explico la diferencia.,Guarda esto antes de emprender,Decirme gastos aproximados de la marca de ropa (o lo dejamos en ejemplo)
+21,domingo,AURO ¿CUÁNTO?,F3,Dinero,Semana 3: números reales,Semana 3. Esto ya se mueve… o no.,¿Qué cambio la semana que viene?,Tus números de la semana
+22,lunes,SIN EXCUSAS,Avatar + texto,Mentalidad,Mi regla de las 3 tareas al día,Solo hago 3 cosas al día. Y avanzo más que nunca.,Prueba mañana y cuéntame,Nada
+23,martes,CONSTRUYO CONTIGO,F2 tutorial,Construir con IA,Cómo reviso lo que hace la IA,La IA programa rápido. Y se equivoca rápido. Así la reviso.,Comenta REVISAR,Nada (pantallas animadas)
+24,miércoles,NOVATO VS PERTX,F1,Emprender,Lanzar un producto,Un novato y yo lanzamos el mismo producto.,¿Qué producto lanzarías tú?,Nada
+25,jueves,DE 0 € A MI PRIMER EURO · Ep. 4,Diario + contador,Emprender,Mi primer cliente (o por qué aún no lo tengo),Día 25. ¿Primer euro? Te enseño la verdad.,Sígueme para el final del mes,Cómo ha ido con los negocios (sí o no y qué te han dicho)
+26,viernes,ME PREGUNTASTEIS,F5,Comunidad,Responde la pregunta más repetida,Esta pregunta me la habéis hecho [N] veces.,Pregúntame lo siguiente,Captura de los comentarios reales
+27,sábado,LO QUE APRENDÍ,Historia con números,Construir con IA,Construyo un marketplace: lo que llevo aprendido,Estoy construyendo un marketplace para artesanos. Esto es lo que nadie te dice.,¿Lo usarías?,Capturas del marketplace
 28,domingo,AURO ¿CUÁNTO?,F3,Dinero,Semana 4: números reales,"Semana 4. Auro, sin piedad.",¿Le doy otro mes?,Tus números de la semana
-29,lunes,SIN EXCUSAS,Avatar + texto,Mentalidad,30 días publicando cada día,"30 días publicando cada día. Lo que nadie te cuenta.",Empieza tu reto hoy,Nada
-30,martes,DE 0 € A MI PRIMER EURO · Especial,F3 grande,Dinero,Mes 1 de Pertx: todos los números,"Mes 1 de Pertx. Todos los números. Sin filtros.",Sígueme para el mes 2,Todos tus números del mes
+29,lunes,SIN EXCUSAS,Avatar + texto,Mentalidad,30 días publicando cada día,30 días publicando cada día. Lo que nadie te cuenta.,Empieza tu reto hoy,Nada
+30,martes,DE 0 € A MI PRIMER EURO · Especial,F3 grande,Dinero,Mes 1 de Pertx: todos los números,Mes 1 de Pertx. Todos los números. Sin filtros.,Sígueme para el mes 2,Todos tus números del mes

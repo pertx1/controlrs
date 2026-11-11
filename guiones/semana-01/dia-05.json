@@ -1,15 +1,15 @@
 {
   "dia": 5,
   "dia_semana": "viernes",
-  "serie": "CONTRARRELOJ",
-  "formato": "F4",
+  "serie": "NOVATO VS PERTX · especial",
+  "formato": "F1",
   "pilar": "Construir con IA",
-  "titulo": "Una web para un negocio en 2 horas",
-  "duracion": 45,
+  "titulo": "El prompt del novato vs el mío",
+  "duracion": 36,
   "ganchos": [
-    "Dos horas para hacerle la web a un negocio real.",
-    "Dos horas. Un negocio real. Cero excusas.",
-    "¿Se puede hacer la web de un negocio en dos horas con IA?"
+    "El novato y yo pedimos lo mismo a la IA.",
+    "Mismo pedido, dos resultados. La diferencia es una frase.",
+    "Por qué la IA te hace webs genéricas."
   ],
   "gancho_elegido": 0,
   "escenas": [
@@ -19,15 +19,16 @@
         3.5
       ],
       "quien": "Pertx",
-      "voz": "Dos horas para hacerle la web a un negocio real.",
-      "visual": "Pertx con portátil; reloj dorado 2:00:00",
+      "voz": "El novato y yo pedimos lo mismo a la IA.",
+      "visual": "Pantalla partida: NOVATO (gris) / PERTX (oro); Auro arriba",
       "texto": [
-        "2 HORAS"
+        "NOVATO",
+        "PERTX"
       ],
       "grabar": null,
       "pertx": {
         "ojos": "decidido",
-        "objeto": "portatil"
+        "objeto": null
       },
       "auro": null,
       "sonido": "whoosh"
@@ -35,113 +36,17 @@
     {
       "t": [
         3.5,
-        5.5
-      ],
-      "quien": "Auro",
-      "voz": "Cronómetro en marcha.",
-      "visual": "Auro con holograma de cuenta atrás",
-      "texto": [
-        "YA"
-      ],
-      "grabar": null,
-      "pertx": null,
-      "auro": "senalando",
-      "sonido": "ding"
-    },
-    {
-      "t": [
-        5.5,
-        11
+        8.5
       ],
       "quien": "Pertx",
-      "voz": "Minuto cero. Le paso a Claude Code lo que hace el negocio y su horario.",
-      "visual": "Grabación de la terminal con el prompt; cronómetro en una esquina",
+      "voz": "Él escribe: hazme una web bonita. Y ya.",
+      "visual": "Lado novato: bocadillo gris con 'hazme una web bonita'",
       "texto": [
-        "MINUTO 0"
-      ],
-      "grabar": "Inicio del reto: el prompt con los datos del negocio (difumina nombre y dirección)",
-      "pertx": null,
-      "auro": null,
-      "sonido": null
-    },
-    {
-      "t": [
-        11,
-        17
-      ],
-      "quien": "Pertx",
-      "voz": "Minuto [MIN 1]. Ya hay web… y es fea. Le paso los colores del local.",
-      "visual": "Antes y después de la web; cronómetro",
-      "texto": [
-        "FEA"
-      ],
-      "grabar": "La primera versión y el cambio de colores",
-      "pertx": null,
-      "auro": null,
-      "sonido": null
-    },
-    {
-      "t": [
-        17,
-        23
-      ],
-      "quien": "Pertx",
-      "voz": "Minuto [MIN 2]. Fotos, mapa y un botón para llamar.",
-      "visual": "Grabación de la web en el móvil con el botón de llamar",
-      "texto": [
-        "BOTÓN"
-      ],
-      "grabar": "Añadir fotos, mapa y botón de llamar",
-      "pertx": null,
-      "auro": null,
-      "sonido": "pop"
-    },
-    {
-      "t": [
-        23,
-        29
-      ],
-      "quien": "Pertx",
-      "voz": "Hora y media. Algo se rompe en el móvil.",
-      "visual": "La web descolocada en el móvil; Auro sorprendido",
-      "texto": [
-        "ERROR"
-      ],
-      "grabar": "El fallo real en el móvil (si lo hay)",
-      "pertx": null,
-      "auro": "sorprendido",
-      "sonido": "error"
-    },
-    {
-      "t": [
-        29,
-        35
-      ],
-      "quien": "Pertx",
-      "voz": "Lo arreglo y la subo. Quedan [MIN RESTANTES] minutos.",
-      "visual": "Notificación de web publicada; cronómetro parado",
-      "texto": [
-        "[MIN RESTANTES] MIN"
-      ],
-      "grabar": "La web publicada y el cronómetro parado",
-      "pertx": null,
-      "auro": "celebrando",
-      "sonido": "ding"
-    },
-    {
-      "t": [
-        35,
-        40
-      ],
-      "quien": "Pertx",
-      "voz": "[RESULTADO DEL RETO]",
-      "visual": "Pertx a cámara",
-      "texto": [
-        "[RESULTADO]"
+        "BONITA"
       ],
       "grabar": null,
       "pertx": {
-        "ojos": "feliz",
+        "ojos": "normal",
         "objeto": null
       },
       "auro": null,
@@ -149,37 +54,110 @@
     },
     {
       "t": [
-        40,
-        45
+        8.5,
+        14
       ],
       "quien": "Pertx",
-      "voz": "¿Qué hago en dos horas la próxima vez? Te leo en comentarios.",
-      "visual": "Pertx señala; bocadillo de comentario",
+      "voz": "Yo escribo para quién es, qué vende y qué tiene que pasar al pulsar cada botón.",
+      "visual": "Lado Pertx: bocadillo dorado largo que se escribe solo",
       "texto": [
-        "¿PRÓXIMO RETO?"
+        "PARA QUIÉN"
       ],
       "grabar": null,
       "pertx": {
         "ojos": "normal",
+        "objeto": null
+      },
+      "auro": null,
+      "sonido": "pop"
+    },
+    {
+      "t": [
+        14,
+        20
+      ],
+      "quien": "Pertx",
+      "voz": "Su web: genérica, con textos de relleno. La mía: lista para enseñar al cliente.",
+      "visual": "Dos webs en móviles: gris con 'Lorem ipsum' / dorada con datos reales de ejemplo",
+      "texto": [
+        "LISTA"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "normal",
+        "objeto": null
+      },
+      "auro": "feliz",
+      "sonido": "ding"
+    },
+    {
+      "t": [
+        20,
+        26
+      ],
+      "quien": "Pertx",
+      "voz": "La IA no adivina. Hace exactamente lo que le pides, ni más ni menos.",
+      "visual": "Pertx pensativo; Auro con holograma de un espejo",
+      "texto": [
+        "NO ADIVINA"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "pensativo",
+        "objeto": null
+      },
+      "auro": "pensativo",
+      "sonido": null
+    },
+    {
+      "t": [
+        26,
+        31
+      ],
+      "quien": "Pertx",
+      "voz": "Si el resultado es malo, casi siempre el pedido era peor.",
+      "visual": "Pertx grande, cejas bajas",
+      "texto": [
+        "EL PEDIDO"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "decidido",
+        "objeto": null
+      },
+      "auro": null,
+      "sonido": null
+    },
+    {
+      "t": [
+        31,
+        36
+      ],
+      "quien": "Pertx",
+      "voz": "Comenta PROMPT y te paso el mío.",
+      "visual": "Bocadillo de comentario con PROMPT en oro; Pertx señala",
+      "texto": [
+        "COMENTA PROMPT"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "feliz",
         "objeto": "senalar"
       },
       "auro": null,
       "sonido": null
     }
   ],
-  "descripcion": "Reto: la web de un negocio real en 2 horas con IA. ¿Lo conseguí? [RESULTADO]",
+  "descripcion": "Mismo pedido, dos resultados. La IA hace lo que le pides, ni más ni menos. Comenta PROMPT y te paso el mío.",
   "hashtags": [
-    "#reto",
+    "#inteligenciaartificial",
+    "#prompts",
     "#claudecode",
     "#crearweb",
-    "#inteligenciaartificial",
     "#pertx"
   ],
-  "cta": "¿Qué hago en 2 horas la próxima vez?",
-  "necesita_de_ti": [
-    "Grabar la pantalla del reto entero haciendo la web de muestra nº 1 (difumina el nombre y la dirección del negocio si no te dan permiso)",
-    "Cronometrar los minutos reales de cada paso"
-  ],
+  "cta": "Comenta PROMPT y te paso el mío",
+  "necesita_de_ti": [],
   "etiqueta_ia": true,
   "estado": "borrador"
 }

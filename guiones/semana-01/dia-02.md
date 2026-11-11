@@ -1,34 +1,31 @@
-# Día 2 · martes · Le pido una web a Claude Code en [X] minutos
+# Día 2 · martes · Así le pido una web a una IA (3 pasos)
 
-**Serie:** CONSTRUYO CONTIGO · **Formato:** F2 tutorial · **Pilar:** Construir con IA · **Duración:** 36 s · **Estado:** ⏳ Faltan datos tuyos
+**Serie:** CONSTRUYO CONTIGO · **Formato:** F2 tutorial (pantallas animadas) · **Pilar:** Construir con IA · **Duración:** 36 s · **Estado:** ✅ Listo para producir
 
 ## Gancho elegido
-> Esta web la ha hecho una IA. Yo solo hablé.
+> Pedirle una web a una IA tiene truco. Tres pasos.
 
-Otros ganchos para probar: «No he escrito ni una línea de código de esta web.» · «Así se hace una web en [X] minutos sin saber diseño.»
+Otros ganchos para probar: «Si la IA te hace webs feas, es por esto.» · «Tres pasos para que una IA te haga una web decente.»
 
 ## Guion
 | Tiempo | Voz | Qué se ve | Texto en pantalla | Qué grabas tú |
 |---|---|---|---|---|
-| 0–3.5 s | **Pertx:** Esta web la ha hecho una IA. Yo solo hablé. | Grabación de la web terminada en el móvil, haciendo scroll | **IA** | La web terminada en el móvil, haciendo scroll (5 s) |
-| 3.5–8 s | **Pertx:** Se llama Claude Code y vive en la terminal. Así lo hice. | Grabación de la terminal abriendo Claude Code; Pertx pequeño abajo · Pertx: ojos normal | **CLAUDE CODE** | Abrir la terminal y escribir claude |
-| 8–14 s | **Pertx:** Paso uno: le explico el negocio en cinco frases. Qué vende y para quién. | Grabación escribiendo el prompt; las 5 frases se resaltan en oro | **5 FRASES** | Escribir el prompt con las 5 frases |
-| 14–20 s | **Pertx:** Paso dos: le pido un plan antes de tocar nada. Lo leo y lo corrijo. | Grabación del plan que propone Claude Code; Auro señala una línea · Auro: senalando | **PLAN** | El plan que te propone y cómo corriges algo |
-| 20–26 s | **Pertx:** Paso tres: crea los archivos. Lo abro en el móvil y le pido cambios, uno a uno. | Pantalla partida: archivos creándose y la web en el móvil cambiando | **CAMBIOS** | Los archivos creándose y 2 cambios pedidos |
-| 26–31 s | **Pertx:** [X] minutos. Pero los cinco primeros son pensar, no programar. | Reloj dorado con [X] min; Pertx a cámara · Pertx: ojos decidido | **PENSAR** | — |
-| 31–36 s | **Pertx:** Comenta WEB y te paso el prompt exacto que uso. | Bocadillo de comentario con WEB en oro; Pertx señala · Pertx: ojos feliz, senalar | **COMENTA WEB** | — |
+| 0–3.5 s | **Pertx:** Pedirle una web a una IA tiene truco. Tres pasos. | Pertx grande; tres números dorados 1 · 2 · 3 aparecen · Pertx: ojos decidido | **3 PASOS** | — |
+| 3.5–8 s | **Pertx:** Yo uso Claude Code, que trabaja dentro de la terminal. | Mockup animado de terminal con ✻ Claude Code; Pertx pequeño abajo · Pertx: ojos normal · Auro: feliz | **CLAUDE CODE** | — |
+| 8–14 s | **Pertx:** Paso uno: explícale el negocio en cinco frases. Qué vende y para quién. | Mockup: bocadillo dorado con 5 líneas que se escriben solas | **5 FRASES** | — |
+| 14–20 s | **Pertx:** Paso dos: pídele un plan antes de tocar nada. Léelo y corrígelo. | Mockup: lista de plan con una línea tachada y corregida; Auro señala · Auro: senalando | **PLAN** | — |
+| 20–26 s | **Pertx:** Paso tres: que cree los archivos. Ábrelo en el móvil y pide cambios, uno a uno. | Mockup: archivos con ✓ apareciendo y un móvil con la web cambiando de color | **CAMBIOS** | — |
+| 26–31 s | **Pertx:** El truco: los primeros minutos son pensar, no programar. | Pertx a cámara, cejas bajas · Pertx: ojos decidido | **PENSAR** | — |
+| 31–36 s | **Pertx:** Comenta WEB y te paso mi prompt. | Bocadillo de comentario con WEB en oro; Pertx señala · Pertx: ojos feliz, senalar | **COMENTA WEB** | — |
 
 ## Para publicar
 **Descripción:**
 ```
-Le pido una web entera a Claude Code y te enseño los 3 pasos que sigo. Comenta WEB y te paso el prompt.
+Los 3 pasos que sigo para que una IA me haga una web que se pueda enseñar a un cliente. Comenta WEB y te paso mi prompt.
 
 #claudecode #crearweb #inteligenciaartificial #programacion #pertx
 ```
 **CTA:** Comenta WEB y te digo el prompt · **Etiqueta de IA:** sí, actívala
 
 ## Lo que necesito de ti
-- [ ] Grabar la pantalla mientras haces una web sencilla con Claude Code (5–10 min) y cronometrar cuánto tardas de verdad
-- [ ] Tener preparado el prompt para enviarlo a quien comente WEB
-
-**Datos que faltan (cámbialos por tus datos reales):** `[X]`
+- Nada: lo hago yo todo.
