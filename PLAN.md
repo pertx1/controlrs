@@ -67,8 +67,8 @@ Vamos **fase por fase**. Al empezar cada fase te hago las preguntas que falten. 
 - [x] 5 emails de bienvenida (`embudo/EMAILS.md`)
 
 ## Fase 5 · Sistema diario
-- [ ] `npm run hoy`: qué grabar, qué publicar y qué tarea hacer hoy
-- [ ] Registro semanal de métricas que yo analizo y con el que ajusto el calendario
+- [x] `npm run hoy`: qué publicar, qué preparar, qué necesito de ti y las tareas del día (`sistema/`)
+- [x] Métricas semanales: `npm run metricas -- crear N` + análisis automático + `/metricas-semana N` en Claude Code
 
 ---
 

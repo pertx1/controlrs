@@ -10,7 +10,7 @@ export const SITIO = {
 export const DATOS = [
   { cifra: "5.000 €", texto: "facturados con mi marca de ropa" },
   { cifra: "4.000+", texto: "seguidores sin anuncios" },
-  { cifra: "0 €", texto: "con apps (de momento)" },
+  { cifra: "50–60 %", texto: "de margen por prenda" },
 ];
 
 export const GUMROAD_URL = process.env.NEXT_PUBLIC_GUMROAD_URL || "";

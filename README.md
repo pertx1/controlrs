@@ -33,6 +33,17 @@ Marca personal faceless en castellano (TikTok, Reels, Shorts). Se construye por 
 | Fase 3 · Edición automática | Hecha · falta instalarla en tu Windows | `video/` · `npm run video -- 1 1` |
 | Fase 4 · Embudo de ventas | Hecho · falta publicarlo (`embudo/CONFIGURAR.md`) y tus datos de la guía | `web/`, `embudo/`, `producto/` |
 | 0. Crear y calentar cuentas (TikTok + Instagram) | Te toca a ti, con tu padre o tu madre | `CUENTAS.md` |
-| 4. Desarrollo (estrategia, guiones, edición, web, sistema diario) | En marcha · siguiente: Fase 5 Sistema diario | **`PLAN.md`** |
+| Fase 5 · Sistema diario | Hecho | `sistema/` · `npm run hoy` · `npm run metricas` |
+| 4. Desarrollo (estrategia, guiones, edición, web, sistema diario) | **Todas las fases construidas** · falta lo tuyo (cuentas, publicar la web, datos) | **`PLAN.md`** |
 
 **Empieza por aquí:** `DIRECCION.md` (hacia dónde va Pertx), `PLAN.md` (qué falta) y `CUENTAS.md` (lo que tienes que hacer tú).
+
+## Tu día a día (cuando ya esté todo instalado)
+| Cuándo | Qué haces |
+|---|---|
+| Cada día | `npm run hoy` → qué publicar, qué preparar y tus tareas |
+| Viernes | En Claude Code: `/guiones-semana N` (guiones de la semana siguiente) |
+| Sábado | `npm run voz -- N todos` y `npm run video -- N todos --voz` |
+| Domingo | `npm run metricas -- crear N` → rellenar → `/metricas-semana N` |
+
+Primera vez en tu portátil Windows: `video/INSTALAR-WINDOWS.md`. Publicar la web: `embudo/CONFIGURAR.md`.
