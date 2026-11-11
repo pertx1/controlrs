@@ -60,10 +60,11 @@ Vamos **fase por fase**. Al empezar cada fase te hago las preguntas que falten. 
 - [x] Del guion al MP4 con un solo comando
 
 ## Fase 4 · Embudo de ventas
-- [ ] Web link-in-bio en **Next.js en Vercel**
-- [ ] Primer producto digital (el que elijas en la Fase 1)
-- [ ] Captación de emails (con una opción gratis)
-- [ ] 5 emails de bienvenida
+- [x] Web link-in-bio en **Next.js** (`web/`): portada, regalo, calculadora, checklist, guía, servicios, lista de espera, aviso legal y privacidad
+- [ ] Publicarla en el Vercel de tus padres (`embudo/CONFIGURAR.md`)
+- [x] Primer producto: índice + **borrador** de "De 0 a 5.000 €" (`producto/marca-de-ropa/`) → faltan tus datos `[PENDIENTE]`
+- [x] Captación de emails: regalo gratis (calculadora de márgenes) → MailerLite
+- [x] 5 emails de bienvenida (`embudo/EMAILS.md`)
 
 ## Fase 5 · Sistema diario
 - [ ] `npm run hoy`: qué grabar, qué publicar y qué tarea hacer hoy
