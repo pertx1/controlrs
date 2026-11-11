@@ -24,9 +24,11 @@ Soy Pertx. Estudiante, menor de edad y bastante desordenado. Con mi marca de rop
 
 ## 1. La idea y a quién le vendía
 
-`[PENDIENTE: a quién le vendías (edad, estilo, dónde estaban), por qué elegiste ropa y cómo nació el estilo de la marca]`
+Le vendía a **un público muy concreto**, y yo mismo era parte de ese público.
 
-**Lo que aprendí:** antes de diseñar nada, ten claro **una persona concreta** a la que le quieres vender. Si le vendes a "todo el mundo", no le vendes a nadie.
+**Lo que aprendí:** cuanto más nicho es la marca, más fácil es llegar a tu público. Y si tú estás dentro de ese público, sabes qué le gusta, cómo habla y dónde está, sin tener que adivinarlo. Si le vendes a "todo el mundo", no le vendes a nadie.
+
+`[PENDIENTE (opcional): cómo describirías a ese público sin dar pistas de la marca: edad, estilo, qué le gusta]`
 
 ---
 
@@ -37,7 +39,9 @@ Vendía tres cosas:
 2. **Sudaderas** (diseños propios).
 3. **Camisetas de fútbol** con diseños propios de la marca.
 
-`[PENDIENTE: cuál se vendió más, a qué precio vendías cada una y por qué crees que funcionó]`
+**La estrella fueron las camisetas de fútbol:** las vendía a **40 €** y me costaba **15 €** hacerlas. Eso son **25 € por camiseta, un 62 % de margen**.
+
+`[PENDIENTE (opcional): precios de las camisetas y las sudaderas]`
 
 > ⚠️ **Muy importante si haces camisetas de fútbol:** solo con **diseños propios**. Poner escudos, nombres o marcas de clubes sin licencia es vender falsificaciones: es ilegal y te pueden cerrar la tienda o algo peor.
 
@@ -62,7 +66,9 @@ Así fue de verdad:
 
 **Por qué la plancha fue la mejor inversión:** dejé de pagar el estampado a la imprenta. Cada prenda me costaba menos y el margen subía. Y podía hacer pedidos el mismo día.
 
-`[PENDIENTE: dónde comprabas las prendas lisas y los transfers DTF (tipo de proveedor, no hace falta el nombre), cuánto tardabas por prenda]`
+Hoy **sigo pidiendo los transfers DTF** a un proveedor y los plancho yo.
+
+`[PENDIENTE (opcional): dónde compras las prendas lisas y cuánto tardas por prenda]`
 
 ---
 
@@ -73,7 +79,9 @@ Así fue de verdad:
 
 **La regla que me funcionó:** no compres stock hasta que los números te digan qué se vende.
 
-`[PENDIENTE: cuántas pediste a China, cuánto tardaron, qué tal la calidad, problemas con aduanas o envíos]`
+**Resultado:** el stock de China se **agotó al segundo día** de publicarlo. La publicación que lo anunció fue la que mejor funcionó de toda la marca.
+
+`[PENDIENTE (opcional): cuántas pediste y cuánto tardaron en llegar]`
 
 ---
 
@@ -88,7 +96,7 @@ Margen (%)      = Lo que te queda ÷ Precio de venta × 100
 
 **Ejemplo** (números de ejemplo, no los míos): prenda 6 € + estampado 3 € + envío 4,50 € + packaging 0,80 € = 14,30 €. Si vendes a 25 € con un 3 % de comisión, te quedan 9,95 € → **40 % de margen**. Para llegar al 55 % tendrías que venderla a unos 35 €, o bajar costes.
 
-`[PENDIENTE: tus precios de venta reales y el coste aproximado de cada tipo de prenda]`
+**Mi caso real:** camiseta de fútbol a **40 €**, coste **15 €** → **25 € de margen (62 %)**. En el conjunto de la marca, el margen estuvo en el **50–60 %**.
 
 **Plantilla:** la calculadora de márgenes (https://pertx.vercel.app/regalo/calculadora).
 
@@ -112,7 +120,11 @@ Toda la venta fue por **mi tienda en Shopify**.
 
 Todo fue **orgánico**: cero euros en publicidad.
 
-`[PENDIENTE: en qué redes, qué publicabas (diseños, proceso, detrás de cámaras, outfits…), cada cuánto y cuál fue tu mejor publicación]`
+Publicaba en **Instagram y TikTok**. Mi **mejor publicación** fue el **anuncio de la camiseta de fútbol**: después de ella, el stock se agotó en dos días.
+
+**Lo que aprendí:** no pares de publicar. Si dejas de hacerlo, la audiencia se enfría y se pierde el hype (es el error 3).
+
+`[PENDIENTE (opcional): qué tipo de publicaciones hacías el resto de días y cada cuánto]`
 
 **Plantilla:** calendario de contenido de 30 días (va en el PDF).
 
@@ -126,7 +138,8 @@ Todo fue **orgánico**: cero euros en publicidad.
 | Beneficio de la primera semana | **200 €**, reinvertidos en la plancha (180 €) |
 | Facturación en 3 meses | **5.000 €** |
 | Margen | **50–60 %** |
-| Lo que quedó, más o menos | `[PENDIENTE: confirmar; con un 50–60 % de margen serían unos 2.500–3.000 € antes de otros gastos]` |
+| **Lo que me quedó limpio** | **2.700 €** |
+| El error más caro (envíos) | **−500 €** |
 | Seguidores | **4.000+** |
 | Gasto en anuncios | **0 €** |
 
@@ -139,7 +152,7 @@ Todo fue **orgánico**: cero euros en publicidad.
 **Error 1 · No calculé bien el margen de las primeras camisetas.** Vendía, pero ganaba menos de lo que creía. Me faltaban costes por meter en la cuenta.
 → *Qué hacer:* antes de poner precio, mete **todos** los costes en la calculadora (hasta la bolsa y la pegatina).
 
-**Error 2 · Un contrato de envíos que se comía el margen.** Firmé un contrato con una empresa de envíos y cada envío me salía más caro de lo que debería.
+**Error 2 · Un contrato de envíos que se comía el margen (el más caro: 500 €).** Firmé un contrato con una empresa de envíos y cada envío me salía más caro de lo que debería. Perdí unos **500 €** de margen.
 → *Qué hacer:* compara antes de firmar nada. A mí me salió mejor **hacer las etiquetas de envío desde Shopify**.
 
 **Error 3 · Dejar de publicar.** Cuando paras, la audiencia se enfría y se pierde el hype por la marca. Volver a calentarla cuesta mucho más.
@@ -147,7 +160,7 @@ Todo fue **orgánico**: cero euros en publicidad.
 
 **La lección que lo resume:** cuanto más volumen (de publicaciones, de diseños, de pruebas), más fácil es que algo funcione.
 
-`[PENDIENTE (opcional): cuánto te costó cada error, más o menos]`
+`[PENDIENTE (opcional): cuánto te costaron los errores 1 y 3]`
 
 ---
 

@@ -96,10 +96,10 @@
         18.5
       ],
       "quien": "Pertx",
-      "voz": "Error dos: un contrato de envíos que se comía mi margen. Ahora hago las etiquetas desde Shopify.",
+      "voz": "Error dos, el más caro: los envíos. Me comieron 500 euros de margen. Ahora hago las etiquetas desde Shopify.",
       "visual": "Caja de envío con etiqueta -MARGEN; luego un check verde con SHOPIFY",
       "texto": [
-        "ENVÍOS"
+        "−500 €"
       ],
       "grabar": null,
       "pertx": {
@@ -124,7 +124,7 @@
             "tipo": "caja",
             "x": 262,
             "y": 140,
-            "etiqueta": "− MARGEN",
+            "etiqueta": "−500 €",
             "anim": "derecha",
             "en": 0.1
           },
@@ -260,7 +260,7 @@
       }
     }
   ],
-  "descripcion": "5.000 € facturados con una marca de ropa en 3 meses… y 3 errores que me comieron margen: el precio, los envíos y dejar de publicar. ¿Cuál te ha pasado a ti?",
+  "descripcion": "5.000 € facturados con una marca de ropa en 3 meses… y 3 errores. El más caro, los envíos: 500 € de margen perdidos. ¿Cuál te ha pasado a ti?",
   "hashtags": [
     "#emprenderjoven",
     "#marcaderopa",

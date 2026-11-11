@@ -39,7 +39,7 @@ La columna **Necesito de ti** dice qué me tienes que pasar o grabar para ese v�
 | **17** · miércoles | NOVATO VS PERTX | Lanzar una marca de ropa | Un novato y yo lanzamos la misma marca de ropa. | ¿Tú qué venderías? | Nada |
 | **18** · jueves | DE 0 € A MI PRIMER EURO · Ep. 3 | Estoy construyendo una web para creadores | Llevo meses llevando mis redes a mano. Así que estoy construyendo esto. | Apúntate a la lista de espera | Capturas de la nueva web para creadores (aunque esté a medias) |
 | **19** · viernes | CONTRARRELOJ | Una web para un negocio en 2 horas | Dos horas para hacerle la web a un negocio real. | ¿Qué hago en 2 horas la próxima vez? | Opcional: si ya tienes tu primera web de muestra, una captura del resultado (si no, lo hago animado con un negocio de ejemplo y se dice) |
-| **20** · sábado | MI MARCA DE ROPA | Facturar no es ganar: mis márgenes reales | Facturé 5.000 €. No gané 5.000 €. Mi margen real fue del 50–60 %. | Guarda esto antes de emprender | Nada (ya sé tu margen) |
+| **20** · sábado | MI MARCA DE ROPA | Facturé 5.000 €, me quedaron 2.700 € | Facturé 5.000 € con mi marca de ropa. Me quedaron 2.700 €. Te enseño a dónde fue el resto. | Guarda esto antes de emprender | Nada |
 | **21** · domingo | AURO ¿CUÁNTO? | Semana 3: números reales | Semana 3. Esto ya se mueve… o no. | ¿Qué cambio la semana que viene? | Tus números de la semana |
 
 ## Semana 4

@@ -12,7 +12,7 @@ Otros ganchos para probar: «Tres errores que me comieron el margen de mi marca 
 |---|---|---|---|---|
 | 0–4.5 s | **Pertx:** Facturé 5.000 euros con una marca de ropa. Y cometí tres errores. | Contadores: ROPA 5.000 € facturados · ERRORES 3; habitación · Pertx: ojos decidido | **3 ERRORES** | — |
 | 4.5–11.5 s | **Pertx:** Error uno: no calculé bien el margen de las primeras camisetas. Vendía, pero ganaba menos de lo que creía. | Pertx pensativo; una camiseta con etiqueta MARGEN ? y una X roja que cae · Pertx: ojos pensativo | **MARGEN** | — |
-| 11.5–18.5 s | **Pertx:** Error dos: un contrato de envíos que se comía mi margen. Ahora hago las etiquetas desde Shopify. | Caja de envío con etiqueta -MARGEN; luego un check verde con SHOPIFY · Pertx: ojos normal | **ENVÍOS** | — |
+| 11.5–18.5 s | **Pertx:** Error dos, el más caro: los envíos. Me comieron 500 euros de margen. Ahora hago las etiquetas desde Shopify. | Caja de envío con etiqueta -MARGEN; luego un check verde con SHOPIFY · Pertx: ojos normal | **−500 €** | — |
 | 18.5–25 s | **Pertx:** Error tres: dejé de publicar. La audiencia se enfría y el hype por la marca desaparece. | Móvil con la gráfica bajando; un calendario vacío · Pertx: ojos sorprendido | **NO PARES** | — |
 | 25–31 s | **Pertx:** Lo que haría hoy: publicar todos los días. Cuanto más volumen, más fácil es que algo funcione. | Frases grandes en el escenario · Pertx: ojos decidido | **VOLUMEN** | — |
 | 31–36 s | **Pertx:** Facturar no es ganar. Y equivocarte no es fracasar, si apuntas el porqué. | Auro apunta en su holograma; Pertx decidido · Pertx: ojos decidido · Auro: pensativo | **APUNTA** | — |
@@ -21,7 +21,7 @@ Otros ganchos para probar: «Tres errores que me comieron el margen de mi marca 
 ## Para publicar
 **Descripción:**
 ```
-5.000 € facturados con una marca de ropa en 3 meses… y 3 errores que me comieron margen: el precio, los envíos y dejar de publicar. ¿Cuál te ha pasado a ti?
+5.000 € facturados con una marca de ropa en 3 meses… y 3 errores. El más caro, los envíos: 500 € de margen perdidos. ¿Cuál te ha pasado a ti?
 
 #emprenderjoven #marcaderopa #errores #emprendimiento #pertx
 ```

@@ -53,7 +53,11 @@ Esto es lo que hace única la cuenta: **es verdad**.
 |---|---|
 | Menor de edad y estudiante | "Estudiante de instituto", "menor de edad". **Nunca la edad exacta, ni el centro, ni la ciudad, ni horarios ni sitios.** |
 | Marca de ropa: **5.000 € facturados en 3 meses** | Siempre **"facturado"** (no "ganado"). Nunca el nombre de la marca. Camisetas, sudaderas y camisetas de fútbol |
-| **Margen del 50–60 %** | Se cuenta tal cual |
+| **Margen del 50–60 %** · camiseta de fútbol a 40 € que costaba 15 € | Se cuenta tal cual |
+| **2.700 € limpios** de los 5.000 € facturados | El dato estrella de "facturar no es ganar" |
+| Stock de China **agotado al 2.º día**; mejor post: el anuncio de la camiseta de fútbol | Gancho fuerte |
+| Error más caro: **envíos, −500 €** | Se cuenta tal cual |
+| Le vendía a un **público muy nicho, y él era parte de ese público** | Lección clave |
 | **Todo orgánico**: tienda online + **más de 4.000 seguidores** sin anuncios | Gancho fuerte para el público joven |
 | **Lo hizo todo él** | Diseño, tienda, redes, envíos, números |
 | Se puede enseñar | Números, procesos y algunas fotos **difuminadas** (nunca el nombre, el logo ni los diseños reconocibles) |
