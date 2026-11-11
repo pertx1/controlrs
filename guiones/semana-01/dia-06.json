@@ -7,8 +7,8 @@
   "titulo": "3 errores con mi marca de ropa",
   "duracion": 39,
   "ganchos": [
-    "Facturé 5.000 euros con una marca de ropa en tres meses. Y cometí estos tres errores.",
-    "Tres errores que me costaron dinero con mi marca de ropa.",
+    "Facturé 5.000 euros con una marca de ropa. Y cometí tres errores.",
+    "Tres errores que me comieron el margen de mi marca de ropa.",
     "5.000 euros facturados. Tres errores que no vuelvo a cometer."
   ],
   "gancho_elegido": 0,
@@ -20,7 +20,7 @@
       ],
       "quien": "Pertx",
       "voz": "Facturé 5.000 euros con una marca de ropa. Y cometí tres errores.",
-      "visual": "Pertx; contador ROPA 5.000 € facturados; 3 cruces rojas",
+      "visual": "Contadores: ROPA 5.000 € facturados · ERRORES 3; habitación",
       "texto": [
         "3 ERRORES"
       ],
@@ -33,6 +33,7 @@
       "sonido": "whoosh",
       "plantilla": "contadores",
       "params": {
+        "fondo": "habitacion",
         "items": [
           {
             "etiqueta": "MARCA DE ROPA",
@@ -42,7 +43,7 @@
           {
             "etiqueta": "ERRORES",
             "valor": "3",
-            "nota": "que me costaron caros"
+            "nota": "que me comieron margen"
           }
         ]
       }
@@ -50,13 +51,13 @@
     {
       "t": [
         4.5,
-        11
+        11.5
       ],
       "quien": "Pertx",
-      "voz": "Error uno: [ERROR 1]. Me costó [COSTE 1].",
-      "visual": "Tarjeta 1 con el error y lo que costó",
+      "voz": "Error uno: no calculé bien el margen de las primeras camisetas. Vendía, pero ganaba menos de lo que creía.",
+      "visual": "Pertx pensativo; una camiseta con etiqueta MARGEN ? y una X roja que cae",
       "texto": [
-        "[ERROR 1]"
+        "MARGEN"
       ],
       "grabar": null,
       "pertx": {
@@ -64,84 +65,117 @@
         "objeto": null
       },
       "auro": null,
-      "sonido": null,
-      "plantilla": "tarjetas",
+      "sonido": "error",
+      "plantilla": "pertx",
       "params": {
-        "items": [
+        "fondo": "habitacion",
+        "posicion": "izquierda",
+        "objetos": [
           {
-            "titulo": "Error 1",
-            "sub": "[ERROR 1] · [COSTE 1]"
+            "tipo": "camiseta",
+            "x": 262,
+            "y": 150,
+            "etiqueta": "MARGEN ?",
+            "anim": "mano",
+            "en": 0.1
+          },
+          {
+            "tipo": "error",
+            "x": 300,
+            "y": 250,
+            "anim": "arriba",
+            "en": 0.55,
+            "k": 0.8
           }
         ]
       }
     },
     {
       "t": [
-        11,
-        18
+        11.5,
+        18.5
       ],
       "quien": "Pertx",
-      "voz": "Error dos: [ERROR 2]. Me costó [COSTE 2].",
-      "visual": "Tarjeta 2",
+      "voz": "Error dos: un contrato de envíos que se comía mi margen. Ahora hago las etiquetas desde Shopify.",
+      "visual": "Caja de envío con etiqueta -MARGEN; luego un check verde con SHOPIFY",
       "texto": [
-        "[ERROR 2]"
+        "ENVÍOS"
       ],
       "grabar": null,
       "pertx": {
-        "ojos": "pensativo",
+        "ojos": "normal",
         "objeto": null
       },
       "auro": null,
       "sonido": "pop",
-      "plantilla": "tarjetas",
+      "plantilla": "pertx",
       "params": {
-        "items": [
+        "fondo": "habitacion",
+        "posicion": "izquierda",
+        "poses": [
           {
-            "titulo": "Error 1",
-            "sub": "[ERROR 1] · [COSTE 1]",
-            "ya": true
+            "en": 0.55,
+            "objeto": "senalar",
+            "ojos": "decidido"
+          }
+        ],
+        "objetos": [
+          {
+            "tipo": "caja",
+            "x": 262,
+            "y": 140,
+            "etiqueta": "− MARGEN",
+            "anim": "derecha",
+            "en": 0.1
           },
           {
-            "titulo": "Error 2",
-            "sub": "[ERROR 2] · [COSTE 2]"
+            "tipo": "check",
+            "x": 290,
+            "y": 260,
+            "etiqueta": "SHOPIFY",
+            "anim": "pop",
+            "en": 0.6
           }
         ]
       }
     },
     {
       "t": [
-        18,
+        18.5,
         25
       ],
       "quien": "Pertx",
-      "voz": "Error tres: [ERROR 3]. Me costó [COSTE 3].",
-      "visual": "Tarjeta 3",
+      "voz": "Error tres: dejé de publicar. La audiencia se enfría y el hype por la marca desaparece.",
+      "visual": "Móvil con la gráfica bajando; un calendario vacío",
       "texto": [
-        "[ERROR 3]"
+        "NO PARES"
       ],
       "grabar": null,
       "pertx": {
-        "ojos": "pensativo",
+        "ojos": "sorprendido",
         "objeto": null
       },
       "auro": null,
-      "sonido": "pop",
-      "plantilla": "tarjetas",
+      "sonido": "error",
+      "plantilla": "pertx",
       "params": {
-        "items": [
+        "fondo": "habitacion",
+        "posicion": "izquierda",
+        "objetos": [
           {
-            "titulo": "Error 1",
-            "sub": "[ERROR 1] · [COSTE 1]",
-            "ya": true
+            "tipo": "calendario",
+            "x": 262,
+            "y": 140,
+            "etiqueta": "SIN PUBLICAR",
+            "anim": "mano",
+            "en": 0.15
           },
           {
-            "titulo": "Error 2",
-            "sub": "[ERROR 2] · [COSTE 2]",
-            "ya": true
-          },
-          {
-            "titulo": "Error 3",
-            "sub": "[ERROR 3] · [COSTE 3]"
+            "tipo": "movil",
+            "x": 300,
+            "y": 260,
+            "anim": "derecha",
+            "en": 0.5
           }
         ]
       }
@@ -152,23 +186,25 @@
         31
       ],
       "quien": "Pertx",
-      "voz": "Lo que haría hoy: [LECCIÓN].",
-      "visual": "Pertx señalando; lección en oro",
+      "voz": "Lo que haría hoy: publicar todos los días. Cuanto más volumen, más fácil es que algo funcione.",
+      "visual": "Frases grandes en el escenario",
       "texto": [
-        "[LECCIÓN]"
+        "VOLUMEN"
       ],
       "grabar": null,
       "pertx": {
-        "ojos": "normal",
-        "objeto": "senalar"
+        "ojos": "decidido",
+        "objeto": null
       },
       "auro": null,
       "sonido": null,
       "plantilla": "texto",
       "params": {
+        "fondo": "escenario",
         "palabras": [
-          "LO QUE HARÍA HOY:",
-          "[LECCIÓN]"
+          "PUBLICA CADA DÍA.",
+          "MÁS VOLUMEN,",
+          "MÁS OPORTUNIDADES."
         ]
       }
     },
@@ -192,6 +228,7 @@
       "sonido": null,
       "plantilla": "texto",
       "params": {
+        "fondo": "escenario",
         "palabras": [
           "FACTURAR ≠ GANAR",
           "APUNTA EL PORQUÉ"
@@ -205,7 +242,7 @@
       ],
       "quien": "Pertx",
       "voz": "¿Cuál te ha pasado a ti?",
-      "visual": "Pertx a cámara",
+      "visual": "Pertx a cámara, salta un poco",
       "texto": [
         "¿Y A TI?"
       ],
@@ -217,10 +254,13 @@
       "auro": null,
       "sonido": null,
       "plantilla": "pertx",
-      "params": {}
+      "params": {
+        "fondo": "habitacion",
+        "mov": "salta"
+      }
     }
   ],
-  "descripcion": "5.000 € facturados con una marca de ropa en 3 meses… y 3 errores que me costaron dinero. ¿Cuál te ha pasado a ti?",
+  "descripcion": "5.000 € facturados con una marca de ropa en 3 meses… y 3 errores que me comieron margen: el precio, los envíos y dejar de publicar. ¿Cuál te ha pasado a ti?",
   "hashtags": [
     "#emprenderjoven",
     "#marcaderopa",
@@ -229,10 +269,7 @@
     "#pertx"
   ],
   "cta": "¿Cuál te ha pasado a ti?",
-  "necesita_de_ti": [
-    "Contarme 3 errores reales de tu marca de ropa y qué te costó cada uno (dinero, tiempo o clientes)",
-    "Lo que harías hoy distinto (una frase)"
-  ],
+  "necesita_de_ti": [],
   "etiqueta_ia": true,
   "estado": "borrador"
 }

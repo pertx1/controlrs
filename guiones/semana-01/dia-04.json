@@ -45,7 +45,8 @@
             "valor": "30 días",
             "nota": "para el primer euro"
           }
-        ]
+        ],
+        "fondo": "habitacion"
       }
     },
     {
@@ -183,7 +184,19 @@
       "auro": "pensativo",
       "sonido": null,
       "plantilla": "pertx",
-      "params": {}
+      "params": {
+        "fondo": "habitacion",
+        "objetos": [
+          {
+            "tipo": "calendario",
+            "x": 262,
+            "y": 150,
+            "etiqueta": "DÍA 1",
+            "anim": "mano",
+            "en": 0.2
+          }
+        ]
+      }
     },
     {
       "t": [
@@ -205,7 +218,8 @@
         "lineas": [
           "DÍA 1",
           "0 €"
-        ]
+        ],
+        "fondo": "habitacion"
       }
     },
     {
@@ -228,7 +242,17 @@
       "sonido": null,
       "plantilla": "movil",
       "params": {
-        "tipo": "perfil"
+        "tipo": "perfil",
+        "objetos": [
+          {
+            "tipo": "moneda",
+            "x": 64,
+            "y": 110,
+            "anim": "mano",
+            "en": 0.2,
+            "gira": 90
+          }
+        ]
       }
     }
   ],

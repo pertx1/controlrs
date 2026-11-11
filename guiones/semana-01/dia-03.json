@@ -175,7 +175,27 @@
       "auro": null,
       "sonido": null,
       "plantilla": "pertx",
-      "params": {}
+      "params": {
+        "fondo": "calle",
+        "objetos": [
+          {
+            "tipo": "tienda",
+            "x": 262,
+            "y": 140,
+            "etiqueta": "PUBLICADA",
+            "anim": "mano",
+            "en": 0.15
+          },
+          {
+            "tipo": "check",
+            "x": 300,
+            "y": 260,
+            "anim": "pop",
+            "en": 0.55,
+            "k": 0.8
+          }
+        ]
+      }
     },
     {
       "t": [

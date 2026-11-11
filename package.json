@@ -8,7 +8,9 @@
     "voz": "node scripts/py.js video/voz.py",
     "calendario": "node scripts/py.js estrategia/hacer-calendario.py",
     "hoy": "node scripts/py.js sistema/hoy.py",
-    "metricas": "node scripts/py.js sistema/metricas.py"
+    "metricas": "node scripts/py.js sistema/metricas.py",
+    "historias": "node scripts/py.js sistema/historias.py",
+    "panel": "node scripts/py.js sistema/panel.py"
   },
   "devDependencies": {
     "playwright": "^1.48.0"

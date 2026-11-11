@@ -142,7 +142,19 @@
       "auro": "pensativo",
       "sonido": null,
       "plantilla": "pertx",
-      "params": {}
+      "params": {
+        "fondo": "escenario",
+        "objetos": [
+          {
+            "tipo": "bombilla",
+            "x": 262,
+            "y": 150,
+            "etiqueta": "NO ADIVINA",
+            "anim": "mano",
+            "en": 0.15
+          }
+        ]
+      }
     },
     {
       "t": [
@@ -163,7 +175,16 @@
       "auro": null,
       "sonido": null,
       "plantilla": "pertx",
-      "params": {}
+      "params": {
+        "fondo": "escenario",
+        "poses": [
+          {
+            "en": 0.5,
+            "objeto": "senalar",
+            "ojos": "decidido"
+          }
+        ]
+      }
     },
     {
       "t": [
@@ -185,7 +206,18 @@
       "sonido": null,
       "plantilla": "movil",
       "params": {
-        "tipo": "perfil"
+        "tipo": "perfil",
+        "objetos": [
+          {
+            "tipo": "libro",
+            "x": 64,
+            "y": 110,
+            "etiqueta": "PROMPT",
+            "anim": "mano",
+            "en": 0.2,
+            "k": 0.8
+          }
+        ]
       }
     }
   ],

@@ -38,7 +38,10 @@ Marca personal faceless en castellano (TikTok, Reels, Shorts). Se construye por 
 
 **Empieza por aquí:** `DIRECCION.md` (hacia dónde va Pertx), `PLAN.md` (qué falta) y `CUENTAS.md` (lo que tienes que hacer tú).
 
-## Tu día a día (cuando ya esté todo instalado)
+## Tu día a día
+**Lo más fácil:** yo preparo los vídeos y las historias y te dejo un **panel** para descargarlos. Tú solo publicas (no hace falta instalar nada).
+
+Si algún día quieres hacerlo tú desde tu portátil:
 | Cuándo | Qué haces |
 |---|---|
 | Cada día | `npm run hoy` → qué publicar, qué preparar y tus tareas |

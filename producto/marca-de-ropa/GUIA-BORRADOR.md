@@ -136,7 +136,18 @@ Todo fue **orgánico**: cero euros en publicidad.
 
 ## 10. Mis errores
 
-`[PENDIENTE: los 3 errores (son los mismos del vídeo del día 6) y lo que te costó cada uno]`
+**Error 1 · No calculé bien el margen de las primeras camisetas.** Vendía, pero ganaba menos de lo que creía. Me faltaban costes por meter en la cuenta.
+→ *Qué hacer:* antes de poner precio, mete **todos** los costes en la calculadora (hasta la bolsa y la pegatina).
+
+**Error 2 · Un contrato de envíos que se comía el margen.** Firmé un contrato con una empresa de envíos y cada envío me salía más caro de lo que debería.
+→ *Qué hacer:* compara antes de firmar nada. A mí me salió mejor **hacer las etiquetas de envío desde Shopify**.
+
+**Error 3 · Dejar de publicar.** Cuando paras, la audiencia se enfría y se pierde el hype por la marca. Volver a calentarla cuesta mucho más.
+→ *Qué hacer:* publica **todos los días**, aunque sea algo pequeño (proceso, detrás de cámaras, una prenda).
+
+**La lección que lo resume:** cuanto más volumen (de publicaciones, de diseños, de pruebas), más fácil es que algo funcione.
+
+`[PENDIENTE (opcional): cuánto te costó cada error, más o menos]`
 
 ---
 

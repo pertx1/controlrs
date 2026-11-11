@@ -33,3 +33,12 @@ Para mirar otro día: `npm run hoy -- 2026-11-30`.
 | Domingo | Métricas + `/metricas-semana` |
 
 `config.json` guarda la fecha del día 1, la hora de publicar y las redes.
+
+## Panel de descarga (lo que usas para publicar)
+Cada semana te dejo un **panel** (página privada) con cada día: el vídeo, la historia, la descripción para copiar, la encuesta de la historia y una casilla de "publicado". Tú solo descargas y publicas.
+
+Cómo lo genero yo:
+```
+npm run historias -- 1     # una historia 1080x1920 por día
+npm run panel -- 1         # video/salida/semana-01/panel.html (+ la lista de archivos que lleva)
+```

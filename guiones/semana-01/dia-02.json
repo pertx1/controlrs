@@ -38,7 +38,8 @@
           "Pide un plan",
           "Crea y corrige"
         ],
-        "activo": -1
+        "activo": -1,
+        "fondo": "habitacion"
       }
     },
     {
@@ -66,7 +67,8 @@
           "✻ Claude Code",
           "¿En qué te ayudo hoy?",
           "> _"
-        ]
+        ],
+        "fondo": "habitacion"
       }
     },
     {
@@ -173,7 +175,20 @@
       "auro": null,
       "sonido": null,
       "plantilla": "pertx",
-      "params": {}
+      "params": {
+        "fondo": "habitacion",
+        "mov": "habla",
+        "objetos": [
+          {
+            "tipo": "bombilla",
+            "x": 262,
+            "y": 150,
+            "etiqueta": "PIENSA",
+            "anim": "mano",
+            "en": 0.15
+          }
+        ]
+      }
     },
     {
       "t": [
@@ -195,7 +210,17 @@
       "sonido": null,
       "plantilla": "movil",
       "params": {
-        "tipo": "perfil"
+        "tipo": "perfil",
+        "objetos": [
+          {
+            "tipo": "web",
+            "x": 64,
+            "y": 110,
+            "anim": "mano",
+            "en": 0.2,
+            "k": 0.9
+          }
+        ]
       }
     }
   ],

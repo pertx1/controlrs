@@ -51,7 +51,8 @@ def trozos_subtitulo(voz: str):
     trozos, peque = [], []
     for p in palabras:
         limpia = re.sub(r"[¿?¡!.,:;…\"«»()]", "", p).lower()
-        if (limpia in UNION or len(limpia) <= 2) and not re.search(r"\d", limpia):
+        sigla = re.sub(r"[^A-ZÁÉÍÓÚÑ]", "", p)
+        if (limpia in UNION or len(limpia) <= 2) and not re.search(r"\d", limpia) and len(sigla) < 2:
             peque.append(p)
             continue
         trozos.append((" ".join(peque), p))
