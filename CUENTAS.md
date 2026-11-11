@@ -31,7 +31,7 @@ Sigue los pasos en orden y tacha cada casilla. Te lleva **unos 45 minutos el pri
 | Campo | Texto |
 |---|---|
 | Nombre | `Pertx` |
-| Bio (TikTok/IG) | `Construyo negocios con IA desde 0` · `Todos los números, sin humo` · `Te enseño a crear tu app` |
+| Bio (TikTok/IG) | `Construyo negocios desde 0` · `Ropa, reventa y apps con IA` · `Todos los números, sin humo` |
 | Descripción (YouTube) | `Pertx construye apps, webs y negocios con inteligencia artificial y lo cuenta todo: lo que funciona, lo que no y los números reales. Contenido con avatar y voz generados con IA.` |
 
 ---

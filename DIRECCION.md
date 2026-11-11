@@ -6,9 +6,11 @@
 
 ## 1. Quién es Pertx, en una frase
 
-> **"El pavo que construye negocios con IA, es sincero con todos los números y te ayuda a crear tu propia app."**
+> **"El pavo que construye negocios (ropa, reventa y apps), es sincero con todos los números y te ayuda a montar el tuyo."**
 
-**Frase de la bio:** `Construyo negocios con IA desde 0 · Todos los números, sin humo · Te enseño a crear tu app`
+*(Cambiado el 11/11: la marca de ropa es la **prueba**; las apps, el **camino**).*
+
+**Frase de la bio:** `Construyo negocios desde 0: ropa, reventa y apps con IA · Todos los números, sin humo`
 
 ## 2. La promesa
 
@@ -29,9 +31,9 @@ Si sigues a Pertx:
 
 | Pilar | Peso | Ejemplos |
 |---|---|---|
-| **Mentalidad y disciplina** | 35 % | Organizarse siendo desordenado, "nadie te va a salvar", hábitos de alguien que estudia y emprende a la vez |
-| **Construir con IA** | 35 % | Pantalla con Claude Code, la nueva web para creadores, el marketplace, tutoriales "haz tu primera app" |
-| **Emprender joven (números reales)** | 20 % | Marca de ropa, reventa, primeros clientes, fracasos |
+| **Emprender joven (marca de ropa, reventa, números reales)** | 35 % | Cómo lancé la marca, 4.000 seguidores sin anuncios, márgenes, errores, Vinted, primeros clientes |
+| **Mentalidad y disciplina** | 30 % | Organizarse siendo desordenado, "nadie te va a salvar", hábitos de alguien que estudia y emprende a la vez |
+| **Construir con IA** | 25 % | Pantalla con Claude Code, la nueva web para creadores, el marketplace, tutoriales "haz tu primera app" |
 | **Dinero** | 10 % | Qué hacer con lo que ganas siendo joven (sin consejos financieros personalizados) |
 
 ## 5. El tono
@@ -50,7 +52,11 @@ Esto es lo que hace única la cuenta: **es verdad**.
 | Dato | Cómo se cuenta |
 |---|---|
 | Menor de edad y estudiante | "Estudiante de instituto", "menor de edad". **Nunca la edad exacta, ni el centro, ni la ciudad, ni horarios ni sitios.** |
-| Marca de ropa: **5.000 € facturados en 3 meses** | Siempre **"facturado"** (no "ganado": facturar no es beneficio). Nunca el nombre de la marca. |
+| Marca de ropa: **5.000 € facturados en 3 meses** | Siempre **"facturado"** (no "ganado"). Nunca el nombre de la marca. Camisetas, sudaderas y camisetas de fútbol |
+| **Margen del 50–60 %** | Se cuenta tal cual |
+| **Todo orgánico**: tienda online + **más de 4.000 seguidores** sin anuncios | Gancho fuerte para el público joven |
+| **Lo hizo todo él** | Diseño, tienda, redes, envíos, números |
+| Se puede enseñar | Números, procesos y algunas fotos **difuminadas** (nunca el nombre, el logo ni los diseños reconocibles) |
 | Reventa en Vinted: **200 € de beneficio** | Tal cual |
 | Apps: **0 € de momento** | **Gancho principal:** "Contador a la vista: primer euro con apps." |
 | Proyecto: **web para llevar todas las redes** (nueva versión) | Se construye en público. Es el **producto grande a largo plazo** (lista de espera desde el principio). |
@@ -63,10 +69,10 @@ Esto es lo que hace única la cuenta: **es verdad**.
 | Orden | Vía | Cuándo | Notas |
 |---|---|---|---|
 | **1** | **Servicios:** webs y tiendas online para negocios | **Ya** (lo antes posible) | Es lo más rápido. Los vídeos sirven de portafolio. Se factura a nombre de tus padres. |
-| **2** | **Producto digital barato** (10–30 €): guía o plantillas "Tu primera app con IA" | Con los primeros 1.000–2.000 seguidores | Se vende en la web de Vercel (Fase 4) |
+| **2** | **Producto: "De 0 a 5.000 €: cómo lancé mi marca de ropa"** (19 €) | Con los primeros 1.000–2.000 seguidores | Guía + plantillas con tus números reales. Se vende desde la web (Fase 4) |
 | **3** | **Afiliados** de herramientas que usas de verdad (por ejemplo ElevenLabs o Vercel, si tienen programa) | Cuando haya audiencia | Siempre avisando de que es un enlace de afiliado |
 | **4** | **La web para creadores** (suscripción) | Cuando esté lista | Es el gran objetivo: Pertx crea la audiencia que luego la usa |
-| **5** | **Curso o mentoría** (50–200 €) | Más adelante | Solo cuando ya haya resultados que enseñar |
+| **5** | **Guía "Tu primera app con IA"** y luego curso | Cuando haya resultados con apps | No antes: vender una guía de apps con 0 € ganados sería vender humo |
 
 ## 8. Líneas rojas (nunca)
 

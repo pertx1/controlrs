@@ -15,7 +15,7 @@ La columna **Necesito de ti** dice qué me tienes que pasar o grabar para ese v�
 | **3** · miércoles | NOVATO VS PERTX | Montar una tienda online | Un novato y yo montamos la misma tienda online. | ¿Tú cuál eres? Comenta | Nada |
 | **4** · jueves | DE 0 € A MI PRIMER EURO · Ep. 1 | El plan para mi primer euro con apps | Llevo 0 € con apps. Este es el plan para cambiarlo en 30 días. | Sígueme y comprueba si lo consigo | Nada |
 | **5** · viernes | NOVATO VS PERTX · especial | El prompt del novato vs el mío | El novato y yo pedimos lo mismo a la IA. | Comenta PROMPT y te paso el mío | Nada |
-| **6** · sábado | LO QUE APRENDÍ | 3 errores con mi marca de ropa | Facturé 5.000 € con una marca de ropa. Y cometí estos 3 errores. | ¿Cuál te ha pasado a ti? | Decirme 3 errores reales de tu marca de ropa |
+| **6** · sábado | MI MARCA DE ROPA | 3 errores con mi marca de ropa | Facturé 5.000 € con una marca de ropa. Y cometí estos 3 errores. | ¿Cuál te ha pasado a ti? | Decirme 3 errores reales de tu marca de ropa |
 | **7** · domingo | AURO ¿CUÁNTO? | Semana 1: números reales | Auro, ¿cuánto he ganado esta semana? | ¿Qué número quieres ver la semana que viene? | Pasarme tus números de la semana (seguidores e ingresos) |
 
 ## Semana 2
@@ -27,7 +27,7 @@ La columna **Necesito de ti** dice qué me tienes que pasar o grabar para ese v�
 | **10** · miércoles | NOVATO VS PERTX | Conseguir el primer cliente | Un novato y yo buscamos nuestro primer cliente. | ¿Tienes un negocio sin web? Escríbeme | Nada |
 | **11** · jueves | DE 0 € A MI PRIMER EURO · Ep. 2 | Le hago una web a un negocio sin que me lo pida | Le he hecho una web a un negocio sin que me lo pida. Esto ha pasado. | Sígueme para ver si dice que sí | Las 3 webs de muestra hechas y la respuesta de los negocios |
 | **12** · viernes | ME PREGUNTASTEIS | La pregunta más repetida de la semana | Me habéis preguntado lo mismo [N] veces. | Pregúntame lo siguiente | Captura de los comentarios reales |
-| **13** · sábado | LO QUE APRENDÍ | 200 € revendiendo en Vinted | Saqué 200 € de beneficio revendiendo en Vinted. Así lo hice. | ¿Revendes algo? Cuéntame | Contarme cómo lo hiciste (qué vendías y cómo) |
+| **13** · sábado | MI MARCA DE ROPA | 200 € revendiendo en Vinted | Saqué 200 € de beneficio revendiendo en Vinted. Así lo hice. | ¿Revendes algo? Cuéntame | Contarme cómo lo hiciste (qué vendías y cómo) |
 | **14** · domingo | AURO ¿CUÁNTO? | Semana 2: números reales | Semana 2. Auro, dime la verdad. | ¿Lo voy a conseguir? | Tus números de la semana |
 
 ## Semana 3
@@ -36,10 +36,10 @@ La columna **Necesito de ti** dice qué me tienes que pasar o grabar para ese v�
 |---|---|---|---|---|---|
 | **15** · lunes | SIN EXCUSAS | Nadie va a venir a salvarte | Nadie va a venir a salvarte. Ni tus padres, ni tu profe, ni un curso. | Comparte con quien lo necesite | Nada |
 | **16** · martes | CONSTRUYO CONTIGO | Le pido una tienda online a la IA: lo bueno y lo malo | Le he pedido una tienda online entera a una IA. Esto ha salido. | Comenta TIENDA | Nada (pantallas animadas) |
-| **17** · miércoles | NOVATO VS PERTX | Usar la IA para copiar vs para aprender | Un novato usa la IA para copiar. Yo, para aprender. | ¿Cómo la usas tú? | Nada |
+| **17** · miércoles | NOVATO VS PERTX | Lanzar una marca de ropa | Un novato y yo lanzamos la misma marca de ropa. | ¿Tú qué venderías? | Nada |
 | **18** · jueves | DE 0 € A MI PRIMER EURO · Ep. 3 | Estoy construyendo una web para creadores | Llevo meses llevando mis redes a mano. Así que estoy construyendo esto. | Apúntate a la lista de espera | Capturas de la nueva web para creadores (aunque esté a medias) |
 | **19** · viernes | CONTRARRELOJ | Una web para un negocio en 2 horas | Dos horas para hacerle la web a un negocio real. | ¿Qué hago en 2 horas la próxima vez? | Opcional: si ya tienes tu primera web de muestra, una captura del resultado (si no, lo hago animado con un negocio de ejemplo y se dice) |
-| **20** · sábado | LO QUE APRENDÍ | Facturar no es ganar | Facturé 5.000 €. No gané 5.000 €. Te explico la diferencia. | Guarda esto antes de emprender | Decirme gastos aproximados de la marca de ropa (o lo dejamos en ejemplo) |
+| **20** · sábado | MI MARCA DE ROPA | Facturar no es ganar: mis márgenes reales | Facturé 5.000 €. No gané 5.000 €. Mi margen real fue del 50–60 %. | Guarda esto antes de emprender | Nada (ya sé tu margen) |
 | **21** · domingo | AURO ¿CUÁNTO? | Semana 3: números reales | Semana 3. Esto ya se mueve… o no. | ¿Qué cambio la semana que viene? | Tus números de la semana |
 
 ## Semana 4
@@ -47,11 +47,11 @@ La columna **Necesito de ti** dice qué me tienes que pasar o grabar para ese v�
 | Día | Serie | Título | Gancho (0–3 s) | CTA | Necesito de ti |
 |---|---|---|---|---|---|
 | **22** · lunes | SIN EXCUSAS | Mi regla de las 3 tareas al día | Solo hago 3 cosas al día. Y avanzo más que nunca. | Prueba mañana y cuéntame | Nada |
-| **23** · martes | CONSTRUYO CONTIGO | Cómo reviso lo que hace la IA | La IA programa rápido. Y se equivoca rápido. Así la reviso. | Comenta REVISAR | Nada (pantallas animadas) |
+| **23** · martes | CONSTRUYO CONTIGO | Cómo uso la IA en mi marca de ropa | Mi marca de ropa la llevé yo solo. La IA hizo de equipo. | Comenta ROPA | Contarme para qué usaste la IA en la marca (textos, diseños, fotos…) |
 | **24** · miércoles | NOVATO VS PERTX | Lanzar un producto | Un novato y yo lanzamos el mismo producto. | ¿Qué producto lanzarías tú? | Nada |
 | **25** · jueves | DE 0 € A MI PRIMER EURO · Ep. 4 | Mi primer cliente (o por qué aún no lo tengo) | Día 25. ¿Primer euro? Te enseño la verdad. | Sígueme para el final del mes | Cómo ha ido con los negocios (sí o no y qué te han dicho) |
 | **26** · viernes | ME PREGUNTASTEIS | Responde la pregunta más repetida | Esta pregunta me la habéis hecho [N] veces. | Pregúntame lo siguiente | Captura de los comentarios reales |
-| **27** · sábado | LO QUE APRENDÍ | Construyo un marketplace: lo que llevo aprendido | Estoy construyendo un marketplace para artesanos. Esto es lo que nadie te dice. | ¿Lo usarías? | Capturas del marketplace |
+| **27** · sábado | MI MARCA DE ROPA | 4.000 seguidores para mi marca sin pagar anuncios | Más de 4.000 seguidores para mi marca de ropa. 0 € en anuncios. Así. | ¿Qué red usas tú? | Contarme qué redes y qué tipo de publicaciones te funcionaron |
 | **28** · domingo | AURO ¿CUÁNTO? | Semana 4: números reales | Semana 4. Auro, sin piedad. | ¿Le doy otro mes? | Tus números de la semana |
 
 ## Semana 5

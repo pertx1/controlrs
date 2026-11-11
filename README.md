@@ -28,7 +28,7 @@ Marca personal faceless en castellano (TikTok, Reels, Shorts). Se construye por 
 | 3. Análisis de referencias | Hecho | `referencias/ANALISIS.md` |
 | Vídeos de muestra | 2 hechos, sin voz y sin publicar | `video/salida/` |
 | Dirección de la cuenta | Aprobada | `DIRECCION.md` |
-| Fase 1 · Estrategia | Hecha (producto: A con C dentro, luego B) | `estrategia/` |
+| Fase 1 · Estrategia | Hecha · cambio del 11/11: la marca de ropa es la prueba y las apps el camino | `estrategia/`, `producto/` |
 | Fase 2 · Fábrica de guiones | Hecha · semana 1 escrita | `guiones/` · comando `/guiones-semana N` |
 | Fase 3 · Edición automática | Hecha · falta instalarla en tu Windows | `video/` · `npm run video -- 1 1` |
 | 0. Crear y calentar cuentas (TikTok + Instagram) | Te toca a ti, con tu padre o tu madre | `CUENTAS.md` |

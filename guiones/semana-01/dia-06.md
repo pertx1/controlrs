@@ -1,6 +1,6 @@
 # Día 6 · sábado · 3 errores con mi marca de ropa
 
-**Serie:** LO QUE APRENDÍ · **Formato:** Historia con números · **Pilar:** Emprender · **Duración:** 39 s · **Estado:** ⏳ Faltan datos tuyos
+**Serie:** MI MARCA DE ROPA · **Formato:** Historia con números · **Pilar:** Emprender · **Duración:** 39 s · **Estado:** ⏳ Faltan datos tuyos
 
 ## Gancho elegido
 > Facturé 5.000 euros con una marca de ropa en tres meses. Y cometí estos tres errores.

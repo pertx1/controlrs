@@ -6,7 +6,9 @@ Basada en `DIRECCION.md` (aprobada). **De momento solo TikTok e Instagram**: You
 
 ## 1. Posicionamiento
 
-**Frase:** *El pavo que construye negocios con IA, es sincero con todos los números y te ayuda a crear tu propia app.*
+**Frase:** *El pavo que construye negocios (ropa, reventa y apps), es sincero con todos los números y te ayuda a montar el tuyo.*
+
+> **Cambio del 11/11:** la marca de ropa (5.000 € facturados, 50–60 % de margen, 4.000 seguidores orgánicos) es la **prueba**; las apps son el **camino**. Pilares: emprender 35 % · mentalidad 30 % · IA 25 % · dinero 10 %.
 
 **En qué nos diferenciamos** de otras cuentas de IA y dinero:
 | Ellos | Pertx |
@@ -23,9 +25,9 @@ Basada en `DIRECCION.md` (aprobada). **De momento solo TikTok e Instagram**: You
 
 | Red | Bio |
 |---|---|
-| **TikTok** (80 caracteres) | `Construyo negocios con IA desde 0 💰` · `Todos los números, sin humo` · `👇 Te ayudo a crear tu app` |
-| **Instagram** | `Pertx · Construyo negocios con IA` · `📊 Todos los números, sin humo` · `🛠️ Te enseño a crear tu app` · `🤖 Con Auro` · `👇 Web y regalo` (cuando tengamos la web) |
-| **YouTube** *(más adelante)* | `Soy Pertx. Estudiante, menor de edad y desordenado. He facturado 5.000 € con una marca de ropa y llevo 0 € con apps. Aquí construyo negocios con inteligencia artificial y lo cuento todo: lo que funciona, lo que no y los números reales. Contenido con avatar y voz generados con IA.` |
+| **TikTok** (80 caracteres) | `Construyo negocios desde 0 💰` · `Todos los números, sin humo` · `👇 Te ayudo a montar el tuyo` |
+| **Instagram** | `Pertx · Construyo negocios con IA` · `📊 Todos los números, sin humo` · `👕 Ropa, reventa y apps con IA` · `🤖 Con Auro` · `👇 Web y regalo` (cuando tengamos la web) |
+| **YouTube** *(más adelante)* | `Soy Pertx. Estudiante, menor de edad y desordenado. He facturado 5.000 € con una marca de ropa (todo orgánico) y llevo 0 € con apps. Aquí construyo negocios —ropa, reventa y apps con inteligencia artificial— y lo cuento todo: lo que funciona, lo que no y los números reales. Contenido con avatar y voz generados con IA.` |
 
 ---
 
@@ -40,7 +42,7 @@ Basada en `DIRECCION.md` (aprobada). **De momento solo TikTok e Instagram**: You
 | **Miércoles** | **NOVATO VS PERTX** | F1 | Construir con IA | La misma tarea hecha a lo novato y bien hecha |
 | **Jueves** | ⭐ **DE 0 € A MI PRIMER EURO** | Diario con contador | Emprender (20 %) | La serie estrella: cada semana, en qué punto está el objetivo |
 | **Viernes** | **CONTRARRELOJ** / **ME PREGUNTASTEIS** (se alternan) | F4 / F5 | Construir / comunidad | Retos con tiempo y respuestas a comentarios |
-| **Sábado** | **LO QUE APRENDÍ** | Historia con números | Emprender / mentalidad | Lecciones reales de la marca de ropa, Vinted, el marketplace… |
+| **Sábado** | **MI MARCA DE ROPA** | Historia con números | Emprender | Cómo la lancé, seguidores sin anuncios, márgenes, errores, envíos… (sin nombrar la marca) |
 | **Domingo** | **AURO, ¿CUÁNTO?** | F3 | Dinero (10 %) | Resumen de la semana con números: seguidores, ingresos, horas |
 
 **Serie estrella · DE 0 € A MI PRIMER EURO CON APPS**
@@ -76,12 +78,12 @@ Basada en `DIRECCION.md` (aprobada). **De momento solo TikTok e Instagram**: You
 
 ---
 
-## 5. Producto digital · DECIDIDO
+## 5. Producto digital · DECIDIDO (actualizado el 11/11)
 
-**Decisión:** los tres, en este orden:
-1. **A · "Tu primera app con IA en 7 días" (19 €)**: producto principal, mes 2.
-2. **C · Pack de prompts**: no se vende aparte; va **dentro de A** como regalo, y 10 prompts sirven de **regalo gratis para captar emails**.
-3. **B · "Sistema anti-desorden" (9 €)**: segundo producto, mes 3.
+1. **"De 0 a 5.000 €: cómo lancé mi marca de ropa" (19 €)**: producto principal, mes 2. Índice en `producto/marca-de-ropa/INDICE.md`.
+2. **Regalo gratis para captar emails:** "Calculadora de márgenes + checklist para lanzar tu marca de ropa".
+3. **"Sistema anti-desorden" (9 €)**: segundo producto, mes 3.
+4. **"Tu primera app con IA" + pack de prompts**: solo **cuando haya resultados reales con apps**.
 
 ### Las 3 opciones (para referencia)
 

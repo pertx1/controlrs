@@ -37,7 +37,7 @@ Vamos **fase por fase**. Al empezar cada fase te hago las preguntas que falten. 
 - [x] Bios definitivas (`estrategia/ESTRATEGIA.md`)
 - [x] Series recurrentes (basadas en F1–F5) con su día de la semana
 - [x] Oferta de **servicios** (qué se vende, a quién, precios orientativos y cómo conseguir los primeros clientes)
-- [x] Producto digital decidido: **A** principal (19 €, con **C** dentro y como regalo gratis) y **B** en el mes 3
+- [x] Producto decidido (cambio del 11/11): **"De 0 a 5.000 €: cómo lancé mi marca de ropa" (19 €)**, regalo gratis = calculadora de márgenes; "Sistema anti-desorden" en el mes 3; la guía de apps cuando haya resultados (`producto/marca-de-ropa/INDICE.md`)
 - [x] Serie estrella "De 0 € a mi primer euro con apps"
 - [x] Plan de 90 días (objetivos honestos por mes)
 - [x] Calendario de los primeros 30 días (`estrategia/CALENDARIO-30.md`)
