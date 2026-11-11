@@ -32,6 +32,6 @@ Marca personal faceless en castellano (TikTok, Reels, Shorts). Se construye por 
 | Fase 2 · Fábrica de guiones | Hecha · semana 1 escrita | `guiones/` · comando `/guiones-semana N` |
 | Fase 3 · Edición automática | Hecha · falta instalarla en tu Windows | `video/` · `npm run video -- 1 1` |
 | 0. Crear y calentar cuentas (TikTok + Instagram) | Te toca a ti, con tu padre o tu madre | `CUENTAS.md` |
-| 4. Desarrollo (estrategia, guiones, edición, web, sistema diario) | En marcha · siguiente: Fase 1 Estrategia | **`PLAN.md`** |
+| 4. Desarrollo (estrategia, guiones, edición, web, sistema diario) | En marcha · siguiente: Fase 4 Embudo de ventas | **`PLAN.md`** |
 
 **Empieza por aquí:** `DIRECCION.md` (hacia dónde va Pertx), `PLAN.md` (qué falta) y `CUENTAS.md` (lo que tienes que hacer tú).
