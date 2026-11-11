@@ -1,0 +1,185 @@
+{
+  "dia": 5,
+  "dia_semana": "viernes",
+  "serie": "CONTRARRELOJ",
+  "formato": "F4",
+  "pilar": "Construir con IA",
+  "titulo": "Una web para un negocio en 2 horas",
+  "duracion": 45,
+  "ganchos": [
+    "Dos horas para hacerle la web a un negocio real.",
+    "Dos horas. Un negocio real. Cero excusas.",
+    "¿Se puede hacer la web de un negocio en dos horas con IA?"
+  ],
+  "gancho_elegido": 0,
+  "escenas": [
+    {
+      "t": [
+        0,
+        3.5
+      ],
+      "quien": "Pertx",
+      "voz": "Dos horas para hacerle la web a un negocio real.",
+      "visual": "Pertx con portátil; reloj dorado 2:00:00",
+      "texto": [
+        "2 HORAS"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "decidido",
+        "objeto": "portatil"
+      },
+      "auro": null,
+      "sonido": "whoosh"
+    },
+    {
+      "t": [
+        3.5,
+        5.5
+      ],
+      "quien": "Auro",
+      "voz": "Cronómetro en marcha.",
+      "visual": "Auro con holograma de cuenta atrás",
+      "texto": [
+        "YA"
+      ],
+      "grabar": null,
+      "pertx": null,
+      "auro": "senalando",
+      "sonido": "ding"
+    },
+    {
+      "t": [
+        5.5,
+        11
+      ],
+      "quien": "Pertx",
+      "voz": "Minuto cero. Le paso a Claude Code lo que hace el negocio y su horario.",
+      "visual": "Grabación de la terminal con el prompt; cronómetro en una esquina",
+      "texto": [
+        "MINUTO 0"
+      ],
+      "grabar": "Inicio del reto: el prompt con los datos del negocio (difumina nombre y dirección)",
+      "pertx": null,
+      "auro": null,
+      "sonido": null
+    },
+    {
+      "t": [
+        11,
+        17
+      ],
+      "quien": "Pertx",
+      "voz": "Minuto [MIN 1]. Ya hay web… y es fea. Le paso los colores del local.",
+      "visual": "Antes y después de la web; cronómetro",
+      "texto": [
+        "FEA"
+      ],
+      "grabar": "La primera versión y el cambio de colores",
+      "pertx": null,
+      "auro": null,
+      "sonido": null
+    },
+    {
+      "t": [
+        17,
+        23
+      ],
+      "quien": "Pertx",
+      "voz": "Minuto [MIN 2]. Fotos, mapa y un botón para llamar.",
+      "visual": "Grabación de la web en el móvil con el botón de llamar",
+      "texto": [
+        "BOTÓN"
+      ],
+      "grabar": "Añadir fotos, mapa y botón de llamar",
+      "pertx": null,
+      "auro": null,
+      "sonido": "pop"
+    },
+    {
+      "t": [
+        23,
+        29
+      ],
+      "quien": "Pertx",
+      "voz": "Hora y media. Algo se rompe en el móvil.",
+      "visual": "La web descolocada en el móvil; Auro sorprendido",
+      "texto": [
+        "ERROR"
+      ],
+      "grabar": "El fallo real en el móvil (si lo hay)",
+      "pertx": null,
+      "auro": "sorprendido",
+      "sonido": "error"
+    },
+    {
+      "t": [
+        29,
+        35
+      ],
+      "quien": "Pertx",
+      "voz": "Lo arreglo y la subo. Quedan [MIN RESTANTES] minutos.",
+      "visual": "Notificación de web publicada; cronómetro parado",
+      "texto": [
+        "[MIN RESTANTES] MIN"
+      ],
+      "grabar": "La web publicada y el cronómetro parado",
+      "pertx": null,
+      "auro": "celebrando",
+      "sonido": "ding"
+    },
+    {
+      "t": [
+        35,
+        40
+      ],
+      "quien": "Pertx",
+      "voz": "[RESULTADO DEL RETO]",
+      "visual": "Pertx a cámara",
+      "texto": [
+        "[RESULTADO]"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "feliz",
+        "objeto": null
+      },
+      "auro": null,
+      "sonido": null
+    },
+    {
+      "t": [
+        40,
+        45
+      ],
+      "quien": "Pertx",
+      "voz": "¿Qué hago en dos horas la próxima vez? Te leo en comentarios.",
+      "visual": "Pertx señala; bocadillo de comentario",
+      "texto": [
+        "¿PRÓXIMO RETO?"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "normal",
+        "objeto": "senalar"
+      },
+      "auro": null,
+      "sonido": null
+    }
+  ],
+  "descripcion": "Reto: la web de un negocio real en 2 horas con IA. ¿Lo conseguí? [RESULTADO]",
+  "hashtags": [
+    "#reto",
+    "#claudecode",
+    "#crearweb",
+    "#inteligenciaartificial",
+    "#pertx"
+  ],
+  "cta": "¿Qué hago en 2 horas la próxima vez?",
+  "necesita_de_ti": [
+    "Grabar la pantalla del reto entero haciendo la web de muestra nº 1 (difumina el nombre y la dirección del negocio si no te dan permiso)",
+    "Cronometrar los minutos reales de cada paso"
+  ],
+  "etiqueta_ia": true,
+  "estado": "borrador"
+}

@@ -1,0 +1,163 @@
+{
+  "dia": 3,
+  "dia_semana": "miércoles",
+  "serie": "NOVATO VS PERTX",
+  "formato": "F1",
+  "pilar": "Construir con IA",
+  "titulo": "Montar una tienda online",
+  "duracion": 37,
+  "ganchos": [
+    "Un novato y yo montamos la misma tienda online.",
+    "El novato tarda un mes en montar su tienda. Yo, un fin de semana.",
+    "Por qué tu tienda online no vende (y la mía sí la publico)."
+  ],
+  "gancho_elegido": 0,
+  "escenas": [
+    {
+      "t": [
+        0,
+        3.5
+      ],
+      "quien": "Pertx",
+      "voz": "Un novato y yo montamos la misma tienda online.",
+      "visual": "Pantalla partida: NOVATO (gris) / PERTX (oro) con Auro; barra DÍA 1",
+      "texto": [
+        "NOVATO",
+        "PERTX"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "decidido",
+        "objeto": null
+      },
+      "auro": null,
+      "sonido": "whoosh"
+    },
+    {
+      "t": [
+        3.5,
+        9
+      ],
+      "quien": "Pertx",
+      "voz": "El novato empieza por el logo. Tres días eligiendo colores.",
+      "visual": "Lado novato: paleta de colores girando y un calendario que pasa tres días",
+      "texto": [
+        "LOGO"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "normal",
+        "objeto": null
+      },
+      "auro": null,
+      "sonido": null
+    },
+    {
+      "t": [
+        9,
+        15
+      ],
+      "quien": "Pertx",
+      "voz": "Yo empiezo por lo que se vende: cinco productos, fotos con el móvil y precios.",
+      "visual": "Lado Pertx: cinco tarjetas de producto con precio entrando una a una",
+      "texto": [
+        "LO QUE SE VENDE"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "normal",
+        "objeto": null
+      },
+      "auro": null,
+      "sonido": "pop"
+    },
+    {
+      "t": [
+        15,
+        21
+      ],
+      "quien": "Pertx",
+      "voz": "El novato quiere cien funciones. Yo solo tres: ver, comprar y pagar.",
+      "visual": "Lista larga del novato tachándose; tres botones dorados del lado de Pertx",
+      "texto": [
+        "3 FUNCIONES"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "normal",
+        "objeto": null
+      },
+      "auro": null,
+      "sonido": null
+    },
+    {
+      "t": [
+        21,
+        27
+      ],
+      "quien": "Pertx",
+      "voz": "Él espera a que esté perfecta. Yo la publico a medias y pregunto a diez personas.",
+      "visual": "Novato con barra 'perfección 99 %' parada; Pertx con móvil y 10 mensajes llegando",
+      "texto": [
+        "A MEDIAS"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "normal",
+        "objeto": "movil"
+      },
+      "auro": "feliz",
+      "sonido": "ding"
+    },
+    {
+      "t": [
+        27,
+        32
+      ],
+      "quien": "Pertx",
+      "voz": "Una tienda que no está publicada no vende. Ni bonita ni fea.",
+      "visual": "Pertx grande en el centro, cejas bajas",
+      "texto": [
+        "PUBLICADA"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "decidido",
+        "objeto": null
+      },
+      "auro": null,
+      "sonido": null
+    },
+    {
+      "t": [
+        32,
+        37
+      ],
+      "quien": "Pertx",
+      "voz": "¿Tú cuál eres? Comenta NOVATO o PERTX.",
+      "visual": "Los dos personajes con sus etiquetas; botones de comentario",
+      "texto": [
+        "¿CUÁL ERES?"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "feliz",
+        "objeto": null
+      },
+      "auro": null,
+      "sonido": null
+    }
+  ],
+  "descripcion": "La misma tienda online, dos formas de hacerla. Spoiler: la que no se publica no vende. ¿Tú cuál eres?",
+  "hashtags": [
+    "#tiendaonline",
+    "#emprender",
+    "#ecommerce",
+    "#emprenderjoven",
+    "#pertx"
+  ],
+  "cta": "¿Tú cuál eres? Comenta",
+  "necesita_de_ti": [],
+  "etiqueta_ia": true,
+  "estado": "borrador"
+}

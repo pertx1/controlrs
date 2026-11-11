@@ -1,0 +1,173 @@
+{
+  "dia": 7,
+  "dia_semana": "domingo",
+  "serie": "AURO ¿CUÁNTO?",
+  "formato": "F3",
+  "pilar": "Dinero",
+  "titulo": "Semana 1: números reales",
+  "duracion": 35,
+  "ganchos": [
+    "Auro, ¿cuánto he ganado esta semana?",
+    "Semana uno de Pertx. Todos los números.",
+    "Esto es lo que he ganado en mi primera semana. Sin filtros."
+  ],
+  "gancho_elegido": 0,
+  "escenas": [
+    {
+      "t": [
+        0,
+        3
+      ],
+      "quien": "Pertx",
+      "voz": "Auro, ¿cuánto he ganado esta semana?",
+      "visual": "Pertx pensativo mira a Auro",
+      "texto": [
+        "¿CUÁNTO?"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "pensativo",
+        "objeto": null
+      },
+      "auro": null,
+      "sonido": "whoosh"
+    },
+    {
+      "t": [
+        3,
+        5
+      ],
+      "quien": "Auro",
+      "voz": "Calculando…",
+      "visual": "Auro con un ? en el holograma",
+      "texto": [
+        "…"
+      ],
+      "grabar": null,
+      "pertx": null,
+      "auro": "pensativo",
+      "sonido": null
+    },
+    {
+      "t": [
+        5,
+        11
+      ],
+      "quien": "Auro",
+      "voz": "Con apps: cero euros. Con webs: [EUROS SEMANA] euros.",
+      "visual": "Holograma: APPS 0 € · WEBS [EUROS SEMANA] €",
+      "texto": [
+        "0 €",
+        "[EUROS SEMANA] €"
+      ],
+      "grabar": null,
+      "pertx": null,
+      "auro": "celebrando",
+      "sonido": "ding"
+    },
+    {
+      "t": [
+        11,
+        17
+      ],
+      "quien": "Auro",
+      "voz": "Seguidores nuevos: [SEGUIDORES]. Vídeo con más visitas: [MEJOR VÍDEO].",
+      "visual": "Holograma con seguidores y la portada del mejor vídeo",
+      "texto": [
+        "[SEGUIDORES]"
+      ],
+      "grabar": null,
+      "pertx": null,
+      "auro": "feliz",
+      "sonido": "ding"
+    },
+    {
+      "t": [
+        17,
+        22
+      ],
+      "quien": "Pertx",
+      "voz": "Negocios contactados: [NEGOCIOS]. Respuestas: [RESPUESTAS].",
+      "visual": "Mapa con chinchetas; las que han respondido en oro",
+      "texto": [
+        "[NEGOCIOS]"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "normal",
+        "objeto": "movil"
+      },
+      "auro": null,
+      "sonido": null
+    },
+    {
+      "t": [
+        22,
+        28
+      ],
+      "quien": "Pertx",
+      "voz": "Lo que he aprendido: [APRENDIZAJE].",
+      "visual": "Pertx a cámara",
+      "texto": [
+        "[APRENDIZAJE]"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "decidido",
+        "objeto": null
+      },
+      "auro": null,
+      "sonido": null
+    },
+    {
+      "t": [
+        28,
+        31
+      ],
+      "quien": "Auro",
+      "voz": "Próximo informe en siete días.",
+      "visual": "Auro con calendario",
+      "texto": [
+        "7 DÍAS"
+      ],
+      "grabar": null,
+      "pertx": null,
+      "auro": "senalando",
+      "sonido": null
+    },
+    {
+      "t": [
+        31,
+        35
+      ],
+      "quien": "Pertx",
+      "voz": "¿Qué número quieres que te enseñe la semana que viene?",
+      "visual": "Los dos juntos",
+      "texto": [
+        "¿QUÉ NÚMERO?"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "feliz",
+        "objeto": null
+      },
+      "auro": "feliz",
+      "sonido": null
+    }
+  ],
+  "descripcion": "Semana 1 de Pertx: todos los números, aunque sean pequeños. No es consejo financiero.",
+  "hashtags": [
+    "#numerosreales",
+    "#emprenderjoven",
+    "#reto30dias",
+    "#negociodigital",
+    "#pertx"
+  ],
+  "cta": "¿Qué número quieres ver la semana que viene?",
+  "necesita_de_ti": [
+    "Tus números de la semana: euros con webs, seguidores nuevos, vídeo con más visitas, negocios contactados y respuestas",
+    "Lo que has aprendido esta semana (una frase)"
+  ],
+  "etiqueta_ia": true,
+  "estado": "borrador"
+}

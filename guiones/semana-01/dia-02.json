@@ -1,0 +1,153 @@
+{
+  "dia": 2,
+  "dia_semana": "martes",
+  "serie": "CONSTRUYO CONTIGO",
+  "formato": "F2 tutorial",
+  "pilar": "Construir con IA",
+  "titulo": "Le pido una web a Claude Code en [X] minutos",
+  "duracion": 36,
+  "ganchos": [
+    "Esta web la ha hecho una IA. Yo solo hablé.",
+    "No he escrito ni una línea de código de esta web.",
+    "Así se hace una web en [X] minutos sin saber diseño."
+  ],
+  "gancho_elegido": 0,
+  "escenas": [
+    {
+      "t": [
+        0,
+        3.5
+      ],
+      "quien": "Pertx",
+      "voz": "Esta web la ha hecho una IA. Yo solo hablé.",
+      "visual": "Grabación de la web terminada en el móvil, haciendo scroll",
+      "texto": [
+        "IA"
+      ],
+      "grabar": "La web terminada en el móvil, haciendo scroll (5 s)",
+      "pertx": null,
+      "auro": null,
+      "sonido": "whoosh"
+    },
+    {
+      "t": [
+        3.5,
+        8
+      ],
+      "quien": "Pertx",
+      "voz": "Se llama Claude Code y vive en la terminal. Así lo hice.",
+      "visual": "Grabación de la terminal abriendo Claude Code; Pertx pequeño abajo",
+      "texto": [
+        "CLAUDE CODE"
+      ],
+      "grabar": "Abrir la terminal y escribir claude",
+      "pertx": {
+        "ojos": "normal",
+        "objeto": null
+      },
+      "auro": null,
+      "sonido": null
+    },
+    {
+      "t": [
+        8,
+        14
+      ],
+      "quien": "Pertx",
+      "voz": "Paso uno: le explico el negocio en cinco frases. Qué vende y para quién.",
+      "visual": "Grabación escribiendo el prompt; las 5 frases se resaltan en oro",
+      "texto": [
+        "5 FRASES"
+      ],
+      "grabar": "Escribir el prompt con las 5 frases",
+      "pertx": null,
+      "auro": null,
+      "sonido": null
+    },
+    {
+      "t": [
+        14,
+        20
+      ],
+      "quien": "Pertx",
+      "voz": "Paso dos: le pido un plan antes de tocar nada. Lo leo y lo corrijo.",
+      "visual": "Grabación del plan que propone Claude Code; Auro señala una línea",
+      "texto": [
+        "PLAN"
+      ],
+      "grabar": "El plan que te propone y cómo corriges algo",
+      "pertx": null,
+      "auro": "senalando",
+      "sonido": null
+    },
+    {
+      "t": [
+        20,
+        26
+      ],
+      "quien": "Pertx",
+      "voz": "Paso tres: crea los archivos. Lo abro en el móvil y le pido cambios, uno a uno.",
+      "visual": "Pantalla partida: archivos creándose y la web en el móvil cambiando",
+      "texto": [
+        "CAMBIOS"
+      ],
+      "grabar": "Los archivos creándose y 2 cambios pedidos",
+      "pertx": null,
+      "auro": null,
+      "sonido": "pop"
+    },
+    {
+      "t": [
+        26,
+        31
+      ],
+      "quien": "Pertx",
+      "voz": "[X] minutos. Pero los cinco primeros son pensar, no programar.",
+      "visual": "Reloj dorado con [X] min; Pertx a cámara",
+      "texto": [
+        "PENSAR"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "decidido",
+        "objeto": null
+      },
+      "auro": null,
+      "sonido": null
+    },
+    {
+      "t": [
+        31,
+        36
+      ],
+      "quien": "Pertx",
+      "voz": "Comenta WEB y te paso el prompt exacto que uso.",
+      "visual": "Bocadillo de comentario con WEB en oro; Pertx señala",
+      "texto": [
+        "COMENTA WEB"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "feliz",
+        "objeto": "senalar"
+      },
+      "auro": null,
+      "sonido": null
+    }
+  ],
+  "descripcion": "Le pido una web entera a Claude Code y te enseño los 3 pasos que sigo. Comenta WEB y te paso el prompt.",
+  "hashtags": [
+    "#claudecode",
+    "#crearweb",
+    "#inteligenciaartificial",
+    "#programacion",
+    "#pertx"
+  ],
+  "cta": "Comenta WEB y te digo el prompt",
+  "necesita_de_ti": [
+    "Grabar la pantalla mientras haces una web sencilla con Claude Code (5–10 min) y cronometrar cuánto tardas de verdad",
+    "Tener preparado el prompt para enviarlo a quien comente WEB"
+  ],
+  "etiqueta_ia": true,
+  "estado": "borrador"
+}

@@ -1,0 +1,165 @@
+{
+  "dia": 6,
+  "dia_semana": "sábado",
+  "serie": "LO QUE APRENDÍ",
+  "formato": "Historia con números",
+  "pilar": "Emprender",
+  "titulo": "3 errores con mi marca de ropa",
+  "duracion": 39,
+  "ganchos": [
+    "Facturé 5.000 euros con una marca de ropa en tres meses. Y cometí estos tres errores.",
+    "Tres errores que me costaron dinero con mi marca de ropa.",
+    "5.000 euros facturados. Tres errores que no vuelvo a cometer."
+  ],
+  "gancho_elegido": 0,
+  "escenas": [
+    {
+      "t": [
+        0,
+        4.5
+      ],
+      "quien": "Pertx",
+      "voz": "Facturé 5.000 euros con una marca de ropa. Y cometí tres errores.",
+      "visual": "Pertx; contador ROPA 5.000 € facturados; 3 cruces rojas",
+      "texto": [
+        "3 ERRORES"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "decidido",
+        "objeto": null
+      },
+      "auro": null,
+      "sonido": "whoosh"
+    },
+    {
+      "t": [
+        4.5,
+        11
+      ],
+      "quien": "Pertx",
+      "voz": "Error uno: [ERROR 1]. Me costó [COSTE 1].",
+      "visual": "Tarjeta 1 con el error y lo que costó",
+      "texto": [
+        "[ERROR 1]"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "pensativo",
+        "objeto": null
+      },
+      "auro": null,
+      "sonido": null
+    },
+    {
+      "t": [
+        11,
+        18
+      ],
+      "quien": "Pertx",
+      "voz": "Error dos: [ERROR 2]. Me costó [COSTE 2].",
+      "visual": "Tarjeta 2",
+      "texto": [
+        "[ERROR 2]"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "pensativo",
+        "objeto": null
+      },
+      "auro": null,
+      "sonido": "pop"
+    },
+    {
+      "t": [
+        18,
+        25
+      ],
+      "quien": "Pertx",
+      "voz": "Error tres: [ERROR 3]. Me costó [COSTE 3].",
+      "visual": "Tarjeta 3",
+      "texto": [
+        "[ERROR 3]"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "pensativo",
+        "objeto": null
+      },
+      "auro": null,
+      "sonido": "pop"
+    },
+    {
+      "t": [
+        25,
+        31
+      ],
+      "quien": "Pertx",
+      "voz": "Lo que haría hoy: [LECCIÓN].",
+      "visual": "Pertx señalando; lección en oro",
+      "texto": [
+        "[LECCIÓN]"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "normal",
+        "objeto": "senalar"
+      },
+      "auro": null,
+      "sonido": null
+    },
+    {
+      "t": [
+        31,
+        36
+      ],
+      "quien": "Pertx",
+      "voz": "Facturar no es ganar. Y equivocarte no es fracasar, si apuntas el porqué.",
+      "visual": "Auro apunta en su holograma; Pertx decidido",
+      "texto": [
+        "APUNTA"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "decidido",
+        "objeto": null
+      },
+      "auro": "pensativo",
+      "sonido": null
+    },
+    {
+      "t": [
+        36,
+        39
+      ],
+      "quien": "Pertx",
+      "voz": "¿Cuál te ha pasado a ti?",
+      "visual": "Pertx a cámara",
+      "texto": [
+        "¿Y A TI?"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "feliz",
+        "objeto": null
+      },
+      "auro": null,
+      "sonido": null
+    }
+  ],
+  "descripcion": "5.000 € facturados con una marca de ropa en 3 meses… y 3 errores que me costaron dinero. ¿Cuál te ha pasado a ti?",
+  "hashtags": [
+    "#emprenderjoven",
+    "#marcaderopa",
+    "#errores",
+    "#emprendimiento",
+    "#pertx"
+  ],
+  "cta": "¿Cuál te ha pasado a ti?",
+  "necesita_de_ti": [
+    "Contarme 3 errores reales de tu marca de ropa y qué te costó cada uno (dinero, tiempo o clientes)",
+    "Lo que harías hoy distinto (una frase)"
+  ],
+  "etiqueta_ia": true,
+  "estado": "borrador"
+}

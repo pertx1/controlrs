@@ -37,15 +37,15 @@ Vamos **fase por fase**. Al empezar cada fase te hago las preguntas que falten. 
 - [x] Bios definitivas (`estrategia/ESTRATEGIA.md`)
 - [x] Series recurrentes (basadas en F1–F5) con su día de la semana
 - [x] Oferta de **servicios** (qué se vende, a quién, precios orientativos y cómo conseguir los primeros clientes)
-- [ ] **3 opciones de producto digital barato** → hechas en `estrategia/ESTRATEGIA.md`, **falta que elijas A, B o C**
+- [x] Producto digital decidido: **A** principal (19 €, con **C** dentro y como regalo gratis) y **B** en el mes 3
 - [x] Serie estrella "De 0 € a mi primer euro con apps"
 - [x] Plan de 90 días (objetivos honestos por mes)
 - [x] Calendario de los primeros 30 días (`estrategia/CALENDARIO-30.md`)
 
 ## Fase 2 · Fábrica de guiones
-- [ ] Comando que genera los guiones de la semana: 3 ganchos, guion con tiempos, qué se ve en cada plano, texto en pantalla, descripción, hashtags y CTA
-- [ ] Usa la ficha del personaje, la mascota y la fórmula de las referencias
-- [ ] Primeros 7 guiones listos para producir
+- [x] Comando que genera los guiones de la semana (`/guiones-semana N` en Claude Code + `guiones/fabrica.py`)
+- [x] Usa la dirección, la estrategia, la ficha del personaje y la fórmula de las referencias, y revisa líneas rojas y ritmo
+- [x] Primeros 7 guiones (`guiones/semana-01/`): 3 listos, 4 esperando tus datos o grabaciones
 
 ## Fase 3 · Edición automática
 - [x] Prototipo del motor (SVG + Chromium + ffmpeg, 1080x1920)

@@ -1,0 +1,181 @@
+{
+  "dia": 4,
+  "dia_semana": "jueves",
+  "serie": "DE 0 € A MI PRIMER EURO · Ep. 1",
+  "formato": "Diario + contador",
+  "pilar": "Emprender",
+  "titulo": "El plan para mi primer euro con apps",
+  "duracion": 37,
+  "ganchos": [
+    "Llevo cero euros con apps. Este es mi plan para treinta días.",
+    "Treinta días para ganar mi primer euro con apps. Este es el plan.",
+    "Cero euros. Treinta días. Cuatro pasos."
+  ],
+  "gancho_elegido": 0,
+  "escenas": [
+    {
+      "t": [
+        0,
+        4.5
+      ],
+      "quien": "Pertx",
+      "voz": "Llevo cero euros con apps. Este es mi plan para treinta días.",
+      "visual": "Contador grande APPS 0 € y un calendario de 30 días",
+      "texto": [
+        "0 €",
+        "30 DÍAS"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "decidido",
+        "objeto": null
+      },
+      "auro": null,
+      "sonido": "whoosh"
+    },
+    {
+      "t": [
+        4.5,
+        10.5
+      ],
+      "quien": "Pertx",
+      "voz": "Uno: no vendo una app. Vendo webs a negocios que no tienen. Es lo más rápido.",
+      "visual": "Tarjeta 1 en oro: VENDER WEBS; escaparates de negocios sin web",
+      "texto": [
+        "WEBS"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "normal",
+        "objeto": null
+      },
+      "auro": null,
+      "sonido": null
+    },
+    {
+      "t": [
+        10.5,
+        16.5
+      ],
+      "quien": "Pertx",
+      "voz": "Dos: busco veinte negocios sin web en Google Maps, y a tres les hago una de muestra gratis.",
+      "visual": "Mapa en negro y oro con 20 chinchetas; 3 se iluminan",
+      "texto": [
+        "20 NEGOCIOS"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "normal",
+        "objeto": null
+      },
+      "auro": null,
+      "sonido": "pop"
+    },
+    {
+      "t": [
+        16.5,
+        22.5
+      ],
+      "quien": "Pertx",
+      "voz": "Tres: se la enseñamos. Si le gusta, se la dejo funcionando por un precio de lanzamiento.",
+      "visual": "Móvil enseñando una web de muestra; etiqueta PRECIO DE LANZAMIENTO",
+      "texto": [
+        "PRECIO"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "normal",
+        "objeto": "movil"
+      },
+      "auro": null,
+      "sonido": null
+    },
+    {
+      "t": [
+        22.5,
+        28
+      ],
+      "quien": "Pertx",
+      "voz": "Y cuatro: te lo enseño todo. Lo que cobre y lo que salga mal.",
+      "visual": "Pertx a cámara; los cuatro pasos en una lista a su lado",
+      "texto": [
+        "TODO"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "decidido",
+        "objeto": null
+      },
+      "auro": null,
+      "sonido": null
+    },
+    {
+      "t": [
+        28,
+        30.5
+      ],
+      "quien": "Pertx",
+      "voz": "Auro, apunta: día uno, cero euros.",
+      "visual": "Pertx mira a Auro",
+      "texto": [
+        "DÍA 1"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "normal",
+        "objeto": null
+      },
+      "auro": "pensativo",
+      "sonido": null
+    },
+    {
+      "t": [
+        30.5,
+        33
+      ],
+      "quien": "Auro",
+      "voz": "Apuntado. Cero euros.",
+      "visual": "Auro con holograma: DÍA 1 · 0 €",
+      "texto": [
+        "0 €"
+      ],
+      "grabar": null,
+      "pertx": null,
+      "auro": "senalando",
+      "sonido": "ding"
+    },
+    {
+      "t": [
+        33,
+        37
+      ],
+      "quien": "Pertx",
+      "voz": "Sígueme y comprueba si lo consigo.",
+      "visual": "Contador 0 € con un ? que parpadea; Pertx señala",
+      "texto": [
+        "¿LO CONSIGO?"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "normal",
+        "objeto": "senalar"
+      },
+      "auro": null,
+      "sonido": null
+    }
+  ],
+  "descripcion": "Episodio 1 del reto: de 0 € a mi primer euro con apps en 30 días. El plan en 4 pasos. Vuelve el jueves para ver si avanza.",
+  "hashtags": [
+    "#reto30dias",
+    "#emprenderjoven",
+    "#negociodigital",
+    "#numerosreales",
+    "#pertx"
+  ],
+  "cta": "Sígueme y comprueba si lo consigo",
+  "necesita_de_ti": [
+    "Hablar con tu padre o tu madre de quién enseñará las webs de muestra a los negocios"
+  ],
+  "etiqueta_ia": true,
+  "estado": "borrador"
+}

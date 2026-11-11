@@ -1,0 +1,163 @@
+{
+  "dia": 1,
+  "dia_semana": "lunes",
+  "serie": "DE 0 € A MI PRIMER EURO · Ep. 0",
+  "formato": "Presentación",
+  "pilar": "Emprender",
+  "titulo": "Quién es Pertx",
+  "duracion": 37,
+  "ganchos": [
+    "Menor de edad. 5.000 euros facturados con ropa. Cero con apps.",
+    "He facturado 5.000 euros con una marca de ropa. Con apps llevo cero. Esto va a cambiar.",
+    "Soy estudiante, desordenado y llevo cero euros con apps. Mira esto."
+  ],
+  "gancho_elegido": 0,
+  "escenas": [
+    {
+      "t": [
+        0,
+        4.5
+      ],
+      "quien": "Pertx",
+      "voz": "Menor de edad. 5.000 euros facturados con ropa. Cero con apps.",
+      "visual": "Pertx grande en el centro. Aparecen dos contadores dorados: ROPA 5.000 € facturados · APPS 0 €",
+      "texto": [
+        "5.000 €",
+        "0 €"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "decidido",
+        "objeto": null
+      },
+      "auro": null,
+      "sonido": "whoosh"
+    },
+    {
+      "t": [
+        4.5,
+        9
+      ],
+      "quien": "Pertx",
+      "voz": "Soy Pertx. Estudiante… y un desastre organizándome.",
+      "visual": "Pertx pensativo; a su alrededor caen post-its y tareas desordenadas",
+      "texto": [
+        "DESASTRE"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "pensativo",
+        "objeto": null
+      },
+      "auro": null,
+      "sonido": null
+    },
+    {
+      "t": [
+        9,
+        15
+      ],
+      "quien": "Pertx",
+      "voz": "Pero construyo cosas. Una marca de ropa. Reventa en Vinted. Y ahora, apps con inteligencia artificial.",
+      "visual": "Tres tarjetas en negro y oro entran una a una: Marca de ropa · Vinted +200 € · Apps 0 €",
+      "texto": [
+        "CONSTRUYO"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "normal",
+        "objeto": null
+      },
+      "auro": null,
+      "sonido": "pop"
+    },
+    {
+      "t": [
+        15,
+        20.5
+      ],
+      "quien": "Pertx",
+      "voz": "Este es Auro. Me ayuda a programar… y a no mentirte con los números.",
+      "visual": "Auro entra flotando al lado de Pertx con un holograma de una gráfica",
+      "texto": [
+        "AURO"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "normal",
+        "objeto": null
+      },
+      "auro": "feliz",
+      "sonido": "ding"
+    },
+    {
+      "t": [
+        20.5,
+        27
+      ],
+      "quien": "Pertx",
+      "voz": "El reto: pasar de cero euros a mi primer euro con apps. Y enseñarte cada paso, aunque salga mal.",
+      "visual": "Contador grande APPS 0 € con un signo de interrogación al lado",
+      "texto": [
+        "PRIMER EURO"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "decidido",
+        "objeto": null
+      },
+      "auro": null,
+      "sonido": null
+    },
+    {
+      "t": [
+        27,
+        32
+      ],
+      "quien": "Pertx",
+      "voz": "Sin humo. Sin cursos milagro. Todos los números.",
+      "visual": "Texto grande en oro, una palabra por golpe; Pertx con cejas bajas",
+      "texto": [
+        "SIN HUMO"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "decidido",
+        "objeto": null
+      },
+      "auro": null,
+      "sonido": null
+    },
+    {
+      "t": [
+        32,
+        37
+      ],
+      "quien": "Pertx",
+      "voz": "Sígueme y mira cómo sube el contador.",
+      "visual": "Móvil con el perfil de Pertx y el botón Seguir; Pertx señala el móvil",
+      "texto": [
+        "SÍGUEME"
+      ],
+      "grabar": null,
+      "pertx": {
+        "ojos": "feliz",
+        "objeto": "senalar"
+      },
+      "auro": "celebrando",
+      "sonido": null
+    }
+  ],
+  "descripcion": "Episodio 0. Facturé 5.000 € con una marca de ropa, saqué 200 € revendiendo y llevo 0 € con apps. El reto: mi primer euro con apps, contándolo todo.",
+  "hashtags": [
+    "#emprenderjoven",
+    "#inteligenciaartificial",
+    "#negociodigital",
+    "#numerosreales",
+    "#pertx"
+  ],
+  "cta": "Sígueme para ver el contador subir",
+  "necesita_de_ti": [],
+  "etiqueta_ia": true,
+  "estado": "borrador"
+}

@@ -76,7 +76,14 @@ Basada en `DIRECCION.md` (aprobada). **De momento solo TikTok e Instagram**: You
 
 ---
 
-## 5. Producto digital: 3 opciones (eliges tú)
+## 5. Producto digital · DECIDIDO
+
+**Decisión:** los tres, en este orden:
+1. **A · "Tu primera app con IA en 7 días" (19 €)**: producto principal, mes 2.
+2. **C · Pack de prompts**: no se vende aparte; va **dentro de A** como regalo, y 10 prompts sirven de **regalo gratis para captar emails**.
+3. **B · "Sistema anti-desorden" (9 €)**: segundo producto, mes 3.
+
+### Las 3 opciones (para referencia)
 
 | | Opción | Precio | Para quién | Esfuerzo | Riesgo |
 |---|---|---|---|---|---|
