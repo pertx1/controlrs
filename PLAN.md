@@ -29,7 +29,7 @@ Vamos **fase por fase**. Al empezar cada fase te hago las preguntas que falten. 
 
 ## Fase 0 · Cuentas (tú, con tu padre o tu madre, 5–6 días)
 - [ ] Crear el Gmail de la marca, TikTok e Instagram a nombre de tu padre o tu madre → `CUENTAS.md` (**YouTube de momento no**; opcional reservar el nombre)
-- [ ] Decirme el **nombre de usuario** que ha quedado libre
+- [x] Nombre de usuario: **@pertx**
 - [ ] 5 días de calentamiento
 
 ## Fase 1 · Estrategia (yo, mientras calientas las cuentas)
