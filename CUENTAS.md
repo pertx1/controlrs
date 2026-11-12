@@ -14,7 +14,7 @@ Sigue los pasos en orden y tacha cada casilla. Te lleva **unos 45 minutos el pri
   - será **titular** de las cuentas de Pertx (con sus datos y su fecha de nacimiento) y de los cobros futuros;
   - tendrá las **contraseñas** y la **verificación en dos pasos** en su móvil;
   - tú harás el contenido, siempre con la etiqueta de IA y sin datos personales.
-- [ ] **Cread un Gmail de la marca a su nombre**, por ejemplo `pertx.contacto@gmail.com` (o el que esté libre), con la **verificación en dos pasos** en su móvil.
+- [ ] **Cread un correo de Outlook de la marca a su nombre**, por ejemplo `pertx.contacto@outlook.com` (o el que esté libre), con su móvil como teléfono de seguridad y la **verificación en dos pasos** activada.
 - [ ] **Elegid el nombre de usuario.** Tiene que ser **el mismo en todas las redes**. Probadlos en este orden y quedaos con el primero libre en TikTok e Instagram (y, si podéis, también en YouTube):
   1. `pertx`
   2. `pertx.ia`
@@ -38,21 +38,21 @@ Sigue los pasos en orden y tacha cada casilla. Te lleva **unos 45 minutos el pri
 
 ## Paso 1 · Crear las cuentas (30 min)
 
-**TikTok e Instagram desde el móvil** (las apps funcionan mejor). **YouTube, de momento no.** Wifi de casa, **sin VPN**. En todos los registros se usan **el Gmail de la marca y los datos de tu padre o tu madre**.
+**TikTok e Instagram en el iPad** (limpio: sin otras cuentas, apps reinstaladas). **YouTube, de momento no.** Wifi de casa, **sin VPN**. En todos los registros se usan **el correo de Outlook de la marca y los datos de tu padre o tu madre**.
 
 ### TikTok
-- [ ] Registrarse → **Usar correo** → Gmail de la marca → **su fecha de nacimiento**.
+- [ ] Registrarse → **Usar correo** → correo de Outlook de la marca → **su fecha de nacimiento**.
 - [ ] Perfil → Editar → nombre de usuario, nombre, foto y bio.
 - [ ] **Déjala como cuenta personal** (no "Empresa"): las de empresa solo pueden usar música comercial y pierdes los sonidos de tendencia. Las estadísticas se ven igual.
 - [ ] *Enlace en la bio:* en TikTok suele desbloquearse a partir de 1.000 seguidores. Hasta entonces, el enlace va en Instagram y YouTube.
 
 ### Instagram
-- [ ] Crear cuenta nueva → Gmail de la marca → **sus datos**.
+- [ ] Crear cuenta nueva → correo de Outlook de la marca → **sus datos**.
 - [ ] Nombre de usuario, nombre, foto y bio.
 - [ ] Configuración → Tipo de cuenta → **Cuenta profesional → Creador** → categoría "Creador digital".
 
 ### YouTube (más adelante · opcional ahora)
-- [ ] *Opcional, 5 minutos:* **reservar el nombre** para que no te lo quiten. En el portátil, con el Gmail de la marca → foto → **Crear un canal** → nombre `Pertx` y el mismo identificador. **No subas nada** ni hace falta calentarlo.
+- [ ] *Opcional, 5 minutos:* **reservar el nombre** para que no te lo quiten. En el portátil, YouTube necesita una cuenta de Google: créala con el correo de Outlook de la marca ("usar mi dirección de correo actual") → foto → **Crear un canal** → nombre `Pertx` y el mismo identificador. **No subas nada** ni hace falta calentarlo.
 - *(Cuando decidas abrirlo: verificar con su teléfono y poner la cuenta de cobro a su nombre).*
 
 ### Etiqueta de IA (en cada vídeo)
@@ -97,7 +97,7 @@ Usa cada cuenta **20–30 minutos al día** como un usuario normal de tu nicho, 
 ## Checklist rápida
 
 - [ ] Padre o madre de acuerdo y presente
-- [ ] Gmail de la marca a su nombre + verificación en dos pasos en su móvil
+- [ ] Correo de Outlook de la marca a su nombre + verificación en dos pasos en su móvil
 - [ ] Nombre de usuario libre en TikTok e Instagram (y en YouTube si lo reservas) → **dímelo**
 - [ ] TikTok (personal) e Instagram (creador) creados con sus datos
 - [ ] *(Opcional)* Canal de YouTube creado solo para reservar el nombre
